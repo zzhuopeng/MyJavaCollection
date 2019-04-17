@@ -9,5 +9,3 @@
 4.JavaSE 用于学习Java SE方面知识
 	目前主要包括了JDBC、MySQL、Junit、DAO等知识
 5.JavaSE 用于学习Java EE方面知识
-
-6.MyUnitTest 平时杂乱的测试代码
