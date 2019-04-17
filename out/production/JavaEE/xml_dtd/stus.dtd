@@ -1,0 +1,19 @@
+<!ELEMENT stus (stu)*>  <!-- stus下面有一个元素stu，且只有一个 -->
+<!ELEMENT stu (name, age, address)> <!--stu下面有三个元素，name，age，address；且name，age，address有顺序要求 -->
+<!ELEMENT name (#PCDATA)> <!--  -->
+<!ELEMENT age (#PCDATA)> <!--  -->
+<!ELEMENT address (#PCDATA)> <!--  -->
+<!ATTLIST stu id CDATA #IMPLIED> <!-- stu有一个属性id，文本类型，该属性可有可无 -->
+
+<!-- 元素的个数：
+         +表示一个或多个
+         *表示零个或多个
+         ?表示零个或多个
+
+     属性的类型定义：
+        CDATA表示属性是普通文字
+        ID表示属性的值必须唯一
+
+     (name,age) 按照顺序来
+     (name|age) 两个中只能包含一个子元素
+ -->

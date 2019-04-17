@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--xmlns: xml namespace 命名空间-->
+<!--targetNamespace: 目标名称空间。下面定义的元素都与这个命名空间绑定上。(里面的值可以改)-->
+<!--elementFormDefault: 元素的格式化情况-->
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.example.org/teacher"
+        elementFormDefault="qualified">
+
+    <!-- 复杂元素 -->
+    <element name="teachers">
+        <!-- complexType、sequence相当于是复杂元素声明 -->
+        <complexType>
+            <sequence maxOccurs="unbounded"> <!-- 在sequence中添加maxOccurs="unbounded"声明表示teacher个数不限，也可以用定值约束 -->
+                <element name="teacher">
+                    <!-- complexType、sequence相当于是复杂元素声明 -->
+                    <complexType>
+                        <sequence>
+                            <!-- 简单元素 -->
+                            <element name="name" type="string"></element>
+                            <element name="age" type="int"></element>
+                        </sequence>
+                    </complexType>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+
+</schema>
