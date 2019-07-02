@@ -139,7 +139,7 @@ public class HashMap<K,V> extends AbstractMap<K,V>
 
     private static final long serialVersionUID = 362498820763181265L;
 
-    /*
+    /**
      * Implementation notes.
      *
      * This map usually acts as a binned (bucketed) hash table, but
