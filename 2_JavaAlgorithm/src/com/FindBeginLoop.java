@@ -1,7 +1,8 @@
+package com;
+
 import org.junit.Test;
 
 import java.util.HashSet;
-import java.util.Random;
 
 /**
  * 笔记：数据结构与算法->a3.判断一个链表是否成环
