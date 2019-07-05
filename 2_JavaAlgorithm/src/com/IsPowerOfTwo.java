@@ -2,6 +2,9 @@ package com;
 
 import org.junit.Test;
 
+/**
+ * 笔记：数据结构与算法->a4.判断一个数是否是2的幂次方
+ */
 public class IsPowerOfTwo {
 
     @Test
