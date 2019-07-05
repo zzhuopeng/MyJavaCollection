@@ -42,11 +42,11 @@ public class FindBeginLoop {
         }
         //取链表中间节点，连接链表尾部
         ListNode rand = headNode;
-        for (int i = 0; i < (int) LENGTH * Math.random(); i++) {
+        for (int i = 0; i < 12/*(int) LENGTH * Math.random()*/; i++) {
             rand = rand.next;
         }
         p.next = rand;
-        if (hasCycle(headNode)) {//if (findBeginLoop(headNode)) {
+        if (findBeginLoop(headNode)) {//if (hasCycle(headNode)) {
             System.out.println("链表有环");
         } else {
             System.out.println("链表无环");
@@ -55,10 +55,12 @@ public class FindBeginLoop {
 
     /**
      * 快慢指针
+     *
      * @param head 链表头
      * @return 判断结果
      */
     public boolean findBeginLoop(ListNode head) {
+        boolean isCycle = false;
         if (null == head || null == head.next)
             return false;
         ListNode cur = head;
@@ -66,14 +68,38 @@ public class FindBeginLoop {
         while (null != pre.next && null != pre.next.next) {
             cur = cur.next;
             pre = pre.next.next;
-            if (cur == pre)
-                return true;
+            if (cur == pre) {
+                isCycle = true;
+                break;
+            }
         }
-        return false;
+        //有环则需要判断环的长度，固定cur
+        if (isCycle) {
+            int cycleLength = 1;
+            pre = pre.next;
+            while (cur != pre) {
+                pre = pre.next;
+                cycleLength++;
+            }
+            System.out.println("环的长度为" + cycleLength);
+        }
+        //判断起点距离环的长度，固定cur
+        if (isCycle) {
+            int startLength = 0;
+            pre = head;
+            while (cur != pre) {
+                pre = pre.next;
+                startLength++;
+            }
+            System.out.println("起点距离环的长度为" + startLength);
+        }
+
+        return isCycle;
     }
 
     /**
      * 哈希表法
+     *
      * @param head 链表头
      * @return 判断结果
      */
