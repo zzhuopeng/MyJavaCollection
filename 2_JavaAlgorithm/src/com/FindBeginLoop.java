@@ -32,7 +32,7 @@ public class FindBeginLoop {
      */
     @Test
     public void testCycle() {
-        final int LENGTH = 100;
+        final int LENGTH = 200;
         //生成一个链表
         ListNode headNode = new ListNode(0);
         ListNode p = headNode;
@@ -82,16 +82,6 @@ public class FindBeginLoop {
                 cycleLength++;
             }
             System.out.println("环的长度为" + cycleLength);
-        }
-        //判断起点距离环的长度，固定cur
-        if (isCycle) {
-            int startLength = 0;
-            pre = head;
-            while (cur != pre) {
-                pre = pre.next;
-                startLength++;
-            }
-            System.out.println("起点距离环的长度为" + startLength);
         }
 
         return isCycle;
