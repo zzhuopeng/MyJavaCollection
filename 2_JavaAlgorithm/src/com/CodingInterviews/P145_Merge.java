@@ -1,4 +1,4 @@
-package com.books.CodingInterviews;
+package com.CodingInterviews;
 
 class ListNode {
     int val;
