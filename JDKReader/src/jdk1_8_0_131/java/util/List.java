@@ -27,7 +27,7 @@ package java.util;
 
 import java.util.function.UnaryOperator;
 
-/**
+/**顺序集合，能精确控制集合中每个元素，通过index下标可以获取对应元素。
  * An ordered collection (also known as a <i>sequence</i>).  The user of this
  * interface has precise control over where in the list each element is
  * inserted.  The user can access elements by their integer index (position in
