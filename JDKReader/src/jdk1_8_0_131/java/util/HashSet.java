@@ -1,47 +1,26 @@
-/*
- * Copyright (c) 1997, 2013, Oracle and/or its affiliates. All rights reserved.
- * ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- */
-
 package java.util;
 
 import java.io.InvalidObjectException;
 
 /**
- * This class implements the <tt>Set</tt> interface, backed by a hash table
+ * This class implements the <tt>Set</tt> interface, backed by（受...支持） a hash table
  * (actually a <tt>HashMap</tt> instance).  It makes no guarantees as to the
  * iteration order of the set; in particular, it does not guarantee that the
  * order will remain constant over time.  This class permits the <tt>null</tt>
  * element.
+ * 该类通过一个hash table对象实现了Set接口，不保证每次迭代的元素顺序，可以存储null元素。
  *
  * <p>This class offers constant time performance for the basic operations
  * (<tt>add</tt>, <tt>remove</tt>, <tt>contains</tt> and <tt>size</tt>),
- * assuming the hash function disperses the elements properly among the
+ * assuming the hash function disperses（分散） the elements properly among the
  * buckets.  Iterating over this set requires time proportional to the sum of
  * the <tt>HashSet</tt> instance's size (the number of elements) plus the
  * "capacity" of the backing <tt>HashMap</tt> instance (the number of
  * buckets).  Thus, it's very important not to set the initial capacity too
  * high (or the load factor too low) if iteration performance is important.
+ * 假设hash函数在bucket数组上分配元素时不发生哈希冲突，则add(),remove(),contains(),
+ * size()等基本方法的时间复杂度为常数级。迭代Set的时间与HashSet元素个数+HashMap的capacity之和成正比。
+ * 因此，如果对迭代Set的时间较敏感，则不要讲capacity设置过大（或装载因子过小）。
  *
  * <p><strong>Note that this implementation is not synchronized.</strong>
  * If multiple threads access a hash set concurrently, and at least one of
@@ -162,42 +141,28 @@ public class HashSet<E>
     }
 
     /**
-     * Returns an iterator over the elements in this set.  The elements
-     * are returned in no particular order.
-     *
-     * @return an Iterator over the elements in this set
-     * @see ConcurrentModificationException
+     * 内部调用map的keySet()获得key对应的Set，然后再调用该Set对应的iterator()方法
      */
     public Iterator<E> iterator() {
         return map.keySet().iterator();
     }
 
     /**
-     * Returns the number of elements in this set (its cardinality).
-     *
-     * @return the number of elements in this set (its cardinality)
+     * 内部调用map的size()
      */
     public int size() {
         return map.size();
     }
 
     /**
-     * Returns <tt>true</tt> if this set contains no elements.
-     *
-     * @return <tt>true</tt> if this set contains no elements
+     * 内部调用map的isEmpty()
      */
     public boolean isEmpty() {
         return map.isEmpty();
     }
 
     /**
-     * Returns <tt>true</tt> if this set contains the specified element.
-     * More formally, returns <tt>true</tt> if and only if this set
-     * contains an element <tt>e</tt> such that
-     * <tt>(o==null&nbsp;?&nbsp;e==null&nbsp;:&nbsp;o.equals(e))</tt>.
-     *
-     * @param o element whose presence in this set is to be tested
-     * @return <tt>true</tt> if this set contains the specified element
+     * 内部调用map的containsKey(o)
      */
     public boolean contains(Object o) {
         return map.containsKey(o);
@@ -236,8 +201,7 @@ public class HashSet<E>
     }
 
     /**
-     * Removes all of the elements from this set.
-     * The set will be empty after this call returns.
+     * 内部调用了map的clear()方法
      */
     public void clear() {
         map.clear();
