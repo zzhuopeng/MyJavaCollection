@@ -32,7 +32,7 @@ public class FindBeginLoop {
      */
     @Test
     public void testCycle() {
-        final int LENGTH = 200;
+        final int LENGTH = 100;
         //生成一个链表
         ListNode headNode = new ListNode(0);
         ListNode p = headNode;
@@ -42,7 +42,7 @@ public class FindBeginLoop {
         }
         //取链表中间节点，连接链表尾部
         ListNode rand = headNode;
-        for (int i = 0; i < 12/*(int) LENGTH * Math.random()*/; i++) {
+        for (int i = 0; i < (int) LENGTH * Math.random(); i++) {
             rand = rand.next;
         }
         p.next = rand;
