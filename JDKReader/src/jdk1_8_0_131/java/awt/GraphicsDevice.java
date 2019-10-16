@@ -165,7 +165,7 @@ public abstract class GraphicsDevice {
      * the Java&trade; Runtime Environment can
      * format the return value of the <code>String</code>.  To determine
      * how to interpret the value of the <code>String</code>, contact the
-     * vendor of your Java Runtime.  To find out who the vendor is, from
+     * vendor of your Java Runtime.  To search out who the vendor is, from
      * your program, call the
      * {@link System#getProperty(String) getProperty} method of the
      * System class with "java.vendor".

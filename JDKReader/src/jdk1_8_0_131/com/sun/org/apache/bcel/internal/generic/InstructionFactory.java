@@ -493,7 +493,7 @@ public class InstructionFactory
       try {
         i = (Instruction)java.lang.Class.forName(name).newInstance();
       } catch(Exception e) {
-        throw new RuntimeException("Could not find instruction: " + name);
+        throw new RuntimeException("Could not search instruction: " + name);
       }
 
       return i;

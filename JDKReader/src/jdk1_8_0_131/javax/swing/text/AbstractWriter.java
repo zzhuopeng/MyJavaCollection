@@ -147,7 +147,7 @@ public abstract class AbstractWriter {
             } catch (SecurityException se) {}
             if (newline == null) {
                 // Should not get here, but if we do it means we could not
-                // find a newline string, use \n in this case.
+                // search a newline string, use \n in this case.
                 newline = "\n";
             }
             setLineSeparator(newline);
@@ -594,7 +594,7 @@ public abstract class AbstractWriter {
                     lastIndex = endIndex;
                 }
                 else {
-                    // Need to break chars, find a place to split chars at,
+                    // Need to break chars, search a place to split chars at,
                     // from lastIndex to endIndex,
                     // or maxLength - lineLength whichever is smaller
                     int breakPoint = -1;
@@ -618,7 +618,7 @@ public abstract class AbstractWriter {
                     else {
                         // No where good to break.
 
-                        // find the next whitespace, or write out the
+                        // search the next whitespace, or write out the
                         // whole string.
                             // maxBreak will be negative if current line too
                             // long.

@@ -2434,7 +2434,7 @@ public class Container extends Component {
             isPeerOK = (peer instanceof LightweightPeer) || includeSelf;
             isMouseOverMe = contains(x,y);
 
-            // didn't find a child target, return this component if it's
+            // didn't search a child target, return this component if it's
             // a possible target
             if (isMouseOverMe && isPeerOK && filter.accept(this)) {
                 return this;
@@ -2633,7 +2633,7 @@ public class Container extends Component {
      * The findComponentAt method is different from getComponentAt in
      * that getComponentAt only searches the Container's immediate
      * children; if the containing component is a Container,
-     * findComponentAt will search that child to find a nested component.
+     * findComponentAt will search that child to search a nested component.
      *
      * @param x the <i>x</i> coordinate
      * @param y the <i>y</i> coordinate
@@ -2728,7 +2728,7 @@ public class Container extends Component {
      * The findComponentAt method is different from getComponentAt in
      * that getComponentAt only searches the Container's immediate
      * children; if the containing component is a Container,
-     * findComponentAt will search that child to find a nested component.
+     * findComponentAt will search that child to search a nested component.
      *
      * @param      p   the point.
      * @return null if the component does not contain the position.

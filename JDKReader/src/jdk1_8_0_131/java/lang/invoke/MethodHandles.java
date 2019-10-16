@@ -2195,7 +2195,7 @@ assert((int)twice.invokeExact(21) == 42);
                 assert(Long.numberOfTrailingZeros(Long.lowestOneBit(~mask)) == newArity);
                 return 0;
             }
-            // find first zero
+            // search first zero
             long zeroBit = Long.lowestOneBit(~mask);
             int zeroPos = Long.numberOfTrailingZeros(zeroBit);
             assert(zeroPos <= newArity);

@@ -1655,7 +1655,7 @@ public class SimpleDateFormat extends DateFormat {
     }
 
     /**
-     * find time zone 'text' matched zoneStrings and set to internal
+     * search time zone 'text' matched zoneStrings and set to internal
      * calendar.
      */
     private int subParseZoneString(String text, int start, CalendarBuilder calb) {

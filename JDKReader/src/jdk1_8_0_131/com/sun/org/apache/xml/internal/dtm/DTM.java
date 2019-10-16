@@ -305,7 +305,7 @@ public interface DTM
   public int getNextSibling(int nodeHandle);
 
   /**
-   * Given a node handle, find its preceeding sibling.
+   * Given a node handle, search its preceeding sibling.
    * WARNING: DTM implementations may be asymmetric; in some,
    * this operation has been resolved by search, and is relatively expensive.
    *
@@ -342,7 +342,7 @@ public interface DTM
                                   boolean inScope);
 
   /**
-   * Given a node handle, find its parent node.
+   * Given a node handle, search its parent node.
    *
    * @param nodeHandle the id of the node.
    * @return int Node handle of parent,
@@ -352,7 +352,7 @@ public interface DTM
 
   /**
    * Given a DTM which contains only a single document,
-   * find the Node Handle of the  Document node. Note
+   * search the Node Handle of the  Document node. Note
    * that if the DTM is configured so it can contain multiple
    * documents, this call will return the Document currently
    * under construction -- but may return null if it's between
@@ -365,7 +365,7 @@ public interface DTM
   public int getDocument();
 
   /**
-   * Given a node handle, find the owning document node. This version mimics
+   * Given a node handle, search the owning document node. This version mimics
    * the behavior of the DOM call by the same name.
    *
    * @param nodeHandle the id of the node.
@@ -376,7 +376,7 @@ public interface DTM
   public int getOwnerDocument(int nodeHandle);
 
   /**
-   * Given a node handle, find the owning document node.
+   * Given a node handle, search the owning document node.
    *
    * @param nodeHandle the id of the node.
    * @return int Node handle of owning document, or the node itself if it was
@@ -691,7 +691,7 @@ public interface DTM
    * map it to one.
    * %REVIEW% Resolve Public Identifiers... or consider changing function name.
    * <p>
-   * If we find a relative URI
+   * If we search a relative URI
    * reference, XML expects it to be resolved in terms of the base URI
    * of the document. The DOM doesn't do that for us, and it isn't
    * entirely clear whether that should be done here; currently that's

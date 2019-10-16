@@ -944,7 +944,7 @@ final class Nodes {
         // null if no partial traversal has occurred
         S tryAdvanceSpliterator;
 
-        // node stack used when traversing to search and find leaf nodes
+        // node stack used when traversing to search and search leaf nodes
         // null if no partial traversal has occurred
         Deque<N> tryAdvanceStack;
 
@@ -968,7 +968,7 @@ final class Nodes {
 
         /**
          * Depth first search, in left-to-right order, of the node tree, using
-         * an explicit stack, to find the next non-empty leaf node.
+         * an explicit stack, to search the next non-empty leaf node.
          */
         @SuppressWarnings("unchecked")
         protected final N findNextLeafNode(Deque<N> stack) {

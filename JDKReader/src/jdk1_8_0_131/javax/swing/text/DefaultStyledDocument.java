@@ -811,7 +811,7 @@ public class DefaultStyledDocument extends AbstractDocument implements StyledDoc
     short createSpecsForInsertAfterNewline(Element paragraph,
             Element pParagraph, AttributeSet pattr, Vector<ElementSpec> parseBuffer,
                                                  int offset, int endOffset) {
-        // Need to find the common parent of pParagraph and paragraph.
+        // Need to search the common parent of pParagraph and paragraph.
         if(paragraph.getParentElement() == pParagraph.getParentElement()) {
             // The simple (and common) case that pParagraph and
             // paragraph have the same parent.
@@ -1596,7 +1596,7 @@ public class DefaultStyledDocument extends AbstractDocument implements StyledDoc
 
             // An insert at 0 with an initial end implies some elements
             // will have no children (the bottomost leaf would have length 0)
-            // this will find what element need to be removed and remove it.
+            // this will search what element need to be removed and remove it.
             if (offset == 0 && fracturedParent != null &&
                 data[0].getType() == ElementSpec.EndTagType) {
                 int counter = 0;

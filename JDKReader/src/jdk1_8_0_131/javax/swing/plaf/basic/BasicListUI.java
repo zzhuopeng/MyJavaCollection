@@ -543,7 +543,7 @@ public class BasicListUI extends ListUI
      *       number of columns needed. Where the number of columns needs is
      *       list.height / max cell height. Max cell height is either the fixed
      *       cell height, or is determined by iterating through all the cells
-     *       to find the maximum height from the ListCellRenderer.
+     *       to search the maximum height from the ListCellRenderer.
      * <tr>
      *   <td>JList.HORIZONTAL_WRAP
      *   <td>If the visible row count is greater than zero, the preferredHeight
@@ -563,7 +563,7 @@ public class BasicListUI extends ListUI
      *       model size / number of columns * maximum cell height.
      *       Max cell height is either the fixed
      *       cell height, or is determined by iterating through all the cells
-     *       to find the maximum height from the ListCellRenderer.
+     *       to search the maximum height from the ListCellRenderer.
      * </table>
      * The above specifies the raw preferred width and height. The resulting
      * preferred width is the above width + insets.left + insets.right and

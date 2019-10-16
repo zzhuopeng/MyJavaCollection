@@ -112,7 +112,7 @@ public class StringToStringTableVector
   }
 
   /**
-   * Given a string, find the last added occurance value
+   * Given a string, search the last added occurance value
    * that matches the key.
    *
    * @param key String to look up
@@ -135,7 +135,7 @@ public class StringToStringTableVector
   }
 
   /**
-   * Given a string, find out if there is a value in this table
+   * Given a string, search out if there is a value in this table
    * that matches the key.
    *
    * @param key String to look for
@@ -171,7 +171,7 @@ public class StringToStringTableVector
   /**
    * Get the nth element.
    *
-   * @param i Index of element to find
+   * @param i Index of element to search
    *
    * @return The StringToStringTable object at the given index
    */
@@ -183,7 +183,7 @@ public class StringToStringTableVector
   /**
    * Tell if the table contains the given StringToStringTable.
    *
-   * @param s The StringToStringTable to find
+   * @param s The StringToStringTable to search
    *
    * @return True if the StringToStringTable is found
    */

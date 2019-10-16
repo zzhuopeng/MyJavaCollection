@@ -151,7 +151,7 @@ public class BasicTableHeaderUI extends TableHeaderUI {
 
             Point p = e.getPoint();
 
-            // First find which header cell was hit
+            // First search which header cell was hit
             TableColumnModel columnModel = header.getColumnModel();
             int index = header.columnAtPoint(p);
 

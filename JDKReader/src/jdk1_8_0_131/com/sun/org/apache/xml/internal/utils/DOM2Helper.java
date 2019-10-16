@@ -253,7 +253,7 @@ public class DOM2Helper extends DOMHelper
    * Get the XPath-model parent of a node.  This version takes advantage
    * of the DOM Level 2 Attr.ownerElement() method; the base version we
    * would otherwise inherit is prepared to fall back on exhaustively
-   * walking the document to find an Attr's parent.
+   * walking the document to search an Attr's parent.
    *
    * @param node Node to be examined
    *

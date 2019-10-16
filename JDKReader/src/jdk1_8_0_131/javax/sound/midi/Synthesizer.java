@@ -242,7 +242,7 @@ public interface Synthesizer extends MidiDevice {
      * instruments might be built into the synthesizer, or they might be
      * part of a default soundbank provided with the synthesizer, etc.
      * <p>
-     * Note that you don't use this method  to find out which instruments are
+     * Note that you don't use this method  to search out which instruments are
      * currently loaded onto the synthesizer; for that purpose, you use
      * <code>getLoadedInstruments()</code>.
      * Nor does the method indicate all the instruments that can be loaded onto

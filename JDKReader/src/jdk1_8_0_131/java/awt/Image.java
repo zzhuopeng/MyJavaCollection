@@ -266,7 +266,7 @@ public abstract class Image {
      * Returns an ImageCapabilities object which can be
      * inquired as to the capabilities of this
      * Image on the specified GraphicsConfiguration.
-     * This allows programmers to find
+     * This allows programmers to search
      * out more runtime information on the specific Image
      * object that they have created.  For example, the user
      * might create a BufferedImage but the system may have

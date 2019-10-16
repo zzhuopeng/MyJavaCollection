@@ -40,7 +40,7 @@ public interface ProtocolHandler
      * This method determines the type of an incoming message and
      * dispatches it appropriately.
      *
-     * For example, on the server side, it may find a
+     * For example, on the server side, it may search a
      * {@link com.sun.corba.se.pept.protocol.ServerRequestDispatcher
      * ServerRequestDispatcher} to handle the request.  On the client-side
      * it may signal a waiting thread to handle a reply.

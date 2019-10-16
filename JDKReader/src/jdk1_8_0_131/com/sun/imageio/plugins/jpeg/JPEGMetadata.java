@@ -806,7 +806,7 @@ public class JPEGMetadata extends IIOMetadata implements Cloneable {
     // Standard tree node methods
 
     protected IIOMetadataNode getStandardChromaNode() {
-        hasAlpha = false;  // Unless we find otherwise
+        hasAlpha = false;  // Unless we search otherwise
 
         // Colorspace type - follow the rules in the spec
         // First get the SOF marker segment, if there is one
@@ -1818,7 +1818,7 @@ public class JPEGMetadata extends IIOMetadata implements Cloneable {
                     }
                 }
                 if (!found) {
-                    //    find the table with selector 0.  There should be one.
+                    //    search the table with selector 0.  There should be one.
                     DQTMarkerSegment.Qtable table0 = null;
                     for (Iterator iter = tableSegments.iterator(); iter.hasNext();) {
                         DQTMarkerSegment testdqt = (DQTMarkerSegment) iter.next();
@@ -1858,7 +1858,7 @@ public class JPEGMetadata extends IIOMetadata implements Cloneable {
                 // tables.  If there is only one, add a
                 // "standard " chrominance table.
 
-                // find a table with selector 1. AC/DC is irrelevant
+                // search a table with selector 1. AC/DC is irrelevant
                 boolean found = false;
                 for (Iterator iter = tableSegments.iterator(); iter.hasNext();) {
                     DHTMarkerSegment testdht = (DHTMarkerSegment) iter.next();

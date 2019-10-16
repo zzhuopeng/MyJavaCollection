@@ -662,10 +662,10 @@ class SynthParser extends DefaultHandler {
                               getField(typeName.substring(classIndex)).
                               get(typeClass), ColorType.class));
                     } catch (NoSuchFieldException nsfe) {
-                        throw new SAXException("Unable to find color type: " +
+                        throw new SAXException("Unable to search color type: " +
                                                typeName);
                     } catch (IllegalAccessException iae) {
-                        throw new SAXException("Unable to find color type: " +
+                        throw new SAXException("Unable to search color type: " +
                                                typeName);
                     }
                 }

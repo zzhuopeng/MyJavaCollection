@@ -239,7 +239,7 @@ public class NamedNodeMapImpl
             previous = (NodeImpl) nodes.get(i);
             nodes.set(i, arg);
         } else {
-            // If we can't find by namespaceURI, localName, then we find by
+            // If we can't search by namespaceURI, localName, then we search by
             // nodeName so we know where to insert.
             i = findNamePoint(arg.getNodeName(),0);
             if (i >= 0) {
@@ -554,7 +554,7 @@ public class NamedNodeMapImpl
             nodes.set(i, arg);
         }
         else {
-            // If we can't find by namespaceURI, localName, then we find by
+            // If we can't search by namespaceURI, localName, then we search by
             // nodeName so we know where to insert.
             i = findNamePoint(arg.getNodeName(),0);
             if (i >= 0) {

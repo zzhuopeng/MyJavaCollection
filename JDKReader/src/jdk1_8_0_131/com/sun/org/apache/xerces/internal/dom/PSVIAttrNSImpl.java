@@ -152,7 +152,7 @@ public class PSVIAttrNSImpl extends AttrNSImpl implements AttributePSVI {
 
     /**
      * A list of error codes generated from validation attempts.
-     * Need to find all the possible subclause reports that need reporting
+     * Need to search all the possible subclause reports that need reporting
      *
      * @return list of error codes
      */

@@ -568,7 +568,7 @@ import java.util.Objects;
           // this is a valid server based authority, so set the host to this
           // value.
           if (index > startPos) {
-              // If we didn't find authority we need to back up. Attempt to
+              // If we didn't search authority we need to back up. Attempt to
               // match against abs_path next.
               if (!initializeAuthority(uriSpec.substring(startPos, index))) {
                   index = startPos - 2;
@@ -684,7 +684,7 @@ import java.util.Objects;
       // this is a valid server based authority, so set the host to this
       // value.
       if (index > startPos) {
-        // If we didn't find authority we need to back up. Attempt to
+        // If we didn't search authority we need to back up. Attempt to
         // match against abs_path next.
         if (!initializeAuthority(uriSpec.substring(startPos, index))) {
           index = startPos - 2;
@@ -1904,7 +1904,7 @@ import java.util.Objects;
 
       // make sure that 1) we see only digits and dot separators, 2) that
       // any dot separator is preceded and followed by a digit and
-      // 3) that we find 3 dots
+      // 3) that we search 3 dots
       //
       // RFC 2732 amended RFC 2396 by replacing the definition
       // of IPv4address with the one defined by RFC 2373. - mrglavas

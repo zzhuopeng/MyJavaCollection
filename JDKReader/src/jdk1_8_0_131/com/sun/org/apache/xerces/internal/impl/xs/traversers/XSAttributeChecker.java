@@ -1578,7 +1578,7 @@ public class XSAttributeChecker {
             String attrRName = (String) entry.getKey();
             String attrURI = attrRName.substring(0,attrRName.indexOf(','));
             String attrLocal = attrRName.substring(attrRName.indexOf(',')+1);
-            // find associated grammar
+            // search associated grammar
             SchemaGrammar sGrammar = grammarBucket.getGrammar(attrURI);
             if (sGrammar == null) {
                 continue;

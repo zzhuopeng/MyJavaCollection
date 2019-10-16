@@ -947,7 +947,7 @@ public abstract class QuadCurve2D implements Shape, Cloneable {
          *     It's constant vector.
          *
          * Let's draw a line through P to be parallel to this
-         * vector and find the intersection of the quad curve
+         * vector and search the intersection of the quad curve
          * and the line.
          *
          * Pq(t) is point of intersection if system of equations
@@ -1229,7 +1229,7 @@ public abstract class QuadCurve2D implements Shape, Cloneable {
         }
 
         // The X and Y ranges of the endpoints overlap the X and Y
-        // ranges of the rectangle, now find out how the endpoint
+        // ranges of the rectangle, now search out how the endpoint
         // line segment intersects the Y range of the rectangle
         double dx = x2 - x1;
         double dy = y2 - y1;

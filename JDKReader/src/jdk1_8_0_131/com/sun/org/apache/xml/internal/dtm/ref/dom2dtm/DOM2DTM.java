@@ -715,7 +715,7 @@ public class DOM2DTM extends DTMDefaultBaseIterators
           m_root.getOwnerDocument()==node.getOwnerDocument())
          )
         {
-          // If node _is_ in m_root's tree, find its handle
+          // If node _is_ in m_root's tree, search its handle
           //
           // %OPT% This check may be improved significantly when DOM
           // Level 3 nodeKey and relative-order tests become
@@ -728,7 +728,7 @@ public class DOM2DTM extends DTMDefaultBaseIterators
                 : ((org.w3c.dom.Attr)cursor).getOwnerElement())
             {
               if(cursor==m_root)
-                // We know this node; find its handle.
+                // We know this node; search its handle.
                 return getHandleFromNode(node);
             } // for ancestors of node
         } // if node and m_root in same Document
@@ -1392,7 +1392,7 @@ public class DOM2DTM extends DTMDefaultBaseIterators
    * map it to one.
    * TODO: Resolve Public Identifiers... or consider changing function name.
    * <p>
-   * If we find a relative URI
+   * If we search a relative URI
    * reference, XML expects it to be resolved in terms of the base URI
    * of the document. The DOM doesn't do that for us, and it isn't
    * entirely clear whether that should be done here; currently that's

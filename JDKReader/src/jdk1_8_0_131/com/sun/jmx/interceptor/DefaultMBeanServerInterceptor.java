@@ -1153,7 +1153,7 @@ public class DefaultMBeanServerInterceptor implements MBeanServerInterceptor {
      *
      * We cannot use simpler solutions such as always creating a new
      * wrapper or always registering the same listener with the MBean
-     * and using the handback to find the client's original listener.
+     * and using the handback to search the client's original listener.
      * The reason is that we need to support the removeListener
      * variant that removes all (listener,filter,handback) triples on
      * a broadcaster that have a given listener.  And we do not have

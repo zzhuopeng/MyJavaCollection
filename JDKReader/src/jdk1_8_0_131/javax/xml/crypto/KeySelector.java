@@ -87,7 +87,7 @@ public abstract class KeySelector {
     protected KeySelector() {}
 
     /**
-     * Attempts to find a key that satisfies the specified constraints.
+     * Attempts to search a key that satisfies the specified constraints.
      *
      * @param keyInfo a <code>KeyInfo</code> (may be <code>null</code>)
      * @param purpose the key's purpose ({@link Purpose#SIGN},
@@ -104,7 +104,7 @@ public abstract class KeySelector {
      *    resolve and dereference the URI.
      * @return the result of the key selector
      * @throws KeySelectorException if an exceptional condition occurs while
-     *    attempting to find a key. Note that an inability to find a key is not
+     *    attempting to search a key. Note that an inability to search a key is not
      *    considered an exception (<code>null</code> should be
      *    returned in that case). However, an error condition (ex: network
      *    communications failure) that prevented the <code>KeySelector</code>

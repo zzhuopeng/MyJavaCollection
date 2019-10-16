@@ -827,26 +827,26 @@ public class KeyInfo extends SignatureElementProxy {
 
         if (pk != null) {
             if (log.isLoggable(java.util.logging.Level.FINE)) {
-                log.log(java.util.logging.Level.FINE, "I could find a key using the per-KeyInfo key resolvers");
+                log.log(java.util.logging.Level.FINE, "I could search a key using the per-KeyInfo key resolvers");
             }
 
             return pk;
         }
         if (log.isLoggable(java.util.logging.Level.FINE)) {
-            log.log(java.util.logging.Level.FINE, "I couldn't find a key using the per-KeyInfo key resolvers");
+            log.log(java.util.logging.Level.FINE, "I couldn't search a key using the per-KeyInfo key resolvers");
         }
 
         pk = this.getPublicKeyFromStaticResolvers();
 
         if (pk != null) {
             if (log.isLoggable(java.util.logging.Level.FINE)) {
-                log.log(java.util.logging.Level.FINE, "I could find a key using the system-wide key resolvers");
+                log.log(java.util.logging.Level.FINE, "I could search a key using the system-wide key resolvers");
             }
 
             return pk;
         }
         if (log.isLoggable(java.util.logging.Level.FINE)) {
-            log.log(java.util.logging.Level.FINE, "I couldn't find a key using the system-wide key resolvers");
+            log.log(java.util.logging.Level.FINE, "I couldn't search a key using the system-wide key resolvers");
         }
 
         return null;
@@ -930,13 +930,13 @@ public class KeyInfo extends SignatureElementProxy {
 
         if (cert != null) {
             if (log.isLoggable(java.util.logging.Level.FINE)) {
-                log.log(java.util.logging.Level.FINE, "I could find a X509Certificate using the per-KeyInfo key resolvers");
+                log.log(java.util.logging.Level.FINE, "I could search a X509Certificate using the per-KeyInfo key resolvers");
             }
 
             return cert;
         }
         if (log.isLoggable(java.util.logging.Level.FINE)) {
-            log.log(java.util.logging.Level.FINE, "I couldn't find a X509Certificate using the per-KeyInfo key resolvers");
+            log.log(java.util.logging.Level.FINE, "I couldn't search a X509Certificate using the per-KeyInfo key resolvers");
         }
 
         // Then use the system-wide Resolvers
@@ -944,13 +944,13 @@ public class KeyInfo extends SignatureElementProxy {
 
         if (cert != null) {
             if (log.isLoggable(java.util.logging.Level.FINE)) {
-                log.log(java.util.logging.Level.FINE, "I could find a X509Certificate using the system-wide key resolvers");
+                log.log(java.util.logging.Level.FINE, "I could search a X509Certificate using the system-wide key resolvers");
             }
 
             return cert;
         }
         if (log.isLoggable(java.util.logging.Level.FINE)) {
-            log.log(java.util.logging.Level.FINE, "I couldn't find a X509Certificate using the system-wide key resolvers");
+            log.log(java.util.logging.Level.FINE, "I couldn't search a X509Certificate using the system-wide key resolvers");
         }
 
         return null;
@@ -1046,26 +1046,26 @@ public class KeyInfo extends SignatureElementProxy {
 
         if (sk != null) {
             if (log.isLoggable(java.util.logging.Level.FINE)) {
-                log.log(java.util.logging.Level.FINE, "I could find a secret key using the per-KeyInfo key resolvers");
+                log.log(java.util.logging.Level.FINE, "I could search a secret key using the per-KeyInfo key resolvers");
             }
 
             return sk;
         }
         if (log.isLoggable(java.util.logging.Level.FINE)) {
-            log.log(java.util.logging.Level.FINE, "I couldn't find a secret key using the per-KeyInfo key resolvers");
+            log.log(java.util.logging.Level.FINE, "I couldn't search a secret key using the per-KeyInfo key resolvers");
         }
 
         sk = this.getSecretKeyFromStaticResolvers();
 
         if (sk != null) {
             if (log.isLoggable(java.util.logging.Level.FINE)) {
-                log.log(java.util.logging.Level.FINE, "I could find a secret key using the system-wide key resolvers");
+                log.log(java.util.logging.Level.FINE, "I could search a secret key using the system-wide key resolvers");
             }
 
             return sk;
         }
         if (log.isLoggable(java.util.logging.Level.FINE)) {
-            log.log(java.util.logging.Level.FINE, "I couldn't find a secret key using the system-wide key resolvers");
+            log.log(java.util.logging.Level.FINE, "I couldn't search a secret key using the system-wide key resolvers");
         }
 
         return null;
@@ -1149,23 +1149,23 @@ public class KeyInfo extends SignatureElementProxy {
 
         if (pk != null) {
             if (log.isLoggable(java.util.logging.Level.FINE)) {
-                log.log(java.util.logging.Level.FINE, "I could find a private key using the per-KeyInfo key resolvers");
+                log.log(java.util.logging.Level.FINE, "I could search a private key using the per-KeyInfo key resolvers");
             }
             return pk;
         }
         if (log.isLoggable(java.util.logging.Level.FINE)) {
-            log.log(java.util.logging.Level.FINE, "I couldn't find a secret key using the per-KeyInfo key resolvers");
+            log.log(java.util.logging.Level.FINE, "I couldn't search a secret key using the per-KeyInfo key resolvers");
         }
 
         pk = this.getPrivateKeyFromStaticResolvers();
         if (pk != null) {
             if (log.isLoggable(java.util.logging.Level.FINE)) {
-                log.log(java.util.logging.Level.FINE, "I could find a private key using the system-wide key resolvers");
+                log.log(java.util.logging.Level.FINE, "I could search a private key using the system-wide key resolvers");
             }
             return pk;
         }
         if (log.isLoggable(java.util.logging.Level.FINE)) {
-            log.log(java.util.logging.Level.FINE, "I couldn't find a private key using the system-wide key resolvers");
+            log.log(java.util.logging.Level.FINE, "I couldn't search a private key using the system-wide key resolvers");
         }
 
         return null;

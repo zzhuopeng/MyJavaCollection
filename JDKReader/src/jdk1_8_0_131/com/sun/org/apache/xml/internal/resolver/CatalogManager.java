@@ -253,7 +253,7 @@ public class CatalogManager {
         CatalogManager.class.getResourceAsStream("/"+propertyFile);
       if (in==null) {
         if (!ignoreMissingProperties) {
-          System.err.println("Cannot find "+propertyFile);
+          System.err.println("Cannot search "+propertyFile);
           // there's no reason to give this warning more than once
           ignoreMissingProperties = true;
         }

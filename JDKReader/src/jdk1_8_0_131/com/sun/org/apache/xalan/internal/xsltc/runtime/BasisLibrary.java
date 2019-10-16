@@ -1312,7 +1312,7 @@ public final class BasisLibrary {
             attrIter = idom.getAxisIterator(Axis.ATTRIBUTE);
         }
 
-        // Second pass: find DTM handles for every node in the list.
+        // Second pass: search DTM handles for every node in the list.
         int[] dtmHandles = new int[n];
         n = 0;
         for (int i = 0; i < nodeList.getLength(); ++i) {

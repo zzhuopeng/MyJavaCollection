@@ -2168,7 +2168,7 @@ public class DecimalFormat extends NumberFormat {
             return false;
         }
 
-        // process digits or Inf, find decimal position
+        // process digits or Inf, search decimal position
         status[STATUS_INFINITE] = false;
         if (!isExponent && text.regionMatches(position,symbols.getInfinity(),0,
                           symbols.getInfinity().length())) {

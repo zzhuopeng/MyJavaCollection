@@ -865,7 +865,7 @@ public final class Scanner implements Iterator<String>, Closeable {
     }
 
     // Returns true if a complete token or partial token is in the buffer.
-    // It is not necessary to find a complete token since a partial token
+    // It is not necessary to search a complete token since a partial token
     // means that there will be another token with or without more input.
     private boolean hasTokenInBuffer() {
         matchValid = false;
@@ -895,7 +895,7 @@ public final class Scanner implements Iterator<String>, Closeable {
      *
      * Triple return:
      * 1. valid string means it was found
-     * 2. null with needInput=false means we won't ever find it
+     * 2. null with needInput=false means we won't ever search it
      * 3. null with needInput=true means try again after readInput
      */
     private String getCompleteTokenInBuffer(Pattern pattern) {
@@ -927,7 +927,7 @@ public final class Scanner implements Iterator<String>, Closeable {
         }
 
         // Must look for next delims. Simply attempting to match the
-        // pattern at this point may find a match but it might not be
+        // pattern at this point may search a match but it might not be
         // the first longest match because of missing input, or it might
         // match a partial token instead of the whole thing.
 
@@ -935,7 +935,7 @@ public final class Scanner implements Iterator<String>, Closeable {
         matcher.region(position, buf.limit());
         boolean foundNextDelim = matcher.find();
         if (foundNextDelim && (matcher.end() == position)) {
-            // Zero length delimiter match; we should find the next one
+            // Zero length delimiter match; we should search the next one
             // using the automatic advance past a zero length match;
             // Otherwise we have just found the same one we just skipped
             foundNextDelim = matcher.find();
@@ -969,7 +969,7 @@ public final class Scanner implements Iterator<String>, Closeable {
             }
         }
 
-        // If we can't find the next delims but no more input is coming,
+        // If we can't search the next delims but no more input is coming,
         // then we can treat the remainder as a whole token
         if (sourceClosed) {
             if (pattern == null) {
@@ -1059,7 +1059,7 @@ public final class Scanner implements Iterator<String>, Closeable {
         if (sourceClosed)
             return null;
 
-        // Read more to find pattern
+        // Read more to search pattern
         needInput = true;
         return null;
     }
@@ -1466,7 +1466,7 @@ public final class Scanner implements Iterator<String>, Closeable {
         if (pattern == null)
             throw new NullPointerException();
 
-        // Did we already find this pattern?
+        // Did we already search this pattern?
         if (hasNextPattern == pattern)
             return getCachedResult();
         clearCaches();
@@ -1551,7 +1551,7 @@ public final class Scanner implements Iterator<String>, Closeable {
     // Public methods that ignore delimiters
 
     /**
-     * Attempts to find the next occurrence of a pattern constructed from the
+     * Attempts to search the next occurrence of a pattern constructed from the
      * specified string, ignoring delimiters.
      *
      * <p>An invocation of this method of the form <tt>findInLine(pattern)</tt>
@@ -1567,7 +1567,7 @@ public final class Scanner implements Iterator<String>, Closeable {
     }
 
     /**
-     * Attempts to find the next occurrence of the specified pattern ignoring
+     * Attempts to search the next occurrence of the specified pattern ignoring
      * delimiters. If the pattern is found before the next line separator, the
      * scanner advances past the input that matched and returns the string that
      * matched the pattern.
@@ -1617,7 +1617,7 @@ public final class Scanner implements Iterator<String>, Closeable {
     }
 
     /**
-     * Attempts to find the next occurrence of a pattern constructed from the
+     * Attempts to search the next occurrence of a pattern constructed from the
      * specified string, ignoring delimiters.
      *
      * <p>An invocation of this method of the form
@@ -1636,7 +1636,7 @@ public final class Scanner implements Iterator<String>, Closeable {
     }
 
     /**
-     * Attempts to find the next occurrence of the specified pattern.
+     * Attempts to search the next occurrence of the specified pattern.
      *
      * <p>This method searches through the input up to the specified
      * search horizon, ignoring delimiters. If the pattern is found the

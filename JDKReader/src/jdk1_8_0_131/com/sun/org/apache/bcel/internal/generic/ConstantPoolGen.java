@@ -522,7 +522,7 @@ public class ConstantPoolGen implements java.io.Serializable {
   /**
    * Look for ConstantMethodref in ConstantPool.
    *
-   * @param class_name Where to find method
+   * @param class_name Where to search method
    * @param method_name Guess what
    * @param signature return and argument types
    * @return index on success, -1 otherwise
@@ -572,7 +572,7 @@ public class ConstantPoolGen implements java.io.Serializable {
   /**
    * Look for ConstantInterfaceMethodref in ConstantPool.
    *
-   * @param class_name Where to find method
+   * @param class_name Where to search method
    * @param method_name Guess what
    * @param signature return and argument types
    * @return index on success, -1 otherwise
@@ -622,7 +622,7 @@ public class ConstantPoolGen implements java.io.Serializable {
   /**
    * Look for ConstantFieldref in ConstantPool.
    *
-   * @param class_name Where to find method
+   * @param class_name Where to search method
    * @param field_name Guess what
    * @param signature return and argument types
    * @return index on success, -1 otherwise

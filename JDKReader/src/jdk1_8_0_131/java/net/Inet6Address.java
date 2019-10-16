@@ -167,7 +167,7 @@ import java.util.Arrays;
  *
  * <p> Note also, that the numeric <i>scope_id</i> can be retrieved from
  * Inet6Address instances returned from the NetworkInterface class. This can be
- * used to find out the current scope ids configured on the system.
+ * used to search out the current scope ids configured on the system.
  * @since 1.4
  */
 

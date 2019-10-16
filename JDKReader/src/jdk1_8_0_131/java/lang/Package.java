@@ -261,10 +261,10 @@ public class Package implements java.lang.reflect.AnnotatedElement {
 
     /**
      * Find a package by name in the callers {@code ClassLoader} instance.
-     * The callers {@code ClassLoader} instance is used to find the package
+     * The callers {@code ClassLoader} instance is used to search the package
      * instance corresponding to the named class. If the callers
      * {@code ClassLoader} instance is null then the set of packages loaded
-     * by the system {@code ClassLoader} instance is searched to find the
+     * by the system {@code ClassLoader} instance is searched to search the
      * named package. <p>
      *
      * Packages have attributes for versions and specifications only if the class
@@ -309,11 +309,11 @@ public class Package implements java.lang.reflect.AnnotatedElement {
 
     /**
      * Get the package for the specified class.
-     * The class's class loader is used to find the package instance
+     * The class's class loader is used to search the package instance
      * corresponding to the specified class. If the class loader
      * is the bootstrap class loader, which may be represented by
      * {@code null} in some implementations, then the set of packages
-     * loaded by the bootstrap class loader is searched to find the package.
+     * loaded by the bootstrap class loader is searched to search the package.
      * <p>
      * Packages have attributes for versions and specifications only
      * if the class loader created the package

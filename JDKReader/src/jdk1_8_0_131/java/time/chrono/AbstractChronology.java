@@ -199,7 +199,7 @@ public abstract class AbstractChronology implements Chronology {
 
     /**
      * Initialization of the maps from id and type to Chronology.
-     * The ServiceLoader is used to find and register any implementations
+     * The ServiceLoader is used to search and register any implementations
      * of {@link java.time.chrono.AbstractChronology} found in the bootclass loader.
      * The built-in chronologies are registered explicitly.
      * Calendars configured via the Thread's context classloader are local

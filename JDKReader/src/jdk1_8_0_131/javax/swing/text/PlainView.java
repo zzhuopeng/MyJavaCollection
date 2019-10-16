@@ -606,7 +606,7 @@ public class PlainView extends View implements TabExpander {
      * Determine the rectangle that represents the given line.
      *
      * @param a  the region allocated for the view to render into
-     * @param line the line number to find the region of.  This must
+     * @param line the line number to search the region of.  This must
      *   be a valid line number in the model.
      * @since 1.4
      */

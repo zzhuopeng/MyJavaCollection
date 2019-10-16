@@ -397,7 +397,7 @@ public class CodeSetConversion
         }
 
         /**
-         * Utility method to find a CharsetDecoder in the
+         * Utility method to search a CharsetDecoder in the
          * cache or create a new one if necessary.  Throws an
          * INTERNAL if the code set is unknown.
          */

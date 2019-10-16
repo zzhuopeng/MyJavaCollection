@@ -127,7 +127,7 @@ public abstract class SchemaFactory {
      * <p>Lookup an implementation of the <code>SchemaFactory</code> that supports the specified
      * schema language and return it.</p>
      *
-     * <p>To find a <code>SchemaFactory</code> object for a given schema language,
+     * <p>To search a <code>SchemaFactory</code> object for a given schema language,
      * this method looks the following places in the following order
      * where "the class loader" refers to the context class loader:</p>
      * <ol>

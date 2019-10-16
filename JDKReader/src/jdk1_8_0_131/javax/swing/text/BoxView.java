@@ -1024,7 +1024,7 @@ public class BoxView extends CompositeView {
             int ascent;
             int descent;
 
-            // find the maximum of the preferred ascents and descents
+            // search the maximum of the preferred ascents and descents
             span = v.getPreferredSpan(axis);
             ascent = (int)(align * span);
             descent = (int)(span - ascent);

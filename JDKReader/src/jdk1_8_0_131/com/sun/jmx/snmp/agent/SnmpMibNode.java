@@ -288,13 +288,13 @@ public abstract class SnmpMibNode implements Serializable {
 
             // loop through the array until indices cross
             while( lo <= hi ) {
-                /* find the first element that is greater than or equal to
+                /* search the first element that is greater than or equal to
                  * the partition element starting from the left Index.
                  */
                 while( ( lo < hi0 )  && ( a[lo] < mid ))
                     ++lo;
 
-                /* find an element that is smaller than or equal to
+                /* search an element that is smaller than or equal to
                  * the partition element starting from the right Index.
                  */
                 while( ( hi > lo0 ) && ( a[hi] > mid ))

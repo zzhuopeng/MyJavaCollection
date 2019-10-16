@@ -289,7 +289,7 @@ final class DateTimePrintContext {
      * <p>
      * This will return the value for the specified field.
      *
-     * @param field  the field to find, not null
+     * @param field  the field to search, not null
      * @return the value, null if not found and optional is true
      * @throws DateTimeException if the field is not available and the section is not optional
      */

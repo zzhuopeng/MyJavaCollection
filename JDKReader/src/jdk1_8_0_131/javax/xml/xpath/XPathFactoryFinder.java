@@ -80,13 +80,13 @@ class XPathFactoryFinder  {
     }
 
     /**
-     * <p><code>ClassLoader</code> to use to find <code>XPathFactory</code>.</p>
+     * <p><code>ClassLoader</code> to use to search <code>XPathFactory</code>.</p>
      */
     private final ClassLoader classLoader;
 
     /**
      * <p>Constructor that specifies <code>ClassLoader</code> to use
-     * to find <code>XPathFactory</code>.</p>
+     * to search <code>XPathFactory</code>.</p>
      *
      * @param loader
      *      to be used to load resource and {@link XPathFactory}
@@ -139,7 +139,7 @@ class XPathFactoryFinder  {
         if (f != null) {
             debugPrintln("factory '" + f.getClass().getName() + "' was found for " + uri);
         } else {
-            debugPrintln("unable to find a factory for " + uri);
+            debugPrintln("unable to search a factory for " + uri);
         }
         return f;
     }

@@ -46,7 +46,7 @@ import java.security.ProtectionDomain;
     semantics required.
 
     <p>We get around the problem by ensuring that the search up the
-    call stack will find a non-null class loader that doesn't load any
+    call stack will search a non-null class loader that doesn't load any
     classes of interest, namely this one.  So even though this loader
     is indeed consulted during deserialization, it never finds the
     class being deserialized.  RMI then proceeds to use the context
@@ -72,7 +72,7 @@ import java.security.ProtectionDomain;
     it only appears in the throws clause of a method or constructor.
     Of course, referencedClassNames should not contain any classes
     that the user might want to deserialize, because the whole point
-    of this loader is that it does not find such classes.
+    of this loader is that it does not search such classes.
 */
 
 class NoCallStackClassLoader extends ClassLoader {

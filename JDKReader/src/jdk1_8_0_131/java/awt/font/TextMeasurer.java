@@ -140,7 +140,7 @@ public final class TextMeasurer implements Cloneable {
 
     private boolean haveLayoutWindow;
 
-    // used to find valid starting points for line components
+    // used to search valid starting points for line components
     private BreakIterator fLineBreak = null;
     private CharArrayIterator charIter = null;
     int layoutCount = 0;

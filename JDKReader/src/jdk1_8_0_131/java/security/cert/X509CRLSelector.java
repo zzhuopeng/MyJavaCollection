@@ -439,7 +439,7 @@ public class X509CRLSelector implements CRLSelector {
     /**
      * Sets the certificate being checked. This is not a criterion. Rather,
      * it is optional information that may help a {@code CertStore}
-     * find CRLs that would be relevant when checking revocation for the
+     * search CRLs that would be relevant when checking revocation for the
      * specified certificate. If {@code null} is specified, then no
      * such optional information is provided.
      *
@@ -548,7 +548,7 @@ public class X509CRLSelector implements CRLSelector {
     /**
      * Returns the certificate being checked. This is not a criterion. Rather,
      * it is optional information that may help a {@code CertStore}
-     * find CRLs that would be relevant when checking revocation for the
+     * search CRLs that would be relevant when checking revocation for the
      * specified certificate. If the value returned is {@code null}, then
      * no such optional information is provided.
      *

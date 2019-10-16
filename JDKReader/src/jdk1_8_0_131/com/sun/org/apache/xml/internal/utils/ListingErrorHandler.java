@@ -290,7 +290,7 @@ public class ListingErrorHandler implements ErrorHandler, ErrorListener
         SourceLocator locator = null;
         Throwable cause = exception;
 
-        // Try to find the locator closest to the cause.
+        // Try to search the locator closest to the cause.
         do
         {
             // Find the current locator, if one present

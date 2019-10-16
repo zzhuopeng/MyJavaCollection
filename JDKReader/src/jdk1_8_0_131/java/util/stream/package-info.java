@@ -58,7 +58,7 @@
  *     collection.</li>
  *     <li>Laziness-seeking.  Many stream operations, such as filtering, mapping,
  *     or duplicate removal, can be implemented lazily, exposing opportunities
- *     for optimization.  For example, "find the first {@code String} with
+ *     for optimization.  For example, "search the first {@code String} with
  *     three consecutive vowels" need not examine all the input strings.
  *     Stream operations are divided into intermediate ({@code Stream}-producing)
  *     operations and terminal (value- or side-effect-producing) operations.
@@ -128,9 +128,9 @@
  * pipeline such as the filter-map-sum example above, filtering, mapping, and
  * summing can be fused into a single pass on the data, with minimal
  * intermediate state. Laziness also allows avoiding examining all the data
- * when it is not necessary; for operations such as "find the first string
+ * when it is not necessary; for operations such as "search the first string
  * longer than 1000 characters", it is only necessary to examine just enough
- * strings to find one that has the desired characteristics without examining
+ * strings to search one that has the desired characteristics without examining
  * all of the strings available from the source. (This behavior becomes even
  * more important when the input stream is infinite and not merely large.)
  *
@@ -399,7 +399,7 @@
  * parallelizable, so long as the function(s) used to process the elements
  * are <a href="package-summary.html#Associativity">associative</a> and
  * <a href="package-summary.html#NonInterfering">stateless</a>.
- * For example, given a stream of numbers for which we want to find the sum, we
+ * For example, given a stream of numbers for which we want to search the sum, we
  * can write:
  * <pre>{@code
  *    int sum = numbers.stream().reduce(0, (x,y) -> x+y);
@@ -430,7 +430,7 @@
  * <p>The "widgets" examples shown earlier shows how reduction combines with
  * other operations to replace for loops with bulk operations.  If {@code widgets}
  * is a collection of {@code Widget} objects, which have a {@code getWeight} method,
- * we can find the heaviest widget with:
+ * we can search the heaviest widget with:
  * <pre>{@code
  *     OptionalInt heaviest = widgets.parallelStream()
  *                                   .mapToInt(Widget::getWeight)

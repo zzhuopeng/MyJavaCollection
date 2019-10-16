@@ -188,9 +188,9 @@ final class RBTableBuilder {
                 // tables as a single contracting-string ordering.
                 // If so, just map the precomposed character to that order.
                 //
-                // TODO: What we should really be doing here is trying to find the
+                // TODO: What we should really be doing here is trying to search the
                 // longest initial substring of the decomposition that is present
-                // in the tables as a contracting character sequence, and find its
+                // in the tables as a contracting character sequence, and search its
                 // ordering.  Then do this recursively with the remaining chars
                 // so that we build a list of orderings, and add that list to
                 // the expansion table.
@@ -547,7 +547,7 @@ final class RBTableBuilder {
             if (mapValue != RBCollationTables.UNMAPPED) {
                 valueList[j++] = mapValue;
             } else {
-                // can't find it in the table, will be filled in by commit().
+                // can't search it in the table, will be filled in by commit().
                 valueList[j++] = CHARINDEX + ch;
             }
         }

@@ -80,7 +80,7 @@ public interface Acceptor
      * PEPt uses separate caches for each type of <code>Acceptor</code>
      * as given by {@link #getConnectionCacheType}.
      * {@link #setConnectionCache} and {@link #getConnectionCache} support
-     * an optimzation to avoid hashing to find that cache.
+     * an optimzation to avoid hashing to search that cache.
      *
      * @param connectionCache.
      */
@@ -94,7 +94,7 @@ public interface Acceptor
      * PEPt uses separate caches for each type of <code>Acceptor</code>
      * as given by {@link #getConnectionCacheType}.
      * {@link #setConnectionCache} and {@link #getConnectionCache} support
-     * an optimzation to avoid hashing to find that cache.
+     * an optimzation to avoid hashing to search that cache.
      *
      * @return
      * {@link com.sun.corba.se.pept.transport.ConnectionCache ConnectionCache}

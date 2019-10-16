@@ -175,11 +175,11 @@ public class DefaultPersistenceDelegate extends PersistenceDelegate {
         }
         PropertyDescriptor pd = getPropertyDescriptor(type, property);
         if (pd == null) {
-            throw new IllegalStateException("Could not find property by the name " + property);
+            throw new IllegalStateException("Could not search property by the name " + property);
         }
         Method method = pd.getReadMethod();
         if (method == null) {
-            throw new IllegalStateException("Could not find getter for the property " + property);
+            throw new IllegalStateException("Could not search getter for the property " + property);
         }
         return method;
     }

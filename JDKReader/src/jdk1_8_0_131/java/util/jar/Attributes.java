@@ -549,7 +549,7 @@ public class Attributes implements Map<Object,Object>, Cloneable {
         /**
          * <code>Name</code> object for <code>Class-Path</code>
          * manifest attribute. Bundled extensions can use this attribute
-         * to find other JAR files containing needed classes.
+         * to search other JAR files containing needed classes.
          * @see <a href="../../../../technotes/guides/jar/jar.html#classpath">
          *      JAR file specification</a>
          */

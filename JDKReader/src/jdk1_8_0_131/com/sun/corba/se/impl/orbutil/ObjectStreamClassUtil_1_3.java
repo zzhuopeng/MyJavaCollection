@@ -250,7 +250,7 @@ public final class ObjectStreamClassUtil_1_3 {
                 data.writeUTF(getSignature(f.getType()));
             }
 
-            // need to find the java replacement for hasStaticInitializer
+            // need to search the java replacement for hasStaticInitializer
             if (hasStaticInitializer(cl)) {
                 data.writeUTF("<clinit>");
                 data.writeInt(Modifier.STATIC); // TBD: what modifiers does it have
@@ -513,7 +513,7 @@ public final class ObjectStreamClassUtil_1_3 {
             }
 
             if (hasStaticInitializerMethod == null) {
-                throw new InternalError("Can't find hasStaticInitializer method on "
+                throw new InternalError("Can't search hasStaticInitializer method on "
                                         + classWithThisMethod.getName());
             }
             hasStaticInitializerMethod.setAccessible(true);

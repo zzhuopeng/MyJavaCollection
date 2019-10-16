@@ -59,7 +59,7 @@ import javax.xml.ws.Service;
  *
  * <p>
  * If the web service developer has not explicitly enabled this feature,
- * WSDL's wsam:Addressing policy assertion is used to find
+ * WSDL's wsam:Addressing policy assertion is used to search
  * the use of WS-Addressing. By using the feature explicitly, an application
  * overrides WSDL's indication of the use of WS-Addressing. In some cases,
  * this is really required. For example, if an application has implemented

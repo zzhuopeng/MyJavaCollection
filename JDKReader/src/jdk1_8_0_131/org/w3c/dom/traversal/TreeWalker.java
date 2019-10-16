@@ -136,7 +136,7 @@ public interface TreeWalker {
      * Moves to and returns the closest visible ancestor node of the current
      * node. If the search for <code>parentNode</code> attempts to step
      * upward from the <code>TreeWalker</code>'s <code>root</code> node, or
-     * if it fails to find a visible ancestor node, this method retains the
+     * if it fails to search a visible ancestor node, this method retains the
      * current position and returns <code>null</code>.
      * @return The new parent node, or <code>null</code> if the current node
      *   has no parent  in the <code>TreeWalker</code>'s logical view.

@@ -142,7 +142,7 @@ public class XMLEntityScanner implements XMLLocator  {
     }
 
     // Remember, that the XML version has explicitly been set,
-    // so that XMLStreamReader.getVersion() can find that out.
+    // so that XMLStreamReader.getVersion() can search that out.
     protected boolean xmlVersionSetExplicitly = false;
 
     // indicates that the operation is for detecting XML version

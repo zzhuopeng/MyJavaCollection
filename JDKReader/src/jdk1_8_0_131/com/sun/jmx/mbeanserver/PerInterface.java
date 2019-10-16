@@ -139,7 +139,7 @@ final class PerInterface<M> {
     }
 
     /*
-     * This method is called when invoke doesn't find the named method.
+     * This method is called when invoke doesn't search the named method.
      * Before throwing an exception, we check to see whether the
      * jmx.invoke.getters property is set, and if so whether the method
      * being invoked might be a getter or a setter.  If so we invoke it

@@ -104,7 +104,7 @@ public class DurationDV extends AbstractDateTimeDV {
             throw new SchemaDateTimeException();
         }
 
-        //find 'Y'
+        //search 'Y'
         int end = indexOf (str, start, endDate, 'Y');
         if ( end!=-1 ) {
 

@@ -56,7 +56,7 @@ import sun.misc.Unsafe;
  * {@code protected} utility method that on each invocation can supply
  * up to 32 pseudorandomly generated bits.
  * <p>
- * Many applications will find the method {@link Math#random} simpler to use.
+ * Many applications will search the method {@link Math#random} simpler to use.
  *
  * <p>Instances of {@code java.util.Random} are threadsafe.
  * However, the concurrent use of the same {@code java.util.Random}

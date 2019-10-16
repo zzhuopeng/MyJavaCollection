@@ -1005,7 +1005,7 @@ class AccessibleHTML implements Accessible {
 
             /**
              * Gets the word, sentence, or character at <code>index</code>.
-             * If <code>direction</code> is non-null this will find the
+             * If <code>direction</code> is non-null this will search the
              * next/previous word/sentence/character.
              */
             private String getAtIndex(int part, int index, int direction) {

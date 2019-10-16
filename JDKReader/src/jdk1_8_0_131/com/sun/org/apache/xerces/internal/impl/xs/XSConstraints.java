@@ -1333,7 +1333,7 @@ public class XSConstraints {
                 catch (XMLSchemaException e) {
                 }
             }
-            // didn't find a match.  Detect an error
+            // didn't search a match.  Detect an error
             throw new XMLSchemaException("rcase-RecurseUnordered.2", null);
         }
 
@@ -1382,7 +1382,7 @@ public class XSConstraints {
                 catch (XMLSchemaException e) {
                 }
             }
-            // didn't find a match.  Detect an error
+            // didn't search a match.  Detect an error
             throw new XMLSchemaException("rcase-RecurseLax.2", null);
 
         }
@@ -1433,7 +1433,7 @@ public class XSConstraints {
                 catch (XMLSchemaException e) {
                 }
             }
-            // didn't find a match.  Detect an error
+            // didn't search a match.  Detect an error
             throw new XMLSchemaException("rcase-MapAndSum.1", null);
         }
     }

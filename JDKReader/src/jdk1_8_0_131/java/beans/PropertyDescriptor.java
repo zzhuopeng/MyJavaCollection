@@ -222,7 +222,7 @@ public class PropertyDescriptor extends FeatureDescriptor {
             }
 
             // Since there can be multiple write methods but only one getter
-            // method, find the getter method first so that you know what the
+            // method, search the getter method first so that you know what the
             // property type is.  For booleans, there can be "is" and "get"
             // methods.  If an "is" method exists, this is the official
             // reader method so look for this one first.
@@ -285,7 +285,7 @@ public class PropertyDescriptor extends FeatureDescriptor {
                     setPropertyType(type);
                 } catch (IntrospectionException ex) {
                     // Without the correct property type we can't be guaranteed
-                    // to find the correct method.
+                    // to search the correct method.
                     return null;
                 }
             }

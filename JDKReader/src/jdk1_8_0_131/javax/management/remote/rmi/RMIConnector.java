@@ -156,7 +156,7 @@ public class RMIConnector implements JMXConnector, Serializable, JMXAddressable 
      * <p>(Here, the square brackets <code>[]</code> are not part of the
      * address but indicate that the host and port are optional.)</p>
      *
-     * <p>The address can instead indicate where to find an RMI stub
+     * <p>The address can instead indicate where to search an RMI stub
      * through JNDI, using one of the following syntaxes:</p>
      *
      * <pre>
@@ -2056,9 +2056,9 @@ public class RMIConnector implements JMXConnector, Serializable, JMXAddressable 
        consult the first non-bootstrap class loader it finds in the
        call stack.  This can lead to behavior that is not portable
        between implementations of the JMX Remote API.  Notably, an
-       implementation on J2SE 1.4 will find the RMI stub's loader on
+       implementation on J2SE 1.4 will search the RMI stub's loader on
        the stack.  But in J2SE 5, this stub is loaded by the
-       bootstrap loader, so RMI will find the loader of the user code
+       bootstrap loader, so RMI will search the loader of the user code
        that called an MBeanServerConnection method.
 
        To avoid this problem, we take advantage of what the RMI stub

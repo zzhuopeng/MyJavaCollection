@@ -94,7 +94,7 @@ public class PropertyEditorManager {
      * Gets the package names that will be searched for property editors.
      *
      * @return  The array of package names that will be searched in
-     *          order to find property editors.
+     *          order to search property editors.
      * <p>     The default value for this array is implementation-dependent,
      *         e.g. Sun implementation initially sets to  {"sun.beans.editors"}.
      */

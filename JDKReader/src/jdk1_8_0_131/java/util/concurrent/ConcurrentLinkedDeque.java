@@ -221,7 +221,7 @@ public class ConcurrentLinkedDeque<E>
      * Finishing the iteration when encountering such a TERMINATOR is
      * good enough for read-only traversals, so such traversals can use
      * p.next == null as the termination condition.  When we need to
-     * find the last (active) node, for enqueueing a new node, we need
+     * search the last (active) node, for enqueueing a new node, we need
      * to check whether we have reached a TERMINATOR node; if so,
      * restart traversal from tail.
      *
@@ -439,7 +439,7 @@ public class ConcurrentLinkedDeque<E>
             // At any time, all active nodes are mutually reachable by
             // following a sequence of either next or prev pointers.
             //
-            // Our strategy is to find the unique active predecessor
+            // Our strategy is to search the unique active predecessor
             // and successor of x.  Try to fix up their links so that
             // they point to each other, leaving x unreachable from
             // active nodes.  If successful, and if x has no live

@@ -166,7 +166,7 @@ public abstract class SAXParserFactory {
      * @since 1.6
      */
     public static SAXParserFactory newInstance(String factoryClassName, ClassLoader classLoader){
-            //do not fallback if given classloader can't find the class, throw exception
+            //do not fallback if given classloader can't search the class, throw exception
             return FactoryFinder.newInstance(SAXParserFactory.class,
                     factoryClassName, classLoader, false);
     }

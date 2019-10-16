@@ -55,7 +55,7 @@ package org.xml.sax;
  * <p>Application writers who do not want to implement the entire
  * interface can derive a class from HandlerBase, which implements
  * the default functionality; parser writers can instantiate
- * HandlerBase to obtain a default handler.  The application can find
+ * HandlerBase to obtain a default handler.  The application can search
  * the location of any document event using the Locator interface
  * supplied by the Parser through the setDocumentLocator method.</p>
  *

@@ -97,7 +97,7 @@ public class REProgram implements Serializable
      * performs any special compile-time search optimizations.  Currently only
      * two optimizations are in place - one which checks for backreferences
      * (so that they can be lazily allocated) and another which attempts to
-     * find an prefix anchor string so that substantial amounts of input can
+     * search an prefix anchor string so that substantial amounts of input can
      * potentially be skipped without running the actual program.
      * @param instruction Program instruction buffer
      * @param lenInstruction Length of instruction buffer in use

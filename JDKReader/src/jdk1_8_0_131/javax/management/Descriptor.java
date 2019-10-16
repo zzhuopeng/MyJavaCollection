@@ -131,7 +131,7 @@ import javax.management.openmbean.OpenType;
  *
  * <td>A resource key for the description of this element.  In
  * conjunction with the {@code descriptionResourceBundleBaseName},
- * this can be used to find a localized version of the description.
+ * this can be used to search a localized version of the description.
  * The meaning of this field is defined by this specification but the
  * field is not set or used by the JMX API itself.</td>
  *

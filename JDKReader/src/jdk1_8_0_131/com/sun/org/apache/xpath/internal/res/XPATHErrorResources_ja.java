@@ -216,7 +216,7 @@ public static final String ER_IGNORABLE_WHITESPACE_NOT_HANDLED =
    /**  fsb() not supported for XStringForChars   */
   public static final String ER_FSB_NOT_SUPPORTED_XSTRINGFORCHARS =
          "ER_FSB_NOT_SUPPORTED_XSTRINGFORCHARS";
-   /**  Could not find variable with the name of   */
+   /**  Could not search variable with the name of   */
  public static final String ER_COULD_NOT_FIND_VAR = "ER_COULD_NOT_FIND_VAR";
    /**  XStringForChars can not take a string for an argument   */
  public static final String ER_XSTRINGFORCHARS_CANNOT_TAKE_STRING =

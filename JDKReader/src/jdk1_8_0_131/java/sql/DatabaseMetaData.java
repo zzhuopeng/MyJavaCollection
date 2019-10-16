@@ -43,7 +43,7 @@ package java.sql;
  * A user for this interface is commonly a tool that needs to discover how to
  * deal with the underlying DBMS.  This is especially true for applications
  * that are intended to be used with more than one DBMS. For example, a tool might use the method
- * <code>getTypeInfo</code> to find out what data types can be used in a
+ * <code>getTypeInfo</code> to search out what data types can be used in a
  * <code>CREATE TABLE</code> statement.  Or a user might call the method
  * <code>supportsCorrelatedSubqueries</code> to see if it is possible to use
  * a correlated subquery or <code>supportsBatchUpdates</code> to see if it is

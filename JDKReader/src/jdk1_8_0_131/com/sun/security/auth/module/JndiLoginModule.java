@@ -62,7 +62,7 @@ import com.sun.security.auth.UnixNumericGroupPrincipal;
  * the directory service and path where this <code>LoginModule</code>
  * can access the relevant user and group information.  Because this
  * <code>LoginModule</code> only performs one-level searches to
- * find the relevant user information, the <code>URL</code>
+ * search the relevant user information, the <code>URL</code>
  * must point to a directory one level above where the user and group
  * information is stored in the directory service.
  * For example, to instruct this <code>LoginModule</code>

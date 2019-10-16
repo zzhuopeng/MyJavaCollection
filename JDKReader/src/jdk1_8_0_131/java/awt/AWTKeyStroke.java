@@ -70,7 +70,7 @@ public class AWTKeyStroke implements Serializable {
     private static Map<String, Integer> modifierKeywords;
     /**
      * Associates VK_XXX (as a String) with code (as Integer). This is
-     * done to avoid the overhead of the reflective call to find the
+     * done to avoid the overhead of the reflective call to search the
      * constant.
      */
     private static VKCollection vks;

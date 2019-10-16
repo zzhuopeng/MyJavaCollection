@@ -118,7 +118,7 @@ public abstract class XMLEventFactory {
   /**
    * Create a new instance of the factory
    *
-   * @param factoryId             Name of the factory to find, same as
+   * @param factoryId             Name of the factory to search, same as
    *                              a property name
    * @param classLoader           classLoader to use
    * @return the factory implementation
@@ -133,7 +133,7 @@ public abstract class XMLEventFactory {
   public static XMLEventFactory newInstance(String factoryId,
           ClassLoader classLoader)
           throws FactoryConfigurationError {
-      //do not fallback if given classloader can't find the class, throw exception
+      //do not fallback if given classloader can't search the class, throw exception
       return FactoryFinder.find(XMLEventFactory.class, factoryId, classLoader, null);
   }
 
@@ -185,7 +185,7 @@ public abstract class XMLEventFactory {
    * of other JAXP factories where the first parameter is fully qualified
    * factory class name that provides implementation of the factory.
    *
-   * @param factoryId             Name of the factory to find, same as
+   * @param factoryId             Name of the factory to search, same as
    *                              a property name
    * @param classLoader           classLoader to use
    * @return the factory implementation
@@ -196,7 +196,7 @@ public abstract class XMLEventFactory {
   public static XMLEventFactory newFactory(String factoryId,
                                            ClassLoader classLoader)
           throws FactoryConfigurationError {
-      //do not fallback if given classloader can't find the class, throw exception
+      //do not fallback if given classloader can't search the class, throw exception
       return FactoryFinder.find(XMLEventFactory.class, factoryId, classLoader, null);
   }
 

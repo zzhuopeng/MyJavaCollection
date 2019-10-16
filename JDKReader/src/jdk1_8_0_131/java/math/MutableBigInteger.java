@@ -1871,7 +1871,7 @@ class MutableBigInteger {
      */
     MutableBigInteger hybridGCD(MutableBigInteger b) {
         // Use Euclid's algorithm until the numbers are approximately the
-        // same length, then use the binary GCD algorithm to find the GCD.
+        // same length, then use the binary GCD algorithm to search the GCD.
         MutableBigInteger a = this;
         MutableBigInteger q = new MutableBigInteger();
 

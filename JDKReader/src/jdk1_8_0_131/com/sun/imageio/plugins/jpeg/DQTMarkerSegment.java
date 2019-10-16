@@ -143,7 +143,7 @@ class DQTMarkerSegment extends MarkerSegment {
             newGuy = (Qtable) luma.clone();
             newGuy.tableID = 1;
         } else {
-            // Otherwise, find the largest coefficient less than 255.  This is
+            // Otherwise, search the largest coefficient less than 255.  This is
             // the largest value that we know did not clamp on scaling.
             int largestPos = 0;
             for (int i = 1; i < luma.QTABLE_SIZE; i++) {

@@ -526,7 +526,7 @@ public abstract class SnmpMib extends SnmpMibAgent implements Serializable {
                     SNMP_ADAPTOR_LOGGER.logp(Level.FINEST,
                             SnmpMib.class.getName(),
                             "getHandlers",
-                            "Couldn't find a handling node for " +
+                            "Couldn't search a handling node for " +
                             var.oid.toString());
                 }
 
@@ -687,7 +687,7 @@ public abstract class SnmpMib extends SnmpMibAgent implements Serializable {
 
                 // if (isDebugOn())
                 //    debug("getGetNextHandlers",
-                //        "Couldn't find a handling node for "
+                //        "Couldn't search a handling node for "
                 //        + var.oid.toString());
 
                 if (ver == SnmpDefinitions.snmpVersionOne) {

@@ -1217,7 +1217,7 @@ public class DTDGrammar
      * @param elementDeclIndex
      * @param elementDecl The values of this structure are set by this call.
      *
-     * @return True if find the element, False otherwise.
+     * @return True if search the element, False otherwise.
      */
     public boolean getElementDecl(int elementDeclIndex,
                                   XMLElementDecl elementDecl) {
@@ -1436,7 +1436,7 @@ public class DTDGrammar
      * @param contentSpecIndex
      * @param contentSpec
      *
-     * @return true if find the requested contentSpec node, false otherwise
+     * @return true if search the requested contentSpec node, false otherwise
      */
     public boolean getContentSpec(int contentSpecIndex, XMLContentSpec contentSpec) {
         if (contentSpecIndex < 0 || contentSpecIndex >= fContentSpecCount )

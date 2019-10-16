@@ -135,7 +135,7 @@ public class ErrorMessages extends ListResourceBundle {
          * not be found.  The substitution text is the name of the class.
          */
         {ErrorMsg.CLASS_NOT_FOUND_ERR,
-        "Cannot find class ''{0}''."},
+        "Cannot search class ''{0}''."},
 
         /*
          * Note to translators:  The word "method" here refers to a Java method.
@@ -144,7 +144,7 @@ public class ErrorMessages extends ListResourceBundle {
          * Java keyword.
          */
         {ErrorMsg.METHOD_NOT_FOUND_ERR,
-        "Cannot find external method ''{0}'' (must be public)."},
+        "Cannot search external method ''{0}'' (must be public)."},
 
         /*
          * Note to translators:  The word "method" here refers to a Java method.
@@ -442,11 +442,11 @@ public class ErrorMessages extends ListResourceBundle {
         "declared in the root element)."},
 
         /*
-         * Note to translators:  XSLTC could not find the stylesheet document
+         * Note to translators:  XSLTC could not search the stylesheet document
          * with the name specified by the substitution text.
          */
         {ErrorMsg.MISSING_XSLT_TARGET_ERR,
-        "Could not find stylesheet target ''{0}''."},
+        "Could not search stylesheet target ''{0}''."},
 
         /*
          * Note to translators:  access to the stylesheet target is denied
@@ -760,11 +760,11 @@ public class ErrorMessages extends ListResourceBundle {
         /*
          * Note to translators:  The substitution text is the name of a Java
          * class.  The term "constructor" here is the Java term.  The message is
-         * displayed if XSLTC could not find a constructor for the specified
+         * displayed if XSLTC could not search a constructor for the specified
          * class.
          */
         {ErrorMsg.CONSTRUCTOR_NOT_FOUND,
-        "Cannot find external constructor ''{0}''."},
+        "Cannot search external constructor ''{0}''."},
 
         /*
          * Note to translators:  "static" is the Java keyword.  The substitution

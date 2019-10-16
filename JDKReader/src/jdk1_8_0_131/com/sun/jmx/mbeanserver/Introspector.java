@@ -366,7 +366,7 @@ public class Introspector {
 
 
     /**
-     * Try to find the MBean interface corresponding to the class aName
+     * Try to search the MBean interface corresponding to the class aName
      * - i.e. <i>aName</i>MBean, from within aClass and its superclasses.
      **/
     private static <T> Class<? super T> findMBeanInterface(
@@ -570,7 +570,7 @@ public class Introspector {
                 }
 
                 throw new AttributeNotFoundException(
-                    "Could not find the getter method for the property " +
+                    "Could not search the getter method for the property " +
                     element + " using the Java Beans introspector");
             }
         } catch (InvocationTargetException e) {

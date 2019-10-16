@@ -639,14 +639,14 @@ public class Resolver extends Catalog {
                                             publicId,
                                             systemId);
                 if (resolved != null) {
-                    // Only find one DOCTYPE resolution
+                    // Only search one DOCTYPE resolution
                     resolutions.addElement(resolved);
                     return resolutions;
                 }
             } else if (entityType == DOCUMENT) {
                 resolved = c.resolveDocument();
                 if (resolved != null) {
-                    // Only find one DOCUMENT resolution
+                    // Only search one DOCUMENT resolution
                     resolutions.addElement(resolved);
                     return resolutions;
                 }
@@ -655,7 +655,7 @@ public class Resolver extends Catalog {
                                            publicId,
                                            systemId);
                 if (resolved != null) {
-                    // Only find one ENTITY resolution
+                    // Only search one ENTITY resolution
                     resolutions.addElement(resolved);
                     return resolutions;
                 }
@@ -664,14 +664,14 @@ public class Resolver extends Catalog {
                                              publicId,
                                              systemId);
                 if (resolved != null) {
-                    // Only find one NOTATION resolution
+                    // Only search one NOTATION resolution
                     resolutions.addElement(resolved);
                     return resolutions;
                 }
             } else if (entityType == PUBLIC) {
                 resolved = c.resolvePublic(publicId, systemId);
                 if (resolved != null) {
-                    // Only find one PUBLIC resolution
+                    // Only search one PUBLIC resolution
                     resolutions.addElement(resolved);
                     return resolutions;
                 }

@@ -506,7 +506,7 @@ public class DTMManagerDefault extends DTMManager
       //
       // NOTE that since a DOM2DTM may represent a subtree rather
       // than a full document, we have to be prepared to check more
-      // than one -- and there is no guarantee that we will find
+      // than one -- and there is no guarantee that we will search
       // one that contains ancestors or siblings of the node we're
       // seeking.
       //
@@ -545,12 +545,12 @@ public class DTMManagerDefault extends DTMManager
                         //
                         // %BUG% If the source node was a DOM2DTM$defaultNamespaceDeclarationNode
                         // and the DTM wasn't registered with this DTMManager, we will create
-                        // a new DTM and _still_ not be able to find the node (since it will
+                        // a new DTM and _still_ not be able to search the node (since it will
                         // be resynthesized). Another reason to push hard on making all DTMs
                         // be managed DTMs.
 
                         // Since the real root of our tree may be a DocumentFragment, we need to
-      // use getParent to find the root, instead of getOwnerDocument.  Otherwise
+      // use getParent to search the root, instead of getOwnerDocument.  Otherwise
       // DOM2DTM#getHandleOfNode will be very unhappy.
       Node root = node;
       Node p = (root.getNodeType() == Node.ATTRIBUTE_NODE) ? ((org.w3c.dom.Attr)root).getOwnerElement() : root.getParentNode();
@@ -567,7 +567,7 @@ public class DTMManagerDefault extends DTMManager
       if(node instanceof com.sun.org.apache.xml.internal.dtm.ref.dom2dtm.DOM2DTMdefaultNamespaceDeclarationNode)
       {
                                 // Can't return the same node since it's unique to a specific DTM,
-                                // but can return the equivalent node -- find the corresponding
+                                // but can return the equivalent node -- search the corresponding
                                 // Document Element, then ask it for the xml: namespace decl.
                                 handle=dtm.getHandleOfNode(((org.w3c.dom.Attr)node).getOwnerElement());
                                 handle=dtm.getAttributeNode(handle,node.getNamespaceURI(),node.getLocalName());
@@ -660,7 +660,7 @@ public class DTMManagerDefault extends DTMManager
   }
 
   /**
-   * Given a DTM, find the ID number in the DTM tables which addresses
+   * Given a DTM, search the ID number in the DTM tables which addresses
    * the start of the document. If overflow addressing is in use, other
    * DTM IDs may also be assigned to this DTM.
    *

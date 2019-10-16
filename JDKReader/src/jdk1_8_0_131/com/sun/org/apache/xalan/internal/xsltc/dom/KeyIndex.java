@@ -263,13 +263,13 @@ public class KeyIndex extends DTMAxisIteratorBase {
                 nodes = getDOMNodeById(token);
             }
 
-            // Did we find the context node in the set of nodes?
+            // Did we search the context node in the set of nodes?
             if (nodes != null && nodes.indexOf(node) >= 0) {
                 return 1;
             }
         }
 
-        // Didn't find the context node in the set of nodes returned by id
+        // Didn't search the context node in the set of nodes returned by id
         return 0;
     }
 

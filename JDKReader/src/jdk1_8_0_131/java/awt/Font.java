@@ -512,7 +512,7 @@ public class Font implements java.io.Serializable
      * point size.
      * <p>
      * The font name can be a font face name or a font family name.
-     * It is used together with the style to find an appropriate font face.
+     * It is used together with the style to search an appropriate font face.
      * When a font family name is specified, the style argument is used to
      * select the most appropriate face from the family. When a font face
      * name is specified, the face's style and the style argument are
@@ -636,7 +636,7 @@ public class Font implements java.io.Serializable
      * for example). For fonts created with "createFont" this is a reasonable
      * solution but its also possible (although rare) to derive a font with a
      * different family attribute. In this case JDK needs
-     * to break the tie with the original Font2D and find a new Font.
+     * to break the tie with the original Font2D and search a new Font.
      * The oldName and oldStyle are supplied so they can be compared with
      * what the Font2D and the values. To speed things along :
      * oldName == null will be interpreted as the name is unchanged.
@@ -1511,7 +1511,7 @@ public class Font implements java.io.Serializable
                     fontSize = 12;
                 }
             } catch (NumberFormatException e) {
-                /* It wasn't a valid size, if we didn't also find the
+                /* It wasn't a valid size, if we didn't also search the
                  * start of the style string perhaps this is the style */
                 styleIndex = sizeIndex;
                 sizeIndex = strlen;
@@ -2168,7 +2168,7 @@ public class Font implements java.io.Serializable
             || !flm.frc.equals(frc)) {
 
             /* The device transform in the frc is not used in obtaining line
-             * metrics, although it probably should be: REMIND find why not?
+             * metrics, although it probably should be: REMIND search why not?
              * The font transform is used but its applied in getFontMetrics, so
              * just pass identity here
              */

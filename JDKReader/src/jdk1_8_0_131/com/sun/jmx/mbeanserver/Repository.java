@@ -188,7 +188,7 @@ public class Repository {
                     // index in receiver
                     //
                     String v = name.getKeyProperty(keys[i]);
-                    // Did we find a value for this key ?
+                    // Did we search a value for this key ?
                     //
                     if (v == null) return false;
                     // If this property is ok (same key, same value), go to next
@@ -450,7 +450,7 @@ public class Repository {
      * Checks whether an MBean of the name specified is already stored in
      * the repository.
      *
-     * @param name name of the MBean to find.
+     * @param name name of the MBean to search.
      *
      * @return  true if the MBean is stored in the repository,
      *          false otherwise.

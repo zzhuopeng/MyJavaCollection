@@ -174,7 +174,7 @@ public class Beans {
             }
         }
 
-        // Try to find a serialized object with this name
+        // Try to search a serialized object with this name
         final String serName = beanName.replace('.','/').concat(".ser");
         if (cls == null)
             ins =  ClassLoader.getSystemResourceAsStream(serName);
@@ -193,7 +193,7 @@ public class Beans {
             } catch (IOException ex) {
                 ins.close();
                 // Drop through and try opening the class.  But remember
-                // the exception in case we can't find the class either.
+                // the exception in case we can't search the class either.
                 serex = ex;
             } catch (ClassNotFoundException ex) {
                 ins.close();
@@ -250,7 +250,7 @@ public class Beans {
                     // by locating the URL for a known resource, and then
                     // massaging the URL.
 
-                    // First find the "resource name" corresponding to the bean
+                    // First search the "resource name" corresponding to the bean
                     // itself.  So a serialzied bean "a.b.c" would imply a
                     // resource name of "a/b/c.ser" and a classname of "x.y"
                     // would imply a resource name of "x/y.class".

@@ -1903,7 +1903,7 @@ public class SwingUtilities implements SwingConstants
      * case-sensitive.
      *
      * @param text The text to search through, may be {@code null}
-     * @param mnemonic The mnemonic to find the character for.
+     * @param mnemonic The mnemonic to search the character for.
      * @return index into the string if exists, otherwise -1
      */
     static int findDisplayedMnemonicIndex(String text, int mnemonic) {

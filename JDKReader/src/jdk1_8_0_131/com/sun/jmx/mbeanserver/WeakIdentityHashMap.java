@@ -53,7 +53,7 @@ import java.util.Map;
  * is to wrap each key in a WeakReference and use the wrapped value as
  * a key in an ordinary HashMap.  The WeakReference has to be a
  * subclass IdentityWeakReference (IWR) where two IWRs are equal if
- * they refer to the same object.  This enables us to find the entry
+ * they refer to the same object.  This enables us to search the entry
  * again.
  */
 class WeakIdentityHashMap<K, V> {

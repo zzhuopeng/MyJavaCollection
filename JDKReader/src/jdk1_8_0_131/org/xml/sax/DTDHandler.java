@@ -64,7 +64,7 @@ package org.xml.sax;
  * future use (perhaps in a hash table or object tree).
  * If the application encounters attributes of type "NOTATION",
  * "ENTITY", or "ENTITIES", it can use the information that it
- * obtained through this interface to find the entity and/or
+ * obtained through this interface to search the entity and/or
  * notation corresponding with the attribute value.</p>
  *
  * @since SAX 1.0

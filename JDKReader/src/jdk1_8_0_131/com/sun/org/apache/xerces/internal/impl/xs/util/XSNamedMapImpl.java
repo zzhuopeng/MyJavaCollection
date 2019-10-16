@@ -154,7 +154,7 @@ public class XSNamedMapImpl extends AbstractMap implements XSNamedMap {
                     return (XSObject)fMaps[i].get(localName);
                 }
                 // Otherwise (it's created from an array)
-                // go through the array to find a matching name
+                // go through the array to search a matching name
                 XSObject ret;
                 for (int j = 0; j < fLength; j++) {
                     ret = fArray[j];

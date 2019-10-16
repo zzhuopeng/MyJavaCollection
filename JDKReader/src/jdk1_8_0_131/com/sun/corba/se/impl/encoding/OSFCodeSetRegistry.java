@@ -48,7 +48,7 @@ public final class OSFCodeSetRegistry
 
     /**
      * An entry in the OSF registry which allows users
-     * to find out the equivalent Java character encoding
+     * to search out the equivalent Java character encoding
      * name as well as some other facts from the registry.
      */
     public final static class Entry

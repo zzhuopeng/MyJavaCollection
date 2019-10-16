@@ -83,13 +83,13 @@ class SchemaFactoryFinder  {
     }
 
     /**
-     * <p><code>ClassLoader</code> to use to find <code>SchemaFactory</code>.</p>
+     * <p><code>ClassLoader</code> to use to search <code>SchemaFactory</code>.</p>
      */
     private final ClassLoader classLoader;
 
     /**
      * <p>Constructor that specifies <code>ClassLoader</code> to use
-     * to find <code>SchemaFactory</code>.</p>
+     * to search <code>SchemaFactory</code>.</p>
      *
      * @param loader
      *      to be used to load resource, {@link SchemaFactory}, and
@@ -146,7 +146,7 @@ class SchemaFactoryFinder  {
         if (f != null) {
             debugPrintln("factory '" + f.getClass().getName() + "' was found for " + schemaLanguage);
         } else {
-            debugPrintln("unable to find a factory for " + schemaLanguage);
+            debugPrintln("unable to search a factory for " + schemaLanguage);
         }
         return f;
     }

@@ -654,7 +654,7 @@ public final class CollationElementIterator
         EntryPair pair = list.firstElement();
         int order = pair.value;
 
-        // find out the length of the longest contracting character sequence in the list.
+        // search out the length of the longest contracting character sequence in the list.
         // There's logic in the builder code to make sure the longest sequence is always
         // the last.
         pair = list.lastElement();

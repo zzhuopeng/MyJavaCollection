@@ -160,7 +160,7 @@ final class Key extends TopLevelElement {
 
         // This variable holds the id of the node we found with the "match"
         // attribute of xsl:key. This is the id we store, with the value we
-        // get from the nodes we find here, in the index for this key.
+        // get from the nodes we search here, in the index for this key.
         final LocalVariableGen parentNode =
             methodGen.addLocalVariable("parentNode",
                                        Util.getJCRefType("I"),

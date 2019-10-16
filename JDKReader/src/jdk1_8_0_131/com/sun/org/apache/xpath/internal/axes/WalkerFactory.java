@@ -798,7 +798,7 @@ public class WalkerFactory
    * as a generalized match pattern.  What this means is that the LocationPath
    * is read backwards, as a test on a given node, to see if it matches the
    * criteria of the selection, and ends up at the context node.  Essentially,
-   * this is a backwards query from a given node, to find the context node.
+   * this is a backwards query from a given node, to search the context node.
    * <p>So, the selection "foo/daz[2]" is, in non-abreviated expanded syntax,
    * "self::node()/following-sibling::foo/child::daz[position()=2]".
    * Taking this as a match pattern for a probable node, it works out to
@@ -870,7 +870,7 @@ public class WalkerFactory
       // pat.setPredicateAxis(paxis);
 
       // If we have an attribute or namespace axis that went up, then
-      // it won't find the attribute in the inverse, since the select-to-match
+      // it won't search the attribute in the inverse, since the select-to-match
       // axes are not invertable (an element is a parent of an attribute, but
       // and attribute is not a child of an element).
       // If we don't do the magic below, then "@*/ancestor-or-self::*" gets

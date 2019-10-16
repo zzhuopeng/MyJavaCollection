@@ -43,7 +43,7 @@ import java.util.Objects;
  *   <li><p> The {@link #lookingAt lookingAt} method attempts to match the
  *   input sequence, starting at the beginning, against the pattern.  </p></li>
  *
- *   <li><p> The {@link #find find} method scans the input sequence looking for
+ *   <li><p> The {@link #find search} method scans the input sequence looking for
  *   the next subsequence that matches the pattern.  </p></li>
  *
  * </ul>
@@ -256,7 +256,7 @@ public final class Matcher implements MatchResult {
 
     /**
       * Changes the <tt>Pattern</tt> that this <tt>Matcher</tt> uses to
-      * find matches with.
+      * search matches with.
       *
       * <p> This method causes this matcher to lose information
       * about the groups of the last match that occurred. The
@@ -605,7 +605,7 @@ public final class Matcher implements MatchResult {
     }
 
     /**
-     * Attempts to find the next subsequence of the input sequence that matches
+     * Attempts to search the next subsequence of the input sequence that matches
      * the pattern.
      *
      * <p> This method starts at the beginning of this matcher's region, or, if
@@ -638,7 +638,7 @@ public final class Matcher implements MatchResult {
     }
 
     /**
-     * Resets this matcher and then attempts to find the next subsequence of
+     * Resets this matcher and then attempts to search the next subsequence of
      * the input sequence that matches the pattern, starting at the specified
      * index.
      *
@@ -757,7 +757,7 @@ public final class Matcher implements MatchResult {
      * string.
      *
      * <p> This method is intended to be used in a loop together with the
-     * {@link #appendTail appendTail} and {@link #find find} methods.  The
+     * {@link #appendTail appendTail} and {@link #find search} methods.  The
      * following code, for example, writes <tt>one dog two dogs in the
      * yard</tt> to the standard-output stream: </p>
      *
@@ -765,7 +765,7 @@ public final class Matcher implements MatchResult {
      * Pattern p = Pattern.compile("cat");
      * Matcher m = p.matcher("one cat two cats in the yard");
      * StringBuffer sb = new StringBuffer();
-     * while (m.find()) {
+     * while (m.search()) {
      *     m.appendReplacement(sb, "dog");
      * }
      * m.appendTail(sb);
@@ -1008,7 +1008,7 @@ public final class Matcher implements MatchResult {
 
     /**
      * Sets the limits of this matcher's region. The region is the part of the
-     * input sequence that will be searched to find a match. Invoking this
+     * input sequence that will be searched to search a match. Invoking this
      * method resets the matcher, and then sets the region to start at the
      * index specified by the <code>start</code> parameter and end at the
      * index specified by the <code>end</code> parameter.
@@ -1224,7 +1224,7 @@ public final class Matcher implements MatchResult {
     }
 
     /**
-     * Initiates a search to find a Pattern within the given bounds.
+     * Initiates a search to search a Pattern within the given bounds.
      * The groups are filled with default values and the match of the root
      * of the state machine is called. The state machine will hold the state
      * of the match as it proceeds in this matcher.

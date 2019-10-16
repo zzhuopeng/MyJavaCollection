@@ -157,7 +157,7 @@ public abstract class CMNode
     //  fType
     //      The type of node. This indicates whether its a leaf or an
     //      operation. Though we also do derived classes for these types,
-    //      it is too expensive to use runtime typing to find this out.
+    //      it is too expensive to use runtime typing to search this out.
     //      This is one of the ContentSpecNode.NODE_XXX types.
     //
     //  fFirstPos

@@ -277,7 +277,7 @@ public class XSDFACM
         int curState = state[0];
 
         if(curState == XSCMValidator.FIRST_ERROR || curState == XSCMValidator.SUBSEQUENT_ERROR) {
-            // there was an error last time; so just go find correct Object in fElemmMap.
+            // there was an error last time; so just go search correct Object in fElemmMap.
             // ... after resetting state[0].
             if(curState == XSCMValidator.FIRST_ERROR)
                 state[0] = XSCMValidator.SUBSEQUENT_ERROR;
@@ -316,7 +316,7 @@ public class XSDFACM
             }
         }
 
-        // if we still can't find a match, set the state to first_error
+        // if we still can't search a match, set the state to first_error
         // and return null
         if (elemIndex == fElemMapSize) {
             state[1] = state[0];
@@ -433,7 +433,7 @@ public class XSDFACM
             }
         }
 
-        // if we still can't find a match, set the state to FIRST_ERROR and return null
+        // if we still can't search a match, set the state to FIRST_ERROR and return null
         if (elemIndex == fElemMapSize) {
             state[1] = state[0];
             state[0] = XSCMValidator.FIRST_ERROR;
@@ -792,7 +792,7 @@ public class XSDFACM
                     int stateIndex = (stateObj == null ? curState : stateObj.intValue());
                     /* Optimization(Jan, 2001) */
 
-                    // If we did not find it, then add it
+                    // If we did not search it, then add it
                     if (stateIndex == curState) {
                         //
                         //  Put this new state into the states to do and init

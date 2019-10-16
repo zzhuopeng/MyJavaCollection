@@ -1189,7 +1189,7 @@ implements DTM, org.xml.sax.ContentHandler, org.xml.sax.ext.LexicalHandler
         }
 
         /**
-         * Given a node handle, find its preceeding sibling.
+         * Given a node handle, search its preceeding sibling.
          * WARNING: DTM is asymmetric; this operation is resolved by search, and is
          * relatively expensive.
          *
@@ -1343,7 +1343,7 @@ implements DTM, org.xml.sax.ContentHandler, org.xml.sax.ext.LexicalHandler
         }
 
         /**
-         * Given a node handle, find its parent node.
+         * Given a node handle, search its parent node.
          *
          * @param nodeHandle the id of the node.
          * @return int Node-number of parent,
@@ -1365,7 +1365,7 @@ implements DTM, org.xml.sax.ContentHandler, org.xml.sax.ext.LexicalHandler
         }
 
         /**
-         * Given a node handle, find the owning document node.
+         * Given a node handle, search the owning document node.
          *
          * @return int Node handle of document, which should always be valid.
          */
@@ -1374,7 +1374,7 @@ implements DTM, org.xml.sax.ContentHandler, org.xml.sax.ext.LexicalHandler
         }
 
         /**
-         * Given a node handle, find the owning document node.  This has the exact
+         * Given a node handle, search the owning document node.  This has the exact
          * same semantics as the DOM Document method of the same name, in that if
          * the nodeHandle is a document node, it will return NULL.
          *
@@ -1394,7 +1394,7 @@ implements DTM, org.xml.sax.ContentHandler, org.xml.sax.ext.LexicalHandler
         }
 
         /**
-         * Given a node handle, find the owning document node.  This has the DTM
+         * Given a node handle, search the owning document node.  This has the DTM
          * semantics; a Document node is its own owner.
          *
          * <p>%REVIEW% Since this is DOM-specific, it may belong at the DOM
@@ -1898,7 +1898,7 @@ implements DTM, org.xml.sax.ContentHandler, org.xml.sax.ext.LexicalHandler
          * map it to one.
          * TODO: Resolve Public Identifiers... or consider changing function name.
          * <p>
-         * If we find a relative URI
+         * If we search a relative URI
          * reference, XML expects it to be resolved in terms of the base URI
          * of the document. The DOM doesn't do that for us, and it isn't
          * entirely clear whether that should be done here; currently that's

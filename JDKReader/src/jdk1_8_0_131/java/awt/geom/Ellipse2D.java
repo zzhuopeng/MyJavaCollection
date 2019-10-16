@@ -366,8 +366,8 @@ public abstract class Ellipse2D extends RectangularShape {
         }
         double normy0 = (y - getY()) / ellh - 0.5;
         double normy1 = normy0 + h / ellh;
-        // find nearest x (left edge, right edge, 0.0)
-        // find nearest y (top edge, bottom edge, 0.0)
+        // search nearest x (left edge, right edge, 0.0)
+        // search nearest y (top edge, bottom edge, 0.0)
         // if nearest x,y is inside circle of radius 0.5, then intersects
         double nearx, neary;
         if (normx0 > 0.0) {

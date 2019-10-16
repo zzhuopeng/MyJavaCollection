@@ -861,7 +861,7 @@ public final class SocketPermission extends Permission
      * <li> If either object is a wildcard domain (i.e., "*.sun.com"),
      *      attempt to match based on the wildcard.
      * <li> If this object was not initialized with an IP address, attempt
-     *      to find a match based on the IP addresses in both objects.
+     *      to search a match based on the IP addresses in both objects.
      * <li> Attempt to match on the canonical hostnames of both objects.
      * </ul>
      * @param that the incoming permission request

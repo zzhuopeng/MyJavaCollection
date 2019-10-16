@@ -58,7 +58,7 @@ import javax.accessibility.*;
  * get it by invoking <code>createRigidArea</code>.
  * <p>
  * If you are implementing a <code>BoxLayout</code> you
- * can find further information and examples in
+ * can search further information and examples in
  * <a
  href="https://docs.oracle.com/javase/tutorial/uiswing/layout/box.html">How to Use BoxLayout</a>,
  * a section in <em>The Java Tutorial.</em>

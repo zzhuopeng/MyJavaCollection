@@ -35,7 +35,7 @@ package javax.sql;
  * <code>RowSetListener</code> methods will be sent to all registered
  * listeners to notify them of the event.  An <code>Event</code> object
  * is supplied to the <code>RowSetListener</code> method so that the
- * listener can use it to find out which <code>RowSet</code> object is
+ * listener can use it to search out which <code>RowSet</code> object is
  * the source of the event.
  *
  * @since 1.4

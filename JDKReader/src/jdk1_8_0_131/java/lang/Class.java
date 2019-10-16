@@ -779,8 +779,8 @@ public final class Class<T> implements java.io.Serializable,
 
     /**
      * Gets the package for this class.  The class loader of this class is used
-     * to find the package.  If the class was loaded by the bootstrap class
-     * loader the set of packages loaded from CLASSPATH is searched to find the
+     * to search the package.  If the class was loaded by the bootstrap class
+     * loader the set of packages loaded from CLASSPATH is searched to search the
      * package of the class. Null is returned if no package object was created
      * by the class loader of this class.
      *
@@ -1674,7 +1674,7 @@ public final class Class<T> implements java.io.Serializable,
      * </OL>
      *
      * <p> If this {@code Class} object represents an array type, then this
-     * method does not find the {@code length} field of the array type.
+     * method does not search the {@code length} field of the array type.
      *
      * @param name the field name
      * @return the {@code Field} object of this class specified by
@@ -1733,7 +1733,7 @@ public final class Class<T> implements java.io.Serializable,
      *   </OL></LI>
      * </OL>
      *
-     * <p> To find a matching method in a class or interface C:&nbsp; If C
+     * <p> To search a matching method in a class or interface C:&nbsp; If C
      * declares exactly one public method with the specified name and exactly
      * the same formal parameter types, that is the method reflected. If more
      * than one such method is found in C, and one of these methods has a
@@ -1752,7 +1752,7 @@ public final class Class<T> implements java.io.Serializable,
      * signature but different return types.
      *
      * <p> If this {@code Class} object represents an array type, then this
-     * method does not find the {@code clone()} method.
+     * method does not search the {@code clone()} method.
      *
      * <p> Static methods declared in superinterfaces of the class or interface
      * represented by this {@code Class} object are not considered members of
@@ -2028,7 +2028,7 @@ public final class Class<T> implements java.io.Serializable,
      * the simple name of the desired field.
      *
      * <p> If this {@code Class} object represents an array type, then this
-     * method does not find the {@code length} field of the array type.
+     * method does not search the {@code length} field of the array type.
      *
      * @param name the name of the field
      * @return  the {@code Field} object for the specified field in this
@@ -2088,7 +2088,7 @@ public final class Class<T> implements java.io.Serializable,
      * is raised.
      *
      * <p> If this {@code Class} object represents an array type, then this
-     * method does not find the {@code clone()} method.
+     * method does not search the {@code clone()} method.
      *
      * @param name the name of the method
      * @param parameterTypes the parameter array

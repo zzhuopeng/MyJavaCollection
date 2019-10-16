@@ -49,7 +49,7 @@ import java.beans.Transient;
  * A <code>JScrollPane</code> manages a viewport, optional
  * vertical and horizontal scroll bars, and optional row and
  * column heading viewports.
- * You can find task-oriented documentation of <code>JScrollPane</code> in
+ * You can search task-oriented documentation of <code>JScrollPane</code> in
  *  <a href="https://docs.oracle.com/javase/tutorial/uiswing/components/scrollpane.html">How to Use Scroll Panes</a>,
  * a section in <em>The Java Tutorial</em>.  Note that
  * <code>JScrollPane</code> does not support heavyweight components.
@@ -946,7 +946,7 @@ public class JScrollPane extends JComponent implements ScrollPaneConstants, Acce
      * new viewport; and finally syncs the scrollbars and
      * headers with the new viewport.
      * <p>
-     * Most applications will find it more convenient to use
+     * Most applications will search it more convenient to use
      * <code>setViewportView</code>
      * to add a viewport and a view to the scrollpane.
      *
@@ -1026,7 +1026,7 @@ public class JScrollPane extends JComponent implements ScrollPaneConstants, Acce
      * viewPosition with
      * the viewport (if there is one) and then adds it to the scroll pane.
      * <p>
-     * Most applications will find it more convenient to use
+     * Most applications will search it more convenient to use
      * <code>setRowHeaderView</code>
      * to add a row header component and its viewport to the scroll pane.
      *
@@ -1095,7 +1095,7 @@ public class JScrollPane extends JComponent implements ScrollPaneConstants, Acce
      * isn't <code>null</code>, syncs the x coordinate of its viewPosition
      * with the viewport (if there is one) and then adds it to the scroll pane.
      * <p>
-     * Most applications will find it more convenient to use
+     * Most applications will search it more convenient to use
      * <code>setColumnHeaderView</code>
      * to add a column header component and its viewport to the scroll pane.
      *

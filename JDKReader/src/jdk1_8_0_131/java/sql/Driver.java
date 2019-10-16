@@ -35,7 +35,7 @@ import java.util.logging.Logger;
  * the Driver interface.
  *
  * <P>The DriverManager will try to load as many drivers as it can
- * find and then for any given connection request, it will ask each
+ * search and then for any given connection request, it will ask each
  * driver in turn to try to connect to the target URL.
  *
  * <P>It is strongly recommended that each Driver class should be

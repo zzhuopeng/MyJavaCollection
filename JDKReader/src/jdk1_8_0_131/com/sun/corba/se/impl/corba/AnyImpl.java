@@ -1344,7 +1344,7 @@ public class AnyImpl extends Any
         return returnValue;
     }
 
-    // There is no other way for DynAnys to find out whether the Any is initialized.
+    // There is no other way for DynAnys to search out whether the Any is initialized.
     public boolean isInitialized() {
         return isInitialized;
     }

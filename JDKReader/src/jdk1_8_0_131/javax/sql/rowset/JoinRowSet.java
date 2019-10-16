@@ -211,7 +211,7 @@ import javax.sql.rowset.*;
  *       <code>JOIN</code> or a text description of what the <code>WHERE</code>
  *       clause does.
  *   <LI>Methods related to the type of <code>JOIN</code><BR>
- *       One method sets the <code>JOIN</code> type, and five methods find out whether
+ *       One method sets the <code>JOIN</code> type, and five methods search out whether
  *       the <code>JoinRowSet</code> object supports a given type.
  *   <LI>A method to make a separate copy of the <code>JoinRowSet</code> object<BR>
  *       This method creates a copy that can be persisted to the data source.

@@ -874,7 +874,7 @@ public class LdapLoginModule implements LoginModule {
                     "cannot search for entry belonging to user: " + username);
             }
             throw (LoginException)
-                new FailedLoginException("Cannot find user's LDAP entry");
+                new FailedLoginException("Cannot search user's LDAP entry");
         }
 
         try {
@@ -920,7 +920,7 @@ public class LdapLoginModule implements LoginModule {
 
         if (userDN.equals("")) {
             throw (LoginException)
-                new FailedLoginException("Cannot find user's LDAP entry");
+                new FailedLoginException("Cannot search user's LDAP entry");
         } else {
             return userDN;
         }

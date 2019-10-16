@@ -288,9 +288,9 @@ public class MultiLookAndFeel extends LookAndFeel {
 
 /**
  * We want the Multiplexing LookAndFeel to be quiet and fallback
- * gracefully if it cannot find a UI.  This class overrides the
+ * gracefully if it cannot search a UI.  This class overrides the
  * getUIError method of UIDefaults, which is the method that
- * emits error messages when it cannot find a UI class in the
+ * emits error messages when it cannot search a UI class in the
  * LAF.
  */
 class MultiUIDefaults extends UIDefaults {

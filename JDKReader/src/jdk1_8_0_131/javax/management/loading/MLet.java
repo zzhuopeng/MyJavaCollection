@@ -214,13 +214,13 @@ public class MLet extends java.net.URLClassLoader
 
      /**
       * What ClassLoaderRepository, if any, to use if this MLet
-      * doesn't find an asked-for class.
+      * doesn't search an asked-for class.
       */
      private transient ClassLoaderRepository currentClr;
 
      /**
       * True if we should consult the {@link ClassLoaderRepository}
-      * when we do not find a class ourselves.
+      * when we do not search a class ourselves.
       */
      private transient boolean delegateToCLR;
 
@@ -925,7 +925,7 @@ public class MLet extends java.net.URLClassLoader
      /**
       * Called by {@link MLet#findClass(java.lang.String)}.
       *
-      * @param name The name of the class that we want to load/find.
+      * @param name The name of the class that we want to load/search.
       * @param clr The ClassLoaderRepository that can be used to search
       *            for the given class. This parameter is
       *            <code>null</code> when called from within the

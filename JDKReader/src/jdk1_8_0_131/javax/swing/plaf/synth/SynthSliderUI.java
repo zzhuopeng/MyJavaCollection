@@ -397,7 +397,7 @@ public class SynthSliderUI extends BasicSliderUI
                     int minValue = slider.getMinimum();
                     int maxValue = slider.getMaximum();
 
-                    // Iterate through the keys in the dictionary and find the
+                    // Iterate through the keys in the dictionary and search the
                     // first and last labels indices that fall within the
                     // slider range.
                     int firstLblIdx = Integer.MAX_VALUE;

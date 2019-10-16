@@ -59,7 +59,7 @@ public class XSWildcardDecl implements XSWildcard {
     // I'm trying to implement the following constraint exactly as what the
     // spec describes. Sometimes it seems redundant, and sometimes there seems
     // to be much easier solutions. But it makes it easy to understand,
-    // easy to maintain, and easy to find a bug (either in the code, or in the
+    // easy to maintain, and easy to search a bug (either in the code, or in the
     // spec). -SG
     //
     // NOTE: Schema spec only requires that ##other not(tNS,absent).

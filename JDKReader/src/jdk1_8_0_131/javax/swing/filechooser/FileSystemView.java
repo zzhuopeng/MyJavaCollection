@@ -619,7 +619,7 @@ class UnixFileSystemView extends FileSystemView {
             throw new IOException("Containing directory is null:");
         }
         File newFolder;
-        // Unix - using OpenWindows' default folder name. Can't find one for Motif/CDE.
+        // Unix - using OpenWindows' default folder name. Can't search one for Motif/CDE.
         newFolder = createFileObject(containingDir, newFolderString);
         int i = 1;
         while (newFolder.exists() && i < 100) {

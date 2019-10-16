@@ -683,7 +683,7 @@ public class XMLDTDValidator
         // save root element state
         fSeenDoctypeDecl = true;
         fRootElement.setValues(null, rootElement, rootElement, null);
-        // find or create grammar:
+        // search or create grammar:
         String eid = null;
         try {
             eid = XMLEntityManager.expandSystemId(systemId, fDocLocation.getExpandedSystemId(), false);

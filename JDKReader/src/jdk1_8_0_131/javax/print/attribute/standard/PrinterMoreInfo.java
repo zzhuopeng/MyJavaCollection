@@ -42,7 +42,7 @@ import javax.print.attribute.PrintServiceAttribute;
  * assistance).
  * <P>
  * In contrast, the {@link PrinterMoreInfoManufacturer
- * PrinterMoreInfoManufacturer} attribute is used to find out more information
+ * PrinterMoreInfoManufacturer} attribute is used to search out more information
  * about this general kind of printer rather than this specific printer.
  * <P>
  * <B>IPP Compatibility:</B> The string form returned by

@@ -428,13 +428,13 @@ public class Utilities {
             }
         }
 
-        // didn't find, return end offset
+        // didn't search, return end offset
         return txtCount;
     }
 
     /**
      * Determine where to break the given text to fit
-     * within the given span. This tries to find a word boundary.
+     * within the given span. This tries to search a word boundary.
      * @param s  the source of the text
      * @param metrics the font metrics to use for the calculation
      * @param x0 the starting view location representing the start
@@ -468,7 +468,7 @@ public class Utilities {
                     break;
                 }
             } else {
-                // a multibyte char found; use BreakIterator to find line break
+                // a multibyte char found; use BreakIterator to search line break
                 BreakIterator bit = BreakIterator.getLineInstance();
                 bit.setText(s);
                 int breakPos = bit.preceding(i + 1);
@@ -700,7 +700,7 @@ public class Utilities {
              nextWord == BreakIterator.DONE;
              nextWord = getNextWordInParagraph(c, line, offs, true)) {
 
-            // didn't find in this line, try the next line
+            // didn't search in this line, try the next line
             offs = line.getEndOffset();
             line = getParagraphElement(c, offs);
         }
@@ -778,7 +778,7 @@ public class Utilities {
              prevWord == BreakIterator.DONE;
              prevWord = getPrevWordInParagraph(c, line, offs)) {
 
-            // didn't find in this line, try the prev line
+            // didn't search in this line, try the prev line
             offs = line.getStartOffset() - 1;
             line = getParagraphElement(c, offs);
         }

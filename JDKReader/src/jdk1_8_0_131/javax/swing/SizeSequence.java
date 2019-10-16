@@ -44,7 +44,7 @@ package javax.swing;
  * to store the widths and X positions of all the columns.
  * The <code>JTable</code> could then use the
  * <code>SizeSequence</code> object
- * to find the column corresponding to a certain position.
+ * to search the column corresponding to a certain position.
  * The <code>JTable</code> could update the
  * <code>SizeSequence</code> object
  * whenever one or more column sizes changed.

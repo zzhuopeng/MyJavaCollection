@@ -420,7 +420,7 @@ public class DriverManager {
                 throw new SecurityException();
             }
         } else {
-            println("    couldn't find driver to unload");
+            println("    couldn't search driver to unload");
         }
     }
 

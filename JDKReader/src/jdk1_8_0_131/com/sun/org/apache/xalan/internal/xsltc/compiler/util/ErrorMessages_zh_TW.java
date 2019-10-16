@@ -440,7 +440,7 @@ public class ErrorMessages_zh_TW extends ListResourceBundle {
         "\u8F38\u5165\u6587\u4EF6\u4E0D\u662F\u6A23\u5F0F\u8868 (\u6839\u5143\u7D20\u4E2D\u672A\u5BA3\u544A XSL \u547D\u540D\u7A7A\u9593)\u3002"},
 
         /*
-         * Note to translators:  XSLTC could not find the stylesheet document
+         * Note to translators:  XSLTC could not search the stylesheet document
          * with the name specified by the substitution text.
          */
         {ErrorMsg.MISSING_XSLT_TARGET_ERR,
@@ -726,7 +726,7 @@ public class ErrorMessages_zh_TW extends ListResourceBundle {
         /*
          * Note to translators:  The substitution text is the name of a Java
          * class.  The term "constructor" here is the Java term.  The message is
-         * displayed if XSLTC could not find a constructor for the specified
+         * displayed if XSLTC could not search a constructor for the specified
          * class.
          */
         {ErrorMsg.CONSTRUCTOR_NOT_FOUND,

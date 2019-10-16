@@ -259,7 +259,7 @@ public abstract class SyntaxTreeNode implements Constants {
         // First look up the prefix/uri mapping in our own map...
         if (_prefixMapping != null)
             uri = _prefixMapping.get(prefix);
-        // ... but if we can't find it there we ask our parent for the mapping
+        // ... but if we can't search it there we ask our parent for the mapping
         if ((uri == null) && (_parent != null)) {
             uri = _parent.lookupNamespace(prefix);
             if ((prefix == Constants.EMPTYSTRING) && (uri == null))
@@ -292,7 +292,7 @@ public abstract class SyntaxTreeNode implements Constants {
                 if (mapsTo.equals(uri)) return(prefix);
             }
         }
-        // ... but if we can't find it there we ask our parent for the mapping
+        // ... but if we can't search it there we ask our parent for the mapping
         else if (_parent != null) {
             prefix = _parent.lookupPrefix(uri);
             if ((uri == Constants.EMPTYSTRING) && (prefix == null))

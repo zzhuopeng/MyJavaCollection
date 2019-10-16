@@ -119,7 +119,7 @@ public abstract class ControlFactory {
       * @param ctx The possibly null context in which the control is being created.
       * If null, no such information is available.
       * @param env The possibly null environment of the context. This is used
-      * to find the value of the <tt>LdapContext.CONTROL_FACTORIES</tt> property.
+      * to search the value of the <tt>LdapContext.CONTROL_FACTORIES</tt> property.
       * @return A control object created using <code>ctl</code>; or
       *         <code>ctl</code> if a control object cannot be created using
       *         the algorithm described above.

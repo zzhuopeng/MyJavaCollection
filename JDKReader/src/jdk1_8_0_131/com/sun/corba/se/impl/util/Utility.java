@@ -172,7 +172,7 @@ public final class Utility {
         Tie result = null;
         Class objClass = obj.getClass();
 
-        // Have we tried to find this guy before?
+        // Have we tried to search this guy before?
 
         synchronized (tieCache) {
 
@@ -617,7 +617,7 @@ public final class Utility {
             if (ids.length == 0) {
                 stub = new org.omg.stub.java.rmi._Remote_Stub();
             } else {
-                // Now walk all the RepIDs till we find a stub or fail...
+                // Now walk all the RepIDs till we search a stub or fail...
                 for (int i = 0; i < ids.length; i++) {
                     if (ids[i].length() == 0) {
                         stub = new org.omg.stub.java.rmi._Remote_Stub();
@@ -656,7 +656,7 @@ public final class Utility {
                 } catch( Exception e1 ) {
                     // The tie does not have a delegate set, so stash
                     // this tie away using the stub as a key so that
-                    // later, when the stub is connected, we can find
+                    // later, when the stub is connected, we can search
                     // and connect the tie as well...
 
                     synchronized (stubToTieCache) {

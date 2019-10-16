@@ -63,7 +63,7 @@ public class FuncTranslate extends Function3Args
       if (theIndex < 0)
       {
 
-        // Didn't find the character in the second string, so it
+        // Didn't search the character in the second string, so it
         // is not translated.
         sbuffer.append(theCurrentChar);
       }

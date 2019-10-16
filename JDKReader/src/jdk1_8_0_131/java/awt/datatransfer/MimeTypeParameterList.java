@@ -133,7 +133,7 @@ class MimeTypeParameterList implements Cloneable {
                     currentIndex = skipWhiteSpace(rawdata, currentIndex);
 
                     if(currentIndex < length) {
-                        //    find the end of the token char run
+                        //    search the end of the token char run
                         lastIndex = currentIndex;
                         currentChar = rawdata.charAt(currentIndex);
                         while((currentIndex < length) && isTokenChar(currentChar)) {
@@ -155,7 +155,7 @@ class MimeTypeParameterList implements Cloneable {
                             currentIndex = skipWhiteSpace(rawdata, currentIndex);
 
                             if(currentIndex < length) {
-                                //    now find out whether or not we have a quoted value
+                                //    now search out whether or not we have a quoted value
                                 currentChar = rawdata.charAt(currentIndex);
                                 if(currentChar == '"') {
                                     //    yup it's quoted so eat it and capture the quoted string
@@ -163,7 +163,7 @@ class MimeTypeParameterList implements Cloneable {
                                     lastIndex = currentIndex;
 
                                     if(currentIndex < length) {
-                                        //    find the next unescqped quote
+                                        //    search the next unescqped quote
                                         foundit = false;
                                         while((currentIndex < length) && !foundit) {
                                             currentChar = rawdata.charAt(currentIndex);
@@ -209,13 +209,13 @@ class MimeTypeParameterList implements Cloneable {
                                 //    now put the data into the hashtable
                                 parameters.put(name, value);
                             } else {
-                                throw new MimeTypeParseException("Couldn't find a value for parameter named " + name);
+                                throw new MimeTypeParseException("Couldn't search a value for parameter named " + name);
                             }
                         } else {
-                            throw new MimeTypeParseException("Couldn't find the '=' that separates a parameter name from its value.");
+                            throw new MimeTypeParseException("Couldn't search the '=' that separates a parameter name from its value.");
                         }
                     } else {
-                        throw new MimeTypeParseException("Couldn't find parameter name");
+                        throw new MimeTypeParseException("Couldn't search parameter name");
                     }
 
                     //    setup the next iteration

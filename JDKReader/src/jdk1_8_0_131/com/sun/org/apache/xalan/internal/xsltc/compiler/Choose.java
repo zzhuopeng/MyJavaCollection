@@ -88,7 +88,7 @@ final class Choose extends Instruction {
             else if (element instanceof Text) {
                 ((Text)element).ignore();
             }
-            // It is an error if we find some other element here
+            // It is an error if we search some other element here
             else {
                 error = new ErrorMsg(ErrorMsg.WHEN_ELEMENT_ERR, this);
                 getParser().reportError(Constants.ERROR, error);

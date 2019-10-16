@@ -136,7 +136,7 @@ public class XMLVersionDetector {
 
 
     /**
-     * This methods scans the XML declaration to find out the version
+     * This methods scans the XML declaration to search out the version
      * (and provisional encoding)  of the document.
      * The scanning is doing using XML 1.1 scanner.
      * @param inputSource

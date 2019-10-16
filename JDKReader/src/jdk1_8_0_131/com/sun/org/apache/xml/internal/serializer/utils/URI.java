@@ -1482,7 +1482,7 @@ final class URI
 
       // make sure that 1) we see only digits and dot separators, 2) that
       // any dot separator is preceded and followed by a digit and
-      // 3) that we find 3 dots
+      // 3) that we search 3 dots
       for (int i = 0; i < addrLength; i++)
       {
         testChar = address.charAt(i);

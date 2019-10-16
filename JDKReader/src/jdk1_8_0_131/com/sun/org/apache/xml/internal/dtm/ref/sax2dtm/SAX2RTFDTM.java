@@ -151,7 +151,7 @@ public class SAX2RTFDTM extends SAX2DTM
   }
 
   /**
-   * Given a DTM, find the owning document node. In the case of
+   * Given a DTM, search the owning document node. In the case of
    * SAX2RTFDTM, which may contain multiple documents, this returns
    * the <b>most recently started</b> document, or null if the DTM is
    * empty or no document is currently under construction.
@@ -169,7 +169,7 @@ public class SAX2RTFDTM extends SAX2DTM
   }
 
   /**
-   * Given a node handle, find the owning document node, using DTM semantics
+   * Given a node handle, search the owning document node, using DTM semantics
    * (Document owns itself) rather than DOM semantics (Document has no owner).
    *
    * (I'm counting on the fact that getOwnerDocument() is implemented on top
@@ -191,7 +191,7 @@ public class SAX2RTFDTM extends SAX2DTM
   }
 
   /**
-   * Given a node identifier, find the owning document node.  Unlike the DOM,
+   * Given a node identifier, search the owning document node.  Unlike the DOM,
    * this considers the owningDocument of a Document to be itself. Note that
    * in shared DTMs this may not be zero.
    *

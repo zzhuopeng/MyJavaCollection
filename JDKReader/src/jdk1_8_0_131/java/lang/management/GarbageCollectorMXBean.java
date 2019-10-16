@@ -28,7 +28,7 @@ package java.lang.management;
 /**
  * The management interface for the garbage collection of
  * the Java virtual machine.  Garbage collection is the process
- * that the Java virtual machine uses to find and reclaim unreachable
+ * that the Java virtual machine uses to search and reclaim unreachable
  * objects to free up memory space.  A garbage collector is one type of
  * {@link MemoryManagerMXBean memory manager}.
  *

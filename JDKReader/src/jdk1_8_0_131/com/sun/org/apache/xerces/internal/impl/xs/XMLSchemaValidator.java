@@ -943,7 +943,7 @@ public class XMLSchemaValidator
         }
 
         // When it's a complex type with element-only content, we need to
-        // find out whether the content contains any non-whitespace character.
+        // search out whether the content contains any non-whitespace character.
         boolean allWhiteSpace = true;
         if (fCurrentType != null
             && fCurrentType.getTypeCategory() == XSTypeDefinition.COMPLEX_TYPE) {
@@ -1577,7 +1577,7 @@ public class XMLSchemaValidator
             fBuffer.append(text.ch, text.offset, text.length);
 
         // When it's a complex type with element-only content, we need to
-        // find out whether the content contains any non-whitespace character.
+        // search out whether the content contains any non-whitespace character.
         fSawOnlyWhitespaceInElementContent = false;
         if (fCurrentType != null
             && fCurrentType.getTypeCategory() == XSTypeDefinition.COMPLEX_TYPE) {
@@ -1762,7 +1762,7 @@ public class XMLSchemaValidator
             return augs;
         }
 
-        //try to find schema grammar by different means..
+        //try to search schema grammar by different means..
         SchemaGrammar sGrammar =
             findSchemaGrammar(
                 XSDDescription.CONTEXT_ELEMENT,
@@ -1772,7 +1772,7 @@ public class XMLSchemaValidator
                 attributes);
 
         // if we are not skipping this element, and there is a content model,
-        // we try to find the corresponding decl object for this element.
+        // we try to search the corresponding decl object for this element.
         // the reason we move this part of code here is to make sure the
         // error reported here (if any) is stored within the parent element's
         // context, instead of that of the current element.
@@ -1846,8 +1846,8 @@ public class XMLSchemaValidator
         }
 
         // try again to get the element decl:
-        // case 1: find declaration for root element
-        // case 2: find declaration for element from another namespace
+        // case 1: search declaration for root element
+        // case 2: search declaration for element from another namespace
         if (fCurrentElemDecl == null) {
             if (sGrammar != null) {
                 fCurrentElemDecl = sGrammar.getGlobalElementDecl(element.localpart);
@@ -1865,7 +1865,7 @@ public class XMLSchemaValidator
         // if no decl/type found for the current element
         if (fCurrentType == null && xsiType == null) {
             // if this is the validation root, report an error, because
-            // we can't find eith decl or type for this element
+            // we can't search eith decl or type for this element
             // REVISIT: should we report error, or warning?
             if (fElementDepth == 0) {
                 // for dynamic validation, skip the whole content,
@@ -1892,7 +1892,7 @@ public class XMLSchemaValidator
                     return augs;
                 }
                 // We don't call reportSchemaError here, because the spec
-                // doesn't think it's invalid not to be able to find a
+                // doesn't think it's invalid not to be able to search a
                 // declaration or type definition for an element. Xerces is
                 // reporting it as an error for historical reasons, but in
                 // PSVI, we shouldn't mark this element as invalid because
@@ -1985,7 +1985,7 @@ public class XMLSchemaValidator
                 reportSchemaError("cvc-type.2", new Object[] { element.rawname });
             }
             if (fNormalizeData) {
-                // find out if the content type is simple and if variety is union
+                // search out if the content type is simple and if variety is union
                 // to be able to do character normalization
                 if (ctype.fContentType == XSComplexTypeDecl.CONTENTTYPE_SIMPLE) {
                     if (ctype.fXSSimpleType.getVariety() == XSSimpleType.VARIETY_UNION) {
@@ -2527,7 +2527,7 @@ public class XMLSchemaValidator
         }
         // if it's not schema built-in types, then try to get a grammar
         if (type == null) {
-            //try to find schema grammar by different means....
+            //try to search schema grammar by different means....
             SchemaGrammar grammar =
                 findSchemaGrammar(
                     XSDDescription.CONTEXT_XSITYPE,
@@ -2539,7 +2539,7 @@ public class XMLSchemaValidator
             if (grammar != null)
                 type = grammar.getGlobalTypeDecl(typeName.localpart);
         }
-        // still couldn't find the type, report an error
+        // still couldn't search the type, report an error
         if (type == null) {
             reportSchemaError("cvc-elt.4.2", new Object[] { element.rawname, xsiType });
             return null;
@@ -2683,7 +2683,7 @@ public class XMLSchemaValidator
                 continue;
             }
 
-            // it's not xmlns, and not xsi, then we need to find a decl for it
+            // it's not xmlns, and not xsi, then we need to search a decl for it
             XSAttributeUseImpl currUse = null, oneUse;
             for (int i = 0; i < useCount; i++) {
                 oneUse = (XSAttributeUseImpl) attrUses.item(i);
@@ -2720,7 +2720,7 @@ public class XMLSchemaValidator
                 if (attrWildcard.fProcessContents == XSWildcardDecl.PC_SKIP)
                     continue;
 
-                //try to find grammar by different means...
+                //try to search grammar by different means...
                 SchemaGrammar grammar =
                     findSchemaGrammar(
                         XSDDescription.CONTEXT_ATTRIBUTE,
@@ -2733,7 +2733,7 @@ public class XMLSchemaValidator
                     currDecl = grammar.getGlobalAttributeDecl(fTempQName.localpart);
                 }
 
-                // if can't find
+                // if can't search
                 if (currDecl == null) {
                     // if strict, report error
                     if (attrWildcard.fProcessContents == XSWildcardDecl.PC_STRICT) {
@@ -3616,7 +3616,7 @@ public class XMLSchemaValidator
                 // found it
                 return true;
             }
-            // didn't find it
+            // didn't search it
             return false;
         } // contains():boolean
 

@@ -115,7 +115,7 @@ public class StringVector implements java.io.Serializable
   /**
    * Get the nth element.
    *
-   * @param i Index of string to find
+   * @param i Index of string to search
    *
    * @return String at given index
    */
@@ -149,7 +149,7 @@ public class StringVector implements java.io.Serializable
   /**
    * Tell if the table contains the given string. Ignore case.
    *
-   * @param s String to find
+   * @param s String to search
    *
    * @return True if the String is in this vector
    */

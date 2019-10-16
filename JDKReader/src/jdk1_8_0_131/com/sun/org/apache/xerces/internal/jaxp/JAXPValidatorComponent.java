@@ -179,7 +179,7 @@ final class JAXPValidatorComponent
         fCurrentAttributes = attributes;
         fCurrentAug = augs;
         xni2sax.startElement(element,attributes,null);
-        fCurrentAttributes = null; // mostly to make it easy to find any bug.
+        fCurrentAttributes = null; // mostly to make it easy to search any bug.
     }
 
     public void endElement(QName element, Augmentations augs) throws XNIException {

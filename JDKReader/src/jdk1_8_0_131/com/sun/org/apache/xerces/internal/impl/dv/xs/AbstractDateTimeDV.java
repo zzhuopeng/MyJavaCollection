@@ -268,7 +268,7 @@ public abstract class AbstractDateTimeDV extends TypeValidator {
             throw new RuntimeException("Error in parsing time zone");
         }
 
-        //find UTC sign if any
+        //search UTC sign if any
         int sign = findUTCSign(buffer, start, end);
 
         //get seconds (ms)

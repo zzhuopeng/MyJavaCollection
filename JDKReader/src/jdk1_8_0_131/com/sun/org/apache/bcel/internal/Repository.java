@@ -107,7 +107,7 @@ public abstract class Repository {
   }
 
   /**
-   * Try to find class source via getResourceAsStream().
+   * Try to search class source via getResourceAsStream().
    * @see Class
    * @return JavaClass object for given runtime class
    */

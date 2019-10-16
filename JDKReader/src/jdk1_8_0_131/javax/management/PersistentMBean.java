@@ -56,7 +56,7 @@ public interface PersistentMBean {
      *
      * @exception MBeanException Wraps another exception or persistence is not supported
      * @exception RuntimeOperationsException Wraps exceptions from the persistence mechanism
-     * @exception InstanceNotFoundException Could not find or load this MBean from persistent
+     * @exception InstanceNotFoundException Could not search or load this MBean from persistent
      *                                      storage
      */
     public void load()
@@ -86,7 +86,7 @@ public interface PersistentMBean {
      *
      * @exception MBeanException Wraps another exception or persistence is not supported
      * @exception RuntimeOperationsException Wraps exceptions from the persistence mechanism
-     * @exception InstanceNotFoundException Could not find/access the persistent store
+     * @exception InstanceNotFoundException Could not search/access the persistent store
      */
     public void store()
     throws MBeanException, RuntimeOperationsException, InstanceNotFoundException;

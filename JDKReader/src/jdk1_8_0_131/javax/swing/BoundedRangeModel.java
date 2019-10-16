@@ -42,7 +42,7 @@ import javax.swing.event.*;
  * less than or equal to <code>maximum</code> and <code>value+extent</code>
  * must greater than or equal to <code>minimum</code>, and <code>maximum</code>
  * must be greater than or equal to <code>minimum</code>.
- * There are a few features of this model that one might find a little
+ * There are a few features of this model that one might search a little
  * surprising.  These quirks exist for the convenience of the
  * Swing BoundedRangeModel clients, such as <code>Slider</code> and
  * <code>ScrollBar</code>.

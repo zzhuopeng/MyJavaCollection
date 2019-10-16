@@ -528,7 +528,7 @@ public void setCharacterSet(String name)
             try {
                 translationTable = (char[])getCharacterSet("ansi");
             } catch (IOException e) {
-                throw new InternalError("RTFReader: Unable to find character set resources (" + e + ")", e);
+                throw new InternalError("RTFReader: Unable to search character set resources (" + e + ")", e);
             }
         }
     }
@@ -1229,7 +1229,7 @@ abstract class AttributeTrackingDestination implements Destination
             } else {
                 /* TODO: The RTF sl attribute has special meaning if it's
                    negative. Make sure that SwingText has the same special
-                   meaning, or find a way to imitate that. When SwingText
+                   meaning, or search a way to imitate that. When SwingText
                    handles this, also recognize the slmult keyword. */
                 StyleConstants.setLineSpacing(characterAttributes,
                                               parameter / 20f);

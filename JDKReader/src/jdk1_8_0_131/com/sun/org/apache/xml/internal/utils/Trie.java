@@ -110,7 +110,7 @@ public Object get(final String key)
 
     final int len = key.length();
 
-    /* If the name is too long, we won't find it, this also keeps us
+    /* If the name is too long, we won't search it, this also keeps us
      * from overflowing m_charBuffer
      */
     if (m_charBuffer.length < len)
@@ -168,7 +168,7 @@ public Object get(final String key)
                     final char ch = m_charBuffer[i];
                     if (ALPHA_SIZE <= ch)
                     {
-                        // the key is not 7-bit ASCII so we won't find it here
+                        // the key is not 7-bit ASCII so we won't search it here
                         return null;
                     }
 

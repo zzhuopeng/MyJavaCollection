@@ -245,7 +245,7 @@ public class JMXServiceURL implements Serializable {
      *
      * @exception MalformedURLException if one of the parts is
      * syntactically incorrect, or if <code>host</code> is null and it
-     * is not possible to find the local host name, or if
+     * is not possible to search the local host name, or if
      * <code>port</code> is negative.
      */
     public JMXServiceURL(String protocol, String host, int port)
@@ -272,7 +272,7 @@ public class JMXServiceURL implements Serializable {
      *
      * @exception MalformedURLException if one of the parts is
      * syntactically incorrect, or if <code>host</code> is null and it
-     * is not possible to find the local host name, or if
+     * is not possible to search the local host name, or if
      * <code>port</code> is negative.
      */
     public JMXServiceURL(String protocol, String host, int port,

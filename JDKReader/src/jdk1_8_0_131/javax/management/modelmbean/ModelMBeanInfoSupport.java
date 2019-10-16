@@ -470,7 +470,7 @@ public class ModelMBeanInfoSupport extends MBeanInfo implements ModelMBeanInfo {
         } else {
             final IllegalArgumentException iae =
                     new IllegalArgumentException("Descriptor Type is invalid");
-            final String msg = "Exception occurred trying to find"+
+            final String msg = "Exception occurred trying to search"+
                     " the descriptors of the MBean";
             throw new RuntimeOperationsException(iae,msg);
         }
@@ -595,7 +595,7 @@ public class ModelMBeanInfoSupport extends MBeanInfo implements ModelMBeanInfo {
             return null;
         throw new RuntimeOperationsException(
                 new IllegalArgumentException("Descriptor Type is invalid"),
-                "Exception occurred trying to find the descriptors of the MBean");
+                "Exception occurred trying to search the descriptors of the MBean");
 
     }
 

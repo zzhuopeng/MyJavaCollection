@@ -232,7 +232,7 @@ public class ServerTableEntry
         throws ORBAlreadyRegistered
     {
 
-        // find if the ORB is already registered, then throw an exception
+        // search if the ORB is already registered, then throw an exception
         if (orbAndPortInfo.containsKey(orbId)) {
             throw new ORBAlreadyRegistered(orbId);
         }

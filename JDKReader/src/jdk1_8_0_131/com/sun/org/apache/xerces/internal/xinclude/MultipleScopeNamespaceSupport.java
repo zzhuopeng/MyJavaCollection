@@ -130,7 +130,7 @@ public class MultipleScopeNamespaceSupport extends NamespaceSupport {
             return XMLSymbols.PREFIX_XMLNS;
         }
 
-        // find uri in current context
+        // search uri in current context
         for (int i = start; i > end; i -= 2) {
             if (fNamespace[i - 1] == uri) {
                 if (getURI(fNamespace[i - 2]) == uri)
@@ -151,7 +151,7 @@ public class MultipleScopeNamespaceSupport extends NamespaceSupport {
             return NamespaceContext.XMLNS_URI;
         }
 
-        // find prefix in current context
+        // search prefix in current context
         for (int i = start; i > end; i -= 2) {
             if (fNamespace[i - 2] == prefix) {
                 return fNamespace[i - 1];

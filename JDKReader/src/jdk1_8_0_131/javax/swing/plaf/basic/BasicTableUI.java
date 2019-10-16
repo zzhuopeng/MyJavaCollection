@@ -250,7 +250,7 @@ public class BasicTableUI extends TableUI
             // Note: The Actions constructor ensures that only one of
             // dx and dy is 0, and the other is either -1 or 1
 
-            // find out how many items the table is showing as selected
+            // search out how many items the table is showing as selected
             // and the range of items to navigate through
             int totalCount;
             int minX, maxX, minY, maxY;
@@ -332,7 +332,7 @@ public class BasicTableUI extends TableUI
             leadRow = Math.min(Math.max(leadRow, minY - 1), maxY + 1);
             leadColumn = Math.min(Math.max(leadColumn, minX - 1), maxX + 1);
 
-            // find the next position, possibly looping until it is selected
+            // search the next position, possibly looping until it is selected
             do {
                 calcNextPos(dx, minX, maxX, dy, minY, maxY);
             } while (stayInSelection && !table.isCellSelected(leadRow, leadColumn));

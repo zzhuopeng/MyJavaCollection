@@ -485,7 +485,7 @@ public final class ORBUtility {
         if (version == null)
             return new int[0];
         char[] s = version.toCharArray();
-        //find the maximum span of the string "n.n.n..." where n is an integer
+        //search the maximum span of the string "n.n.n..." where n is an integer
         int start = 0;
         for (; start < s.length  && (s[start] < '0' || s[start] > '9'); ++start)
             if (start == s.length)      //no digit found

@@ -134,7 +134,7 @@ import sun.swing.AccumulativeRunnable;
  * component.
  *
  * <p>
- * Say we want to find the "Meaning of Life" and display the result in
+ * Say we want to search the "Meaning of Life" and display the result in
  * a {@code JLabel}.
  *
  * <pre>
@@ -162,7 +162,7 @@ import sun.swing.AccumulativeRunnable;
  * as it is ready on the <i>Event Dispatch Thread</i>.
  *
  * <p>
- * Now we want to find the first N prime numbers and display the results in a
+ * Now we want to search the first N prime numbers and display the results in a
  * {@code JTextArea}.  While this is computing, we want to update our
  * progress in a {@code JProgressBar}.  Finally, we also want to print
  * the prime numbers to {@code System.out}.

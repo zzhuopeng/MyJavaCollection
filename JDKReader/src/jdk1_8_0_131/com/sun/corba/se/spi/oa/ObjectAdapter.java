@@ -100,7 +100,7 @@ import com.sun.corba.se.spi.ior.IORTemplate ;
 * <ol>
 * <li>The remote pattern:
 *   <ol>
-*   <li>oa = oaf.find( oaid )</li>
+*   <li>oa = oaf.search( oaid )</li>
 *   <li>oa.enter()</li>
 *   <li>info = oa.makeInvocationInfo( oid )</li>
 *   <li>info.setOperation( operation )</li>
@@ -118,7 +118,7 @@ import com.sun.corba.se.spi.ior.IORTemplate ;
 * returnServant, exit, and pop must be called in the correct order.
 * <li>The local pattern:
 *   <ol>
-*   <li>oa = oaf.find( oaid )</li>
+*   <li>oa = oaf.search( oaid )</li>
 *   <li>oa.enter()</li>
 *   <li>info = oa.makeInvocationInfo( oid )</li>
 *   <li>info.setOperation( operation )</li>
@@ -136,7 +136,7 @@ import com.sun.corba.se.spi.ior.IORTemplate ;
 *    first extract ObjectKey from IOR in delegate,
 *    then get ObjectId, ObjectAdapterId, and ObjectAdapterFactory (oaf). Then:
 *    <ol>
-*    <li>oa = oaf.find( oaid )</li>
+*    <li>oa = oaf.search( oaid )</li>
 *    <li>info = oa.makeInvocationInfo( oid ) (note: no operation!)</li>
 *    <li>push info (needed for the correct functioning of getInvocationServant)</li>
 *    <li>oa.getInvocationServant( info )</li>

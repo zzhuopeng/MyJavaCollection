@@ -303,7 +303,7 @@ public class StyleContext implements Serializable, AbstractDocument.AttributeCon
      */
     public synchronized AttributeSet addAttribute(AttributeSet old, Object name, Object value) {
         if ((old.getAttributeCount() + 1) <= getCompressionThreshold()) {
-            // build a search key and find/create an immutable and unique
+            // build a search key and search/create an immutable and unique
             // set.
             search.removeAttributes(search);
             search.addAttributes(old);
@@ -331,7 +331,7 @@ public class StyleContext implements Serializable, AbstractDocument.AttributeCon
      */
     public synchronized AttributeSet addAttributes(AttributeSet old, AttributeSet attr) {
         if ((old.getAttributeCount() + attr.getAttributeCount()) <= getCompressionThreshold()) {
-            // build a search key and find/create an immutable and unique
+            // build a search key and search/create an immutable and unique
             // set.
             search.removeAttributes(search);
             search.addAttributes(old);
@@ -359,7 +359,7 @@ public class StyleContext implements Serializable, AbstractDocument.AttributeCon
      */
     public synchronized AttributeSet removeAttribute(AttributeSet old, Object name) {
         if ((old.getAttributeCount() - 1) <= getCompressionThreshold()) {
-            // build a search key and find/create an immutable and unique
+            // build a search key and search/create an immutable and unique
             // set.
             search.removeAttributes(search);
             search.addAttributes(old);
@@ -387,7 +387,7 @@ public class StyleContext implements Serializable, AbstractDocument.AttributeCon
      */
     public synchronized AttributeSet removeAttributes(AttributeSet old, Enumeration<?> names) {
         if (old.getAttributeCount() <= getCompressionThreshold()) {
-            // build a search key and find/create an immutable and unique
+            // build a search key and search/create an immutable and unique
             // set.
             search.removeAttributes(search);
             search.addAttributes(old);
@@ -415,7 +415,7 @@ public class StyleContext implements Serializable, AbstractDocument.AttributeCon
      */
     public synchronized AttributeSet removeAttributes(AttributeSet old, AttributeSet attrs) {
         if (old.getAttributeCount() <= getCompressionThreshold()) {
-            // build a search key and find/create an immutable and unique
+            // build a search key and search/create an immutable and unique
             // set.
             search.removeAttributes(search);
             search.addAttributes(old);

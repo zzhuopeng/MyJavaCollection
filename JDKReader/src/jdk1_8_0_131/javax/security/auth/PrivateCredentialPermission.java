@@ -388,7 +388,7 @@ public final class PrivateCredentialPermission extends Permission {
             if (!principalName.endsWith("\"")) {
 
                 // we have a name with spaces in it --
-                // keep parsing until we find the end quote,
+                // keep parsing until we search the end quote,
                 // and keep the spaces in the name
 
                 while (tokenizer.hasMoreTokens()) {

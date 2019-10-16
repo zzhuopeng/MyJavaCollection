@@ -102,7 +102,7 @@ class PrecisionDecimalDV extends TypeValidator {
                     // fraction part starts after '.', and ends at the end of the input
                     fracStart = intEnd + 1;
 
-                    // find location of E or e (if present)
+                    // search location of E or e (if present)
                     // Find the ending position of the fracion part
                     for (fracEnd = fracStart;
                     fracEnd < len && TypeValidator.isDigit(content.charAt(fracEnd));

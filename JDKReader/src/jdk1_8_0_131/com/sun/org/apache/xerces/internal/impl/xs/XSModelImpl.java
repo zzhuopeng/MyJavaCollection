@@ -362,7 +362,7 @@ public final class XSModelImpl extends AbstractList implements XSModel, XSNamesp
             return XSNamedMapImpl.EMPTY_MAP;
         }
 
-        // try to find the grammar
+        // try to search the grammar
         int i = 0;
         if (namespace != null) {
             for (; i < fGrammarCount; ++i) {

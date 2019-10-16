@@ -80,7 +80,7 @@ import sun.swing.SwingAccessor;
  * where it can reasonably do so.  Also provided are other services
  * for additional flexibility (beyond the pluggable UI and bean
  * support).
- * You can find information on how to use the functionality
+ * You can search information on how to use the functionality
  * this class provides in
  * <a href="https://docs.oracle.com/javase/tutorial/uiswing/components/generaltext.html">General Rules for Using Text Components</a>,
  * a section in <em>The Java Tutorial.</em>
@@ -985,7 +985,7 @@ public abstract class JTextComponent extends JComponent implements Scrollable, A
         else if (newKm != null) {
             km = getInputMap(JComponent.WHEN_FOCUSED);
             if (km != null) {
-                // Couldn't find it.
+                // Couldn't search it.
                 // Set the parent of WHEN_FOCUSED InputMap to be the new one.
                 InputMap newKM = new KeymapWrapper(newKm);
                 newKM.setParent(km.getParent());
@@ -1022,7 +1022,7 @@ public abstract class JTextComponent extends JComponent implements Scrollable, A
         else if (newKm != null) {
             am = getActionMap();
             if (am != null) {
-                // Couldn't find it.
+                // Couldn't search it.
                 // Set the parent of ActionMap to be the new one.
                 ActionMap newAM = new KeymapActionMap(newKm);
                 newAM.setParent(am.getParent());
@@ -2927,7 +2927,7 @@ public abstract class JTextComponent extends JComponent implements Scrollable, A
 
         /**
          * Gets the word, sentence, or character at <code>index</code>.
-         * If <code>direction</code> is non-null this will find the
+         * If <code>direction</code> is non-null this will search the
          * next/previous word/sentence/character.
          */
         private String getAtIndex(int part, int index, int direction) {
@@ -3259,7 +3259,7 @@ public abstract class JTextComponent extends JComponent implements Scrollable, A
 
         /**
          * Returns the AccessibleTextSequence at a given <code>index</code>.
-         * If <code>direction</code> is non-null this will find the
+         * If <code>direction</code> is non-null this will search the
          * next/previous word/sentence/character.
          *
          * @param part the <code>CHARACTER</code>, <code>WORD</code>,
@@ -3430,20 +3430,20 @@ public abstract class JTextComponent extends JComponent implements Scrollable, A
                     int tempIndex = index;
                     switch (direction) {
                     case -1:
-                        // going backwards, so find left edge of this run -
+                        // going backwards, so search left edge of this run -
                         // that'll be the end of the previous run
                         // (off-by-one counting)
                         attributeRunEndIndex = getRunEdge(index, direction);
-                        // now set ourselves up to find the left edge of the
+                        // now set ourselves up to search the left edge of the
                         // prev. run
                         tempIndex = attributeRunEndIndex - 1;
                         break;
                     case 1:
-                        // going forward, so find right edge of this run -
+                        // going forward, so search right edge of this run -
                         // that'll be the start of the next run
                         // (off-by-one counting)
                         attributeRunStartIndex = getRunEdge(index, direction);
-                        // now set ourselves up to find the right edge of the
+                        // now set ourselves up to search the right edge of the
                         // next run
                         tempIndex = attributeRunStartIndex;
                         break;
@@ -3517,7 +3517,7 @@ public abstract class JTextComponent extends JComponent implements Scrollable, A
             AttributeSet indexAS = indexElement.getAttributes();
             Element parent = indexElement.getParentElement();
 
-            // find the first Element before/after ours w/the same AttributeSet
+            // search the first Element before/after ours w/the same AttributeSet
             // if we are already at edge of the first element in our parent
             // then return that edge
             Element edgeElement;

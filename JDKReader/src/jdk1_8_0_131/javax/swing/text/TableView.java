@@ -57,7 +57,7 @@ import javax.swing.text.html.HTML;
  * is a vertical box, the rows are horizontal boxes, and the cells
  * are vertical boxes.  The cells are allowed to span multiple
  * columns and rows.  By default, the table can be thought of as
- * being formed over a grid (i.e. somewhat like one would find in
+ * being formed over a grid (i.e. somewhat like one would search in
  * gridbag layout), where table cells can request to span more
  * than one grid cell.  The default horizontal span of table cells
  * will be based upon this grid, but can be changed by reimplementing

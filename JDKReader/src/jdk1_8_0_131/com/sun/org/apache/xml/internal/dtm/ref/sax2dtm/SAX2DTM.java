@@ -1084,7 +1084,7 @@ public class SAX2DTM extends DTMDefaultBaseIterators
    * map it to one.
    * TODO: Resolve Public Identifiers... or consider changing function name.
    * <p>
-   * If we find a relative URI
+   * If we search a relative URI
    * reference, XML expects it to be resolved in terms of the base URI
    * of the document. The DOM doesn't do that for us, and it isn't
    * entirely clear whether that should be done here; currently that's

@@ -887,7 +887,7 @@ public class ConcurrentSkipListMap<K,V> extends AbstractMap<K,V>
                     }
                 }
             }
-            // find insertion points and splice in
+            // search insertion points and splice in
             splice: for (int insertionLevel = level;;) {
                 int j = h.level;
                 for (Index<K,V> q = h, r = q.right, t = idx;;) {
@@ -1140,7 +1140,7 @@ public class ConcurrentSkipListMap<K,V> extends AbstractMap<K,V>
     /* ---------------- Finding and removing last element -------------- */
 
     /**
-     * Specialized version of find to get last valid node.
+     * Specialized version of search to get last valid node.
      * @return last node or null if empty
      */
     final Node<K,V> findLast() {

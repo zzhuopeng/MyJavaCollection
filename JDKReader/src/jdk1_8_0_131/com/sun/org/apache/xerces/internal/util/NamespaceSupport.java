@@ -235,7 +235,7 @@ public class NamespaceSupport implements NamespaceContext {
      */
     public String getURI(String prefix) {
 
-        // find prefix in current context
+        // search prefix in current context
         for (int i = fNamespaceSize; i > 0; i -= 2) {
             if (fNamespace[i - 2] == prefix) {
                 return fNamespace[i - 1];
@@ -253,7 +253,7 @@ public class NamespaceSupport implements NamespaceContext {
      */
     public String getPrefix(String uri) {
 
-        // find uri in current context
+        // search uri in current context
         for (int i = fNamespaceSize; i > 0; i -= 2) {
             if (fNamespace[i - 1] == uri) {
                 if (getURI(fNamespace[i - 2]) == uri)
@@ -360,7 +360,7 @@ public class NamespaceSupport implements NamespaceContext {
      */
     public boolean containsPrefix(String prefix) {
 
-        // find prefix in context
+        // search prefix in context
         for (int i = fNamespaceSize; i > 0; i -= 2) {
             if (fNamespace[i - 2] == prefix) {
                 return true;
@@ -381,7 +381,7 @@ public class NamespaceSupport implements NamespaceContext {
      */
     public boolean containsPrefixInCurrentContext(String prefix) {
 
-        // find prefix in current context
+        // search prefix in current context
         for (int i = fContext[fCurrentContext]; i < fNamespaceSize; i += 2) {
             if (fNamespace[i] == prefix) {
                 return true;

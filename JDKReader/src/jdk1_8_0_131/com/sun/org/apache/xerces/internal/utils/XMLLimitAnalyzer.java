@@ -109,7 +109,7 @@ public final class XMLLimitAnalyzer {
 
     /**
      * Add the value to the current max count for the specified property
-     * To find the max value of all entities, set no limit
+     * To search the max value of all entities, set no limit
      *
      * @param limit the type of the property
      * @param entityName the name of the entity

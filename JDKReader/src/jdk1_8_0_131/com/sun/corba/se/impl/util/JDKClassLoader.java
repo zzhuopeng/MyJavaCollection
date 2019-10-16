@@ -96,7 +96,7 @@ class JDKClassLoader {
                 // to load it.
                 return Class.forName(className, false, loader);
             } catch(ClassNotFoundException cnfe) {
-                // Record that we failed to find the class
+                // Record that we failed to search the class
                 // with this particular loader.  This way, we won't
                 // waste time looking with this loader, again.
                 classCache.recordFailure(key);
@@ -110,7 +110,7 @@ class JDKClassLoader {
      */
     private static class JDKClassLoaderCache
     {
-        // JDKClassLoader couldn't find the class with the located
+        // JDKClassLoader couldn't search the class with the located
         // ClassLoader.  Note this in our cache so JDKClassLoader
         // can abort early next time.
         public final void recordFailure(Object key) {

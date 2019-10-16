@@ -110,7 +110,7 @@ import javax.sql.rowset.spi.*;
  * A <code>CachedRowSet</code> object may use any
  * <code>SyncProvider</code> implementation that has been registered
  * with the <code>SyncFactory</code> singleton. An application
- * can find out which <code>SyncProvider</code> implementations have been
+ * can search out which <code>SyncProvider</code> implementations have been
  * registered by calling the following line of code.
  * <PRE>
  *      java.util.Enumeration providers = SyncFactory.getRegisteredProviders();

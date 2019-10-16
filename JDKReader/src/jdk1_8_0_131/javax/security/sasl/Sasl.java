@@ -345,7 +345,7 @@ public class Sasl {
      * the realm must be entered.
      *
      *@return A possibly null {@code SaslClient} created using the parameters
-     * supplied. If null, cannot find a {@code SaslClientFactory}
+     * supplied. If null, cannot search a {@code SaslClientFactory}
      * that will produce one.
      *@exception SaslException If cannot create a {@code SaslClient} because
      * of an error.
@@ -488,7 +488,7 @@ public class Sasl {
      * the realm must be entered.
      *
      *@return A possibly null {@code SaslServer} created using the parameters
-     * supplied. If null, cannot find a {@code SaslServerFactory}
+     * supplied. If null, cannot search a {@code SaslServerFactory}
      * that will produce one.
      *@exception SaslException If cannot create a {@code SaslServer} because
      * of an error.

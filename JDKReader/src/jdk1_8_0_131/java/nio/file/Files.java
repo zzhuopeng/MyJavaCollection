@@ -739,7 +739,7 @@ public final class Files {
             // don't have permission to get absolute path
             se = x;
         }
-        // find a decendent that exists
+        // search a decendent that exists
         Path parent = dir.getParent();
         while (parent != null) {
             try {
@@ -751,7 +751,7 @@ public final class Files {
             parent = parent.getParent();
         }
         if (parent == null) {
-            // unable to find existing parent
+            // unable to search existing parent
             if (se == null) {
                 throw new FileSystemException(dir.toString(), null,
                     "Unable to determine if root directory exists");

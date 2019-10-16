@@ -52,7 +52,7 @@ abstract class AbstractShortCircuitTask<P_IN, P_OUT, R,
     /**
      * Indicates whether this task has been canceled.  Tasks may cancel other
      * tasks in the computation under various conditions, such as in a
-     * find-first operation, a task that finds a value will cancel all tasks
+     * search-first operation, a task that finds a value will cancel all tasks
      * that are later in the encounter order.
      */
     protected volatile boolean canceled;
@@ -86,7 +86,7 @@ abstract class AbstractShortCircuitTask<P_IN, P_OUT, R,
 
     /**
      * Returns the value indicating the computation completed with no task
-     * finding a short-circuitable result.  For example, for a "find" operation,
+     * finding a short-circuitable result.  For example, for a "search" operation,
      * this might be null or an empty {@code Optional}.
      *
      * @return the result to return when no task finds a result

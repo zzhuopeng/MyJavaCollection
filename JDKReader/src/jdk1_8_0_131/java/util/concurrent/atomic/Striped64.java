@@ -88,7 +88,7 @@ abstract class Striped64 extends Number {
      * holds the lock. If a hashed slot is empty, and lock is
      * available, a new Cell is created. Otherwise, if the slot
      * exists, a CAS is tried.  Retries proceed by "double hashing",
-     * using a secondary hash (Marsaglia XorShift) to try to find a
+     * using a secondary hash (Marsaglia XorShift) to try to search a
      * free slot.
      *
      * The table size is capped because, when there are more threads

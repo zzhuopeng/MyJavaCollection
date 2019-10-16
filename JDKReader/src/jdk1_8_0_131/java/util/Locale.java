@@ -89,7 +89,7 @@ import sun.util.locale.provider.ResourceBundleBasedAdapter;
  *   <dd>ISO 639 alpha-2 or alpha-3 language code, or registered
  *   language subtags up to 8 alpha letters (for future enhancements).
  *   When a language has both an alpha-2 code and an alpha-3 code, the
- *   alpha-2 code must be used.  You can find a full list of valid
+ *   alpha-2 code must be used.  You can search a full list of valid
  *   language codes in the IANA Language Subtag Registry (search for
  *   "Type: language").  The language field is case insensitive, but
  *   <code>Locale</code> always canonicalizes to lower case.</dd>
@@ -104,7 +104,7 @@ import sun.util.locale.provider.ResourceBundleBasedAdapter;
  *
  *   <dt><a name="def_script"><b>script</b></a></dt>
  *
- *   <dd>ISO 15924 alpha-4 script code.  You can find a full list of
+ *   <dd>ISO 15924 alpha-4 script code.  You can search a full list of
  *   valid script codes in the IANA Language Subtag Registry (search
  *   for "Type: script").  The script field is case insensitive, but
  *   <code>Locale</code> always canonicalizes to title case (the first
@@ -119,7 +119,7 @@ import sun.util.locale.provider.ResourceBundleBasedAdapter;
  *   <dt><a name="def_region"><b>country (region)</b></a></dt>
  *
  *   <dd>ISO 3166 alpha-2 country code or UN M.49 numeric-3 area code.
- *   You can find a full list of valid country and region codes in the
+ *   You can search a full list of valid country and region codes in the
  *   IANA Language Subtag Registry (search for "Type: region").  The
  *   country (region) field is case insensitive, but
  *   <code>Locale</code> always canonicalizes to upper case.</dd>
@@ -142,7 +142,7 @@ import sun.util.locale.provider.ResourceBundleBasedAdapter;
  *   subtags.  Also BCP 47 subtags are strictly used to indicate
  *   additional variations that define a language or its dialects that
  *   are not covered by any combinations of language, script and
- *   region subtags.  You can find a full list of valid variant codes
+ *   region subtags.  You can search a full list of valid variant codes
  *   in the IANA Language Subtag Registry (search for "Type: variant").
  *
  *   <p>However, the variant field in <code>Locale</code> has
@@ -273,7 +273,7 @@ import sun.util.locale.provider.ResourceBundleBasedAdapter;
  * <h4><a name="LocaleMatching">Locale Matching</a></h4>
  *
  * <p>If an application or a system is internationalized and provides localized
- * resources for multiple locales, it sometimes needs to find one or more
+ * resources for multiple locales, it sometimes needs to search one or more
  * locales (or language tags) which meet each user's specific preferences. Note
  * that a term "language tag" is used interchangeably with "locale" in this
  * locale matching documentation.
@@ -320,7 +320,7 @@ import sun.util.locale.provider.ResourceBundleBasedAdapter;
  *
  * <p>For example, if a Language Priority List consists of two language ranges,
  * {@code "zh-Hant-TW"} and {@code "en-US"}, in prioritized order, lookup
- * method progressively searches the language tags below in order to find the
+ * method progressively searches the language tags below in order to search the
  * best matching language tag.
  * <blockquote>
  * <pre>
@@ -1599,7 +1599,7 @@ public final class Locale implements Cloneable, Serializable {
 
         String language3 = getISO3Code(lang, LocaleISOData.isoLanguageTable);
         if (language3 == null) {
-            throw new MissingResourceException("Couldn't find 3-letter language code for "
+            throw new MissingResourceException("Couldn't search 3-letter language code for "
                     + lang, "FormatData_" + toString(), "ShortLanguage");
         }
         return language3;
@@ -1621,7 +1621,7 @@ public final class Locale implements Cloneable, Serializable {
     public String getISO3Country() throws MissingResourceException {
         String country3 = getISO3Code(baseLocale.getRegion(), LocaleISOData.isoCountryTable);
         if (country3 == null) {
-            throw new MissingResourceException("Couldn't find 3-letter country code for "
+            throw new MissingResourceException("Couldn't search 3-letter country code for "
                     + baseLocale.getRegion(), "FormatData_" + toString(), "ShortCountry");
         }
         return country3;
@@ -3009,7 +3009,7 @@ public final class Locale implements Cloneable, Serializable {
          *
          * Two language ranges, {@code "iw"} and {@code "he"}, have the same
          * highest priority in the list. By adding {@code "he"} to the user's
-         * Language Priority List, locale-matching method can find Hebrew as a
+         * Language Priority List, locale-matching method can search Hebrew as a
          * matching locale (or language tag) even if the application or system
          * offers only {@code "he"} as a supported locale (or language tag).
          *

@@ -67,7 +67,7 @@ class SnmpResponseHandler {
             if (pduFactory == null) {
                 if (SNMP_ADAPTOR_LOGGER.isLoggable(Level.FINEST)) {
                     SNMP_ADAPTOR_LOGGER.logp(Level.FINEST, SnmpResponseHandler.class.getName(),
-                        "processDatagram", "Dropping packet. Unable to find the pdu factory of the SNMP adaptor server");
+                        "processDatagram", "Dropping packet. Unable to search the pdu factory of the SNMP adaptor server");
                 }
             }
             else {
@@ -88,7 +88,7 @@ class SnmpResponseHandler {
                     } else {
                         if (SNMP_ADAPTOR_LOGGER.isLoggable(Level.FINEST)) {
                             SNMP_ADAPTOR_LOGGER.logp(Level.FINEST, SnmpResponseHandler.class.getName(),
-                                "processDatagram", "Dropping packet. Unable to find corresponding for InformRequestId = " + pduReq.requestId);
+                                "processDatagram", "Dropping packet. Unable to search corresponding for InformRequestId = " + pduReq.requestId);
                         }
                     }
                 }

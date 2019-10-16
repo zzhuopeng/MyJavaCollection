@@ -374,7 +374,7 @@ public final class Encodings extends Object
             return values;
         }
 
-        // This method here attempts to find the canonical charset name for the
+        // This method here attempts to search the canonical charset name for the
         // the given name - which is supposed to be either a java name or a mime
         // name.
         // For that, it attempts to load the charset using the given name, and
@@ -389,7 +389,7 @@ public final class Encodings extends Object
             }
         }
 
-        // This method here attempts to find the canonical charset name for the
+        // This method here attempts to search the canonical charset name for the
         // the set javaName+mimeNames - which are supposed to all refer to the
         // same charset.
         // For that it attempts to load the charset using the javaName, and if

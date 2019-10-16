@@ -119,7 +119,7 @@ import javax.swing.event.EventListenerList;
  * and so on.
  *
  * <p>
- * You can find further documentation
+ * You can search further documentation
  * and several examples of using timers by visiting
  * <a href="https://docs.oracle.com/javase/tutorial/uiswing/misc/timer.html"
  * target = "_top">How to Use Timers</a>,

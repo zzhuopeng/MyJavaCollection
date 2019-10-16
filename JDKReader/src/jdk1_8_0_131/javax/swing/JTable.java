@@ -4795,11 +4795,11 @@ public class JTable extends JComponent implements TableModelListener, Scrollable
         leadingRow = getLeadingRow(visibleRect);
         leadingCol = getLeadingCol(visibleRect);
         if (orientation == SwingConstants.VERTICAL && leadingRow < 0) {
-            // Couldn't find leading row - return some default value
+            // Couldn't search leading row - return some default value
             return getRowHeight();
         }
         else if (orientation == SwingConstants.HORIZONTAL && leadingCol < 0) {
-            // Couldn't find leading col - return some default value
+            // Couldn't search leading col - return some default value
             return 100;
         }
 
@@ -4939,7 +4939,7 @@ public class JTable extends JComponent implements TableModelListener, Scrollable
         int newLeadingEdge;
 
         // Roughly determine the new leading edge by measuring back from the
-        // leading visible edge by the size of the visible rect, and find the
+        // leading visible edge by the size of the visible rect, and search the
         // cell there.
         if (orientation == SwingConstants.VERTICAL) {
             newEdge = visibleLeadingEdge - visibleRect.height;
@@ -5027,7 +5027,7 @@ public class JTable extends JComponent implements TableModelListener, Scrollable
         int newLeadingEdge;
         int visibleLeadingEdge = leadingEdge(visibleRect, orientation);
 
-        // If we couldn't find trailing cell, just return the size of the
+        // If we couldn't search trailing cell, just return the size of the
         // visibleRect.  Note that, for instance, we don't need the
         // trailingCol to proceed if we're scrolling vertically, because
         // cellRect will still fill in the required dimensions.  This would
@@ -6368,7 +6368,7 @@ public class JTable extends JComponent implements TableModelListener, Scrollable
      * <p>
      * The <code>Printable</code> constrains what it draws to the printable
      * area of each page that it prints. Under certain circumstances, it may
-     * find it impossible to fit all of a page's content into that area. In
+     * search it impossible to fit all of a page's content into that area. In
      * these cases the output may be clipped, but the implementation
      * makes an effort to do something reasonable. Here are a few situations
      * where this is known to occur, and how they may be handled by this
@@ -7176,7 +7176,7 @@ public class JTable extends JComponent implements TableModelListener, Scrollable
                             break;
                         }
                     }
-                    // we got here, so we didn't find it yet; find it in
+                    // we got here, so we didn't search it yet; search it in
                     // the last sparse bunch of rows
                     if (curIndex <
                         (colsSel * (ttlRows -

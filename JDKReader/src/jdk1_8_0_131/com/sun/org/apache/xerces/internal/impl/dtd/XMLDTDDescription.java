@@ -145,7 +145,7 @@ public class XMLDTDDescription extends XMLResourceIdentifierImpl
      * Compares this grammar with the given grammar. Currently, we compare
      * as follows:
      * - if grammar type not equal return false immediately
-     * - try and find a common root name:
+     * - try and search a common root name:
      *    - if both have roots, use them
      *    - else if one has a root, examine other's possible root's for a match;
      *    - else try all combinations

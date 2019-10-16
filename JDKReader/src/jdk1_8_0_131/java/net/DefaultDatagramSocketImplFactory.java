@@ -108,7 +108,7 @@ class DefaultDatagramSocketImplFactory
             if (prefix != null)
                 prefixImplClassLocal = Class.forName("java.net."+prefix+"DatagramSocketImpl");
         } catch (Exception e) {
-            System.err.println("Can't find class: java.net." +
+            System.err.println("Can't search class: java.net." +
                                 prefix +
                                 "DatagramSocketImpl: check impl.prefix property");
         }

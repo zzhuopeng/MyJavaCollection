@@ -2602,7 +2602,7 @@ public class WindowsLookAndFeel extends BasicLookAndFeel
             canFilterIndexColorModel = true;
         }
         public int filterRGB(int x, int y, int rgb) {
-            // find the average of red, green, and blue
+            // search the average of red, green, and blue
             float avg = (((rgb >> 16) & 0xff) / 255f +
                           ((rgb >>  8) & 0xff) / 255f +
                            (rgb        & 0xff) / 255f) / 3;

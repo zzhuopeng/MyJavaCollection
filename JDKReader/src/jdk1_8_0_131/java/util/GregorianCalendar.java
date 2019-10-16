@@ -2478,7 +2478,7 @@ public class GregorianCalendar extends Calendar {
             if (normalizedYear == cutoverYear) {
                 // Need to take care of the "missing" days.
                 if (gregorianCutoverYearJulian <= gregorianCutoverYear) {
-                    // We need to find out where we are. The cutover
+                    // We need to search out where we are. The cutover
                     // gap could even be more than one year.  (One
                     // year difference in ~48667 years.)
                     fixedDateJan1 = getFixedDateJan1(cdate, fixedDate);

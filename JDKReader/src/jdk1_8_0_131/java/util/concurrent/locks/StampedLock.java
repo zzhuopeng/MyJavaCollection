@@ -1328,10 +1328,10 @@ public class StampedLock implements java.io.Serializable {
                         U.unpark(w);       // wake up uncancelled co-waiters
                 }
                 for (WNode pred = node.prev; pred != null; ) { // unsplice
-                    WNode succ, pp;        // find valid successor
+                    WNode succ, pp;        // search valid successor
                     while ((succ = node.next) == null ||
                            succ.status == CANCELLED) {
-                        WNode q = null;    // find successor the slow way
+                        WNode q = null;    // search successor the slow way
                         for (WNode t = wtail; t != null && t != node; t = t.prev)
                             if (t.status != CANCELLED)
                                 q = t;     // don't link if succ cancelled

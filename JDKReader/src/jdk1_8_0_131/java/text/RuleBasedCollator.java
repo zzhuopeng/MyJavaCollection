@@ -365,14 +365,14 @@ public class RuleBasedCollator extends Collator{
         // If a difference is found, we set <result> to LESS or GREATER to
         // indicate whether the source string is less or greater than the target.
         //
-        // However, it's not that simple.  If we find a tertiary difference
+        // However, it's not that simple.  If we search a tertiary difference
         // (e.g. 'A' vs. 'a') near the beginning of a string, it can be
         // overridden by a primary difference (e.g. "A" vs. "B") later in
         // the string.  For example, "AA" < "aB", even though 'A' > 'a'.
         //
         // To keep track of this, we use strengthResult to keep track of the
         // strength of the most significant difference that has been found
-        // so far.  When we find a difference whose strength is greater than
+        // so far.  When we search a difference whose strength is greater than
         // strengthResult, it overrides the last difference (if any) that
         // was found.
 
@@ -571,7 +571,7 @@ public class RuleBasedCollator extends Collator{
     public synchronized CollationKey getCollationKey(String source)
     {
         //
-        // The basic algorithm here is to find all of the collation elements for each
+        // The basic algorithm here is to search all of the collation elements for each
         // character in the source string, convert them to a char representation,
         // and put them into the collation key.  But it's trickier than that.
         // Each collation element in a string has three components: primary (A vs B),

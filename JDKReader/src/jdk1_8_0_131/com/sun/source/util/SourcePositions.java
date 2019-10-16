@@ -51,7 +51,7 @@ public interface SourcePositions {
      * {@code subtree.getStartPosition() == NOPOS}
      * </p>
      *
-     * @param file CompilationUnit in which to find tree.
+     * @param file CompilationUnit in which to search tree.
      * @param tree tree for which a position is sought.
      * @return the start position of tree.
      */
@@ -78,7 +78,7 @@ public interface SourcePositions {
      * {@code tree.getEndPosition() == NOPOS}
      * </p>
      *
-     * @param file CompilationUnit in which to find tree.
+     * @param file CompilationUnit in which to search tree.
      * @param tree tree for which a position is sought.
      * @return the end position of tree.
      */

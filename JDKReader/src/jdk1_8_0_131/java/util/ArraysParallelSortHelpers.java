@@ -53,7 +53,7 @@ import java.util.concurrent.CountedCompleter;
  * Merger classes perform merging for Sorter.  They are structured
  * such that if the underlying sort is stable (as is true for
  * TimSort), then so is the full sort.  If big enough, they split the
- * largest of the two partitions in half, find the greatest point in
+ * largest of the two partitions in half, search the greatest point in
  * smaller partition less than the beginning of the second half of
  * larger via binary search; and then merge in parallel the two
  * partitions.  In part to ensure tasks are triggered in
@@ -172,7 +172,7 @@ import java.util.concurrent.CountedCompleter;
                 if (a == null || w == null || lb < 0 || rb < 0 || k < 0 ||
                     c == null)
                     throw new IllegalStateException(); // hoist checks
-                for (int lh, rh;;) {  // split larger, find point in smaller
+                for (int lh, rh;;) {  // split larger, search point in smaller
                     if (ln >= rn) {
                         if (ln <= g)
                             break;
@@ -285,7 +285,7 @@ import java.util.concurrent.CountedCompleter;
                     rn = this.rsize, k = this.wbase, g = this.gran;
                 if (a == null || w == null || lb < 0 || rb < 0 || k < 0)
                     throw new IllegalStateException(); // hoist checks
-                for (int lh, rh;;) {  // split larger, find point in smaller
+                for (int lh, rh;;) {  // split larger, search point in smaller
                     if (ln >= rn) {
                         if (ln <= g)
                             break;
@@ -396,7 +396,7 @@ import java.util.concurrent.CountedCompleter;
                     rn = this.rsize, k = this.wbase, g = this.gran;
                 if (a == null || w == null || lb < 0 || rb < 0 || k < 0)
                     throw new IllegalStateException(); // hoist checks
-                for (int lh, rh;;) {  // split larger, find point in smaller
+                for (int lh, rh;;) {  // split larger, search point in smaller
                     if (ln >= rn) {
                         if (ln <= g)
                             break;
@@ -507,7 +507,7 @@ import java.util.concurrent.CountedCompleter;
                     rn = this.rsize, k = this.wbase, g = this.gran;
                 if (a == null || w == null || lb < 0 || rb < 0 || k < 0)
                     throw new IllegalStateException(); // hoist checks
-                for (int lh, rh;;) {  // split larger, find point in smaller
+                for (int lh, rh;;) {  // split larger, search point in smaller
                     if (ln >= rn) {
                         if (ln <= g)
                             break;
@@ -618,7 +618,7 @@ import java.util.concurrent.CountedCompleter;
                     rn = this.rsize, k = this.wbase, g = this.gran;
                 if (a == null || w == null || lb < 0 || rb < 0 || k < 0)
                     throw new IllegalStateException(); // hoist checks
-                for (int lh, rh;;) {  // split larger, find point in smaller
+                for (int lh, rh;;) {  // split larger, search point in smaller
                     if (ln >= rn) {
                         if (ln <= g)
                             break;
@@ -729,7 +729,7 @@ import java.util.concurrent.CountedCompleter;
                     rn = this.rsize, k = this.wbase, g = this.gran;
                 if (a == null || w == null || lb < 0 || rb < 0 || k < 0)
                     throw new IllegalStateException(); // hoist checks
-                for (int lh, rh;;) {  // split larger, find point in smaller
+                for (int lh, rh;;) {  // split larger, search point in smaller
                     if (ln >= rn) {
                         if (ln <= g)
                             break;
@@ -840,7 +840,7 @@ import java.util.concurrent.CountedCompleter;
                     rn = this.rsize, k = this.wbase, g = this.gran;
                 if (a == null || w == null || lb < 0 || rb < 0 || k < 0)
                     throw new IllegalStateException(); // hoist checks
-                for (int lh, rh;;) {  // split larger, find point in smaller
+                for (int lh, rh;;) {  // split larger, search point in smaller
                     if (ln >= rn) {
                         if (ln <= g)
                             break;
@@ -951,7 +951,7 @@ import java.util.concurrent.CountedCompleter;
                     rn = this.rsize, k = this.wbase, g = this.gran;
                 if (a == null || w == null || lb < 0 || rb < 0 || k < 0)
                     throw new IllegalStateException(); // hoist checks
-                for (int lh, rh;;) {  // split larger, find point in smaller
+                for (int lh, rh;;) {  // split larger, search point in smaller
                     if (ln >= rn) {
                         if (ln <= g)
                             break;

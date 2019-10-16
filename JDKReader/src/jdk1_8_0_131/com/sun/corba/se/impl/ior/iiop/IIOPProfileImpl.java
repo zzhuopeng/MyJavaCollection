@@ -322,7 +322,7 @@ public class IIOPProfileImpl extends IdentifiableBase implements IIOPProfile
         try {
             oa = oaf.find( oaid ) ;
         } catch (SystemException exc) {
-            // Could not find the OA, so just return null.
+            // Could not search the OA, so just return null.
             // This usually happens when POAs are being deleted,
             // and the POA always return null for getLocalServant anyway.
             wrapper.getLocalServantFailure( exc, oaid.toString() ) ;

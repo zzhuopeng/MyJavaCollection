@@ -136,7 +136,7 @@ public class CertStore {
      * Some {@code CertStore} implementations (especially LDAP
      * {@code CertStore}s) may throw a {@code CertStoreException}
      * unless a non-null {@code CertSelector} is provided that
-     * includes specific criteria that can be used to find the certificates.
+     * includes specific criteria that can be used to search the certificates.
      * Issuer and/or subject names are especially useful criteria.
      *
      * @param selector A {@code CertSelector} used to select which
@@ -166,7 +166,7 @@ public class CertStore {
      * Some {@code CertStore} implementations (especially LDAP
      * {@code CertStore}s) may throw a {@code CertStoreException}
      * unless a non-null {@code CRLSelector} is provided that
-     * includes specific criteria that can be used to find the CRLs.
+     * includes specific criteria that can be used to search the CRLs.
      * Issuer names and/or the certificate to be checked are especially useful.
      *
      * @param selector A {@code CRLSelector} used to select which

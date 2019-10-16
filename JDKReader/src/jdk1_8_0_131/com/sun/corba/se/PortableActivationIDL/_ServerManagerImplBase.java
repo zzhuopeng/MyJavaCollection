@@ -113,7 +113,7 @@ public abstract class _ServerManagerImplBase extends org.omg.CORBA.portable.Obje
        }
 
 
-  /** Construct or find an ORBD object template corresponding to the 
+  /** Construct or search an ORBD object template corresponding to the
 	* server's object template and return it.  Called whenever a 
 	* persistent POA is created.
 	*/

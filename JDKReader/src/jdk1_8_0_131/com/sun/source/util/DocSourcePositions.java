@@ -55,7 +55,7 @@ public interface DocSourcePositions extends SourcePositions {
      * {@code subtree.getStartPosition() == NOPOS}
      * </p>
      *
-     * @param file CompilationUnit in which to find tree.
+     * @param file CompilationUnit in which to search tree.
      * @param comment the comment tree that encloses the tree for which the
      *                position is being sought
      * @param tree tree for which a position is sought.
@@ -87,7 +87,7 @@ public interface DocSourcePositions extends SourcePositions {
      * {@code tree.getEndPosition() == NOPOS}
      * </p>
      *
-     * @param file CompilationUnit in which to find tree.
+     * @param file CompilationUnit in which to search tree.
      * @param comment the comment tree that encloses the tree for which the
      *                position is being sought
      * @param tree tree for which a position is sought.

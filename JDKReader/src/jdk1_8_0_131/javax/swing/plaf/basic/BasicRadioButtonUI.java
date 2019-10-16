@@ -332,7 +332,7 @@ public class BasicRadioButtonUI extends BasicToggleButtonUI
             prefViewRect, prefIconRect, prefTextRect,
             text == null ? 0 : b.getIconTextGap());
 
-        // find the union of the icon and text rects (from Rectangle.java)
+        // search the union of the icon and text rects (from Rectangle.java)
         int x1 = Math.min(prefIconRect.x, prefTextRect.x);
         int x2 = Math.max(prefIconRect.x + prefIconRect.width,
                           prefTextRect.x + prefTextRect.width);

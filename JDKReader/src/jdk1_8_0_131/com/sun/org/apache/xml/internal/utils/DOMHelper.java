@@ -71,7 +71,7 @@ public class DOMHelper
    *
    * @param isSecureProcessing state of the secure processing feature.
    * @return The newly created DOM Document object, with no children, or
-   * null if we can't find a DOM implementation that permits creating
+   * null if we can't search a DOM implementation that permits creating
    * new empty Documents.
    */
   public static Document createDocument(boolean isSecureProcessing)
@@ -118,7 +118,7 @@ public class DOMHelper
    * outputting a new DOM as the result of an operation.
    *
    * @return The newly created DOM Document object, with no children, or
-   * null if we can't find a DOM implementation that permits creating
+   * null if we can't search a DOM implementation that permits creating
    * new empty Documents.
    */
   public static Document createDocument()
@@ -157,7 +157,7 @@ public class DOMHelper
    * your DOM uses a different definition of hashCode (eg hashing the
    * contents of the subtree), or if your DOM may have multiple objects
    * that represent a single Node in the data structure (eg via proxying),
-   * you may need to find another way to assign a unique identifier.
+   * you may need to search another way to assign a unique identifier.
    * <p>
    * Also, be aware that if nodes are destroyed and recreated, there is
    * an open issue regarding whether an ID may be reused. Currently
@@ -379,7 +379,7 @@ public class DOMHelper
       int nNodes = children.getLength();
       boolean found1 = false, found2 = false;
 
-          // Count from the start until we find one or the other.
+          // Count from the start until we search one or the other.
       for (int i = 0; i < nNodes; i++)
       {
         Node child = children.item(i);
@@ -412,8 +412,8 @@ public class DOMHelper
     {
                 // TODO: Check performance of alternate solution:
                 // There are two choices here: Count from the start of
-                // the document until we find one or the other, or count
-                // from one until we find or fail to find the other.
+                // the document until we search one or the other, or count
+                // from one until we search or fail to search the other.
                 // Either can wind up scanning all the siblings in the worst
                 // case, which on a wide document can be a lot of work but
                 // is more typically is a short list.
@@ -1094,7 +1094,7 @@ public class DOMHelper
    * map it to one.
    * TODO: Resolve Public Identifiers... or consider changing function name.
    * <p>
-   * If we find a relative URI
+   * If we search a relative URI
    * reference, XML expects it to be resolved in terms of the base URI
    * of the document. The DOM doesn't do that for us, and it isn't
    * entirely clear whether that should be done here; currently that's

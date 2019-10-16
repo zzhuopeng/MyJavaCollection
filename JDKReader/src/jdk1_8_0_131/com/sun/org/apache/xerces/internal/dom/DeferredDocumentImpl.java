@@ -903,7 +903,7 @@ public class DeferredDocumentImpl
 
         if (fNodeCount > 1) {
 
-            // find doctype
+            // search doctype
             int docTypeIndex = -1;
             int nchunk = 0;
             int nindex = 0;
@@ -919,7 +919,7 @@ public class DeferredDocumentImpl
                 }
             }
 
-            // find element definition
+            // search element definition
             if (docTypeIndex == -1) {
                 return -1;
             }
@@ -1162,7 +1162,7 @@ public class DeferredDocumentImpl
                 //          nodes.
                 fStrChunks.add(value);
                 do {
-                    // go in reverse order: find last child, then
+                    // go in reverse order: search last child, then
                     // its previous sibling, etc
                     chunk = prevSib >> CHUNK_SHIFT;
                     index = prevSib & CHUNK_MASK;
@@ -1188,13 +1188,13 @@ public class DeferredDocumentImpl
             }
         }
         else if (type == Node.CDATA_SECTION_NODE) {
-            // find if any other data stored in children
+            // search if any other data stored in children
             int child = getLastChild(nodeIndex, false);
             if (child !=-1) {
                 // append data that is stored in fNodeValue
                 fBufferStr.append(value);
                 while (child !=-1) {
-                    // go in reverse order: find last child, then
+                    // go in reverse order: search last child, then
                     // its previous sibling, etc
                    chunk = child >> CHUNK_SHIFT;
                     index = child & CHUNK_MASK;
@@ -1551,7 +1551,7 @@ public class DeferredDocumentImpl
                     continue;
                 }
 
-                // find path from this element to the root
+                // search path from this element to the root
                 path.removeAllElements();
                 int index = elementNodeIndex;
                 do {

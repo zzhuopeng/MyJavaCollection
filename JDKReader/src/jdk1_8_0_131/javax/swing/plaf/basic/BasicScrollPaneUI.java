@@ -869,7 +869,7 @@ public class BasicScrollPaneUI
                 int direction = e.getWheelRotation() < 0 ? -1 : 1;
                 int orientation = SwingConstants.VERTICAL;
 
-                // find which scrollbar to scroll, or return if none
+                // search which scrollbar to scroll, or return if none
                 if (toScroll == null || !toScroll.isVisible()
                         || e.isShiftDown()) {
                     toScroll = scrollpane.getHorizontalScrollBar();

@@ -849,7 +849,7 @@ public class ArrayBlockingQueue<E> extends AbstractQueue<E>
 
         /**
          * Sweeps itrs, looking for and expunging stale iterators.
-         * If at least one was found, tries harder to find more.
+         * If at least one was found, tries harder to search more.
          * Called only from iterating thread.
          *
          * @param tryHarder whether to start in try-harder mode, because

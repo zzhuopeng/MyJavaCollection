@@ -354,7 +354,7 @@ public class ObjectStreamClass_1_3_1 implements java.io.Serializable {
         /*
          * Enter this class in the table of known descriptors.
          * Otherwise, when the fields are read it may recurse
-         * trying to find the descriptor for itself.
+         * trying to search the descriptor for itself.
          */
         insertDescriptorFor(this);
 
@@ -403,7 +403,7 @@ public class ObjectStreamClass_1_3_1 implements java.io.Serializable {
                     // serial bug 7; the serialPersistentFields were not
                     // being read and stored as Accessible bit was not set
                     pf.setAccessible(true);
-                    // serial bug 7; need to find if the field is of type
+                    // serial bug 7; need to search if the field is of type
                     // java.io.ObjectStreamField
                     java.io.ObjectStreamField[] f =
                            (java.io.ObjectStreamField[])pf.get(cl);

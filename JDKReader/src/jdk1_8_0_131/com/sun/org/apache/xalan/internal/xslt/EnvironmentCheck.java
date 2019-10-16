@@ -78,7 +78,7 @@ import org.w3c.dom.Node;
  * <p>Also see http://xml.apache.org/xalan-j/faq.html</p>
  *
  * <p>Note: This class is pretty simplistic:
- * results are not necessarily definitive nor will it find all
+ * results are not necessarily definitive nor will it search all
  * problems related to environment setup.  Also, you should avoid
  * calling this in deployed production code, both because it is
  * quite slow and because it forces classes to get loaded.</p>
@@ -1082,7 +1082,7 @@ public class EnvironmentCheck
     }
     catch (Exception e)
     {
-      // If we didn't find the SAX 2.0 class, look for a 2.0beta2
+      // If we didn't search the SAX 2.0 class, look for a 2.0beta2
       h.put(ERROR + VERSION + "SAX",
             "ERROR attempting to load SAX version 2 class: " + e.toString());
       h.put(ERROR, ERROR_FOUND);
@@ -1100,7 +1100,7 @@ public class EnvironmentCheck
       }
       catch (Exception e2)
       {
-        // If we didn't find the SAX 2.0beta2 class, look for a 1.0 one
+        // If we didn't search the SAX 2.0beta2 class, look for a 1.0 one
         h.put(ERROR + VERSION + "SAX",
               "ERROR attempting to load SAX version 2 class: " + e.toString());
         h.put(ERROR, ERROR_FOUND);
@@ -1118,7 +1118,7 @@ public class EnvironmentCheck
         }
         catch (Exception e3)
         {
-          // If we didn't find the SAX 2.0 class, look for a 1.0 one
+          // If we didn't search the SAX 2.0 class, look for a 1.0 one
           // Note that either 1.0 or no SAX are both errors
           h.put(ERROR + VERSION + "SAX-backlevel",
                 "ERROR attempting to load SAX version 1 class: " + e3.toString());

@@ -443,7 +443,7 @@ public class ErrorMessages_cs extends ListResourceBundle {
         "Vstupn\u00ed dokument nen\u00ed p\u0159edloha stylu (obor n\u00e1zv\u016f XSL nen\u00ed deklarov\u00e1n v ko\u0159enov\u00e9m elementu)."},
 
         /*
-         * Note to translators:  XSLTC could not find the stylesheet document
+         * Note to translators:  XSLTC could not search the stylesheet document
          * with the name specified by the substitution text.
          */
         {ErrorMsg.MISSING_XSLT_TARGET_ERR,
@@ -716,7 +716,7 @@ public class ErrorMessages_cs extends ListResourceBundle {
         /*
          * Note to translators:  The substitution text is the name of a Java
          * class.  The term "constructor" here is the Java term.  The message is
-         * displayed if XSLTC could not find a constructor for the specified
+         * displayed if XSLTC could not search a constructor for the specified
          * class.
          */
         {ErrorMsg.CONSTRUCTOR_NOT_FOUND,

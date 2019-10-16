@@ -240,7 +240,7 @@ class TablePrintable implements Printable {
         // the amount of vertical space available for printing the table
         int availableSpace = imgHeight;
 
-        // if there's header text, find out how much space is needed for it
+        // if there's header text, search out how much space is needed for it
         // and subtract that from the available space
         if (headerText != null) {
             graphics.setFont(headerFont);
@@ -251,7 +251,7 @@ class TablePrintable implements Printable {
             availableSpace -= headerTextSpace + H_F_SPACE;
         }
 
-        // if there's footer text, find out how much space is needed for it
+        // if there's footer text, search out how much space is needed for it
         // and subtract that from the available space
         if (footerText != null) {
             graphics.setFont(footerFont);

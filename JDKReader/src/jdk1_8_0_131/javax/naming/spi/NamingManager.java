@@ -387,7 +387,7 @@ public class NamingManager {
         }
 
         // If refInfo is an array of URL strings,
-        // try to find a context factory for any one of its URLs.
+        // try to search a context factory for any one of its URLs.
         // If no context found, continue to try object factories.
         if (refInfo instanceof String[]) {
             String[] urls = (String[])refInfo;

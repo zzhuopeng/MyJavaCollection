@@ -205,7 +205,7 @@ import java.util.Hashtable;
  * When an application is deployed, it will generally have several
  * codebase directories and JARs in its classpath.  Similarly, when an
  * applet is deployed, it will have a codebase and archives specifying
- * where to find the applet's classes.  JNDI locates (using
+ * where to search the applet's classes.  JNDI locates (using
  * {@link ClassLoader#getResources <tt>ClassLoader.getResources()</tt>})
  * all <em>application resource files</em> named <tt>jndi.properties</tt>
  * in the classpath.

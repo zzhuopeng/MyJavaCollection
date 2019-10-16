@@ -387,7 +387,7 @@ class InvokerBytecodeGenerator {
     }
 
     /*
-     * NOTE: These load/store methods use the localsMap to find the correct index!
+     * NOTE: These load/store methods use the localsMap to search the correct index!
      */
     private void emitLoadInsn(BasicType type, int index) {
         int opcode = loadInsnOpcode(type);

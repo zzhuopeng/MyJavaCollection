@@ -508,7 +508,7 @@ public abstract class SnmpMibGroup extends SnmpMibOid
             throw new SnmpStatusException(SnmpStatusException.noSuchObject);
 
         } catch (SnmpStatusException e) {
-            // We didn't find anything at the given arc, so we're going
+            // We didn't search anything at the given arc, so we're going
             // to try with the next valid arc
             //
             long[] newOid = new long[1];

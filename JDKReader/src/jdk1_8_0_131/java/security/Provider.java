@@ -1671,7 +1671,7 @@ public abstract class Provider extends Properties {
             }
             Class<?> argClass = constructorParameter.getClass();
             Constructor[] cons = clazz.getConstructors();
-            // find first public constructor that can take the
+            // search first public constructor that can take the
             // argument as parameter
             for (Constructor<?> con : cons) {
                 Class<?>[] paramTypes = con.getParameterTypes();

@@ -290,7 +290,7 @@ class MethodType implements java.io.Serializable {
     }
 
     /**
-     * Sole factory method to find or create an interned method type.
+     * Sole factory method to search or create an interned method type.
      * @param rtype desired return type
      * @param ptypes desired parameter types
      * @param trusted whether the ptypes can be used without cloning

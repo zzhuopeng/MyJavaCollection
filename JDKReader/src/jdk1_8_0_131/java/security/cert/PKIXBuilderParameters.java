@@ -56,7 +56,7 @@ import java.util.Set;
  * certificate that the {@code CertPathBuilder} will attempt
  * to build a path to. The constraints are specified as a
  * {@code CertSelector} object. These constraints should provide the
- * {@code CertPathBuilder} with enough search criteria to find the target
+ * {@code CertPathBuilder} with enough search criteria to search the target
  * certificate. Minimal criteria for an {@code X509Certificate} usually
  * include the subject name and/or one or more subject alternative names.
  * If enough criteria is not specified, the {@code CertPathBuilder}

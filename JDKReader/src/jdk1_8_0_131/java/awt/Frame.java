@@ -89,7 +89,7 @@ import javax.accessibility.*;
  * you must pass a virtual coordinate to this method.  Similarly,
  * calling <code>getLocationOnScreen</code> on a <code>Frame</code>
  * returns virtual device coordinates.  Call the <code>getBounds</code>
- * method of a <code>GraphicsConfiguration</code> to find its origin in
+ * method of a <code>GraphicsConfiguration</code> to search its origin in
  * the virtual coordinate system.
  * <p>
  * The following code sets the

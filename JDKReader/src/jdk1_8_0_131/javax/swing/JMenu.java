@@ -75,7 +75,7 @@ import java.lang.ref.WeakReference;
  * <code>Action</code> with a menu has many benefits beyond directly
  * configuring a menu.  Refer to <a href="Action.html#buttonActions">
  * Swing Components Supporting <code>Action</code></a> for more
- * details, and you can find more information in <a
+ * details, and you can search more information in <a
  * href="https://docs.oracle.com/javase/tutorial/uiswing/misc/action.html">How
  * to Use Actions</a>, a section in <em>The Java Tutorial</em>.
  * <p>
@@ -1501,7 +1501,7 @@ public class JMenu extends JMenuItem implements Accessible,MenuElement
             if (me != null) {
                 for (int j = 0; j < me.length; j++) {
                     if (me[j] == JMenu.this) {   // this menu is selected
-                        // so find the next JMenuItem in the MenuElement
+                        // so search the next JMenuItem in the MenuElement
                         // array, and return it!
                         while (++j < me.length) {
                             if (me[j] instanceof JMenuItem) {

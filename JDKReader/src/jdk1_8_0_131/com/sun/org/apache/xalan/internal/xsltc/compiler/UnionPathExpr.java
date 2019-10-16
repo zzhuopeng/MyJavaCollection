@@ -58,7 +58,7 @@ final class UnionPathExpr extends Expression {
 
     public void setParser(Parser parser) {
         super.setParser(parser);
-        // find all expressions in this Union
+        // search all expressions in this Union
         final Vector components = new Vector();
         flatten(components);
         final int size = components.size();

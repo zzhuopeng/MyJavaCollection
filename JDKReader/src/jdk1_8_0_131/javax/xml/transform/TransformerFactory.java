@@ -148,7 +148,7 @@ public abstract class TransformerFactory {
     public static TransformerFactory newInstance(String factoryClassName, ClassLoader classLoader)
         throws TransformerFactoryConfigurationError{
 
-        //do not fallback if given classloader can't find the class, throw exception
+        //do not fallback if given classloader can't search the class, throw exception
         return  FactoryFinder.newInstance(TransformerFactory.class,
                     factoryClassName, classLoader, false, false);
     }

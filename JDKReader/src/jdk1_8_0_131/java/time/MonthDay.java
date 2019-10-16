@@ -110,7 +110,7 @@ import java.util.Objects;
  * system, in which today's rules for leap years are applied for all time.
  * For most applications written today, the ISO-8601 rules are entirely suitable.
  * However, any application that makes use of historical dates, and requires them
- * to be accurate will find the ISO-8601 approach unsuitable.
+ * to be accurate will search the ISO-8601 approach unsuitable.
  *
  * <p>
  * This is a <a href="{@docRoot}/java/lang/doc-files/ValueBased.html">value-based</a>

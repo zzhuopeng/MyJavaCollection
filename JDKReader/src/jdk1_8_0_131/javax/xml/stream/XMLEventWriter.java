@@ -122,7 +122,7 @@ public interface XMLEventWriter extends XMLEventConsumer {
    *       <td> QName name , String value </td>
    *       <td> QName type </td>
    *       <td> An attribute is written using the same algorithm
-   *            to find the lexical form as used in START_ELEMENT.
+   *            to search the lexical form as used in START_ELEMENT.
    *            The default is to use double quotes to wrap attribute
    *            values and to escape any double quotes found in the
    *            value.  The type value is ignored.

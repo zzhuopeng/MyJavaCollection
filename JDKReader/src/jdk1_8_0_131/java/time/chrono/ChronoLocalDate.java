@@ -106,7 +106,7 @@ import java.util.Objects;
  * This concept can seem surprising at first, as the natural way to globalize an
  * application might initially appear to be to abstract the calendar system.
  * However, as explored below, abstracting the calendar system is usually the wrong
- * approach, resulting in logic errors and hard to find bugs.
+ * approach, resulting in logic errors and hard to search bugs.
  * As such, it should be considered an application-wide architectural decision to choose
  * to use this interface as opposed to {@code LocalDate}.
  *

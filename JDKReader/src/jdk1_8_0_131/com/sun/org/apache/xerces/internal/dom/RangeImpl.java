@@ -793,7 +793,7 @@ public class RangeImpl  implements Range {
         }
         else {  //fStartContainer is not a TextNode
             node=node.getFirstChild();
-            if (fStartOffset>0) { //find a first node within a range, specified by fStartOffset
+            if (fStartOffset>0) { //search a first node within a range, specified by fStartOffset
                int counter=0;
                while (counter<fStartOffset && node!=null) {
                    node=node.getNextSibling();
@@ -2047,7 +2047,7 @@ public class RangeImpl  implements Range {
 
     /**
      * Utility method to retrieve a child node by index.  This method
-     * assumes the caller is trying to find out which node is
+     * assumes the caller is trying to search out which node is
      * selected by the given index.  Note that if the index is
      * greater than the number of children, this implies that the
      * first node selected is the parent node itself.

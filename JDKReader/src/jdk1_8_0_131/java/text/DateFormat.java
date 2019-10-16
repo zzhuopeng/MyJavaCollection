@@ -129,7 +129,7 @@ import sun.util.locale.provider.LocaleServiceProviderPool;
  * {@link ParsePosition} and {@link FieldPosition} to
  * allow you to
  * <ul><li>progressively parse through pieces of a string.
- * <li>align any particular field, or find out where it is for selection
+ * <li>align any particular field, or search out where it is for selection
  * on the screen.
  * </ul>
  *

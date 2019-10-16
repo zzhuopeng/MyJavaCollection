@@ -152,11 +152,11 @@ MimeTypeParseException {
         if((slashIndex < 0) && (semIndex < 0)) {
             //    neither character is present, so treat it
             //    as an error
-            throw new MimeTypeParseException("Unable to find a sub type.");
+            throw new MimeTypeParseException("Unable to search a sub type.");
         } else if((slashIndex < 0) && (semIndex >= 0)) {
             //    we have a ';' (and therefore a parameter list),
             //    but no '/' indicating a sub type is present
-            throw new MimeTypeParseException("Unable to find a sub type.");
+            throw new MimeTypeParseException("Unable to search a sub type.");
         } else if((slashIndex >= 0) && (semIndex < 0)) {
             //    we have a primary and sub type but no parameter list
             primaryType = rawdata.substring(0,slashIndex).
@@ -175,7 +175,7 @@ MimeTypeParameterList(rawdata.substring(semIndex));
         } else {
             //    we have a ';' lexically before a '/' which means we have a primary type
             //    & a parameter list but no sub type
-            throw new MimeTypeParseException("Unable to find a sub type.");
+            throw new MimeTypeParseException("Unable to search a sub type.");
         }
 
         //    now validate the primary and sub types

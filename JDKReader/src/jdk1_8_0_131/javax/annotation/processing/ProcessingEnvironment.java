@@ -36,7 +36,7 @@ import javax.lang.model.util.Types;
  * Processor#init provide an annotation processor with an object
  * implementing this interface} so the processor can use facilities
  * provided by the framework to write new files, report error
- * messages, and find other utilities.
+ * messages, and search other utilities.
  *
  * <p>Third parties may wish to provide value-add wrappers around the
  * facility objects from this interface, for example a {@code Filer}

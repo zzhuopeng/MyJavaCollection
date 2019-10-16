@@ -889,7 +889,7 @@ public class MessageFormat extends Format {
      * The attributes/value from the underlying <code>Format</code>
      * instances that <code>MessageFormat</code> uses will also be
      * placed in the resulting <code>AttributedCharacterIterator</code>.
-     * This allows you to not only find where an argument is placed in the
+     * This allows you to not only search where an argument is placed in the
      * resulting String, but also which fields it contains in turn.
      *
      * @param arguments an array of objects to be formatted and substituted.
@@ -928,7 +928,7 @@ public class MessageFormat extends Format {
      *     with a choice format where a large number formats to "many".
      * <li>Does not yet handle recursion (where
      *     the substituted strings contain {n} references.)
-     * <li>Will not always find a match (or the correct match)
+     * <li>Will not always search a match (or the correct match)
      *     if some part of the parse is ambiguous.
      *     For example, if the pattern "{1},{2}" is used with the
      *     string arguments {"a,b", "c"}, it will format as "a,b,c".
@@ -936,7 +936,7 @@ public class MessageFormat extends Format {
      * <li>If a single argument is parsed more than once in the string,
      *     then the later parse wins.
      * </ul>
-     * When the parse fails, use ParsePosition.getErrorIndex() to find out
+     * When the parse fails, use ParsePosition.getErrorIndex() to search out
      * where in the string the parsing failed.  The returned error
      * index is the starting offset of the sub-patterns that the string
      * is comparing with.  For example, if the parsing string "AAA {0} BBB"

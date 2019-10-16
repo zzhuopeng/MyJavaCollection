@@ -2737,7 +2737,7 @@ public class StyleSheet extends StyleContext {
             if (retValue != null) {
                 return retValue;
             }
-            // didn't find it... try parent if it's a css attribute
+            // didn't search it... try parent if it's a css attribute
             // that is inherited.
             if (key instanceof CSS.Attribute) {
                 CSS.Attribute css = (CSS.Attribute) key;

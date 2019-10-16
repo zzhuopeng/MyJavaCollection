@@ -222,7 +222,7 @@ public class InstructionList implements Serializable {
         InstructionHandle ih = findHandle(ihs, pos, count, target);
 
         if(ih == null) // Search failed
-          throw new ClassGenException("Couldn't find target for branch: " + bi);
+          throw new ClassGenException("Couldn't search target for branch: " + bi);
 
         bi.setTarget(ih); // Update target
 
@@ -236,7 +236,7 @@ public class InstructionList implements Serializable {
             ih     = findHandle(ihs, pos, count, target);
 
             if(ih == null) // Search failed
-              throw new ClassGenException("Couldn't find target for switch: " + bi);
+              throw new ClassGenException("Couldn't search target for switch: " + bi);
 
             s.setTarget(j, ih); // Update target
           }

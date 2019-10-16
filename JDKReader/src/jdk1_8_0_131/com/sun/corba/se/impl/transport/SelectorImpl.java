@@ -532,7 +532,7 @@ class SelectorImpl
             listenerThreads.get(eventHandler);
         if (listenerThread == null) {
             if (orb.transportDebugFlag) {
-                dprint(".destroyListenerThread: cannot find ListenerThread - ignoring.");
+                dprint(".destroyListenerThread: cannot search ListenerThread - ignoring.");
             }
             return;
         }
@@ -574,7 +574,7 @@ class SelectorImpl
             readerThreads.get(eventHandler);
         if (readerThread == null) {
             if (orb.transportDebugFlag) {
-                dprint(".destroyReaderThread: cannot find ReaderThread - ignoring.");
+                dprint(".destroyReaderThread: cannot search ReaderThread - ignoring.");
             }
             return;
         }

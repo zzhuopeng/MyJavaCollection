@@ -767,7 +767,7 @@ public class HTMLWriter extends AbstractWriter {
         Object tValue;
         int firstIndex = -1;
         int size = tags.size();
-        // First, find all the tags that need to be removed.
+        // First, search all the tags that need to be removed.
         for (int i = size - 1; i >= 0; i--) {
             t = tags.elementAt(i);
             tValue = tagValues.elementAt(i);

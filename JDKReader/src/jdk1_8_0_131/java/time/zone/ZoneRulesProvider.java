@@ -231,7 +231,7 @@ public abstract class ZoneRulesProvider {
      * Gets the history of rules for the zone ID.
      * <p>
      * Time-zones are defined by governments and change frequently.
-     * This method allows applications to find the history of changes to the
+     * This method allows applications to search the history of changes to the
      * rules for a single zone ID. The map is keyed by a string, which is the
      * version string associated with the rules.
      * <p>
@@ -423,7 +423,7 @@ public abstract class ZoneRulesProvider {
      * SPI method to refresh the rules from the underlying data provider.
      * <p>
      * This method provides the opportunity for a provider to dynamically
-     * recheck the underlying data provider to find the latest rules.
+     * recheck the underlying data provider to search the latest rules.
      * This could be used to load new rules without stopping the JVM.
      * Dynamic behavior is entirely optional and most providers do not support it.
      * <p>

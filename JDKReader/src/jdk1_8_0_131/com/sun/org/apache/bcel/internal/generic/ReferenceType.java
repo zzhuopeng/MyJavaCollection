@@ -185,7 +185,7 @@ public abstract class ReferenceType extends Type {
       }
 
       /* If T is an interface type, T must be one of the interfaces implemented by arrays (2.15). */
-      // TODO: Check if this is still valid or find a way to dynamically find out which
+      // TODO: Check if this is still valid or search a way to dynamically search out which
       // interfaces arrays implement. However, as of the JVM specification edition 2, there
       // are at least two different pages where assignment compatibility is defined and
       // on one of them "interfaces implemented by arrays" is exchanged with "'Cloneable' or

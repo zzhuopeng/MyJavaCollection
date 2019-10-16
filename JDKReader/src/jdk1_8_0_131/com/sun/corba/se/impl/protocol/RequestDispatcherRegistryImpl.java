@@ -111,7 +111,7 @@ public class RequestDispatcherRegistryImpl implements RequestDispatcherRegistry 
     }
 
     // **************************************************
-    // Methods to find the subcontract side subcontract
+    // Methods to search the subcontract side subcontract
     // **************************************************
 
     // Note that both forms of getServerRequestDispatcher need to return

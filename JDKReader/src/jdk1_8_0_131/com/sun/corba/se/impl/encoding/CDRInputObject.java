@@ -239,7 +239,7 @@ public class CDRInputObject extends CDRInputStream
 
     // -----------------------------------------------------------
     // Below this point are commented out methods with features
-    // from the old stream.  We must find ways to address
+    // from the old stream.  We must search ways to address
     // these issues in the future.
     // -----------------------------------------------------------
 

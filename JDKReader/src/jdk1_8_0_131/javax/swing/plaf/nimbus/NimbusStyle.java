@@ -408,7 +408,7 @@ public final class NimbusStyle extends SynthStyle {
                 //Multiple states may be specified in the string, such as
                 //Enabled+MouseOver
                 String[] stateParts = stateString.split("\\+");
-                //For each state, we need to find the State object associated
+                //For each state, we need to search the State object associated
                 //with it, or skip it if it cannot be found.
                 for (String s : stateParts) {
                     if (stateCodes.containsKey(s)) {
@@ -423,7 +423,7 @@ public final class NimbusStyle extends SynthStyle {
 
                 if (skip) continue;
 
-                //find the RuntimeState for this State
+                //search the RuntimeState for this State
                 RuntimeState rs = null;
                 for (RuntimeState s : runtimeStates) {
                     if (s.state == componentState) {
@@ -432,7 +432,7 @@ public final class NimbusStyle extends SynthStyle {
                     }
                 }
 
-                //couldn't find the runtime state, so create a new one
+                //couldn't search the runtime state, so create a new one
                 if (rs == null) {
                     rs = new RuntimeState(componentState, stateString);
                     runtimeStates.add(rs);
@@ -637,7 +637,7 @@ public final class NimbusStyle extends SynthStyle {
      * Button.Enabled.foreground, and have a match. So we return it.</p>
      *
      * <p>Again, if we were in the state Enabled and looked for "background", we
-     * wouldn't find it in Button.Enabled, or in Button, but would at the top
+     * wouldn't search it in Button.Enabled, or in Button, but would at the top
      * level in UIManager. So we return that value.</p>
      *
      * <p>One special note: the "key" passed to this method could be of the form
@@ -907,7 +907,7 @@ public final class NimbusStyle extends SynthStyle {
      * Enabled+Pressed
      * Disabled
      * </pre>
-     * And you wanted to find the state that best represented
+     * And you wanted to search the state that best represented
      * ENABLED+PRESSED+FOCUSED and <code>lastState</code> was null (or an
      * empty array, or an array with a single int with index == -1), then
      * Enabled+Pressed would be returned. If you then call this method again but
@@ -947,7 +947,7 @@ public final class NimbusStyle extends SynthStyle {
             int wildIndex = -1;
 
             //if xstate is 0, then search for the runtime state with component
-            //state of 0. That is, find the exact match and return it.
+            //state of 0. That is, search the exact match and return it.
             if (xstate == 0) {
                 for (int counter = states.length - 1; counter >= 0; counter--) {
                     if (states[counter].state == 0) {

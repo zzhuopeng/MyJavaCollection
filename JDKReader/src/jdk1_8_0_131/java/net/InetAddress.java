@@ -1302,7 +1302,7 @@ class InetAddress implements java.io.Serializable {
         //     i) if it found the addresses in the
         //        addressCache, checkLookupTable()  would
         //        return the addresses.
-        //     ii) if it didn't find the addresses in the
+        //     ii) if it didn't search the addresses in the
         //         addressCache for any reason,
         //         it should add the host in the
         //         lookupTable and return null so the

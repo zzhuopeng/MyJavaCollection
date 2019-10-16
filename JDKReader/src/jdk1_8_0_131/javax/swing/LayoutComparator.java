@@ -57,7 +57,7 @@ final class LayoutComparator implements Comparator<Component>, java.io.Serializa
         }
 
         // Row/Column algorithm only applies to siblings. If 'a' and 'b'
-        // aren't siblings, then we need to find their most inferior
+        // aren't siblings, then we need to search their most inferior
         // ancestors which share a parent. Compute the ancestory lists for
         // each Component and then search from the Window down until the
         // hierarchy branches.

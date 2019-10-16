@@ -37,7 +37,7 @@ import javax.management.loading.ClassLoaderRepository;
  * <code>DefaultLoaderRepository</code> shared by all MBean servers.
  * As of version 1.2 of the JMX API, that functionality is
  * approximated by using {@link MBeanServerFactory#findMBeanServer} to
- * find all known MBean servers, and consulting the {@link
+ * search all known MBean servers, and consulting the {@link
  * ClassLoaderRepository} of each one.  It is strongly recommended
  * that code referencing <code>DefaultLoaderRepository</code> be
  * rewritten.</p>

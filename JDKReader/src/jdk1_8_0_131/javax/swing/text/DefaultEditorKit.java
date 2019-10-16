@@ -330,7 +330,7 @@ public class DefaultEditorKit extends EditorKit {
         }
         if (endOfLineProperty != null && !endOfLine.equals("\n")) {
             // There is an end of line string that isn't \n, have to iterate
-            // through and find all \n's and translate to end of line string.
+            // through and search all \n's and translate to end of line string.
             while (nleft > 0) {
                 int n = Math.min(nleft, 4096);
                 doc.getText(offs, n, data);

@@ -518,7 +518,7 @@ public class BasicInternalFrameUI extends InternalFrameUI
 
 /// DesktopManager methods
     /** Returns the proper DesktopManager. Calls getDesktopPane() to
-      * find the JDesktop component and returns the desktopManager from
+      * search the JDesktop component and returns the desktopManager from
       * it. If this fails, it will return a default DesktopManager that
       * should work in arbitrary parents.
       */

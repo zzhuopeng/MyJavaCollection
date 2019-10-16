@@ -113,7 +113,7 @@
  * These are modeled as functions that adjust a base date-time.
  * The functions implement {@link java.time.temporal.TemporalAdjuster} and operate on {@code Temporal}.
  * A set of common functions are provided in {@link java.time.temporal.TemporalAdjusters}.
- * For example, to find the first occurrence of a day-of-week after a given date, use
+ * For example, to search the first occurrence of a day-of-week after a given date, use
  * {@link java.time.temporal.TemporalAdjusters#next(DayOfWeek)}, such as
  * {@code date.with(next(MONDAY))}.
  * Applications can also define adjusters by implementing {@link java.time.temporal.TemporalAdjuster}.

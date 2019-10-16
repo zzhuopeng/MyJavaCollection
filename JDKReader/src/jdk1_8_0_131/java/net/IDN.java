@@ -351,7 +351,7 @@ public final class IDN {
         StringBuffer dest;
 
         // step 1
-        // find out if all the codepoints in input are ASCII
+        // search out if all the codepoints in input are ASCII
         boolean isASCII = isAllASCII(label);
 
         if(!isASCII){

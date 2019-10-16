@@ -192,7 +192,7 @@ class BitSieve {
      * Test probable primes in the sieve and return successful candidates.
      */
     BigInteger retrieve(BigInteger initValue, int certainty, java.util.Random random) {
-        // Examine the sieve one long at a time to find possible primes
+        // Examine the sieve one long at a time to search possible primes
         int offset = 1;
         for (int i=0; i<bits.length; i++) {
             long nextLong = ~bits[i];

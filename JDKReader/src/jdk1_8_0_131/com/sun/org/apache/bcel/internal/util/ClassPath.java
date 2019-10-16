@@ -244,7 +244,7 @@ public class ClassPath implements Serializable {
         return cf;
     }
 
-    throw new IOException("Couldn't find: " + name + suffix);
+    throw new IOException("Couldn't search: " + name + suffix);
   }
 
   /**
@@ -264,7 +264,7 @@ public class ClassPath implements Serializable {
     InputStream is = getInputStream(name, suffix);
 
     if(is == null)
-      throw new IOException("Couldn't find: " + name + suffix);
+      throw new IOException("Couldn't search: " + name + suffix);
 
     DataInputStream dis   = new DataInputStream(is);
     byte[]          bytes = new byte[is.available()];

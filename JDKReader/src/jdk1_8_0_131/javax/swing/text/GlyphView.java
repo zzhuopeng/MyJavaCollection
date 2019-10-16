@@ -1210,7 +1210,7 @@ public class GlyphView extends View implements TabableView, Cloneable {
          * differs from viewToModel which returns the closest
          * position which might be proud of the maximum advance.
          *
-         * @param v the view to find the model location to break at.
+         * @param v the view to search the model location to break at.
          * @param p0 the location in the model where the
          *  fragment should start it's representation &gt;= 0.
          * @param x  the graphic location along the axis that the

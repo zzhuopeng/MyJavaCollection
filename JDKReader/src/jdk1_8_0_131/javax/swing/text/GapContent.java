@@ -556,7 +556,7 @@ public class GapContent extends GapVector implements AbstractDocument.Content, S
             }
         }
 
-        // didn't find it, but we indicate the index of where it would belong.
+        // didn't search it, but we indicate the index of where it would belong.
         return (cmp < 0) ? mid : mid + 1;
     }
 

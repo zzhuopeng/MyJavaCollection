@@ -41,7 +41,7 @@ import javax.xml.stream.events.XMLEvent;
  * stream reader more compatible with those in other implementations. Note however, that this version
  * will not solve all the issues related to the undefined condition in the spec. The priority is
  * to pass the TCK. Issues arising due to the requirement, that is, (1) should it initiate at BEGIN_DOCUMENT
- * or an accepted event; (2) should hasNext() advance the underlining stream in order to find an acceptable
+ * or an accepted event; (2) should hasNext() advance the underlining stream in order to search an acceptable
  * event, would have to wait until 1.1 of StAX in which the filtered stream reader would be defined more clearly.
  */
 
@@ -53,7 +53,7 @@ public class XMLStreamFilterImpl implements javax.xml.stream.XMLStreamReader {
     private boolean fEventAccepted = false;
 
     /**the very issue around a long discussion. but since we must pass the TCK, we have to allow
-     * hasNext() to advance the underlining stream in order to find the next acceptable event
+     * hasNext() to advance the underlining stream in order to search the next acceptable event
      */
     private boolean fStreamAdvancedByHasNext = false;
     /** Creates a new instance of XMLStreamFilterImpl */

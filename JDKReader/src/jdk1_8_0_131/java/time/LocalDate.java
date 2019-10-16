@@ -120,7 +120,7 @@ import java.util.Objects;
  * system, in which today's rules for leap years are applied for all time.
  * For most applications written today, the ISO-8601 rules are entirely suitable.
  * However, any application that makes use of historical dates, and requires them
- * to be accurate will find the ISO-8601 approach unsuitable.
+ * to be accurate will search the ISO-8601 approach unsuitable.
  *
  * <p>
  * This is a <a href="{@docRoot}/java/lang/doc-files/ValueBased.html">value-based</a>
@@ -312,7 +312,7 @@ public final class LocalDate
      */
     public static LocalDate ofEpochDay(long epochDay) {
         long zeroDay = epochDay + DAYS_0000_TO_1970;
-        // find the march-based year
+        // search the march-based year
         zeroDay -= 60;  // adjust to 0000-03-01 so leap day is at end of four year cycle
         long adjust = 0;
         if (zeroDay < 0) {

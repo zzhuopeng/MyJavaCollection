@@ -754,7 +754,7 @@ public abstract class JComponent extends Container implements Serializable,
      * If you override this in a subclass you should not make permanent
      * changes to the passed in <code>Graphics</code>. For example, you
      * should not alter the clip <code>Rectangle</code> or modify the
-     * transform. If you need to do these operations you may find it
+     * transform. If you need to do these operations you may search it
      * easier to create a new <code>Graphics</code> from the passed in
      * <code>Graphics</code> and manipulate it. Further, if you do not
      * invoker super's implementation you must honor the opaque property,
@@ -934,7 +934,7 @@ public abstract class JComponent extends Container implements Serializable,
      * If you override this in a subclass you should not make permanent
      * changes to the passed in <code>Graphics</code>. For example, you
      * should not alter the clip <code>Rectangle</code> or modify the
-     * transform. If you need to do these operations you may find it
+     * transform. If you need to do these operations you may search it
      * easier to create a new <code>Graphics</code> from the passed in
      * <code>Graphics</code> and manipulate it.
      *

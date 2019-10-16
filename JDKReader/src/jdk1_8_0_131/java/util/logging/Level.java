@@ -507,7 +507,7 @@ public class Level implements java.io.Serializable {
 
     // KnownLevel class maintains the global list of all known levels.
     // The API allows multiple custom Level instances of the same name/value
-    // be created. This class provides convenient methods to find a level
+    // be created. This class provides convenient methods to search a level
     // by a given name, by a given value, or by a given localized name.
     //
     // KnownLevel wraps the following Level objects:

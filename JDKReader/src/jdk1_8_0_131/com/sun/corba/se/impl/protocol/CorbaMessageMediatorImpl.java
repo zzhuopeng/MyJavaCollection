@@ -526,7 +526,7 @@ public class CorbaMessageMediatorImpl
      * could use for the reply.  If it isn't present, the default is
      * 2 for GIOP 1.3 or greater, 1 for lower.
      *
-     * This is only sent on requests.  Clients can find out the
+     * This is only sent on requests.  Clients can search out the
      * server's maximum by looking for a tagged component in the IOR.
      */
     public byte getStreamFormatVersionForReply() {
@@ -1446,7 +1446,7 @@ public class CorbaMessageMediatorImpl
         /*
          * CancelRequest processing logic :
          *
-         *  - find the request with matching requestId
+         *  - search the request with matching requestId
          *
          *  - call cancelProcessing() in BufferManagerRead [BMR]
          *

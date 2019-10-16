@@ -813,7 +813,7 @@ public class ScheduledThreadPoolExecutor
          * A DelayedWorkQueue is based on a heap-based data structure
          * like those in DelayQueue and PriorityQueue, except that
          * every ScheduledFutureTask also records its index into the
-         * heap array. This eliminates the need to find a task upon
+         * heap array. This eliminates the need to search a task upon
          * cancellation, greatly speeding up removal (down from O(n)
          * to O(log n)), and reducing garbage retention that would
          * otherwise occur by waiting for the element to rise to top

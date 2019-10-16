@@ -1631,7 +1631,7 @@ public class HTMLDocument extends DefaultStyledDocument {
             }
         }
         else {
-            // Not a leaf, descend until we find the leaf representing
+            // Not a leaf, descend until we search the leaf representing
             // start - 1 and remove it.
             Element newLineE = e.getElement(index - 1);
             while (!newLineE.isLeaf()) {

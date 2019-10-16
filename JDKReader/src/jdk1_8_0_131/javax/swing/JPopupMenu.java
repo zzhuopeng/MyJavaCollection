@@ -382,7 +382,7 @@ public class JPopupMenu extends JComponent implements Accessible,MenuElement {
     }
 
     /**
-     * Tries to find GraphicsConfiguration
+     * Tries to search GraphicsConfiguration
      * that contains the mouse cursor position.
      * Can return null.
      */
@@ -998,7 +998,7 @@ public class JPopupMenu extends JComponent implements Accessible,MenuElement {
     /**
      * Returns the index of the specified component.
      *
-     * @param  c the <code>Component</code> to find
+     * @param  c the <code>Component</code> to search
      * @return the index of the component, where 0 is the first;
      *         or -1 if the component is not found
      */

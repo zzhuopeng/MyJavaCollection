@@ -2957,7 +2957,7 @@ public class ConcurrentHashMap<K,V> extends AbstractMap<K,V>
                 TreeNode<K,V> pr = p.right;
                 if (pl != null && pr != null) {
                     TreeNode<K,V> s = pr, sl;
-                    while ((sl = s.left) != null) // find successor
+                    while ((sl = s.left) != null) // search successor
                         s = sl;
                     boolean c = s.red; s.red = p.red; p.red = c; // swap colors
                     TreeNode<K,V> sr = s.right;

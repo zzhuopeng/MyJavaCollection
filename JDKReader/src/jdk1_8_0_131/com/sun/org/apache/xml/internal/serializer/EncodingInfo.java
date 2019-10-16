@@ -200,7 +200,7 @@ public final class EncodingInfo extends Object
                 if (m_alreadyKnown[idx])
                     ret = m_isInEncoding[idx];
                 else {
-                    // We don't know the answer, so find out,
+                    // We don't know the answer, so search out,
                     // which may be expensive, then cache the answer
                     ret = inEncoding(ch1, m_encoding);
                     m_alreadyKnown[idx] = true;
@@ -247,7 +247,7 @@ public final class EncodingInfo extends Object
                 if (m_alreadyKnown[idx])
                     ret = m_isInEncoding[idx];
                 else {
-                    // We don't know the answer, so find out,
+                    // We don't know the answer, so search out,
                     // which may be expensive, then cache the answer
                     ret = inEncoding(high, low, m_encoding);
                     m_alreadyKnown[idx] = true;

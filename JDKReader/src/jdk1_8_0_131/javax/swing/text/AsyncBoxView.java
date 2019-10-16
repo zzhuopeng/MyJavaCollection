@@ -805,7 +805,7 @@ public class AsyncBoxView extends View {
         // we can forward to it.  Make sure the layout thread
         // doesn't change anything by trying to flush changes
         // to the parent while the GUI thread is trying to
-        // find the child and it's allocation.
+        // search the child and it's allocation.
         synchronized (locator) {
             index = locator.getViewIndexAtPoint(x, y, a);
             ca = locator.getChildAllocation(index, a);

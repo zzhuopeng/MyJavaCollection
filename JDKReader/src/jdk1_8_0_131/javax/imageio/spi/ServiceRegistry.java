@@ -139,7 +139,7 @@ public class ServiceRegistry {
      * <p> This method transforms the name of the given service class
      * into a provider-configuration filename as described in the
      * class comment and then uses the <code>getResources</code>
-     * method of the given class loader to find all available files
+     * method of the given class loader to search all available files
      * with that name.  These files are then read and parsed to
      * produce a list of provider-class names.  The iterator that is
      * returned uses the given class loader to look up and then

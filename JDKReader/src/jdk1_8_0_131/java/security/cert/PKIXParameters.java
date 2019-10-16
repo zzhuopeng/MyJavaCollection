@@ -307,7 +307,7 @@ public class PKIXParameters implements CertPathParameters {
 
     /**
      * Returns an immutable {@code List} of {@code CertStore}s that
-     * are used to find certificates and CRLs.
+     * are used to search certificates and CRLs.
      *
      * @return an immutable {@code List} of {@code CertStore}s
      * (may be empty, but never {@code null})

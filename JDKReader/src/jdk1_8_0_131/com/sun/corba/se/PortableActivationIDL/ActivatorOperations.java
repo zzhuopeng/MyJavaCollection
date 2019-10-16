@@ -28,7 +28,7 @@ public interface ActivatorOperations
 	*/
   void registerORB (String serverId, String orbId, com.sun.corba.se.PortableActivationIDL.ORBProxy orb, com.sun.corba.se.PortableActivationIDL.EndPointInfo[] endPointInfo) throws com.sun.corba.se.PortableActivationIDL.ServerNotRegistered, com.sun.corba.se.PortableActivationIDL.NoSuchEndPoint, com.sun.corba.se.PortableActivationIDL.ORBAlreadyRegistered;
 
-  /** Construct or find an ORBD object template corresponding to the 
+  /** Construct or search an ORBD object template corresponding to the
 	* server's object template and return it.  Called whenever a 
 	* persistent POA is created.
 	*/

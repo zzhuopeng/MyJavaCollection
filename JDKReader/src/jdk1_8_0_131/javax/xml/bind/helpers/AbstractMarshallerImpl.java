@@ -288,7 +288,7 @@ public abstract class AbstractMarshallerImpl implements Marshaller
      * encoding names.
      *
      * @exception UnsupportedEncodingException
-     *      If this implementation couldn't find the Java encoding name.
+     *      If this implementation couldn't search the Java encoding name.
      */
     protected String getJavaEncoding( String encoding ) throws UnsupportedEncodingException {
         try {

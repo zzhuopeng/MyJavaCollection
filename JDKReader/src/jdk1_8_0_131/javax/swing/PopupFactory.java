@@ -746,7 +746,7 @@ public class PopupFactory {
                 parent = (owner instanceof Container? (Container)owner : owner.getParent());
             }
 
-            // Try to find a JLayeredPane and Window to add
+            // Try to search a JLayeredPane and Window to add
             for (Container p = parent; p != null; p = p.getParent()) {
                 if (p instanceof JRootPane) {
                     if (p.getParent() instanceof JInternalFrame) {

@@ -62,7 +62,7 @@ class FactoryFinder {
      * @return the <code>Class</code> object of the specified message factory;
      *         or <code>null</code>
      *
-     * @param factoryId             the name of the factory to find, which is
+     * @param factoryId             the name of the factory to search, which is
      *                              a system property
      * @exception SOAPException if there is a SOAP error
      */
@@ -84,7 +84,7 @@ class FactoryFinder {
      * @return the <code>Class</code> object of the specified message factory;
      *         may be <code>null</code>
      *
-     * @param factoryId             the name of the factory to find, which is
+     * @param factoryId             the name of the factory to search, which is
      *                              a system property
      * @param fallbackClassName     the implementation class name, which is
      *                              to be used only if nothing else
@@ -112,7 +112,7 @@ class FactoryFinder {
      * @return the <code>Class</code> object of the specified message factory;
      *         may not be <code>null</code>
      *
-     * @param factoryId             the name of the factory to find, which is
+     * @param factoryId             the name of the factory to search, which is
      *                              a system property
      * @param defaultClassName      the implementation class name, which is
      *                              to be used only if nothing else
@@ -157,7 +157,7 @@ class FactoryFinder {
         }
 
         String serviceId = "META-INF/services/" + factoryId;
-        // try to find services in CLASSPATH
+        // try to search services in CLASSPATH
         try {
             InputStream is=null;
             if (classLoader == null) {
@@ -185,7 +185,7 @@ class FactoryFinder {
         if (!tryFallback)
             return null;
 
-        // We didn't find the class through the usual means so try the default
+        // We didn't search the class through the usual means so try the default
         // (built in) factory if specified.
         if (defaultClassName == null) {
             throw new SOAPException(

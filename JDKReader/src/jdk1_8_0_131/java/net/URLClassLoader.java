@@ -428,7 +428,7 @@ public class URLClassLoader extends SecureClassLoader implements Closeable {
                 // race condition
                 if (getAndVerifyPackage(pkgname, man, url) == null) {
                     // Should never happen
-                    throw new AssertionError("Cannot find package " +
+                    throw new AssertionError("Cannot search package " +
                                              pkgname);
                 }
             }

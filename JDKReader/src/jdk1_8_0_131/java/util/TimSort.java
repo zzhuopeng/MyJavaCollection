@@ -244,7 +244,7 @@ class TimSort<T> {
             ts.pushRun(lo, runLen);
             ts.mergeCollapse();
 
-            // Advance to find next run
+            // Advance to search next run
             lo += runLen;
             nRemaining -= runLen;
         } while (nRemaining != 0);

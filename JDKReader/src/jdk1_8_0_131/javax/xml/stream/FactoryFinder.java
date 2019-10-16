@@ -214,7 +214,7 @@ class FactoryFinder {
      * @return Class object of factory, never null
      *
      * @param type                  Base class / Service interface  of the
-     *                              factory to find.
+     *                              factory to search.
      *
      * @param fallbackClassName     Implementation class name, if nothing else
      *                              is found.  Use null to mean no fallback.
@@ -233,9 +233,9 @@ class FactoryFinder {
      * @return Class object of factory, never null
      *
      * @param type                  Base class / Service interface  of the
-     *                              factory to find.
+     *                              factory to search.
      *
-     * @param factoryId             Name of the factory to find, same as
+     * @param factoryId             Name of the factory to search, same as
      *                              a property name
      *
      * @param cl                    ClassLoader to be used to load the class, null means to use
@@ -249,7 +249,7 @@ class FactoryFinder {
     static <T> T find(Class<T> type, String factoryId, ClassLoader cl, String fallbackClassName)
         throws FactoryConfigurationError
     {
-        dPrint("find factoryId =" + factoryId);
+        dPrint("search factoryId =" + factoryId);
 
         // Use the system property first
         try {
@@ -330,9 +330,9 @@ class FactoryFinder {
     }
 
     /*
-     * Try to find provider using the ServiceLoader API
+     * Try to search provider using the ServiceLoader API
      *
-     * @param type Base class / Service interface  of the factory to find.
+     * @param type Base class / Service interface  of the factory to search.
      *
      * @return instance of provider class if found or null
      */

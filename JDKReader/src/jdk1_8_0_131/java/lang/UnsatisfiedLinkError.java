@@ -26,7 +26,7 @@
 package java.lang;
 
 /**
- * Thrown if the Java Virtual Machine cannot find an appropriate
+ * Thrown if the Java Virtual Machine cannot search an appropriate
  * native-language definition of a method declared <code>native</code>.
  *
  * @author unascribed

@@ -390,7 +390,7 @@ class DurationImpl
         // duration is the offset from the Epoch
         gregorianCalendar.setTimeInMillis(l);
 
-        // now find out how much each field has changed
+        // now search out how much each field has changed
         long int2long = 0L;
 
         // years

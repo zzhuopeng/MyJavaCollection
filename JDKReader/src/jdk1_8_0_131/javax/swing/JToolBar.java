@@ -217,7 +217,7 @@ public class JToolBar extends JComponent implements SwingConstants, Accessible
      * Returns the index of the specified component.
      * (Note: Separators occupy index positions.)
      *
-     * @param c  the <code>Component</code> to find
+     * @param c  the <code>Component</code> to search
      * @return an integer indicating the component's position,
      *          where 0 is first
      */

@@ -84,7 +84,7 @@ class Metacity implements SynthConstants {
             }
         }
         if (INSTANCE == null) {
-            throw new Error("Could not find any installed metacity theme, and fallback failed");
+            throw new Error("Could not search any installed metacity theme, and fallback failed");
         }
     }
 

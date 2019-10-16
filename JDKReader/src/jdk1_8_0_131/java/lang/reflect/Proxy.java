@@ -115,7 +115,7 @@ import sun.security.util.SecurityConstants;
  * {@code getMethods} on its {@code Class} object will return
  * an array of {@code Method} objects that include all of the
  * methods in those interfaces, and invoking {@code getMethod} will
- * find methods in the proxy interfaces as would be expected.
+ * search methods in the proxy interfaces as would be expected.
  *
  * <li>The {@link Proxy#isProxyClass Proxy.isProxyClass} method will
  * return true if it is passed a proxy class-- a class returned by

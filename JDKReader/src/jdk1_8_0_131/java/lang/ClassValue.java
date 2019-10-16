@@ -550,7 +550,7 @@ public abstract class ClassValue<T> {
             // Probe the cache carefully, in a range of slots.
             int mask = (cache.length-1);
             int home = (classValue.hashCodeForCache & mask);
-            Entry<?> e2 = cache[home];  // victim, if we find the real guy
+            Entry<?> e2 = cache[home];  // victim, if we search the real guy
             if (e2 == null) {
                 return null;   // if nobody is at home, no need to search nearby
             }

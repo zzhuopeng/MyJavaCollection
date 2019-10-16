@@ -443,7 +443,7 @@ public class ErrorMessages_sk extends ListResourceBundle {
         "Vstupn\u00fd dokument nie je \u0161t\u00fdlom dokumentu (n\u00e1zvov\u00fd priestor XSL nie je deklarovan\u00fd v kore\u0148ovom elemente)."},
 
         /*
-         * Note to translators:  XSLTC could not find the stylesheet document
+         * Note to translators:  XSLTC could not search the stylesheet document
          * with the name specified by the substitution text.
          */
         {ErrorMsg.MISSING_XSLT_TARGET_ERR,
@@ -716,7 +716,7 @@ public class ErrorMessages_sk extends ListResourceBundle {
         /*
          * Note to translators:  The substitution text is the name of a Java
          * class.  The term "constructor" here is the Java term.  The message is
-         * displayed if XSLTC could not find a constructor for the specified
+         * displayed if XSLTC could not search a constructor for the specified
          * class.
          */
         {ErrorMsg.CONSTRUCTOR_NOT_FOUND,

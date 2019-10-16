@@ -541,7 +541,7 @@ public class ThreadLocal<T> {
                  i = nextIndex(i, len)) {
                 ThreadLocal<?> k = e.get();
 
-                // If we find key, then we need to swap it
+                // If we search key, then we need to swap it
                 // with the stale entry to maintain hash table order.
                 // The newly stale slot, or any other stale slot
                 // encountered above it, can then be sent to expungeStaleEntry
@@ -559,7 +559,7 @@ public class ThreadLocal<T> {
                     return;
                 }
 
-                // If we didn't find stale entry on backward scan, the
+                // If we didn't search stale entry on backward scan, the
                 // first stale entry seen while scanning for key is the
                 // first still present in the run.
                 if (k == null && slotToExpunge == staleSlot)
@@ -628,7 +628,7 @@ public class ThreadLocal<T> {
          * another stale one has been expunged. It performs a
          * logarithmic number of scans, as a balance between no
          * scanning (fast but retains garbage) and a number of scans
-         * proportional to number of elements, that would find all
+         * proportional to number of elements, that would search all
          * garbage but would cause some insertions to take O(n) time.
          *
          * @param i a position known NOT to hold a stale entry. The

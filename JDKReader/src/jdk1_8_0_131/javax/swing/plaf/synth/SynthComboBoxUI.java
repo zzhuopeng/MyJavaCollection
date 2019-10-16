@@ -48,7 +48,7 @@ public class SynthComboBoxUI extends BasicComboBoxUI implements
 
     /**
      * Used to adjust the location and size of the popup. Very useful for
-     * situations such as we find in Nimbus where part of the border is used
+     * situations such as we search in Nimbus where part of the border is used
      * to paint the focus. In such cases, the border is empty space, and not
      * part of the "visual" border, and in these cases, you'd like the popup
      * to be adjusted such that it looks as if it were next to the visual border.

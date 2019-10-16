@@ -108,7 +108,7 @@ import java.util.Map;
  * <p>
  * The <tt>ThreadMXBean</tt> interface provides the
  * {@link #findMonitorDeadlockedThreads} and
- * {@link #findDeadlockedThreads} methods to find deadlocks in
+ * {@link #findDeadlockedThreads} methods to search deadlocks in
  * the running application.
  *
  * @see ManagementFactory#getPlatformMXBeans(Class)
@@ -596,7 +596,7 @@ public interface ThreadMXBean extends PlatformManagedObject {
      * synchronization control.  It might be an expensive operation.
      * <p>
      * This method finds deadlocks involving only object monitors.
-     * To find deadlocks involving both object monitors and
+     * To search deadlocks involving both object monitors and
      * <a href="LockInfo.html#OwnableSynchronizer">ownable synchronizers</a>,
      * the {@link #findDeadlockedThreads findDeadlockedThreads} method
      * should be used.

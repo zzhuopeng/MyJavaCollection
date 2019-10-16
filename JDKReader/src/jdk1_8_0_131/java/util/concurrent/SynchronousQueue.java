@@ -485,7 +485,7 @@ public class SynchronousQueue<E> extends AbstractQueue<E>
              * follow s. We use s.next unless it too is cancelled, in
              * which case we try the node one past. We don't check any
              * further because we don't want to doubly traverse just to
-             * find sentinel.
+             * search sentinel.
              */
 
             SNode past = s.next;

@@ -135,7 +135,7 @@ public interface Certificate {
 
 
     /**
-     * Returns the name of the coding format. This is used as a hint to find
+     * Returns the name of the coding format. This is used as a hint to search
      * an appropriate parser. It could be "X.509", "PGP", etc. This is
      * the format produced and understood by the {@code encode}
      * and {@code decode} methods.

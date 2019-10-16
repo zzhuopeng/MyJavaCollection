@@ -294,7 +294,7 @@ public interface AnnotatedElement {
      *
      * The difference between this method and {@link #getAnnotation(Class)}
      * is that this method detects if its argument is a <em>repeatable
-     * annotation type</em> (JLS 9.6), and if so, attempts to find one or
+     * annotation type</em> (JLS 9.6), and if so, attempts to search one or
      * more annotations of that type by "looking through" a container
      * annotation.
      *
@@ -391,16 +391,16 @@ public interface AnnotatedElement {
      * The difference between this method and {@link
      * #getDeclaredAnnotation(Class)} is that this method detects if its
      * argument is a <em>repeatable annotation type</em> (JLS 9.6), and if so,
-     * attempts to find one or more annotations of that type by "looking
+     * attempts to search one or more annotations of that type by "looking
      * through" a container annotation if one is present.
      *
      * The caller of this method is free to modify the returned array; it will
      * have no effect on the arrays returned to other callers.
      *
      * @implSpec The default implementation may call {@link
-     * #getDeclaredAnnotation(Class)} one or more times to find a
+     * #getDeclaredAnnotation(Class)} one or more times to search a
      * directly present annotation and, if the annotation type is
-     * repeatable, to find a container annotation. If annotations of
+     * repeatable, to search a container annotation. If annotations of
      * the annotation type {@code annotationClass} are found to be both
      * directly and indirectly present, then {@link
      * #getDeclaredAnnotations()} will get called to determine the

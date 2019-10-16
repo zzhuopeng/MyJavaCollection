@@ -472,7 +472,7 @@ public final class ZoneRules implements Serializable {
      * one valid offset for each instant.
      * This method returns that offset.
      *
-     * @param instant  the instant to find the offset for, not null, but null
+     * @param instant  the instant to search the offset for, not null, but null
      *  may be ignored if the rules have a single offset for all instants
      * @return the offset, not null
      */
@@ -743,7 +743,7 @@ public final class ZoneRules implements Serializable {
      * The standard offset is the offset before any daylight saving time is applied.
      * This is typically the offset applicable during winter.
      *
-     * @param instant  the instant to find the offset information for, not null, but null
+     * @param instant  the instant to search the offset information for, not null, but null
      *  may be ignored if the rules have a single offset for all instants
      * @return the standard offset, not null
      */
@@ -773,7 +773,7 @@ public final class ZoneRules implements Serializable {
      * {@link #getOffset(java.time.Instant) actual} and
      * {@link #getStandardOffset(java.time.Instant) standard} offsets.
      *
-     * @param instant  the instant to find the daylight savings for, not null, but null
+     * @param instant  the instant to search the daylight savings for, not null, but null
      *  may be ignored if the rules have a single offset for all instants
      * @return the difference between the standard and actual offset, not null
      */
@@ -796,7 +796,7 @@ public final class ZoneRules implements Serializable {
      * This default implementation compares the {@link #getOffset(java.time.Instant) actual}
      * and {@link #getStandardOffset(java.time.Instant) standard} offsets.
      *
-     * @param instant  the instant to find the offset information for, not null, but null
+     * @param instant  the instant to search the offset information for, not null, but null
      *  may be ignored if the rules have a single offset for all instants
      * @return the standard offset, not null
      */

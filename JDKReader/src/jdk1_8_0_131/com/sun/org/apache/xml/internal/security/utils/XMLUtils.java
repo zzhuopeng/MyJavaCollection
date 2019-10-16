@@ -948,7 +948,7 @@ public class XMLUtils {
                         Attr attr = (Attr)attributes.item(i);
                         if (attr.isId() && id.equals(attr.getValue())) {
                             if (foundElement == null) {
-                                // Continue searching to find duplicates
+                                // Continue searching to search duplicates
                                 foundElement = attr.getOwnerElement();
                             } else {
                                 log.log(java.util.logging.Level.FINE, "Multiple elements with the same 'Id' attribute value!");

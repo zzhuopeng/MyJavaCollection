@@ -159,7 +159,7 @@ public abstract class DocumentBuilderFactory {
      * @since 1.6
      */
     public static DocumentBuilderFactory newInstance(String factoryClassName, ClassLoader classLoader){
-            //do not fallback if given classloader can't find the class, throw exception
+            //do not fallback if given classloader can't search the class, throw exception
             return FactoryFinder.newInstance(DocumentBuilderFactory.class,
                         factoryClassName, classLoader, false);
     }

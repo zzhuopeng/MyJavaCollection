@@ -46,7 +46,7 @@ import javax.management.MBeanServer;
  * JMXConnectorServerProvider}.  This instance is found as follows.  Suppose
  * the given {@link JMXServiceURL} looks like
  * <code>"service:jmx:<em>protocol</em>:<em>remainder</em>"</code>.
- * Then the factory will attempt to find the appropriate {@link
+ * Then the factory will attempt to search the appropriate {@link
  * JMXConnectorServerProvider} for <code><em>protocol</em></code>.  Each
  * occurrence of the character <code>+</code> or <code>-</code> in
  * <code><em>protocol</em></code> is replaced by <code>.</code> or
@@ -123,7 +123,7 @@ import javax.management.MBeanServer;
  * implementation will use its own provider for
  * <code><em>protocol</em></code>, or it will throw a
  * <code>MalformedURLException</code> if there is none.  An
- * implementation may choose to find providers by other means.  For
+ * implementation may choose to search providers by other means.  For
  * example, it may support the <a
  * href="{@docRoot}/../technotes/guides/jar/jar.html#Service Provider">
  * JAR conventions for service providers</a>, where the service

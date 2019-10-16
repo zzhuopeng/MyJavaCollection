@@ -107,7 +107,7 @@ public abstract class XPathFactory {
     /**
     * <p>Get a new <code>XPathFactory</code> instance using the specified object model.</p>
     *
-    * <p>To find a <code>XPathFactory</code> object,
+    * <p>To search a <code>XPathFactory</code> object,
     * this method looks the following places in the following order where "the class loader" refers to the context class loader:</p>
     * <ol>
     *   <li>

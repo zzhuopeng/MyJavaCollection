@@ -513,12 +513,12 @@ public class XSDHandler {
 
         // if loading using JAXP schemaSource property, or using grammar caching loadGrammar
         // the desc.targetNamespace is always null.
-        // Therefore we should not attempt to find out if
+        // Therefore we should not attempt to search out if
         // the schema is already in the bucket, since in the case we have
         // no namespace schema in the bucket, findGrammar will always return the
         // no namespace schema.
         if (referType != XSDDescription.CONTEXT_PREPARSE){
-            // first try to find it in the bucket/pool, return if one is found
+            // first try to search it in the bucket/pool, return if one is found
             if (fHonourAllSchemaLocations && referType == XSDDescription.CONTEXT_IMPORT && isExistingGrammar(desc, fNamespaceGrowth)) {
                 grammar = fGrammarBucket.getGrammar(desc.getTargetNamespace());
             }
@@ -722,7 +722,7 @@ public class XSDHandler {
     }
 
     /**
-     * First try to find a grammar in the bucket, if failed, consult the
+     * First try to search a grammar in the bucket, if failed, consult the
      * grammar pool. If a grammar is found in the pool, then add it (and all
      * imported ones) into the bucket.
      */
@@ -1705,7 +1705,7 @@ public class XSDHandler {
         Element decl = null;
         XSDocumentInfo declDoc = null;
 
-        // the component is not parsed, try to find a DOM element for it
+        // the component is not parsed, try to search a DOM element for it
         switch (declType) {
         case ATTRIBUTE_TYPE :
             decl = getElementFromMap(fUnparsedAttributeRegistry, declKey);
@@ -1761,7 +1761,7 @@ public class XSDHandler {
         }
 
         // a component is hidden, meaning either it's traversed, or being traversed.
-        // but we didn't find it in the grammar, so it's the latter case, and
+        // but we didn't search it in the grammar, so it's the latter case, and
         // a circular reference. error!
         if (DOMUtil.isHidden(decl, fHiddenNodes)) {
             if (retObj == null) {
@@ -2004,7 +2004,7 @@ public class XSDHandler {
 
 
     // This method squirrels away <keyref> declarations--along with the element
-    // decls and namespace bindings they might find handy.
+    // decls and namespace bindings they might search handy.
     protected void storeKeyRef (Element keyrefToStore, XSDocumentInfo schemaDoc,
             XSElementDecl currElemDecl) {
         String keyrefName = DOMUtil.getAttrValue(keyrefToStore, SchemaSymbols.ATT_NAME);
@@ -2143,7 +2143,7 @@ public class XSDHandler {
         try {
             // when the system id and byte stream and character stream
             // of the input source are all null, it's
-            // impossible to find the schema document. so we skip in
+            // impossible to search the schema document. so we skip in
             // this case. otherwise we'll receive some NPE or
             // file not found errors. but schemaHint=="" is perfectly
             // legal for import.

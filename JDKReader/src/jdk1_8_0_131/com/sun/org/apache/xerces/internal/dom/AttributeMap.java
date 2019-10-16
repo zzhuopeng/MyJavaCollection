@@ -185,7 +185,7 @@ public class AttributeMap extends NamedNodeMapImpl {
             // make sure it won't be mistaken with defaults in case it's reused
             previous.isSpecified(true);
         } else {
-            // If we can't find by namespaceURI, localName, then we find by
+            // If we can't search by namespaceURI, localName, then we search by
             // nodeName so we know where to insert.
             i = findNamePoint(arg.getNodeName(),0);
             if (i >=0) {
@@ -316,7 +316,7 @@ public class AttributeMap extends NamedNodeMapImpl {
                 findNamePoint(name, index+1) < 0) {
                     NodeImpl clone = (NodeImpl)d.cloneNode(true);
                     if (d.getLocalName() !=null){
-                            // we must rely on the name to find a default attribute
+                            // we must rely on the name to search a default attribute
                             // ("test:attr"), but while copying it from the DOCTYPE
                             // we should not loose namespace URI that was assigned
                             // to the attribute in the instance document.
@@ -426,7 +426,7 @@ public class AttributeMap extends NamedNodeMapImpl {
                     NodeImpl clone = (NodeImpl)d.cloneNode(true);
                     clone.ownerNode = ownerNode;
                     if (d.getLocalName() != null) {
-                        // we must rely on the name to find a default attribute
+                        // we must rely on the name to search a default attribute
                         // ("test:attr"), but while copying it from the DOCTYPE
                         // we should not loose namespace URI that was assigned
                         // to the attribute in the instance document.
@@ -583,7 +583,7 @@ public class AttributeMap extends NamedNodeMapImpl {
             nodes.set(i, arg);
         }
         else {
-            // If we can't find by namespaceURI, localName, then we find by
+            // If we can't search by namespaceURI, localName, then we search by
             // nodeName so we know where to insert.
             i = findNamePoint(argn.getNodeName(),0);
             if (i >= 0) {

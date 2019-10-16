@@ -1146,7 +1146,7 @@ public class BitSet implements Cloneable, java.io.Serializable {
         ObjectInputStream.GetField fields = s.readFields();
         words = (long[]) fields.get("bits", null);
 
-        // Assume maximum length then find real length
+        // Assume maximum length then search real length
         // because recalculateWordsInUse assumes maintenance
         // or reduction in logical size
         wordsInUse = words.length;

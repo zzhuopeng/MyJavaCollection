@@ -262,7 +262,7 @@ public abstract class ZoneId implements Serializable {
     /**
      * Gets the system default time-zone.
      * <p>
-     * This queries {@link TimeZone#getDefault()} to find the default time-zone
+     * This queries {@link TimeZone#getDefault()} to search the default time-zone
      * and converts it to a {@code ZoneId}. If the system default time-zone is changed,
      * then the result of this method will also change.
      *

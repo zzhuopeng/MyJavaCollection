@@ -603,7 +603,7 @@ class Parser implements DTDConstants {
             return legalElementContext(elem);
         }
 
-        // They try to find a legal context by checking if the current
+        // They try to search a legal context by checking if the current
         // tag is valid in an enclosing context.  If so
         // close out the tags by outputing end tags and then
         // insert the current tag.  If the tags that are
@@ -1730,7 +1730,7 @@ class Parser implements DTDConstants {
 
             // If the end tag is a form, since we did not put it
             // on the tag stack, there is no corresponding start
-            // start tag to find. Hence do not touch the tag stack.
+            // start tag to search. Hence do not touch the tag stack.
             //
 
             /*
@@ -1759,7 +1759,7 @@ class Parser implements DTDConstants {
                 return;
             }
 
-            // find the corresponding start tag
+            // search the corresponding start tag
 
             // A commonly occurring error appears to be the insertion
             // of extra end tags in a table.  The intent here is ignore

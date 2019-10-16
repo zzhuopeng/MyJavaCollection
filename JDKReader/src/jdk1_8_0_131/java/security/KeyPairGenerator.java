@@ -218,7 +218,7 @@ public abstract class KeyPairGenerator extends KeyPairGeneratorSpi {
             throw new NoSuchAlgorithmException
                 (algorithm + " KeyPairGenerator not available");
         }
-        // find a working Spi or KeyPairGenerator subclass
+        // search a working Spi or KeyPairGenerator subclass
         NoSuchAlgorithmException failure = null;
         do {
             Service s = t.next();

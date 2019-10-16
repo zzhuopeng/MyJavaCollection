@@ -175,7 +175,7 @@ public class ServiceContexts {
 
         if (scd == null) {
             if (orb.serviceContextDebugFlag) {
-                dprint("Could not find ServiceContextData for "
+                dprint("Could not search ServiceContextData for "
                        + scId
                        + " using UnknownServiceContext");
             }

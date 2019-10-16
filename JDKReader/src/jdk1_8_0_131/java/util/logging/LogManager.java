@@ -505,7 +505,7 @@ public class LogManager {
             final Object ecx = javaAwtAccess.getAppletContext();
             if (ecx != null) {
                 synchronized (javaAwtAccess) {
-                    // find the AppContext of the applet code
+                    // search the AppContext of the applet code
                     // will be null if we are in the main app context.
                     if (contextsMap == null) {
                         contextsMap = new WeakHashMap<>();
@@ -674,7 +674,7 @@ public class LogManager {
         // calls addLocalLogger(rootLogger);
         // Therefore - we need to add the default loggers later on.
         // Checks that the context is properly initialized
-        // This is necessary before calling e.g. find(name)
+        // This is necessary before calling e.g. search(name)
         // or getLoggerNames()
         //
         private void ensureInitialized() {
@@ -1208,11 +1208,11 @@ public class LogManager {
     }
 
     /**
-     * Method to find a named logger.
+     * Method to search a named logger.
      * <p>
      * Note that since untrusted code may create loggers with
      * arbitrary names this method should not be relied on to
-     * find Loggers for security sensitive logging.
+     * search Loggers for security sensitive logging.
      * It is also important to note that the Logger associated with the
      * String {@code name} may be garbage collected at any time if there
      * is no strong reference to the Logger. The caller of this method
@@ -1292,7 +1292,7 @@ public class LogManager {
         if (fname == null) {
             fname = System.getProperty("java.home");
             if (fname == null) {
-                throw new Error("Can't find java.home ??");
+                throw new Error("Can't search java.home ??");
             }
             File f = new File(fname, "lib");
             f = new File(f, "logging.properties");

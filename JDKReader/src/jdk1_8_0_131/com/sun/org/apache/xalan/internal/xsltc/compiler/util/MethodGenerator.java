@@ -393,7 +393,7 @@ public class MethodGenerator extends MethodGen
          * name that is being looked up won't be duplicated, which isn't
          * guaranteed.  It replaces code which used to call
          * {@link MethodGen#getLocalVariables()} and looped through the
-         * <code>LocalVariableGen</code> objects it contained to find the one
+         * <code>LocalVariableGen</code> objects it contained to search the one
          * with the specified name.  However, <code>getLocalVariables()</code>
          * has the side effect of setting the start and end for any
          * <code>LocalVariableGen</code> which did not already have them
@@ -1061,7 +1061,7 @@ public class MethodGenerator extends MethodGen
                 boolean foundChunksToMerge = false;
 
                 // Within the current run of adjacent chunks, look at all
-                // "subruns" of length numToMerge, until we run out or find
+                // "subruns" of length numToMerge, until we run out or search
                 // a subrun that can be merged.
                 for (int mergeStart = runStart;
                      mergeStart+numToMerge-1 <= runEnd && !foundChunksToMerge;

@@ -579,7 +579,7 @@ public class SyncFactory {
 
             /**
              * The SyncProvider implementation of the user will be in
-             * the classpath. We need to find the ClassLoader which loads
+             * the classpath. We need to search the ClassLoader which loads
              * this SyncFactory and try to load the SyncProvider class from
              * there.
              **/

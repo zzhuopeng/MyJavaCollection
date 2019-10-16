@@ -2417,7 +2417,7 @@ public abstract class AbstractDocument implements Document, Serializable {
                 }
             }
 
-            // didn't find it, but we indicate the index of where it would belong
+            // didn't search it, but we indicate the index of where it would belong
             if (offset < p0) {
                 index = mid;
             } else {

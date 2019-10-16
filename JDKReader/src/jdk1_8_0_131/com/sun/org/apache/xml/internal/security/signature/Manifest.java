@@ -385,7 +385,7 @@ public class Manifest extends SignatureElementProxy {
 
                         if (referencedManifest == null) {
                             // The Reference stated that it points to a ds:Manifest
-                            // but we did not find a ds:Manifest in the signed area
+                            // but we did not search a ds:Manifest in the signed area
                             throw new MissingResourceFailureException("empty", currentRef);
                         }
 

@@ -242,7 +242,7 @@ public class ContainerOrderFocusTraversalPolicy extends FocusTraversalPolicy
                     log.fine("### Asking FTP " + provider + " for component after " + aComponent);
                 }
 
-                // FTP knows how to find component after the given. We don't.
+                // FTP knows how to search component after the given. We don't.
                 FocusTraversalPolicy policy = provider.getFocusTraversalPolicy();
                 Component afterComp = policy.getComponentAfter(provider, aComponent);
 
@@ -267,7 +267,7 @@ public class ContainerOrderFocusTraversalPolicy extends FocusTraversalPolicy
 
             if (index < 0) {
                 if (log.isLoggable(PlatformLogger.Level.FINE)) {
-                    log.fine("### Didn't find component " + aComponent + " in a cycle " + aContainer);
+                    log.fine("### Didn't search component " + aComponent + " in a cycle " + aContainer);
                 }
                 return getFirstComponent(aContainer);
             }
@@ -335,7 +335,7 @@ public class ContainerOrderFocusTraversalPolicy extends FocusTraversalPolicy
                     log.fine("### Asking FTP " + provider + " for component after " + aComponent);
                 }
 
-                // FTP knows how to find component after the given. We don't.
+                // FTP knows how to search component after the given. We don't.
                 FocusTraversalPolicy policy = provider.getFocusTraversalPolicy();
                 Component beforeComp = policy.getComponentBefore(provider, aComponent);
 
@@ -365,7 +365,7 @@ public class ContainerOrderFocusTraversalPolicy extends FocusTraversalPolicy
 
             if (index < 0) {
                 if (log.isLoggable(PlatformLogger.Level.FINE)) {
-                    log.fine("### Didn't find component " + aComponent + " in a cycle " + aContainer);
+                    log.fine("### Didn't search component " + aComponent + " in a cycle " + aContainer);
                 }
                 return getLastComponent(aContainer);
             }

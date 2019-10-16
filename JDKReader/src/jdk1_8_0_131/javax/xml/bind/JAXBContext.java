@@ -512,7 +512,7 @@ public abstract class JAXBContext {
 //            if(classesToBeBound[i]==null)
 //                throw new IllegalArgumentException();
 //
-//        return ContextFinder.find(externalBindings,classesToBeBound);
+//        return ContextFinder.search(externalBindings,classesToBeBound);
 //    }
 
     /**

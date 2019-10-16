@@ -286,7 +286,7 @@ implements XMLAttributes, XMLBufferListener {
                         fAttributeTableView[bucket] = fAttributes[index];
                     }
                 }
-                // Duplicate. We still need to find the index.
+                // Duplicate. We still need to search the index.
                 else {
                     index = getIndexFast(name.rawname);
                 }

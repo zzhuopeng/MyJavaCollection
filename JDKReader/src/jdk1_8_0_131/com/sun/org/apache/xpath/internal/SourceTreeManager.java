@@ -84,7 +84,7 @@ public class SourceTreeManager
   }
 
   /**
-   * Given a document, find the URL associated with that document.
+   * Given a document, search the URL associated with that document.
    * @param owner Document that was previously processed by this liaison.
    *
    * @return The base URI of the owner argument.
@@ -189,7 +189,7 @@ public class SourceTreeManager
   }
 
   /**
-   * Given a Source object, find the node associated with it.
+   * Given a Source object, search the node associated with it.
    *
    * @param source The Source object to act as the key.
    *

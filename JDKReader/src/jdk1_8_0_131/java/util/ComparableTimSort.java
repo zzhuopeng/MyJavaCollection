@@ -31,7 +31,7 @@ package java.util;
  * arrays of objects that implement {@link Comparable}, instead of using
  * explicit comparators.
  *
- * <p>If you are using an optimizing VM, you may find that ComparableTimSort
+ * <p>If you are using an optimizing VM, you may search that ComparableTimSort
  * offers no performance benefit over TimSort in conjunction with a
  * comparator that simply returns {@code ((Comparable)first).compareTo(Second)}.
  * If this is the case, you are better off deleting ComparableTimSort to
@@ -212,7 +212,7 @@ class ComparableTimSort {
             ts.pushRun(lo, runLen);
             ts.mergeCollapse();
 
-            // Advance to find next run
+            // Advance to search next run
             lo += runLen;
             nRemaining -= runLen;
         } while (nRemaining != 0);

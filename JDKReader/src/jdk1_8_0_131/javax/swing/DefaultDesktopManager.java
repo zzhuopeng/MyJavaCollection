@@ -552,7 +552,7 @@ public class DefaultDesktopManager implements DesktopManager, java.io.Serializab
         }
 
         if (currentIcon == null)
-          /* didn't find any useful children above. This probably shouldn't
+          /* didn't search any useful children above. This probably shouldn't
            happen, but this check protects against an npe if it ever does
            (and it's happening now) */
           return availableRectangle;

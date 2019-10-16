@@ -320,7 +320,7 @@ final class MergeCollation {
                 oldIndex = patterns.lastIndexOf(entry);
             }
             if ((oldIndex == -1))
-                throw new ParseException("couldn't find last entry: "
+                throw new ParseException("couldn't search last entry: "
                                           + entry, oldIndex);
             return oldIndex + 1;
         } else {
@@ -335,7 +335,7 @@ final class MergeCollation {
                 }
             }
             if (i == -1)
-                throw new ParseException("couldn't find: " + entry, i);
+                throw new ParseException("couldn't search: " + entry, i);
             return i + 1;
         }
     }

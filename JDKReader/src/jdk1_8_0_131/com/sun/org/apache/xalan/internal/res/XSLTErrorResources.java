@@ -498,7 +498,7 @@ public class XSLTErrorResources extends ListResourceBundle
      "{0} must have a name attribute."},
 
     {ER_TEMPLATE_NOT_FOUND,
-     "Could not find template named: {0}"},
+     "Could not search template named: {0}"},
 
     {ER_CANT_RESOLVE_NAME_AVT,
       "Could not resolve name AVT in xsl:call-template."},
@@ -591,7 +591,7 @@ public class XSLTErrorResources extends ListResourceBundle
       "Had IO Exception with stylesheet file: {0}"},
 
     { ER_NO_HREF_ATTRIB,
-      "(StylesheetHandler) Could not find href attribute for {0}"},
+      "(StylesheetHandler) Could not search href attribute for {0}"},
 
     { ER_STYLESHEET_INCLUDES_ITSELF,
       "(StylesheetHandler) {0} is directly or indirectly including itself!"},
@@ -615,7 +615,7 @@ public class XSLTErrorResources extends ListResourceBundle
      "UnImplNode error: {0}"},
 
     { ER_NO_SELECT_EXPRESSION,
-      "Error! Did not find xpath select expression (-select)."},
+      "Error! Did not search xpath select expression (-select)."},
 
     { ER_CANNOT_SERIALIZE_XSLPROCESSOR,
       "Can not serialize an XSLProcessor!"},
@@ -630,7 +630,7 @@ public class XSLTErrorResources extends ListResourceBundle
      "Could not parse {0} document!"},
 
     { ER_COULDNT_FIND_FRAGMENT,
-     "Could not find fragment: {0}"},
+     "Could not search fragment: {0}"},
 
     { ER_NODE_NOT_ELEMENT,
       "Node pointed to by fragment identifier was not an element: {0}"},
@@ -871,7 +871,7 @@ public class XSLTErrorResources extends ListResourceBundle
              "Invalid driver name specified!"},
 
     { ER_NO_STYLESHEETROOT,
-             "Did not find the stylesheet root!"},
+             "Did not search the stylesheet root!"},
 
     { ER_ILLEGAL_XMLSPACE_VALUE,
          "Illegal value for xml:space"},
@@ -998,7 +998,7 @@ public class XSLTErrorResources extends ListResourceBundle
      "Attempting to format a number bigger than the largest Long integer"},
 
     { ER_CANNOT_FIND_SAX1_DRIVER,
-     "Cannot find SAX1 driver class {0}"},
+     "Cannot search SAX1 driver class {0}"},
 
     { ER_SAX1_DRIVER_NOT_LOADED,
      "SAX1 driver class {0} found but cannot be loaded"},
@@ -1226,7 +1226,7 @@ public class XSLTErrorResources extends ListResourceBundle
       "Xalan doesn't yet handle the locale name in the format-number function."},
 
     { WG_LOCALE_NOT_FOUND,
-      "Warning: Could not find locale for xml:lang={0}"},
+      "Warning: Could not search locale for xml:lang={0}"},
 
     { WG_CANNOT_MAKE_URL_FROM,
       "Can not make URL from: {0}"},
@@ -1235,7 +1235,7 @@ public class XSLTErrorResources extends ListResourceBundle
       "Can not load requested doc: {0}"},
 
     { WG_CANNOT_FIND_COLLATOR,
-      "Could not find Collator for <sort xml:lang={0}"},
+      "Could not search Collator for <sort xml:lang={0}"},
 
     { WG_FUNCTIONS_SHOULD_USE_URL,
       "Old syntax: the functions instruction should use a url of {0}"},
@@ -1376,7 +1376,7 @@ public class XSLTErrorResources extends ListResourceBundle
   {  "optionHTML", "   [-HTML (Use HTML formatter.)]"},
   {  "optionPARAM", "   [-PARAM name expression (Set a stylesheet parameter)]"},
   {  "noParsermsg1", "XSL Process was not successful."},
-  {  "noParsermsg2", "** Could not find parser **"},
+  {  "noParsermsg2", "** Could not search parser **"},
   { "noParsermsg3",  "Please check your classpath."},
   { "noParsermsg4", "If you don't have IBM's XML Parser for Java, you can download it from"},
   { "noParsermsg5", "IBM's AlphaWorks: http://www.alphaworks.ibm.com/formula/xml"},
@@ -1389,7 +1389,7 @@ public class XSLTErrorResources extends ListResourceBundle
     // Following are the new options added in XSLTErrorResources.properties files after Jdk 1.4 (Xalan 2.2-D11)
 
 
-  {  "optionMEDIA",  "   [-MEDIA mediaType (use media attribute to find stylesheet associated with a document.)]"},
+  {  "optionMEDIA",  "   [-MEDIA mediaType (use media attribute to search stylesheet associated with a document.)]"},
   {  "optionFLAVOR",  "   [-FLAVOR flavorName (Explicitly use s2s=SAX or d2d=DOM to do transform.)] "}, // Added by sboag/scurcuru; experimental
   { "optionDIAG", "   [-DIAG (Print overall milliseconds transform took.)]"},
   { "optionINCREMENTAL",  "   [-INCREMENTAL (request incremental DTM construction by setting http://xml.apache.org/xalan/features/incremental true.)]"},

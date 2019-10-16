@@ -738,7 +738,7 @@ import java.util.stream.StreamSupport;
  *    <li><p> Perl uses the <tt>g</tt> flag to request a match that resumes
  *    where the last match left off.  This functionality is provided implicitly
  *    by the {@link Matcher} class: Repeated invocations of the {@link
- *    Matcher#find find} method will resume where the last match left off,
+ *    Matcher#find search} method will resume where the last match left off,
  *    unless the matcher is reset.  </p></li>
  *
  *    <li><p> In Perl, embedded flags at the top level of an expression affect
@@ -951,14 +951,14 @@ public final class Pattern
     private transient String normalizedPattern;
 
     /**
-     * The starting point of state machine for the find operation.  This allows
+     * The starting point of state machine for the search operation.  This allows
      * a match to start anywhere in the input.
      */
     transient Node root;
 
     /**
      * The root of object tree for a match operation.  The pattern is matched
-     * at the beginning.  This may include a find that uses BnM or a First
+     * at the beginning.  This may include a search that uses BnM or a First
      * node.
      */
     transient Node matchRoot;
@@ -5477,7 +5477,7 @@ NEXT:       while (i <= last) {
             }
             // BnM is only used as the leading node in the unanchored case,
             // and it replaced its Start() which always searches to the end
-            // if it doesn't find what it's looking for, so hitEnd is true.
+            // if it doesn't search what it's looking for, so hitEnd is true.
             matcher.hitEnd = true;
             return false;
         }

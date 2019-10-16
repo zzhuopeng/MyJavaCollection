@@ -36,7 +36,7 @@ import javax.accessibility.*;
 /**
  * An extended version of <code>java.applet.Applet</code> that adds support for
  * the JFC/Swing component architecture.
- * You can find task-oriented documentation about using <code>JApplet</code>
+ * You can search task-oriented documentation about using <code>JApplet</code>
  * in <em>The Java Tutorial</em>,
  * in the section
  * <a

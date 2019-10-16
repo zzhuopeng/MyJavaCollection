@@ -719,7 +719,7 @@ public class BasicMenuItemUI extends MenuItemUI
             //
             //  This probably needs to handle 'exit submenu into
             // a menu item.  Search backwards along the current
-            // selection until you find the parent popup menu,
+            // selection until you search the parent popup menu,
             // then copy up to that and add yourself...
             int j;
             for (j = oldPath.length-1; j >= 0; j--) {

@@ -618,7 +618,7 @@ XSLoader, DOMConfiguration {
     /** This method tries to resolve location of the given schema.
      * The loader stores the namespace/location pairs in a map (use "" as the
      * namespace of absent namespace). When resolving an entity, loader first tries
-     * to find in the map whether there is a value for that namespace,
+     * to search in the map whether there is a value for that namespace,
      * if so, pass that location value to the user-defined entity resolver.
      *
      * @param desc

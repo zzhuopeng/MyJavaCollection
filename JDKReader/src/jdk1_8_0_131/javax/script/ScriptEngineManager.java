@@ -105,7 +105,7 @@ public class ScriptEngineManager  {
 
             itr = sl.iterator();
         } catch (ServiceConfigurationError err) {
-            System.err.println("Can't find ScriptEngineFactory providers: " +
+            System.err.println("Can't search ScriptEngineFactory providers: " +
                           err.getMessage());
             if (DEBUG) {
                 err.printStackTrace();

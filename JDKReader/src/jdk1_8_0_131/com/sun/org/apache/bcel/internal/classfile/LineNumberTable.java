@@ -216,7 +216,7 @@ public final class LineNumberTable extends Attribute {
       }
     } while(l <= r);
 
-    /* It's possible that we did not find any valid entry for the bytecode
+    /* It's possible that we did not search any valid entry for the bytecode
      * offset we were looking for.
      */
     if (min_index < 0)

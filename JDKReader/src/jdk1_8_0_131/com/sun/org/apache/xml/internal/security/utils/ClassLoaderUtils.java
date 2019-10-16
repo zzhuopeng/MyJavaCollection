@@ -205,7 +205,7 @@ final class ClassLoaderUtils {
 
     /**
      * This is a convenience method to load a resource as a stream. <p/> The
-     * algorithm used to find the resource is given in getResource()
+     * algorithm used to search the resource is given in getResource()
      *
      * @param resourceName The name of the resource to load
      * @param callingClass The Class object of the calling object

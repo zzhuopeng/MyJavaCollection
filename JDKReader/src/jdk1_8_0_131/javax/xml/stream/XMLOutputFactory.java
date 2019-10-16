@@ -183,7 +183,7 @@ public abstract class XMLOutputFactory {
   /**
    * Create a new instance of the factory.
    *
-   * @param factoryId             Name of the factory to find, same as
+   * @param factoryId             Name of the factory to search, same as
    *                              a property name
    * @param classLoader           classLoader to use
    * @return the factory implementation
@@ -197,7 +197,7 @@ public abstract class XMLOutputFactory {
   public static XMLInputFactory newInstance(String factoryId,
           ClassLoader classLoader)
           throws FactoryConfigurationError {
-      //do not fallback if given classloader can't find the class, throw exception
+      //do not fallback if given classloader can't search the class, throw exception
       return FactoryFinder.find(XMLInputFactory.class, factoryId, classLoader, null);
   }
 
@@ -248,7 +248,7 @@ public abstract class XMLOutputFactory {
    *   The original method was incorrectly defined to return XMLInputFactory.
    * </p>
    *
-   * @param factoryId             Name of the factory to find, same as
+   * @param factoryId             Name of the factory to search, same as
    *                              a property name
    * @param classLoader           classLoader to use
    * @return the factory implementation
@@ -259,7 +259,7 @@ public abstract class XMLOutputFactory {
   public static XMLOutputFactory newFactory(String factoryId,
           ClassLoader classLoader)
           throws FactoryConfigurationError {
-      //do not fallback if given classloader can't find the class, throw exception
+      //do not fallback if given classloader can't search the class, throw exception
       return FactoryFinder.find(XMLOutputFactory.class, factoryId, classLoader, null);
   }
 

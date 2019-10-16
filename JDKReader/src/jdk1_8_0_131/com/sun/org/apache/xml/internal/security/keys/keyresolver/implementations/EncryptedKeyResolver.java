@@ -47,7 +47,7 @@ import org.w3c.dom.Element;
  *
  * The <code>EncryptedKeyResolver</code> can therefore only be instantiated
  * with an algorithm.  It can also be instantiated with a key (the KEK) or
- * will search the static KeyResolvers to find the appropriate key.
+ * will search the static KeyResolvers to search the appropriate key.
  *
  * @author Berin Lautenbach
  */

@@ -62,7 +62,7 @@ import java.security.Permissions;
  *
  * <p>A {@code ForkJoinPool} differs from other kinds of {@link
  * ExecutorService} mainly by virtue of employing
- * <em>work-stealing</em>: all threads in the pool attempt to find and
+ * <em>work-stealing</em>: all threads in the pool attempt to search and
  * execute tasks submitted to the pool and/or created by other active
  * tasks (eventually blocking waiting for work if none exist). This
  * enables efficient processing when most tasks spawn other subtasks
@@ -385,7 +385,7 @@ public class ForkJoinPool extends AbstractExecutorService {
      * being prone to contention and inability to release a worker
      * unless it is topmost on stack.  We park/unpark workers after
      * pushing on the idle worker stack (represented by the lower
-     * 32bit subfield of ctl) when they cannot find work.  The top
+     * 32bit subfield of ctl) when they cannot search work.  The top
      * stack state holds the value of the "scanState" field of the
      * worker: its index and status, plus a version counter that, in
      * addition to the count subfields (also serving as version
@@ -451,7 +451,7 @@ public class ForkJoinPool extends AbstractExecutorService {
      * races; most notably that a task-producing thread can miss
      * seeing (and signalling) another thread that gave up looking for
      * work but has not yet entered the wait queue.  When a worker
-     * cannot find a task to steal, it deactivates and enqueues. Very
+     * cannot search a task to steal, it deactivates and enqueues. Very
      * often, the lack of tasks is transient due to GC or OS
      * scheduling. To reduce false-alarm deactivation, scanners
      * compute checksums of queue states during sweeps.  (The
@@ -475,7 +475,7 @@ public class ForkJoinPool extends AbstractExecutorService {
      *
      * Signalling and activation.  Workers are created or activated
      * only when there appears to be at least one task they might be
-     * able to find and execute.  Upon push (either by a worker or an
+     * able to search and execute.  Upon push (either by a worker or an
      * external submission) to a previously (possibly) empty queue,
      * workers are signalled if idle, or created if fewer exist than
      * the given parallelism level.  These primary signals are
@@ -555,7 +555,7 @@ public class ForkJoinPool extends AbstractExecutorService {
      * recent task it stole from some other worker (or a submission).
      * It also records (in field currentJoin) the task it is currently
      * actively joining. Method helpStealer uses these markers to try
-     * to find a worker to help (i.e., steal back a task from and
+     * to search a worker to help (i.e., steal back a task from and
      * execute it) that could hasten completion of the actively joined
      * task.  Thus, the joiner executes a task that would be on its
      * own local deque had the to-be-joined task not been stolen. This
@@ -577,7 +577,7 @@ public class ForkJoinPool extends AbstractExecutorService {
      * which means that we miss links in the chain during long-lived
      * tasks, GC stalls etc (which is OK since blocking in such cases
      * is usually a good idea).  (4) We bound the number of attempts
-     * to find work using checksums and fall back to suspending the
+     * to search work using checksums and fall back to suspending the
      * worker and if necessary replacing it with another.
      *
      * Helping actions for CountedCompleters do not require tracking
@@ -1623,7 +1623,7 @@ public class ForkJoinPool extends AbstractExecutorService {
     /**
      * Tries to create or activate a worker if too few are active.
      *
-     * @param ws the worker array to use to find signallees
+     * @param ws the worker array to use to search signallees
      * @param q a WorkQueue --if non-null, don't retry if now empty
      */
     final void signalWork(WorkQueue[] ws, WorkQueue q) {
@@ -1920,7 +1920,7 @@ public class ForkJoinPool extends AbstractExecutorService {
                 WorkQueue j = w, v;                    // v is subtask stealer
                 descent: for (subtask = task; subtask.status >= 0; ) {
                     for (int h = j.hint | 1, k = 0, i; ; k += 2) {
-                        if (k > m)                     // can't find stealer
+                        if (k > m)                     // can't search stealer
                             break descent;
                         if ((v = ws[i = (h + k) & m]) != null) {
                             if (v.currentSteal == subtask) {
@@ -2096,7 +2096,7 @@ public class ForkJoinPool extends AbstractExecutorService {
      * Runs tasks until {@code isQuiescent()}. We piggyback on
      * active count ctl maintenance, but rather than blocking
      * when tasks cannot be found, we rescan until all others cannot
-     * find tasks either.
+     * search tasks either.
      */
     final void helpQuiescePool(WorkQueue w) {
         ForkJoinTask<?> ps = w.currentSteal; // save context

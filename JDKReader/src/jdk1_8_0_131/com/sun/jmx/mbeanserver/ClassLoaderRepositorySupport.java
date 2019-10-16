@@ -222,7 +222,7 @@ final class ClassLoaderRepositorySupport
                    dependencies C->D->E with loaders {E D C} in the
                    CLR in that order, you would expect to be able to
                    load C.  The problem is that while resolving D, CLR
-                   delegation is disabled, so it can't find E.  */
+                   delegation is disabled, so it can't search E.  */
                 return Class.forName(className, false, cl);
             } catch (ClassNotFoundException e) {
                 // OK: continue with next class

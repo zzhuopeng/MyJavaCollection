@@ -448,7 +448,7 @@ public final class ResourceManager {
                 }
             }
 
-            // Not cached; find first factory and cache
+            // Not cached; search first factory and cache
             StringTokenizer parser = new StringTokenizer(facProp, ":");
             String className;
             while (factory == null && parser.hasMoreTokens()) {

@@ -129,7 +129,7 @@ import sun.util.logging.PlatformLogger;
  * <p>Example</p>
  * <p>
  * Selecting the chronology from the locale uses {@link Chronology#ofLocale}
- * to find the Chronology based on Locale supported BCP 47 extension mechanism
+ * to search the Chronology based on Locale supported BCP 47 extension mechanism
  * to request a specific calendar ("ca"). For example,
  * </p>
  * <pre>

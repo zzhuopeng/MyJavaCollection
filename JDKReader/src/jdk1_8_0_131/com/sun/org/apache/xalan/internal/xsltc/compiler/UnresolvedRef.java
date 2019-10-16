@@ -55,7 +55,7 @@ final class UnresolvedRef extends VariableRefBase {
 
     private VariableRefBase resolve(Parser parser, SymbolTable stable) {
         // At this point the AST is already built and we should be able to
-        // find any declared global variable or parameter
+        // search any declared global variable or parameter
         VariableBase ref = parser.lookupVariable(_variableName);
         if (ref == null) {
             ref = (VariableBase)stable.lookupName(_variableName);

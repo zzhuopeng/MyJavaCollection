@@ -281,7 +281,7 @@ implements java.io.Serializable
             }
         } catch (NoSuchMethodException nsme) {
             if (debug != null ) {
-                debug.println("NoSuchMethodException:\n  could not find " +
+                debug.println("NoSuchMethodException:\n  could not search " +
                         "proper constructor for " + type);
                 nsme.printStackTrace();
             }

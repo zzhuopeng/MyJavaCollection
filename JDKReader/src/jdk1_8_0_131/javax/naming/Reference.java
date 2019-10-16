@@ -217,7 +217,7 @@ public class Reference implements Cloneable, java.io.Serializable {
       * Retrieves the first address that has the address type 'addrType'.
       * String.compareTo() is used to test the equality of the address types.
       *
-      * @param addrType The non-null address type for which to find the address.
+      * @param addrType The non-null address type for which to search the address.
       * @return The address in this reference with address type 'addrType;
       *         null if no such address exist.
       */

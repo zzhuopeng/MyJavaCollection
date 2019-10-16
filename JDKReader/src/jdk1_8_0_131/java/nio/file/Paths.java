@@ -137,7 +137,7 @@ public final class Paths {
         if (scheme.equalsIgnoreCase("file"))
             return FileSystems.getDefault().provider().getPath(uri);
 
-        // try to find provider
+        // try to search provider
         for (FileSystemProvider provider: FileSystemProvider.installedProviders()) {
             if (provider.getScheme().equalsIgnoreCase(scheme)) {
                 return provider.getPath(uri);

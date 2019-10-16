@@ -30,7 +30,7 @@ package java.sql;
  * and properties of the columns in a <code>ResultSet</code> object.
  * The following code fragment creates the <code>ResultSet</code> object rs,
  * creates the <code>ResultSetMetaData</code> object rsmd, and uses rsmd
- * to find out how many columns rs has and whether the first column in rs
+ * to search out how many columns rs has and whether the first column in rs
  * can be used in a <code>WHERE</code> clause.
  * <PRE>
  *

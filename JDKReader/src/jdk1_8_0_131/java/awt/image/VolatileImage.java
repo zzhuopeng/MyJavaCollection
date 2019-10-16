@@ -301,7 +301,7 @@ public abstract class VolatileImage extends Image implements Transparency
     /**
      * Returns an ImageCapabilities object which can be
      * inquired as to the specific capabilities of this
-     * VolatileImage.  This would allow programmers to find
+     * VolatileImage.  This would allow programmers to search
      * out more runtime information on the specific VolatileImage
      * object that they have created.  For example, the user
      * might create a VolatileImage but the system may have
@@ -309,7 +309,7 @@ public abstract class VolatileImage extends Image implements Transparency
      * size, so although the object is a VolatileImage, it is
      * not as accelerated as other VolatileImage objects on
      * this platform might be.  The user might want that
-     * information to find other solutions to their problem.
+     * information to search other solutions to their problem.
      * @return an <code>ImageCapabilities</code> object that contains
      *         the capabilities of this <code>VolatileImage</code>.
      * @since 1.4

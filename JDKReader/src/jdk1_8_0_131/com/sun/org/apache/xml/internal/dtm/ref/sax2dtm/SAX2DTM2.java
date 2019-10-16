@@ -161,7 +161,7 @@ public class SAX2DTM2 extends SAX2DTM
 
     /**
      * Set the node type of the parent that we're looking for.
-     * Note that this does _not_ mean "find the nearest ancestor of
+     * Note that this does _not_ mean "search the nearest ancestor of
      * this type", but "yield the parent if it is of this type".
      *
      *

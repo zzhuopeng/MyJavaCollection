@@ -912,7 +912,7 @@ public abstract class DTMDefaultBase implements DTM
 
   /** Given a node handle, return a node identity. If extended addressing
    * has been used (multiple DTM IDs), we need to map the high bits of the
-   * identity into the proper DTM ID and thence find the proper offset
+   * identity into the proper DTM ID and thence search the proper offset
    * to add to the low bits of the identity
    *
    * This has been made FINAL to facilitate inlining, since we do not expect
@@ -1165,7 +1165,7 @@ public abstract class DTMDefaultBase implements DTM
   }
 
   /**
-   * Given a node handle, find its preceeding sibling.
+   * Given a node handle, search its preceeding sibling.
    * WARNING: DTM is asymmetric; this operation is resolved by search, and is
    * relatively expensive.
    *
@@ -1350,10 +1350,10 @@ public abstract class DTMDefaultBase implements DTM
           return null; // Not after anything; definitely not found
 
         // Not found, but we know where it should have been.
-        // Search back until we find an ancestor or run out.
+        // Search back until we search an ancestor or run out.
         wouldBeAt=-1-wouldBeAt;
 
-        // Decrement wouldBeAt to find last possible ancestor
+        // Decrement wouldBeAt to search last possible ancestor
         int candidate=m_namespaceDeclSetElements.elementAt(-- wouldBeAt);
         int ancestor=_parent(elementNodeIndex);
 
@@ -1503,7 +1503,7 @@ public abstract class DTMDefaultBase implements DTM
    *
    * @param baseHandle handle to original node from where the first namespace
    * was relative to (needed to return nodes in document order).
-   * @param nodeHandle A namespace handle for which we will find the next node.
+   * @param nodeHandle A namespace handle for which we will search the next node.
    * @param inScope true if all namespaces that are in scope should be processed,
    * otherwise just process the nodes in the given element handle.
    * @return handle of next namespace, or DTM.NULL to indicate none exists.
@@ -1549,7 +1549,7 @@ public abstract class DTMDefaultBase implements DTM
   }
 
   /**
-   * Given a node handle, find its parent node.
+   * Given a node handle, search its parent node.
    *
    * @param nodeHandle the id of the node.
    * @return int Node-number of parent,
@@ -1580,7 +1580,7 @@ public abstract class DTMDefaultBase implements DTM
   }
 
   /**
-   * Given a node handle, find the owning document node.  This has the exact
+   * Given a node handle, search the owning document node.  This has the exact
    * same semantics as the DOM Document method of the same name, in that if
    * the nodeHandle is a document node, it will return NULL.
    *
@@ -1601,7 +1601,7 @@ public abstract class DTMDefaultBase implements DTM
   }
 
   /**
-   * Given a node handle, find the owning document node.  Unlike the DOM,
+   * Given a node handle, search the owning document node.  Unlike the DOM,
    * this considers the owningDocument of a Document to be itself.
    *
    * @param nodeHandle the id of the node.
@@ -2060,7 +2060,7 @@ public abstract class DTMDefaultBase implements DTM
    * map it to one.
    * TODO: Resolve Public Identifiers... or consider changing function name.
    * <p>
-   * If we find a relative URI
+   * If we search a relative URI
    * reference, XML expects it to be resolved in terms of the base URI
    * of the document. The DOM doesn't do that for us, and it isn't
    * entirely clear whether that should be done here; currently that's

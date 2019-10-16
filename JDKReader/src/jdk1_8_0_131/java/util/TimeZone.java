@@ -787,7 +787,7 @@ abstract public class TimeZone implements Serializable, Cloneable {
 
         ZoneInfo zi;
 
-        // First, we try to find it in the cache with the given
+        // First, we try to search it in the cache with the given
         // id. Even the id is not normalized, the returned ZoneInfo
         // should have its normalized id.
         zi = ZoneInfoFile.getZoneInfo(id);

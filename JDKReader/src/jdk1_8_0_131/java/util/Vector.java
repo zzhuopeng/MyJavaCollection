@@ -85,32 +85,20 @@ public class Vector<E>
     implements List<E>, RandomAccess, Cloneable, java.io.Serializable
 {
     /**
-     * The array buffer into which the components of the vector are
-     * stored. The capacity of the vector is the length of this array buffer,
-     * and is at least large enough to contain all the vector's elements.
-     *
-     * <p>Any array elements following the last element in the Vector are null.
-     *
-     * @serial
+     * Vector内部通过elementData[]数组存储元素.
+     * Vector的容量即为elementData[]数组大小
+     * 未赋值的elementData[]中的元素都为null。
      */
     protected Object[] elementData;
 
     /**
-     * The number of valid components in this {@code Vector} object.
-     * Components {@code elementData[0]} through
-     * {@code elementData[elementCount-1]} are the actual items.
-     *
-     * @serial
+     * Vector中元素个数，elementData[0-elementCount]即为有效元素
      */
     protected int elementCount;
 
     /**
-     * The amount by which the capacity of the vector is automatically
-     * incremented when its size becomes greater than its capacity.  If
-     * the capacity increment is less than or equal to zero, the capacity
-     * of the vector is doubled each time it needs to grow.
-     *
-     * @serial
+     * 当Vector中存放元素个数大于capacity容量时，Vector会自增长。
+     * 当capacityIncrement<=0时，capacity容量以2倍增长。
      */
     protected int capacityIncrement;
 
@@ -118,14 +106,8 @@ public class Vector<E>
     private static final long serialVersionUID = -2767605614048989439L;
 
     /**
-     * Constructs an empty vector with the specified initial capacity and
-     * capacity increment.
-     *
-     * @param   initialCapacity     the initial capacity of the vector
-     * @param   capacityIncrement   the amount by which the capacity is
-     *                              increased when the vector overflows
-     * @throws IllegalArgumentException if the specified initial capacity
-     *         is negative
+     * 指定initialCapacity和capacityIncrement初始化Vector
+     * 当capacityIncrement<=0, Vector以2倍增长；否则，按照capacityIncrement大小增长
      */
     public Vector(int initialCapacity, int capacityIncrement) {
         super();
@@ -137,35 +119,22 @@ public class Vector<E>
     }
 
     /**
-     * Constructs an empty vector with the specified initial capacity and
-     * with its capacity increment equal to zero.
+     * 指定initialCapacity初始化Vector，capacityIncrement默认为0
      *
-     * @param   initialCapacity   the initial capacity of the vector
-     * @throws IllegalArgumentException if the specified initial capacity
-     *         is negative
      */
     public Vector(int initialCapacity) {
         this(initialCapacity, 0);
     }
 
     /**
-     * Constructs an empty vector so that its internal data array
-     * has size {@code 10} and its standard capacity increment is
-     * zero.
+     * 初始化Vector:默认initialCapacity=10，capacityIncrement=0
      */
     public Vector() {
         this(10);
     }
 
     /**
-     * Constructs a vector containing the elements of the specified
-     * collection, in the order they are returned by the collection's
-     * iterator.
-     *
-     * @param c the collection whose elements are to be placed into this
-     *       vector
-     * @throws NullPointerException if the specified collection is null
-     * @since   1.2
+     * 通过Collection对象构造Vector，顺序以Collection的Iterator为准。
      */
     public Vector(Collection<? extends E> c) {
         elementData = c.toArray();
@@ -176,29 +145,15 @@ public class Vector<E>
     }
 
     /**
-     * Copies the components of this vector into the specified array.
-     * The item at index {@code k} in this vector is copied into
-     * component {@code k} of {@code anArray}.
-     *
-     * @param  anArray the array into which the components get copied
-     * @throws NullPointerException if the given array is null
-     * @throws IndexOutOfBoundsException if the specified array is not
-     *         large enough to hold all the components of this vector
-     * @throws ArrayStoreException if a component of this vector is not of
-     *         a runtime type that can be stored in the specified array
-     * @see #toArray(Object[])
+     * 按照原顺序拷贝Array[]到Vector中
      */
     public synchronized void copyInto(Object[] anArray) {
         System.arraycopy(elementData, 0, anArray, 0, elementCount);
     }
 
     /**
-     * Trims the capacity of this vector to be the vector's current
-     * size. If the capacity of this vector is larger than its current
-     * size, then the capacity is changed to equal the size by replacing
-     * its internal data array, kept in the field {@code elementData},
-     * with a smaller one. An application can use this operation to
-     * minimize the storage of a vector.
+     * 将Vector的capacity设置为Vector当前大小。
+     * 用于减少Vector的内存占用。
      */
     public synchronized void trimToSize() {
         modCount++;
@@ -212,14 +167,14 @@ public class Vector<E>
      * Increases the capacity of this vector, if necessary, to ensure
      * that it can hold at least the number of components specified by
      * the minimum capacity argument.
-     *
+     * 如果Vector当前capacity小于minCapacity，
      * <p>If the current capacity of this vector is less than
      * {@code minCapacity}, then its capacity is increased by replacing its
      * internal data array, kept in the field {@code elementData}, with a
-     * larger one.  The size of the new data array will be the old size plus
-     * {@code capacityIncrement}, unless the value of
-     * {@code capacityIncrement} is less than or equal to zero, in which case
-     * the new capacity will be twice the old capacity; but if this new size
+     * larger one.
+     * 如果capacityIncrement<=0, newCapacity=2*oldCapacity;
+     * 否则newCapacity=oldCapacity+capacityIncrement。
+     * but if this new size
      * is still smaller than {@code minCapacity}, then the new capacity will
      * be {@code minCapacity}.
      *
@@ -247,10 +202,7 @@ public class Vector<E>
     }
 
     /**
-     * The maximum size of array to allocate.
-     * Some VMs reserve some header words in an array.
-     * Attempts to allocate larger arrays may result in
-     * OutOfMemoryError: Requested array size exceeds VM limit
+     * 数组分配内存的最大大小。
      */
     private static final int MAX_ARRAY_SIZE = Integer.MAX_VALUE - 8;
 
@@ -296,31 +248,23 @@ public class Vector<E>
     }
 
     /**
-     * Returns the current capacity of this vector.
+     * 获取当前Vector容量大小
      *
-     * @return  the current capacity (the length of its internal
-     *          data array, kept in the field {@code elementData}
-     *          of this vector)
      */
     public synchronized int capacity() {
         return elementData.length;
     }
 
     /**
-     * Returns the number of components in this vector.
+     * 返回Vector中元素个数
      *
-     * @return  the number of components in this vector
      */
     public synchronized int size() {
         return elementCount;
     }
 
     /**
-     * Tests if this vector has no components.
-     *
-     * @return  {@code true} if and only if this vector has
-     *          no components, that is, its size is zero;
-     *          {@code false} otherwise.
+     * 判断Vector是否为空
      */
     public synchronized boolean isEmpty() {
         return elementCount == 0;

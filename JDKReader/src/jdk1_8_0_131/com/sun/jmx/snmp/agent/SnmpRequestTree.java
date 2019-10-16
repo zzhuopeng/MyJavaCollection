@@ -959,7 +959,7 @@ final class SnmpRequestTree {
             final SnmpOid pos = oids[curr];
 
             //System.out.println("Compare with" + pos.toString());
-            // never know ...we might find something ...
+            // never know ...we might search something ...
             //
             final int comp = oid.compareTo(pos);
             if (comp == 0)
@@ -996,7 +996,7 @@ final class SnmpRequestTree {
 
             final SnmpOid pos = localoids[curr];
 
-            // never know ...we might find something ...
+            // never know ...we might search something ...
             //
             final int comp= oid.compareTo(pos);
 

@@ -372,10 +372,10 @@ public class DFAContentModel
                 }
             }
 
-            // If we didn't find it, then obviously not valid
+            // If we didn't search it, then obviously not valid
             if (elemIndex == fElemMapSize) {
                 if (DEBUG_VALIDATE_CONTENT) {
-                    System.out.println("!!! didn't find it");
+                    System.out.println("!!! didn't search it");
 
                     System.out.println("curElem : " +curElem );
                     for (int i=0; i<fElemMapSize; i++) {
@@ -714,7 +714,7 @@ public class DFAContentModel
             int stateIndex = (stateObj == null ? curState : stateObj.intValue());
             /* Optimization(Jan, 2001) */
 
-                    // If we did not find it, then add it
+                    // If we did not search it, then add it
                     if (stateIndex == curState)
                     {
                         //

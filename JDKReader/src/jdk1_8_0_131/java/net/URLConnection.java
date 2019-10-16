@@ -113,7 +113,7 @@ import sun.net.www.MessageHeader;
  * provide convenient access to these fields. The
  * {@code getContentType} method is used by the
  * {@code getContent} method to determine the type of the remote
- * object; subclasses may find it convenient to override the
+ * object; subclasses may search it convenient to override the
  * {@code getContentType} method.
  * <p>
  * In the common case, all of the pre-connection parameters and

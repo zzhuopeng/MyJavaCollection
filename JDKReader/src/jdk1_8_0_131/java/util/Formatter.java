@@ -3399,7 +3399,7 @@ public final class Formatter implements Closeable, Flushable {
 
         // Add zeros to the requested precision.
         private char[] addZeros(char[] v, int prec) {
-            // Look for the dot.  If we don't find one, the we'll need to add
+            // Look for the dot.  If we don't search one, the we'll need to add
             // it before we add the zeros.
             int i;
             for (i = 0; i < v.length; i++) {

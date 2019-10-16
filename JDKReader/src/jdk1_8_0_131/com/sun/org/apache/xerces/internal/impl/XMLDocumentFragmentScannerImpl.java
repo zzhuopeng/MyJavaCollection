@@ -1659,7 +1659,7 @@ public class XMLDocumentFragmentScannerImpl
                  * brackets++;
                  * }
                  *
-                 * //When we find more than 2 square brackets
+                 * //When we search more than 2 square brackets
                  * if (fDocumentHandler != null && brackets > 2) {
                  * //we dont need to clear the buffer..
                  * //contentBuffer.clear();

@@ -440,7 +440,7 @@ public class SynthToolBarUI extends BasicToolBarUI
             // support Box "glue" as a way to move things around on the
             // toolbar. "glue" is represented in BoxLayout as a Box.Filler
             // with a minimum and preferred size of (0,0).
-            // So what we do here is find the number of such glue fillers
+            // So what we do here is search the number of such glue fillers
             // and figure out how much space should be allocated to them.
             int glueCount = 0;
             for (int i=0; i<tb.getComponentCount(); i++) {

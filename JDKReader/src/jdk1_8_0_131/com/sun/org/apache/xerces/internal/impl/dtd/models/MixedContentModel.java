@@ -213,7 +213,7 @@ public class MixedContentModel
                 if (curChild.localpart == null)
                     continue;
 
-                // And try to find it in our list
+                // And try to search it in our list
                 int inIndex = 0;
                 for (; inIndex < fCount; inIndex++)
                 {
@@ -245,7 +245,7 @@ public class MixedContentModel
                     //          content model.
                 }
 
-                // We did not find this one, so the validation failed
+                // We did not search this one, so the validation failed
                 if (inIndex == fCount)
                     return outIndex;
             }

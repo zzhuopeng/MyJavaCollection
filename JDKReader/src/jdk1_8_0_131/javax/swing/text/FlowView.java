@@ -573,7 +573,7 @@ public abstract class FlowView extends BoxView {
 
         /**
          * Adjusts the given row if possible to fit within the
-         * layout span.  By default this will try to find the
+         * layout span.  By default this will try to search the
          * highest break weight possible nearest the end of
          * the row.  If a forced break is encountered, the
          * break will be positioned there.
@@ -741,7 +741,7 @@ public abstract class FlowView extends BoxView {
 
         /**
          * Determines the minimum span for this view along an
-         * axis.  The is implemented to find the minimum unbreakable
+         * axis.  The is implemented to search the minimum unbreakable
          * span.
          *
          * @param axis may be either View.X_AXIS or View.Y_AXIS

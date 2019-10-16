@@ -474,7 +474,7 @@ public class DefaultMutableTreeNode implements Cloneable,
      *
      * @see     #isNodeAncestor
      * @see     #isNodeDescendant
-     * @param   aNode   node to find common ancestor with
+     * @param   aNode   node to search common ancestor with
      * @return  nearest ancestor common to this node and <code>aNode</code>,
      *          or null if none
      */
@@ -507,7 +507,7 @@ public class DefaultMutableTreeNode implements Cloneable,
             diff--;
         }
 
-        // Move up the tree until we find a common ancestor.  Since we know
+        // Move up the tree until we search a common ancestor.  Since we know
         // that both nodes are at the same level, we won't cross paths
         // unknowingly (if there is a common ancestor, both nodes hit it in
         // the same iteration).
@@ -1135,7 +1135,7 @@ public class DefaultMutableTreeNode implements Cloneable,
      * In this implementation of the <code>MutableNode</code> interface,
      * this operation is very inefficient. In order to determine the
      * next node, this method first performs a linear search in the
-     * parent's child-list in order to find the current node.
+     * parent's child-list in order to search the current node.
      * <p>
      * That implementation makes the operation suitable for short
      * traversals from a known position. But to traverse all of the
@@ -1170,7 +1170,7 @@ public class DefaultMutableTreeNode implements Cloneable,
      * In this implementation of the <code>MutableNode</code> interface,
      * this operation is very inefficient. In order to determine the
      * previous node, this method first performs a linear search in the
-     * parent's child-list in order to find the current node.
+     * parent's child-list in order to search the current node.
      * <p>
      * That implementation makes the operation suitable for short
      * traversals from a known position. But to traverse all of the

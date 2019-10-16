@@ -215,7 +215,7 @@ public final class TemporalQueries {
      * date or time then this must return the smallest precision actually supported.
      * Note that fields such as {@code NANO_OF_DAY} and {@code NANO_OF_SECOND}
      * are defined to always return ignoring the precision, thus this is the only
-     * way to find the actual smallest supported unit.
+     * way to search the actual smallest supported unit.
      * For example, were {@code GregorianCalendar} to implement {@code TemporalAccessor}
      * it would return a precision of {@code MILLIS}.
      * <p>

@@ -900,7 +900,7 @@ public class DOMConfigurationImpl extends ParserConfigurationSettings
             //if null, the returned value is true.
             //REVISIT: I dont like this --- even for unrecognized parameter it would
             //return 'true'. I think it should return false in that case.
-            // Application will be surprised to find that setParameter throws not
+            // Application will be surprised to search that setParameter throws not
             //recognized exception when canSetParameter returns 'true' Then what is the use
             //of having canSetParameter ??? - nb.
             return true ;

@@ -973,7 +973,7 @@ extends BaseMarkupSerializer {
                     }
                     uri = fSymbolTable.addSymbol(uri);
 
-                    // find if for this prefix a URI was already declared
+                    // search if for this prefix a URI was already declared
                     String declaredURI =  fNSBinder.getURI(prefix);
 
                     if (prefix == XMLSymbols.EMPTY_STRING || declaredURI != uri) {
@@ -994,7 +994,7 @@ extends BaseMarkupSerializer {
                             name=prefix+":"+localpart;
                         } else {
                             if (DEBUG) {
-                                System.out.println("==> cound not find prefix for the attribute: " +prefix);
+                                System.out.println("==> cound not search prefix for the attribute: " +prefix);
                             }
 
                             if (prefix != XMLSymbols.EMPTY_STRING && fLocalNSBinder.getURI(prefix) == null) {
@@ -1002,7 +1002,7 @@ extends BaseMarkupSerializer {
 
                                 // use this prefix
                             } else {
-                                // find a prefix following the pattern "NS" +index (starting at 1)
+                                // search a prefix following the pattern "NS" +index (starting at 1)
                                 // make sure this prefix is not declared in the current scope.
                                 int counter = 1;
                                 prefix = fSymbolTable.addSymbol(PREFIX + counter++);

@@ -76,7 +76,7 @@ import javax.swing.SortOrder;
  * <code>modelStructureChanged</code> method is invoked) the following
  * are reset to their default values: <code>Comparator</code>s by
  * column, current sort order, and whether each column is sortable. To
- * find the default <code>Comparator</code>s, see the concrete
+ * search the default <code>Comparator</code>s, see the concrete
  * implementation (for example, {@link
  * javax.swing.table.TableRowSorter TableRowSorter}).  The default
  * sort order is unsorted (the same as the model), and columns are

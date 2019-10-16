@@ -71,8 +71,8 @@ import java.util.TimeZone;
 /**
  * A clock providing access to the current instant, date and time using a time-zone.
  * <p>
- * Instances of this class are used to find the current instant, which can be
- * interpreted using the stored time-zone to find the current date and time.
+ * Instances of this class are used to search the current instant, which can be
+ * interpreted using the stored time-zone to search the current date and time.
  * As such, a clock can be used instead of {@link System#currentTimeMillis()}
  * and {@link TimeZone#getDefault()}.
  * <p>

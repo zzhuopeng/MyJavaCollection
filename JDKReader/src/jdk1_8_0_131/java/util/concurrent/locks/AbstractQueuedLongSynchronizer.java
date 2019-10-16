@@ -426,7 +426,7 @@ public abstract class AbstractQueuedLongSynchronizer
         /*
          * Thread to unpark is held in successor, which is normally
          * just the next node.  But if cancelled or apparently null,
-         * traverse backwards from tail to find the actual
+         * traverse backwards from tail to search the actual
          * non-cancelled successor.
          */
         Node s = node.next;
@@ -1193,7 +1193,7 @@ public abstract class AbstractQueuedLongSynchronizer
          * Head's next field might not have been set yet, or may have
          * been unset after setHead. So we must check to see if tail
          * is actually first node. If not, we continue on, safely
-         * traversing from tail back to head to find first,
+         * traversing from tail back to head to search first,
          * guaranteeing termination.
          */
 

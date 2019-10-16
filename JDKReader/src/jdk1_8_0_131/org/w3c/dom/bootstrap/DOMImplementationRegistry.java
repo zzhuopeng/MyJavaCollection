@@ -305,7 +305,7 @@ public final class DOMImplementationRegistry {
      */
     private static String getServiceValue(final ClassLoader classLoader) {
         String serviceId = "META-INF/services/" + PROPERTY;
-        // try to find services in CLASSPATH
+        // try to search services in CLASSPATH
         try {
             InputStream is = getResourceAsStream(classLoader, serviceId);
 

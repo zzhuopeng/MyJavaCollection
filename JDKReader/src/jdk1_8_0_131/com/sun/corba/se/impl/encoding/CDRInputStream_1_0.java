@@ -1358,14 +1358,14 @@ public class CDRInputStream_1_0 extends CDRInputStreamBase
     {
         ValueFactory factory ;
 
-        // Always try to find a ValueFactory first, as required by the spec.
+        // Always try to search a ValueFactory first, as required by the spec.
         // There are some complications here in the IDL 3.0 mapping (see 1.13.8),
         // but basically we must always be able to override the DefaultFactory
         // or Helper mappings that are also used.  This appears to be the case
         // even in the boxed value cases.  The original code only did the lookup
         // in the case of class implementing either StreamableValue or CustomValue,
         // but abstract valuetypes only implement ValueBase, and really require
-        // the use of the repId to find a factory (including the DefaultFactory).
+        // the use of the repId to search a factory (including the DefaultFactory).
         try {
             // use new-style OBV support (factory object)
             factory = Utility.getFactory(clazz, codebase, orb, repId);
@@ -1529,7 +1529,7 @@ public class CDRInputStream_1_0 extends CDRInputStreamBase
         int nextLong = read_long();
         bbwi.position(bbwi.position() - 4);
 
-        // We did find an end tag, so we're done.  readEndTag
+        // We did search an end tag, so we're done.  readEndTag
         // should take care of making sure it's the correct
         // end tag, etc.  Remember that since end tags,
         // chunk lengths, and valuetags have non overlapping
@@ -2087,9 +2087,9 @@ public class CDRInputStream_1_0 extends CDRInputStreamBase
     }
 
     /**
-     * Attempts to find the class described by the given
+     * Attempts to search the class described by the given
      * repository ID string and expected type.  The first
-     * attempt is to find the class locally, falling back
+     * attempt is to search the class locally, falling back
      * on the URL that came with the value.  The second
      * attempt is to use a URL from the remote CodeBase.
      */
@@ -2117,7 +2117,7 @@ public class CDRInputStream_1_0 extends CDRInputStreamBase
                     // Get a URL from the remote CodeBase and retry
                     codebaseURL = getCodeBase().implementation(repositoryIDString);
 
-                    // Don't bother trying to find it locally again if
+                    // Don't bother trying to search it locally again if
                     // we got a null URL
                     if (codebaseURL == null)
                         return null;
@@ -2138,9 +2138,9 @@ public class CDRInputStream_1_0 extends CDRInputStreamBase
     }
 
     /**
-     * Attempts to find the class described by the given
+     * Attempts to search the class described by the given
      * repository ID string.  At most, three attempts are made:
-     * Try to find it locally, through the provided URL, and
+     * Try to search it locally, through the provided URL, and
      * finally, via a URL from the remote CodeBase.
      */
     private Class getClassFromString(String repositoryIDString,

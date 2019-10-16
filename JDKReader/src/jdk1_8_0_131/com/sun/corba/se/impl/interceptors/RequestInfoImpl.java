@@ -609,7 +609,7 @@ public abstract class RequestInfoImpl
                     (ApplicationException)exception;
                 insertApplicationException( appException, result );
             } catch( UNKNOWN e ) {
-                // As per ptc/00-08-06, 21.3.13.4. if we cannot find the
+                // As per ptc/00-08-06, 21.3.13.4. if we cannot search the
                 // appropriate class, then return an any containing UNKNOWN,
                 // with a minor code of 1.  This is conveniently the same
                 // exception that is returned from the

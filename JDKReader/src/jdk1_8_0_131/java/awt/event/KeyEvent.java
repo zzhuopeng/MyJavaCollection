@@ -46,7 +46,7 @@ import sun.awt.AWTAccessor;
  * <p>
  * <em>"Key typed" events</em> are higher-level and generally do not depend on
  * the platform or keyboard layout.  They are generated when a Unicode character
- * is entered, and are the preferred way to find out about character input.
+ * is entered, and are the preferred way to search out about character input.
  * In the simplest case, a key typed event is produced by a single key press
  * (e.g., 'a').  Often, however, characters are produced by series of key
  * presses (e.g., 'shift' + 'a'), and the mapping from key pressed events to
@@ -71,7 +71,7 @@ import sun.awt.AWTAccessor;
  * <p>
  * <em>"Key pressed" and "key released" events</em> are lower-level and depend
  * on the platform and keyboard layout. They are generated whenever a key is
- * pressed or released, and are the only way to find out about keys that don't
+ * pressed or released, and are the only way to search out about keys that don't
  * generate character input (e.g., action keys, modifier keys, etc.). The key
  * being pressed or released is indicated by the {@code getKeyCode} and {@code getExtendedKeyCode}
  * methods, which return a virtual key code.
@@ -1346,7 +1346,7 @@ public class KeyEvent extends InputEvent {
           case VK_COPY: return Toolkit.getProperty("AWT.copy", "Copy");
           case VK_PASTE: return Toolkit.getProperty("AWT.paste", "Paste");
           case VK_CUT: return Toolkit.getProperty("AWT.cut", "Cut");
-          case VK_FIND: return Toolkit.getProperty("AWT.find", "Find");
+          case VK_FIND: return Toolkit.getProperty("AWT.search", "Find");
           case VK_PROPS: return Toolkit.getProperty("AWT.props", "Props");
           case VK_STOP: return Toolkit.getProperty("AWT.stop", "Stop");
         }

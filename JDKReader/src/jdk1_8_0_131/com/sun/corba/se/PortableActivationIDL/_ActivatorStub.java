@@ -97,7 +97,7 @@ public class _ActivatorStub extends org.omg.CORBA.portable.ObjectImpl implements
   } // registerORB
 
 
-  /** Construct or find an ORBD object template corresponding to the 
+  /** Construct or search an ORBD object template corresponding to the
 	* server's object template and return it.  Called whenever a 
 	* persistent POA is created.
 	*/

@@ -295,7 +295,7 @@ public interface LSSerializer {
      * be included. The version (<code>Document.xmlVersion</code> if the
      * document is a Level 3 document and the version is non-null, otherwise
      * use the value "1.0"), and the output encoding (see
-     * <code>LSSerializer.write</code> for details on how to find the output
+     * <code>LSSerializer.write</code> for details on how to search the output
      * encoding) are specified in the serialized XML declaration. </dd>
      * <dt>
      * <code>false</code></dt>

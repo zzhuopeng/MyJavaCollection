@@ -79,7 +79,7 @@ import sun.reflect.misc.ReflectUtil;
  * class and its base classes, and do not proceed any further up the superclass
  * chain.
  * <p>
- * If we don't find explicit BeanInfo on a class, we use low-level
+ * If we don't search explicit BeanInfo on a class, we use low-level
  * reflection to study the methods of the class and apply standard design
  * patterns to identify property accessors, event sources, or public
  * methods.  We then proceed to analyze the class's superclass and add
@@ -299,7 +299,7 @@ public class Introspector {
      *          finding BeanInfo classes.
      *
      * @return  The array of package names that will be searched in
-     *          order to find BeanInfo classes. The default value
+     *          order to search BeanInfo classes. The default value
      *          for this array is implementation-dependent; e.g.
      *          Sun implementation initially sets to {"sun.beans.infos"}.
      */
@@ -1369,7 +1369,7 @@ public class Introspector {
      */
     private static Method internalFindMethod(Class<?> start, String methodName,
                                                  int argCount, Class args[]) {
-        // For overriden methods we need to find the most derived version.
+        // For overriden methods we need to search the most derived version.
         // So we start with the given class and walk up the superclass chain.
 
         Method method = null;

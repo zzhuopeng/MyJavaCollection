@@ -109,7 +109,7 @@ public class ParserAdapter implements XMLReader, DocumentHandler
             setup(ParserFactory.makeParser());
         } catch (ClassNotFoundException e1) {
             throw new
-                SAXException("Cannot find SAX1 driver class " +
+                SAXException("Cannot search SAX1 driver class " +
                              driver, e1);
         } catch (IllegalAccessException e2) {
             throw new

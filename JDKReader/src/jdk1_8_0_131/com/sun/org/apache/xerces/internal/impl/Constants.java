@@ -146,7 +146,7 @@ public final class Constants {
      * <ul>
      *   <li>
      * {@code true} instruct an object to use service mechanism to
-     * find a service implementation. This is the default behavior.
+     * search a service implementation. This is the default behavior.
      *   </li>
      *   <li>
      * {@code false} instruct an object to skip service mechanism and

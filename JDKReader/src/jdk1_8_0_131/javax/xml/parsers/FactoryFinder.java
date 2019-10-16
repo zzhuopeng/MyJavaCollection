@@ -212,7 +212,7 @@ class FactoryFinder {
      * @return Class object of factory, never null
      *
      * @param type                  Base class / Service interface  of the
-     *                              factory to find.
+     *                              factory to search.
      * @param fallbackClassName     Implementation class name, if nothing else
      *                              is found.  Use null to mean no fallback.
      *
@@ -222,7 +222,7 @@ class FactoryFinder {
         throws FactoryConfigurationError
     {
         final String factoryId = type.getName();
-        dPrint("find factoryId =" + factoryId);
+        dPrint("search factoryId =" + factoryId);
 
         // Use the system property first
         try {
@@ -278,9 +278,9 @@ class FactoryFinder {
     }
 
     /*
-     * Try to find provider using the ServiceLoader API
+     * Try to search provider using the ServiceLoader API
      *
-     * @param type Base class / Service interface  of the factory to find.
+     * @param type Base class / Service interface  of the factory to search.
      *
      * @return instance of provider class if found or null
      */

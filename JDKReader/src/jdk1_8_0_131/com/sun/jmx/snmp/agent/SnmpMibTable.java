@@ -1623,7 +1623,7 @@ public abstract class SnmpMibTable extends SnmpMibNode
             throw new SnmpStatusException(SnmpStatusException.noSuchInstance);
         }
 
-        // First find the oid. This will allow to speed up retrieval process
+        // First search the oid. This will allow to speed up retrieval process
         // during smart discovery of table (using the getNext) as the
         // management station will use the valid index returned during a
         // previous getNext ...
@@ -1634,7 +1634,7 @@ public abstract class SnmpMibTable extends SnmpMibNode
         //
         final int newPos = getInsertionPoint(resOid,false);
 
-        // If the position returned is not out of bound, we will find
+        // If the position returned is not out of bound, we will search
         // the next element in the array.
         //
         if (newPos > -1 && newPos < size) {
@@ -1961,7 +1961,7 @@ public abstract class SnmpMibTable extends SnmpMibNode
             } else if (oid[pos] > nodeId) {
                 // oid[pos] is expected to be the id of the xxxEntry ...
                 // The id requested is greater than the id of the xxxEntry,
-                // so we won't find the next element in this table... (any
+                // so we won't search the next element in this table... (any
                 // element in this table will have a smaller OID)
                 //
                 throw new SnmpStatusException(SnmpStatusException.noSuchObject);
@@ -2324,7 +2324,7 @@ public abstract class SnmpMibTable extends SnmpMibNode
             pos = tableoids[curr];
 
             //System.out.println("Compare with" + pos.toString());
-            // never know ...we might find something ...
+            // never know ...we might search something ...
             //
             comp = oid.compareTo(pos);
             if (comp == 0)
@@ -2377,7 +2377,7 @@ public abstract class SnmpMibTable extends SnmpMibNode
             // XX pos= (SnmpOid) oids.elementAt(curr);
             pos= tableoids[curr];
 
-            // never know ...we might find something ...
+            // never know ...we might search something ...
             //
             comp= oid.compareTo(pos);
 

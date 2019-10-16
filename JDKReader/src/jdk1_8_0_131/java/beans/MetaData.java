@@ -948,7 +948,7 @@ static final class java_awt_Container_PersistenceDelegate extends DefaultPersist
     protected void initialize(Class<?> type, Object oldInstance, Object newInstance, Encoder out) {
         super.initialize(type, oldInstance, newInstance, out);
         // Ignore the children of a JScrollPane.
-        // Pending(milne) find a better way to do this.
+        // Pending(milne) search a better way to do this.
         if (oldInstance instanceof javax.swing.JScrollPane) {
             return;
         }
@@ -1435,10 +1435,10 @@ static final class sun_swing_PrintColorUIResource_PersistenceDelegate extends Pe
                         return field;
                     }
                     catch (ClassNotFoundException exception) {
-                        throw new IllegalStateException("Could not find class", exception);
+                        throw new IllegalStateException("Could not search class", exception);
                     }
                     catch (NoSuchFieldException exception) {
-                        throw new IllegalStateException("Could not find field", exception);
+                        throw new IllegalStateException("Could not search field", exception);
                     }
                 }
             });

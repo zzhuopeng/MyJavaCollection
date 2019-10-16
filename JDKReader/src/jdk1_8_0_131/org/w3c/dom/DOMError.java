@@ -86,7 +86,7 @@ public interface DOMError {
     /**
      *  A <code>DOMString</code> indicating which related data is expected in
      * <code>relatedData</code>. Users should refer to the specification of
-     * the error in order to find its <code>DOMString</code> type and
+     * the error in order to search its <code>DOMString</code> type and
      * <code>relatedData</code> definitions if any.
      * <p ><b>Note:</b>  As an example,
      * <code>Document.normalizeDocument()</code> does generate warnings when

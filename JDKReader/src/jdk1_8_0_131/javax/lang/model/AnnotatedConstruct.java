@@ -186,7 +186,7 @@ public interface AnnotatedConstruct {
      *
      * The difference between this method and {@link #getAnnotation(Class)}
      * is that this method detects if its argument is a <em>repeatable
-     * annotation type</em>, and if so, attempts to find one or more
+     * annotation type</em>, and if so, attempts to search one or more
      * annotations of that type by "looking through" a container annotation.
      *
      * <p> The annotations returned by this method could contain an element

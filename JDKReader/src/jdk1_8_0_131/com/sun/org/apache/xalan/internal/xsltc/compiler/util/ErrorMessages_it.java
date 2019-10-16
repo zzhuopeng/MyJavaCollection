@@ -440,7 +440,7 @@ public class ErrorMessages_it extends ListResourceBundle {
         "Il documento di input non \u00E8 un foglio di stile (spazio di nomi XSL non dichiarato nell'elemento radice)."},
 
         /*
-         * Note to translators:  XSLTC could not find the stylesheet document
+         * Note to translators:  XSLTC could not search the stylesheet document
          * with the name specified by the substitution text.
          */
         {ErrorMsg.MISSING_XSLT_TARGET_ERR,
@@ -726,7 +726,7 @@ public class ErrorMessages_it extends ListResourceBundle {
         /*
          * Note to translators:  The substitution text is the name of a Java
          * class.  The term "constructor" here is the Java term.  The message is
-         * displayed if XSLTC could not find a constructor for the specified
+         * displayed if XSLTC could not search a constructor for the specified
          * class.
          */
         {ErrorMsg.CONSTRUCTOR_NOT_FOUND,

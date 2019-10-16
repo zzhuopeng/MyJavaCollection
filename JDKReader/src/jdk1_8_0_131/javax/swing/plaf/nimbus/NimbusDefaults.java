@@ -1336,7 +1336,7 @@ final class NimbusDefaults {
                         AbstractRegionPainter.PaintContext.class, int.class);
                 if (constructor == null) {
                     throw new NullPointerException(
-                            "Failed to find the constructor for the class: " +
+                            "Failed to search the constructor for the class: " +
                             className);
                 }
                 return constructor.newInstance(ctx, which);

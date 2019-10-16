@@ -553,7 +553,7 @@ public final class ServiceLoader<S>
      * class loader is used.
      *
      * <p> This method is intended for use when only installed providers are
-     * desired.  The resulting service will only find and load providers that
+     * desired.  The resulting service will only search and load providers that
      * have been installed into the current Java virtual machine; providers on
      * the application's class path will be ignored.
      *

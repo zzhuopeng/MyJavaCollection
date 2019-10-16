@@ -241,7 +241,7 @@ class FactoryFinder {
      * @return Class object of factory, never null
      *
      * @param type                  Base class / Service interface  of the
-     *                              factory to find.
+     *                              factory to search.
      *
      * @param fallbackClassName     Implementation class name, if nothing else
      *                              is found.  Use null to mean no fallback.
@@ -255,7 +255,7 @@ class FactoryFinder {
 
         final String factoryId = type.getName();
 
-        dPrint("find factoryId =" + factoryId);
+        dPrint("search factoryId =" + factoryId);
         // Use the system property first
         try {
             String systemProp = ss.getSystemProperty(factoryId);
@@ -310,9 +310,9 @@ class FactoryFinder {
     }
 
     /*
-     * Try to find provider using the ServiceLoader.
+     * Try to search provider using the ServiceLoader.
      *
-     * @param type Base class / Service interface  of the factory to find.
+     * @param type Base class / Service interface  of the factory to search.
      *
      * @return instance of provider class if found or null
      */

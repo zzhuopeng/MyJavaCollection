@@ -107,7 +107,7 @@ import java.awt.Component;
  *  in a functional language.
  * <p>
  * If you are implementing a <code>SpringLayout</code> you
- * can find further information and examples in
+ * can search further information and examples in
  * <a
  href="https://docs.oracle.com/javase/tutorial/uiswing/layout/spring.html">How to Use SpringLayout</a>,
  * a section in <em>The Java Tutorial.</em>

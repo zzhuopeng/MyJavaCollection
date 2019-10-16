@@ -1314,13 +1314,13 @@ public abstract class Arc2D extends RectangularShape {
          */
         Rectangle2D rect = new Rectangle2D.Double(x, y, w, h);
         if (type == PIE || Math.abs(ext) > 180) {
-            // for PIE: try to find intersections with pie slices
+            // for PIE: try to search intersections with pie slices
             if (rect.intersectsLine(axc, ayc, sx, sy) ||
                 rect.intersectsLine(axc, ayc, ex, ey)) {
                 return true;
             }
         } else {
-            // for CHORD and OPEN: try to find intersections with chord
+            // for CHORD and OPEN: try to search intersections with chord
             if (rect.intersectsLine(sx, sy, ex, ey)) {
                 return true;
             }

@@ -142,7 +142,7 @@ public class StartTlsRequest implements ExtendedRequest {
      * This method will return an instance of the first implementation
      * class that it is able to load and instantiate successfully from
      * the list of class names collected from the configuration files.
-     * This method uses the calling thread's context classloader to find the
+     * This method uses the calling thread's context classloader to search the
      * configuration files and to load the implementation class.
      * <p>
      * If no class can be found in this way, this method will use

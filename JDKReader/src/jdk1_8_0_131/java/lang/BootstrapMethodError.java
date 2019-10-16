@@ -27,7 +27,7 @@ package java.lang;
 
 /**
  * Thrown to indicate that an {@code invokedynamic} instruction has
- * failed to find its bootstrap method,
+ * failed to search its bootstrap method,
  * or the bootstrap method has failed to provide a
  * {@linkplain java.lang.invoke.CallSite call site} with a {@linkplain java.lang.invoke.CallSite#getTarget target}
  * of the correct {@linkplain java.lang.invoke.MethodHandle#type method type}.

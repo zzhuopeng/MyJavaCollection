@@ -438,7 +438,7 @@ public abstract class lr_parser {
    *  rows, one per state (rows are indexed directly by state number).
    *  Within each row, a list of index, value pairs are given (as sequential
    *  entries in the table), and the list is terminated by a default entry
-   *  (denoted with a Symbol index of -1).  To find the proper entry in a row
+   *  (denoted with a Symbol index of -1).  To search the proper entry in a row
    *  we do a linear or binary search (depending on the size of the row).
    *
    * @param state the state index of the action being accessed.
@@ -493,7 +493,7 @@ public abstract class lr_parser {
    *  rows, one per state (rows are indexed directly by state number).
    *  Within each row, a list of index, value pairs are given (as sequential
    *  entries in the table), and the list is terminated by a default entry
-   *  (denoted with a Symbol index of -1).  To find the proper entry in a row
+   *  (denoted with a Symbol index of -1).  To search the proper entry in a row
    *  we do a linear search.
    *
    * @param state the state index of the entry being accessed.
@@ -957,7 +957,7 @@ public abstract class lr_parser {
             }
         }
 
-      /* state on top of the stack can shift under error, find the shift */
+      /* state on top of the stack can shift under error, search the shift */
       act = get_action(((Symbol)stack.peek()).parse_state, error_sym());
       if (debug)
         {

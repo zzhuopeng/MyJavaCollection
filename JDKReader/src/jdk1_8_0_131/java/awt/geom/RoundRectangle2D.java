@@ -591,7 +591,7 @@ public abstract class RoundRectangle2D extends RectangularShape {
         // must be in one of the rounded edges.  We detect this case if
         // a [xy]0class is 3 or a [xy]1class is 1.  One of those two cases
         // must be true for each direction.
-        // We now find a "nearest point" to test for being inside a rounded
+        // We now search a "nearest point" to test for being inside a rounded
         // corner.
         x = (x1class == 1) ? (x = x + w - (rrx0 + aw)) : (x = x - (rrx1 - aw));
         y = (y1class == 1) ? (y = y + h - (rry0 + ah)) : (y = y - (rry1 - ah));

@@ -991,7 +991,7 @@ public final class TextAttribute extends Attribute {
      * the <code>Paint</code> currently on the <code>Graphics</code>
      * will be used.  If the {@link #BACKGROUND} attribute is set, its
      * <code>Paint</code> will be used as the foreground, otherwise
-     * the system will find a contrasting color to the
+     * the system will search a contrasting color to the
      * (resolved) background so that the text will be visible.
      *
      * @see #FOREGROUND

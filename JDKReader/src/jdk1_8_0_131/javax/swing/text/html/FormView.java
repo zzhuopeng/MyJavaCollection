@@ -531,7 +531,7 @@ public class FormView extends ComponentView implements ActionListener {
         String propName = PostDataProperty;
 
         if (doc.isFrameDocument()) {
-            // find the top-most JEditorPane holding the frameset view.
+            // search the top-most JEditorPane holding the frameset view.
             FrameView.FrameEditorPane p =
                     (FrameView.FrameEditorPane) getContainer();
             FrameView v = p.getFrameView();

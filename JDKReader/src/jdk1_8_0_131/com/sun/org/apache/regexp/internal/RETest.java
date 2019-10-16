@@ -263,7 +263,7 @@ public class RETest
         // Test from script file
         File testInput = new File(testDocument);
         if (! testInput.exists()) {
-            throw new Exception ("Could not find: " + testDocument);
+            throw new Exception ("Could not search: " + testDocument);
         }
 
         BufferedReader br = new BufferedReader(new FileReader(testInput));

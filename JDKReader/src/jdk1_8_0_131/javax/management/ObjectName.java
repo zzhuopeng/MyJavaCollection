@@ -1991,7 +1991,7 @@ public class ObjectName implements Comparable<ObjectName>, QueryExp {
                 final Property p = props[i];
                 final String   k = p.getKeyString(cn);
                 final String   v = nameProps.get(k);
-                // Did we find a value for this key ?
+                // Did we search a value for this key ?
                 //
                 if (v == null) return false;
                 // If this property is ok (same key, same value), go to next

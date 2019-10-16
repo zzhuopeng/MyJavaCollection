@@ -4616,7 +4616,7 @@ public class BigDecimal extends Number implements Comparable<BigDecimal> {
             yscale -= 1; // [that is, divisor *= 10]
         }
         int roundingMode = mc.roundingMode.oldMode;
-        // In order to find out whether the divide generates the exact result,
+        // In order to search out whether the divide generates the exact result,
         // we avoid calling the above divide method. 'quotient' holds the
         // return BigDecimal object whose scale will be set to 'scl'.
         int scl = checkScaleNonZero(preferredScale + yscale - xscale + mcp);
@@ -4663,7 +4663,7 @@ public class BigDecimal extends Number implements Comparable<BigDecimal> {
         int mcp = mc.precision;
         int roundingMode = mc.roundingMode.oldMode;
 
-        // In order to find out whether the divide generates the exact result,
+        // In order to search out whether the divide generates the exact result,
         // we avoid calling the above divide method. 'quotient' holds the
         // return BigDecimal object whose scale will be set to 'scl'.
         BigDecimal quotient;
@@ -4704,7 +4704,7 @@ public class BigDecimal extends Number implements Comparable<BigDecimal> {
         int mcp = mc.precision;
         int roundingMode = mc.roundingMode.oldMode;
 
-        // In order to find out whether the divide generates the exact result,
+        // In order to search out whether the divide generates the exact result,
         // we avoid calling the above divide method. 'quotient' holds the
         // return BigDecimal object whose scale will be set to 'scl'.
         BigDecimal quotient;
@@ -4735,7 +4735,7 @@ public class BigDecimal extends Number implements Comparable<BigDecimal> {
         int mcp = mc.precision;
         int roundingMode = mc.roundingMode.oldMode;
 
-        // In order to find out whether the divide generates the exact result,
+        // In order to search out whether the divide generates the exact result,
         // we avoid calling the above divide method. 'quotient' holds the
         // return BigDecimal object whose scale will be set to 'scl'.
         BigDecimal quotient;

@@ -42,7 +42,7 @@ import javax.print.attribute.PrintServiceAttribute;
  * services.
  * <P>
  * In contrast, the {@link PrinterMoreInfo PrinterMoreInfo} attribute is used
- * to find out more information about this specific printer rather than this
+ * to search out more information about this specific printer rather than this
  * general kind of printer.
  * <P>
  * <P>

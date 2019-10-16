@@ -440,7 +440,7 @@ public class ErrorMessages_fr extends ListResourceBundle {
         "Le document d'entr\u00E9e n'est pas une feuille de style (l'espace de noms XSL n'est pas d\u00E9clar\u00E9 dans l'\u00E9l\u00E9ment racine)."},
 
         /*
-         * Note to translators:  XSLTC could not find the stylesheet document
+         * Note to translators:  XSLTC could not search the stylesheet document
          * with the name specified by the substitution text.
          */
         {ErrorMsg.MISSING_XSLT_TARGET_ERR,
@@ -726,7 +726,7 @@ public class ErrorMessages_fr extends ListResourceBundle {
         /*
          * Note to translators:  The substitution text is the name of a Java
          * class.  The term "constructor" here is the Java term.  The message is
-         * displayed if XSLTC could not find a constructor for the specified
+         * displayed if XSLTC could not search a constructor for the specified
          * class.
          */
         {ErrorMsg.CONSTRUCTOR_NOT_FOUND,

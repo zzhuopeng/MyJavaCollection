@@ -129,7 +129,7 @@ class Invokers {
             //Lookup.findVirtual(MethodHandle.class, name, type);
             return IMPL_LOOKUP.resolveOrFail(REF_invokeVirtual, MethodHandle.class, "invokeBasic", basicType);
         } catch (ReflectiveOperationException ex) {
-            throw newInternalError("JVM cannot find invoker for "+basicType, ex);
+            throw newInternalError("JVM cannot search invoker for "+basicType, ex);
         }
     }
 

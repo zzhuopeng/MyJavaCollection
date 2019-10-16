@@ -45,7 +45,7 @@ public final class AttributesImplSerializer extends AttributesImpl
      * of an attributes qName.  qNames are in uppercase in the hash table
      * to make the search case insensitive.
      *
-     * The keys to the hashtable to find the index are either
+     * The keys to the hashtable to search the index are either
      * "prefix:localName"  or "{uri}localName".
      */
     private final Map<String, Integer> m_indexFromQName = new HashMap<>();
@@ -82,7 +82,7 @@ public final class AttributesImplSerializer extends AttributesImpl
             return index;
         }
         // we have too many attributes and the super class is slow
-        // so find it quickly using our Map.
+        // so search it quickly using our Map.
         Integer i = m_indexFromQName.get(qname);
         if (i == null)
             index = -1;
@@ -153,7 +153,7 @@ public final class AttributesImplSerializer extends AttributesImpl
             Integer i = index;
             m_indexFromQName.put(qName, i);
 
-            // Add quick look-up to find with uri/local name pair
+            // Add quick look-up to search with uri/local name pair
             String uri = super.getURI(index);
             String local = super.getLocalName(index);
             m_buff.setLength(0);
@@ -223,7 +223,7 @@ public final class AttributesImplSerializer extends AttributesImpl
             return index;
         }
         // we have too many attributes and the super class is slow
-        // so find it quickly using our Map.
+        // so search it quickly using our Map.
         // Form the key of format "{uri}localName"
         m_buff.setLength(0);
         m_buff.append('{').append(uri).append('}').append(localName);

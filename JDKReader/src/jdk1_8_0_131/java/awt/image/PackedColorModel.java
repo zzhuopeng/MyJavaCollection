@@ -267,7 +267,7 @@ public abstract class PackedColorModel extends ColorModel {
         // Store the mask
         maskArray[idx]   = mask;
 
-        // Now find the shift
+        // Now search the shift
         if (mask != 0) {
             while ((mask & 1) == 0) {
                 mask >>>= 1;

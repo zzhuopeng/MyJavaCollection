@@ -440,7 +440,7 @@ public class ErrorMessages_ko extends ListResourceBundle {
         "\uC785\uB825 \uBB38\uC11C\uB294 \uC2A4\uD0C0\uC77C\uC2DC\uD2B8\uAC00 \uC544\uB2D9\uB2C8\uB2E4. XSL \uB124\uC784\uC2A4\uD398\uC774\uC2A4\uAC00 \uB8E8\uD2B8 \uC694\uC18C\uC5D0 \uC120\uC5B8\uB418\uC9C0 \uC54A\uC558\uC2B5\uB2C8\uB2E4."},
 
         /*
-         * Note to translators:  XSLTC could not find the stylesheet document
+         * Note to translators:  XSLTC could not search the stylesheet document
          * with the name specified by the substitution text.
          */
         {ErrorMsg.MISSING_XSLT_TARGET_ERR,
@@ -726,7 +726,7 @@ public class ErrorMessages_ko extends ListResourceBundle {
         /*
          * Note to translators:  The substitution text is the name of a Java
          * class.  The term "constructor" here is the Java term.  The message is
-         * displayed if XSLTC could not find a constructor for the specified
+         * displayed if XSLTC could not search a constructor for the specified
          * class.
          */
         {ErrorMsg.CONSTRUCTOR_NOT_FOUND,

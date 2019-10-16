@@ -124,7 +124,7 @@ public abstract class AbstractSpinnerModel implements SpinnerModel, Serializable
 
     /**
      * Return an array of all the listeners of the given type that
-     * were added to this model.  For example to find all of the
+     * were added to this model.  For example to search all of the
      * ChangeListeners added to this model:
      * <pre>
      * myAbstractSpinnerModel.getListeners(ChangeListener.class);

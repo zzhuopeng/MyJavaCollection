@@ -96,7 +96,7 @@ public class XSAllCM implements XSCMValidator {
         return state;
     }
 
-    // convinient method: when error occurs, to find a matching decl
+    // convinient method: when error occurs, to search a matching decl
     // from the candidate elements.
     Object findMatchingDecl(QName elementName, SubstitutionGroupHandler subGroupHandler) {
         Object matchingDecl = null;
@@ -141,7 +141,7 @@ public class XSAllCM implements XSCMValidator {
             }
         }
 
-        // couldn't find the decl, change to error state.
+        // couldn't search the decl, change to error state.
         currentState[0] = XSCMValidator.FIRST_ERROR;
         return findMatchingDecl(elementName, subGroupHandler);
     }

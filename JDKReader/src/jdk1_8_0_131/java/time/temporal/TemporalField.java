@@ -204,7 +204,7 @@ public interface TemporalField {
      * Get the range of valid values for this field using the temporal object to
      * refine the result.
      * <p>
-     * This uses the temporal object to find the range of valid values for the field.
+     * This uses the temporal object to search the range of valid values for the field.
      * This is similar to {@link #range()}, however this method refines the result
      * using the temporal. For example, if the field is {@code DAY_OF_MONTH} the
      * {@code range} method is not accurate as there are four possible month lengths,

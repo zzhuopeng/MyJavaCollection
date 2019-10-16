@@ -723,7 +723,7 @@ public class ParagraphView extends FlowView implements TabExpander {
             View v = getLayoutView(i);
             float span = v.getMinimumSpan(axis);
             if (v.getBreakWeight(axis, 0, v.getMaximumSpan(axis)) > View.BadBreakWeight) {
-                // find the longest non-breakable fragments at the view edges
+                // search the longest non-breakable fragments at the view edges
                 int p0 = v.getStartOffset();
                 int p1 = v.getEndOffset();
                 float start = findEdgeSpan(v, axis, p0, p0, p1);
@@ -875,7 +875,7 @@ public class ParagraphView extends FlowView implements TabExpander {
         /**
          * Provides a mapping from the document model coordinate space
          * to the coordinate space of the view mapped to it.  This is
-         * implemented to let the superclass find the position along
+         * implemented to let the superclass search the position along
          * the major axis and the allocation of the row is used
          * along the minor axis, so that even though the children
          * are different heights they all get the same caret height.

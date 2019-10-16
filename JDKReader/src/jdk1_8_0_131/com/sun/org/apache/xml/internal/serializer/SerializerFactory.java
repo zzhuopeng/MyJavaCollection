@@ -81,7 +81,7 @@ public final class SerializerFactory
    * null or an appropriate serializer can't be found
    * @throws Exception if the class for the serializer is found but does not
    * implement ContentHandler.
-   * @throws WrappedRuntimeException if an exception is thrown while trying to find serializer
+   * @throws WrappedRuntimeException if an exception is thrown while trying to search serializer
    */
   public static Serializer getSerializer(Properties format)
   {

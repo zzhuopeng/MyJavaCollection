@@ -88,9 +88,9 @@ import sun.security.util.SecurityConstants;
  *
  * <p> The <tt>ClassLoader</tt> class uses a delegation model to search for
  * classes and resources.  Each instance of <tt>ClassLoader</tt> has an
- * associated parent class loader.  When requested to find a class or
+ * associated parent class loader.  When requested to search a class or
  * resource, a <tt>ClassLoader</tt> instance will delegate the search for the
- * class or resource to its parent class loader before attempting to find the
+ * class or resource to its parent class loader before attempting to search the
  * class or resource itself.  The virtual machine's built-in class loader,
  * called the "bootstrap class loader", does not itself have a parent but may
  * serve as the parent of a <tt>ClassLoader</tt> instance.
@@ -371,7 +371,7 @@ public abstract class ClassLoader {
      *   on the parent class loader.  If the parent is <tt>null</tt> the class
      *   loader built-in to the virtual machine is used, instead.  </p></li>
      *
-     *   <li><p> Invoke the {@link #findClass(String)} method to find the
+     *   <li><p> Invoke the {@link #findClass(String)} method to search the
      *   class.  </p></li>
      *
      * </ol>
@@ -419,7 +419,7 @@ public abstract class ClassLoader {
 
                 if (c == null) {
                     // If still not found, then invoke findClass in order
-                    // to find the class.
+                    // to search the class.
                     long t1 = System.nanoTime();
                     c = findClass(name);
 
@@ -1070,7 +1070,7 @@ public abstract class ClassLoader {
      * <p> This method will first search the parent class loader for the
      * resource; if the parent is <tt>null</tt> the path of the class loader
      * built-in to the virtual machine is searched.  That failing, this method
-     * will invoke {@link #findResource(String)} to find the resource.  </p>
+     * will invoke {@link #findResource(String)} to search the resource.  </p>
      *
      * @apiNote When overriding this method it is recommended that an
      * implementation ensures that any delegation is consistent with the {@link
@@ -1146,7 +1146,7 @@ public abstract class ClassLoader {
 
     /**
      * Finds the resource with the given name. Class loader implementations
-     * should override this method to specify where to find resources.
+     * should override this method to specify where to search resources.
      *
      * @param  name
      *         The resource name

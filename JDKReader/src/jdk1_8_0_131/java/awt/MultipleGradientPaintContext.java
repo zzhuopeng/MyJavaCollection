@@ -279,7 +279,7 @@ abstract class MultipleGradientPaintContext implements PaintContext {
         // array of interpolation arrays
         gradients = new int[normalizedIntervals.length][];
 
-        // find smallest interval
+        // search smallest interval
         float Imin = 1;
         for (int i = 0; i < normalizedIntervals.length; i++) {
             Imin = (Imin > normalizedIntervals[i]) ?
@@ -397,7 +397,7 @@ abstract class MultipleGradientPaintContext implements PaintContext {
      *
      * This method uses the minimum amount of space (only 255 * number of
      * intervals), but it aggravates the lookup procedure, because now we
-     * have to find out which interval to select, then calculate the index
+     * have to search out which interval to select, then calculate the index
      * within that interval.  This causes a significant performance hit,
      * because it requires this calculation be done for every point in
      * the rendering loop.

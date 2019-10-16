@@ -1412,7 +1412,7 @@ public class XMLCipher {
 
         if (key == null) {
             if (log.isLoggable(java.util.logging.Level.FINE)) {
-                log.log(java.util.logging.Level.FINE, "Trying to find a KEK via key resolvers");
+                log.log(java.util.logging.Level.FINE, "Trying to search a KEK via key resolvers");
             }
 
             KeyInfo ki = encryptedKey.getKeyInfo();

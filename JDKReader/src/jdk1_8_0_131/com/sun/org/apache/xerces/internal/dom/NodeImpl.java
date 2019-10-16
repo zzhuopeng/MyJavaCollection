@@ -868,7 +868,7 @@ public abstract class NodeImpl
             thisNode==otherNode)
             return TREE_POSITION_EQUIVALENT;
 
-        // Now, find the ancestor of the owning element, if the original
+        // Now, search the ancestor of the owning element, if the original
         // ancestor was an attribute
 
         // Note:  the following 2 loops are quite close to the ones above.
@@ -886,7 +886,7 @@ public abstract class NodeImpl
             }
         }
 
-        // Now, find the ancestor of the owning element, if the original
+        // Now, search the ancestor of the owning element, if the original
         // ancestor was an attribute
         if (otherAncestorType == Node.ATTRIBUTE_NODE) {
             otherDepth=0;
@@ -906,7 +906,7 @@ public abstract class NodeImpl
           return TREE_POSITION_DISCONNECTED;
 
 
-        // Go up the parent chain of the deeper node, until we find a node
+        // Go up the parent chain of the deeper node, until we search a node
         // with the same depth as the shallower node
 
         if (thisDepth > otherDepth) {
@@ -1112,7 +1112,7 @@ public abstract class NodeImpl
               }
             }
 
-            // Now, find the ancestor of the element
+            // Now, search the ancestor of the element
             thisDepth=0;
             for (node=thisNode; node != null; node=node.getParentNode()) {
                 thisDepth +=1;
@@ -1177,7 +1177,7 @@ public abstract class NodeImpl
         }
 
 
-        // Go up the parent chain of the deeper node, until we find a node
+        // Go up the parent chain of the deeper node, until we search a node
         // with the same depth as the shallower node
 
         if (thisDepth > otherDepth) {

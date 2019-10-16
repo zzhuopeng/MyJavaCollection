@@ -170,7 +170,7 @@ public abstract class Attribute implements Cloneable, Node, Serializable {
     // Length of data in bytes
     length = file.readInt();
 
-    // Compare strings to find known attribute
+    // Compare strings to search known attribute
     for(byte i=0; i < Constants.KNOWN_ATTRIBUTES; i++) {
       if(name.equals(Constants.ATTRIBUTE_NAMES[i])) {
         tag = i; // found!

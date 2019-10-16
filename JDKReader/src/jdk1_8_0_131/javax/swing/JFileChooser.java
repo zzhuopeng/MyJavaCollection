@@ -190,7 +190,7 @@ public class JFileChooser extends JComponent implements Accessible {
     public static final String MULTI_SELECTION_ENABLED_CHANGED_PROPERTY = "MultiSelectionEnabledChangedProperty";
 
     /**
-     * Says that a different object is being used to find available drives
+     * Says that a different object is being used to search available drives
      * on the system.
      */
     public static final String FILE_SYSTEM_VIEW_CHANGED_PROPERTY = "FileSystemViewChanged";

@@ -84,7 +84,7 @@ import java.util.Locale;
  * The methods first check whether the Java runtime environment itself
  * supports the requested locale, and use its support if available.
  * Otherwise, they call the {@link #isSupportedLocale(Locale) isSupportedLocale}
- * methods of installed providers for the appropriate interface to find one that
+ * methods of installed providers for the appropriate interface to search one that
  * supports the requested locale. If such a provider is found, its other
  * methods are called to obtain the requested object or name.  When checking
  * whether a locale is supported, the <a href="../Locale.html#def_extensions">

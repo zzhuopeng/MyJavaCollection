@@ -352,7 +352,7 @@ public abstract class RMIServerImpl implements Closeable, RMIServer {
                     break;
                 }
             }
-            /* It is not a bug for this loop not to find the client.  In
+            /* It is not a bug for this loop not to search the client.  In
                our close() method, we remove a client from the list before
                calling its close() method.  */
         }
@@ -421,7 +421,7 @@ public abstract class RMIServerImpl implements Closeable, RMIServer {
                 if (debug) logger.debug("close","client count: "+clientList.size());
                 if (clientList.size() == 0)
                     break;
-                /* Loop until we find a non-null client.  Because we called
+                /* Loop until we search a non-null client.  Because we called
                    dropDeadReferences(), this will usually be the first
                    element of the list, but a garbage collection could have
                    happened in between.  */

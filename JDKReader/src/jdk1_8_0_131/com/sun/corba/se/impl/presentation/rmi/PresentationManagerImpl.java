@@ -214,7 +214,7 @@ public final class PresentationManagerImpl implements PresentationManager
             // Expand all nodes into the graph
             gr.getRoots() ;
 
-            // remove the roots and find roots again
+            // remove the roots and search roots again
             gr.removeAll( initialRootSet ) ;
             rootSet = gr.getRoots() ;
         }

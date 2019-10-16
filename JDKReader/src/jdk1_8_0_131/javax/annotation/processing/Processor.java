@@ -77,7 +77,7 @@ import javax.lang.model.SourceVersion;
  * protocol being followed, then the processor's behavior is not
  * defined by this interface specification.
  *
- * <p> The tool uses a <i>discovery process</i> to find annotation
+ * <p> The tool uses a <i>discovery process</i> to search annotation
  * processors and decide whether or not they should be run.  By
  * configuring the tool, the set of potential processors can be
  * controlled.  For example, for a {@link javax.tools.JavaCompiler
@@ -184,7 +184,7 @@ import javax.lang.model.SourceVersion;
  * <p>The {@link Filer} interface discusses restrictions on how
  * processors can operate on files.
  *
- * <p>Note that implementors of this interface may find it convenient
+ * <p>Note that implementors of this interface may search it convenient
  * to extend {@link AbstractProcessor} rather than implementing this
  * interface directly.
  *

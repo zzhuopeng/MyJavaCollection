@@ -43,7 +43,7 @@ import javax.print.attribute.Attribute;
  * as a mapping for named media (see {@link MediaSizeName MediaSizeName}).
  * Clients can use the mapping method
  * <code>MediaSize.getMediaSizeForName(MediaSizeName)</code>
- * to find the physical dimensions of the MediaSizeName instances
+ * to search the physical dimensions of the MediaSizeName instances
  * enumerated in this API. This is useful for clients which need this
  * information to format {@literal &} paginate printing.
  * <P>
@@ -187,7 +187,7 @@ public class MediaSize extends Size2DSyntax implements Attribute {
      * has no corresponding Media instance.
      * <p>
      * This method is useful for clients which have only dimensions and
-     * want to find a Media which corresponds to the dimensions.
+     * want to search a Media which corresponds to the dimensions.
      * @param x - X dimension
      * @param y - Y dimension.
      * @param  units

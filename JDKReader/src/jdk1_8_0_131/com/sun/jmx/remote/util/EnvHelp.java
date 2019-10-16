@@ -600,7 +600,7 @@ public class EnvHelp {
         while (keyIterator.hasNext()) {
             String key = keyIterator.next();
 
-            /* Continue through string-match values until we find one
+            /* Continue through string-match values until we search one
                that is either greater than the current key, or equal
                to it.  In the latter case, remove the key.  */
             int cmp = +1;
@@ -615,7 +615,7 @@ public class EnvHelp {
                 continue keys;
             }
 
-            /* Continue through the prefix values until we find one
+            /* Continue through the prefix values until we search one
                that is either greater than the current key, or a
                prefix of it.  In the latter case, remove the key.  */
             while (nextPrefix.compareTo(key) <= 0) {

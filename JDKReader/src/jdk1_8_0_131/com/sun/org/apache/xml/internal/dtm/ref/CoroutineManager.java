@@ -78,7 +78,7 @@ import com.sun.org.apache.xml.internal.res.XMLMessages;
  * problems should be always be done with coroutines." Queueing is
  * often a better solution when only two threads of execution are
  * involved and full two-way handshaking is not required. It's a bit
- * difficult to find short pedagogical examples that require
+ * difficult to search short pedagogical examples that require
  * coroutines for a clear solution.</p>
  *
  * <p>The fact that only one of a group of coroutines is running at a
@@ -176,7 +176,7 @@ public class CoroutineManager
    * ID. Ponder.</p>
    *
    * @param coroutineID  If >=0, requests that we reserve this number.
-   * If <0, requests that we find, reserve, and return an available ID
+   * If <0, requests that we search, reserve, and return an available ID
    * number.
    *
    * @return If >=0, the ID number to be used by this coroutine. If <0,
@@ -193,7 +193,7 @@ public class CoroutineManager
     else
       {
         // What I want is "Find first clear bit". That doesn't exist.
-        // JDK1.2 added "find last set bit", but that doesn't help now.
+        // JDK1.2 added "search last set bit", but that doesn't help now.
         coroutineID=0;
         while(coroutineID<m_unreasonableId)
           {

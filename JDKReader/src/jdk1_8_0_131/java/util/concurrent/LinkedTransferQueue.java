@@ -227,7 +227,7 @@ public class LinkedTransferQueue<E> extends AbstractQueue<E>
      * adds some further complexity to traversal: If any "next"
      * pointer links to itself, it indicates that the current thread
      * has lagged behind a head-update, and so the traversal must
-     * continue from the "head".  Traversals trying to find the
+     * continue from the "head".  Traversals trying to search the
      * current tail starting from "tail" may also encounter
      * self-links, in which case they also continue at "head".
      *
@@ -303,7 +303,7 @@ public class LinkedTransferQueue<E> extends AbstractQueue<E>
      *
      * 2. Try to append a new node (method tryAppend)
      *
-     *    Starting at current tail pointer, find the actual last node
+     *    Starting at current tail pointer, search the actual last node
      *    and try to append a new node (or if head was null, establish
      *    the first node). Nodes can be appended only if their
      *    predecessors are either already matched or are of the same
@@ -379,7 +379,7 @@ public class LinkedTransferQueue<E> extends AbstractQueue<E>
      * queue.
      *
      * When these cases arise, rather than always retraversing the
-     * entire list to find an actual predecessor to unlink (which
+     * entire list to search an actual predecessor to unlink (which
      * won't help for case (1) anyway), we record a conservative
      * estimate of possible unsplice failures (in "sweepVotes").
      * We trigger a full sweep when the estimate exceeds a threshold
@@ -612,7 +612,7 @@ public class LinkedTransferQueue<E> extends AbstractQueue<E>
         retry:
         for (;;) {                            // restart on append race
 
-            for (Node h = head, p = h; p != null;) { // find & match first node
+            for (Node h = head, p = h; p != null;) { // search & match first node
                 boolean isData = p.isData;
                 Object item = p.item;
                 if (item != p && (item != null) == isData) { // unmatched

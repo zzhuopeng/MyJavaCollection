@@ -182,7 +182,7 @@ public abstract class AbstractSerializer implements Serializer {
             OutputStreamWriter outputStreamWriter = new OutputStreamWriter(byteArrayOutputStream, "UTF-8");
             outputStreamWriter.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?><dummy");
 
-            // Run through each node up to the document node and find any xmlns: nodes
+            // Run through each node up to the document node and search any xmlns: nodes
             Map<String, String> storedNamespaces = new HashMap<String, String>();
             Node wk = ctx;
             while (wk != null) {
@@ -224,7 +224,7 @@ public abstract class AbstractSerializer implements Serializer {
         StringBuilder sb = new StringBuilder();
         sb.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?><dummy");
 
-        // Run through each node up to the document node and find any xmlns: nodes
+        // Run through each node up to the document node and search any xmlns: nodes
         Map<String, String> storedNamespaces = new HashMap<String, String>();
         Node wk = ctx;
         while (wk != null) {

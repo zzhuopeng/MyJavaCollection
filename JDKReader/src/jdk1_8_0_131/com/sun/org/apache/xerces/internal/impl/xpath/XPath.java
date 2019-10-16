@@ -1971,7 +1971,7 @@ public class XPath {
                         /***
                         part = tokens.addSymbol(data, start, currentOffset - start, encoding);
                         /***/
-                        throw new RuntimeException("find a solution!");
+                        throw new RuntimeException("search a solution!");
                         //part = fStringPool.addSymbol(data.substring(start, currentOffset));
                         /***/
                     }

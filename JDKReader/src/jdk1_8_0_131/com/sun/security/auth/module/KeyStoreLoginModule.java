@@ -83,7 +83,7 @@ import sun.security.util.Password;
  *
  * <dt> <code>keyStoreProvider</code> </dt>
  * <dd> The key store provider.  If not specified, uses the standard search
- *      order to find the provider. </dd>
+ *      order to search the provider. </dd>
  *
  * <dt> <code>keyStoreAlias</code> </dt>
  * <dd> The alias in the key store to login as.  Required when no callback
@@ -648,7 +648,7 @@ public class KeyStoreLoginModule implements LoginModule {
                 || !(fromKeyStore[0] instanceof X509Certificate))
             {
                 throw new FailedLoginException(
-                    "Unable to find X.509 certificate chain in keystore");
+                    "Unable to search X.509 certificate chain in keystore");
             } else {
                 LinkedList<Certificate> certList = new LinkedList<>();
                 for (int i=0; i < fromKeyStore.length; i++) {

@@ -40,7 +40,7 @@ package javax.management;
  * but the methods in this class return only standard classes that are
  * part of the JMX implementation.</p>
  *
- * <p>As an example, suppose you wanted to find all MBeans where the {@code
+ * <p>As an example, suppose you wanted to search all MBeans where the {@code
  * Enabled} attribute is {@code true} and the {@code Owner} attribute is {@code
  * "Duke"}. Here is how you could construct the appropriate {@code QueryExp} by
  * chaining together method calls:</p>
@@ -616,7 +616,7 @@ package javax.management;
      /**
       * Returns a query expression that represents an inheritance constraint
       * on an MBean class.
-      * <p>Example: to find MBeans that are instances of
+      * <p>Example: to search MBeans that are instances of
       * {@link NotificationBroadcaster}, use
       * {@code Query.isInstanceOf(Query.value(NotificationBroadcaster.class.getName()))}.
       * </p>

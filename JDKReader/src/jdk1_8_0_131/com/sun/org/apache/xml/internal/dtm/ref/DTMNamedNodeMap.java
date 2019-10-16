@@ -39,7 +39,7 @@ import org.w3c.dom.Node;
  * and possibly buffer the whole array.
  * <p>
  * ***** Also note that there's no fastpath for the by-name query; we search
- * linearly until we find it or fail to find it. Again, that could be
+ * linearly until we search it or fail to search it. Again, that could be
  * optimized at some cost in object creation/storage.
  * @xsl.usage internal
  */

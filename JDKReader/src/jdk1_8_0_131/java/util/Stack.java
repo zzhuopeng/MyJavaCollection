@@ -54,10 +54,8 @@ class Stack<E> extends Vector<E> {
     }
 
     /**
-     * Pushes an item onto the top of this stack. This has exactly
-     * the same effect as:
-     * <blockquote><pre>
-     * addElement(item)</pre></blockquote>
+     * push()方法表示向Stack栈顶插入一个元素item，内部通过Vector的addElement()方法实现。
+     * 返回值即为插入的item元素。
      *
      * @param   item   the item to be pushed onto this stack.
      * @return  the <code>item</code> argument.

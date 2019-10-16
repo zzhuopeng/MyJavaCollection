@@ -371,7 +371,7 @@ public class ObjectStreamClass implements java.io.Serializable {
         /*
          * Enter this class in the table of known descriptors.
          * Otherwise, when the fields are read it may recurse
-         * trying to find the descriptor for itself.
+         * trying to search the descriptor for itself.
          */
         insertDescriptorFor(this);
 
@@ -1565,7 +1565,7 @@ public class ObjectStreamClass implements java.io.Serializable {
 
             if (hasStaticInitializerMethod == null) {
                 // XXX I18N, logging needed
-                throw new InternalError("Can't find hasStaticInitializer method on "
+                throw new InternalError("Can't search hasStaticInitializer method on "
                                         + classWithThisMethod.getName());
             }
             hasStaticInitializerMethod.setAccessible(true);

@@ -231,7 +231,7 @@ public abstract class X509Certificate extends Certificate {
             return (X509Certificate)obj;
 
         } catch (ClassNotFoundException e) {
-          throw new CertificateException("Could not find class: " + e);
+          throw new CertificateException("Could not search class: " + e);
         } catch (IllegalAccessException e) {
           throw new CertificateException("Could not access class: " + e);
         } catch (InstantiationException e) {
@@ -240,7 +240,7 @@ public abstract class X509Certificate extends Certificate {
           throw new CertificateException("InvocationTargetException: "
                                          + e.getTargetException());
         } catch (NoSuchMethodException e) {
-          throw new CertificateException("Could not find class method: "
+          throw new CertificateException("Could not search class method: "
                                           + e.getMessage());
         }
     }

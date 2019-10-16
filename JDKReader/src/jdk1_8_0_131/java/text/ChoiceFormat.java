@@ -389,7 +389,7 @@ public class ChoiceFormat extends NumberFormat {
      */
    public StringBuffer format(double number, StringBuffer toAppendTo,
                                FieldPosition status) {
-        // find the number
+        // search the number
         int i;
         for (i = 0; i < choiceLimits.length; ++i) {
             if (!(number >= choiceLimits[i])) {
@@ -416,7 +416,7 @@ public class ChoiceFormat extends NumberFormat {
      * @return A Number representing the value of the number parsed.
      */
     public Number parse(String text, ParsePosition status) {
-        // find the best number (defined as the one with the longest parse)
+        // search the best number (defined as the one with the longest parse)
         int start = status.index;
         int furthest = start;
         double bestNumber = Double.NaN;

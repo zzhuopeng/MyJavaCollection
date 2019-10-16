@@ -216,7 +216,7 @@ public static final String ER_IGNORABLE_WHITESPACE_NOT_HANDLED =
    /**  fsb() not supported for XStringForChars   */
   public static final String ER_FSB_NOT_SUPPORTED_XSTRINGFORCHARS =
          "ER_FSB_NOT_SUPPORTED_XSTRINGFORCHARS";
-   /**  Could not find variable with the name of   */
+   /**  Could not search variable with the name of   */
  public static final String ER_COULD_NOT_FIND_VAR = "ER_COULD_NOT_FIND_VAR";
    /**  XStringForChars can not take a string for an argument   */
  public static final String ER_XSTRINGFORCHARS_CANNOT_TAKE_STRING =
@@ -474,10 +474,10 @@ public static final String ER_IGNORABLE_WHITESPACE_NOT_HANDLED =
       "Could not create XML TransformerFactory Liaison: {0}"},
 
   { ER_DIDNOT_FIND_XPATH_SELECT_EXP,
-      "Error! Did not find xpath select expression (-select)."},
+      "Error! Did not search xpath select expression (-select)."},
 
   { ER_COULDNOT_FIND_ENDOP_AFTER_OPLOCATIONPATH,
-      "ERROR! Could not find ENDOP after OP_LOCATIONPATH"},
+      "ERROR! Could not search ENDOP after OP_LOCATIONPATH"},
 
   { ER_ERROR_OCCURED,
      "Error occured!"},
@@ -495,7 +495,7 @@ public static final String ER_IGNORABLE_WHITESPACE_NOT_HANDLED =
       "The count function should take one argument!"},
 
   { ER_COULDNOT_FIND_FUNCTION,
-     "Could not find function: {0}"},
+     "Could not search function: {0}"},
 
   { ER_UNSUPPORTED_ENCODING,
      "Unsupported encoding: {0}"},
@@ -595,7 +595,7 @@ public static final String ER_IGNORABLE_WHITESPACE_NOT_HANDLED =
        "fsb() not supported for XStringForChars"},
 
   { ER_COULD_NOT_FIND_VAR,
-      "Could not find variable with the name of {0}"},
+      "Could not search variable with the name of {0}"},
 
   { ER_XSTRINGFORCHARS_CANNOT_TAKE_STRING,
       "XStringForChars can not take a string for an argument"},
@@ -846,7 +846,7 @@ public static final String ER_IGNORABLE_WHITESPACE_NOT_HANDLED =
       "function token not found."},
 
   { WG_COULDNOT_FIND_FUNCTION,
-      "Could not find function: {0}"},
+      "Could not search function: {0}"},
 
   { WG_CANNOT_MAKE_URL_FROM,
       "Can not make URL from: {0}"},
@@ -880,7 +880,7 @@ public static final String ER_IGNORABLE_WHITESPACE_NOT_HANDLED =
   { "optionMatch", "   [-match match pattern (for match diagnostics)]"},
   { "optionAnyExpr", "Or just an xpath expression will do a diagnostic dump"},
   { "noParsermsg1", "XSL Process was not successful."},
-  { "noParsermsg2", "** Could not find parser **"},
+  { "noParsermsg2", "** Could not search parser **"},
   { "noParsermsg3", "Please check your classpath."},
   { "noParsermsg4", "If you don't have IBM's XML Parser for Java, you can download it from"},
   { "noParsermsg5", "IBM's AlphaWorks: http://www.alphaworks.ibm.com/formula/xml"},

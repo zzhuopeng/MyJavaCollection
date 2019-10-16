@@ -139,7 +139,7 @@ abstract class XSDAbstractTraverser {
         // nothing to contribute to PSVI
         if (contents == null) return null;
 
-        // find the grammar; fSchemaHandler must be known!
+        // search the grammar; fSchemaHandler must be known!
         SchemaGrammar grammar = fSchemaHandler.getGrammar(schemaDoc.fTargetNamespace);
         // fish out local attributes passed from parent
         Vector annotationLocalAttrs = (Vector)parentAttrs[XSAttributeChecker.ATTIDX_NONSCHEMA];
@@ -202,7 +202,7 @@ abstract class XSDAbstractTraverser {
 
         String contents = initialContent;
 
-        // find the grammar; fSchemaHandler must be known!
+        // search the grammar; fSchemaHandler must be known!
         SchemaGrammar grammar = fSchemaHandler.getGrammar(schemaDoc.fTargetNamespace);
         // fish out local attributes passed from parent
         Vector annotationLocalAttrs = (Vector)parentAttrs[XSAttributeChecker.ATTIDX_NONSCHEMA];

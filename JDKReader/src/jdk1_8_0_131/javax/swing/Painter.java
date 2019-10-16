@@ -36,7 +36,7 @@ import java.awt.Graphics2D;
  * <p><code>Painter</code>s are simply encapsulations of Java2D code and make
  * it fairly trivial to reuse existing <code>Painter</code>s or to combine
  * them together. Implementations of this interface are also trivial to write,
- * such that if you can't find a <code>Painter</code> that does what you need,
+ * such that if you can't search a <code>Painter</code> that does what you need,
  * you can write one with minimal effort. Writing a <code>Painter</code> requires
  * knowledge of Java2D.</p>
  *

@@ -434,7 +434,7 @@ public class DataFlavor implements Externalizable, Cloneable {
         } catch (MimeTypeParseException mtpe) {
             throw new IllegalArgumentException("failed to parse:" + mimeType);
         } catch (ClassNotFoundException cnfe) {
-            throw new IllegalArgumentException("can't find specified class: " + cnfe.getMessage());
+            throw new IllegalArgumentException("can't search specified class: " + cnfe.getMessage());
         }
     }
 

@@ -397,7 +397,7 @@ public class RequiredModelMBean
      * persistence is not supported
      * @exception RuntimeOperationsException Wraps exceptions from the
      * persistence mechanism
-     * @exception InstanceNotFoundException Could not find or load
+     * @exception InstanceNotFoundException Could not search or load
      * this MBean from persistent storage
      */
     public void load()
@@ -439,7 +439,7 @@ public class RequiredModelMBean
      * persistence is not supported
      * @exception RuntimeOperationsException Wraps exceptions from the
      * persistence mechanism
-     * @exception InstanceNotFoundException Could not find/access the
+     * @exception InstanceNotFoundException Could not search/access the
      * persistent store
      */
     public void store()
@@ -1642,7 +1642,7 @@ public class RequiredModelMBean
                         if (tracing) {
                             MODELMBEAN_LOGGER.logp(Level.FINER,
                                     RequiredModelMBean.class.getName(), mth,
-                                "could not find getMethod for " +attrName +
+                                "could not search getMethod for " +attrName +
                                 ", returning descriptor " +qualifier + "value");
                         }
                         // !! cast response to right class

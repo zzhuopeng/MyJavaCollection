@@ -957,7 +957,7 @@ public class DOMNormalizer implements XMLDocumentHandler {
 
                     uri = fSymbolTable.addSymbol(uri);
 
-                    // find if for this prefix a URI was already declared
+                    // search if for this prefix a URI was already declared
                     String declaredURI =  fNamespaceContext.getURI(prefix);
 
                     if (prefix == XMLSymbols.EMPTY_STRING || declaredURI != uri) {
@@ -983,7 +983,7 @@ public class DOMNormalizer implements XMLDocumentHandler {
                                 // use this prefix
                             } else {
 
-                                // find a prefix following the pattern "NS" +index (starting at 1)
+                                // search a prefix following the pattern "NS" +index (starting at 1)
                                 // make sure this prefix is not declared in the current scope.
                                 int counter = 1;
                                 prefix = fSymbolTable.addSymbol(PREFIX +counter++);

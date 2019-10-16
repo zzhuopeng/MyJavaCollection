@@ -262,7 +262,7 @@ class StringCoding {
             // the only way we will be able to get any kind of error message.
             MessageUtils.err("ISO-8859-1 charset not available: "
                              + x.toString());
-            // If we can not find ISO-8859-1 (a required encoding) then things
+            // If we can not search ISO-8859-1 (a required encoding) then things
             // are seriously wrong with the installation.
             System.exit(1);
             return null;
@@ -395,7 +395,7 @@ class StringCoding {
             // the only way we will be able to get any kind of error message.
             MessageUtils.err("ISO-8859-1 charset not available: "
                              + x.toString());
-            // If we can not find ISO-8859-1 (a required encoding) then things
+            // If we can not search ISO-8859-1 (a required encoding) then things
             // are seriously wrong with the installation.
             System.exit(1);
             return null;

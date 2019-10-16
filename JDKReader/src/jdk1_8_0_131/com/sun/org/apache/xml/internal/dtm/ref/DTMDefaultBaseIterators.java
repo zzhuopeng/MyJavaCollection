@@ -374,7 +374,7 @@ public abstract class DTMDefaultBaseIterators extends DTMDefaultBaseTraversers
 
     /**
      * Set the node type of the parent that we're looking for.
-     * Note that this does _not_ mean "find the nearest ancestor of
+     * Note that this does _not_ mean "search the nearest ancestor of
      * this type", but "yield the parent if it is of this type".
      *
      *
@@ -1511,7 +1511,7 @@ public abstract class DTMDefaultBaseIterators extends DTMDefaultBaseTraversers
         _startNode = node;
 
         // ?? -sb
-        // find rightmost descendant (or self)
+        // search rightmost descendant (or self)
         // int current;
         // while ((node = getLastChild(current = node)) != NULL){}
         // _currentNode = current;

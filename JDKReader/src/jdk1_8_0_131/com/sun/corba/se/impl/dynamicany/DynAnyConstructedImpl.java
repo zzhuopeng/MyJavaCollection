@@ -102,7 +102,7 @@ abstract class DynAnyConstructedImpl extends DynAnyImpl
                 else
                     isRecursive = RECURSIVE_NO;
             } else {
-                // No way to find out unless the TypeCode spec changes.
+                // No way to search out unless the TypeCode spec changes.
                 isRecursive = RECURSIVE_NO;
             }
         }

@@ -281,7 +281,7 @@ public final class IDLTypesUtil {
                   (readPropertyMethod.getReturnType() ==
                    writePropertyParameters[0]) );
         } catch(Exception e) {
-            // ignore. this means we didn't find a corresponding get property.
+            // ignore. this means we didn't search a corresponding get property.
         }
 
         return foundReadProperty;
@@ -306,7 +306,7 @@ public final class IDLTypesUtil {
             foundIsProperty = isPropertyAccessorMethod(isPropertyMethod,
                 c) ;
         } catch(Exception e) {
-            // ignore. this means we didn't find a corresponding Is property.
+            // ignore. this means we didn't search a corresponding Is property.
         }
 
         return foundIsProperty;
@@ -331,7 +331,7 @@ public final class IDLTypesUtil {
             foundIsProperty = isPropertyAccessorMethod(isPropertyMethod,
                 c) ;
         } catch(Exception e) {
-            // ignore. this means we didn't find a corresponding read property.
+            // ignore. this means we didn't search a corresponding read property.
         }
 
         return foundIsProperty;

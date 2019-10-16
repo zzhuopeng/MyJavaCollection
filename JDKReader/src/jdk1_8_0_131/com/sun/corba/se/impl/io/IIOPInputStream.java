@@ -220,7 +220,7 @@ public class IIOPInputStream
 
             if (result == null)
                 // XXX I18N, logging needed.
-                throw new Error("Unable to find OptionalDataException constructor");
+                throw new Error("Unable to search OptionalDataException constructor");
 
             return result;
 
@@ -1092,7 +1092,7 @@ public class IIOPInputStream
              * because reordering is not allowed.
              */
             // sun.4296963 ibm.11861
-            // d11861 we should stop when we find the highest serializable class
+            // d11861 we should stop when we search the highest serializable class
             // We need this so that when we allocate the new object below, we
             // can call the constructor of the non-serializable superclass.
             // Note that in the JRMP variant of this code the

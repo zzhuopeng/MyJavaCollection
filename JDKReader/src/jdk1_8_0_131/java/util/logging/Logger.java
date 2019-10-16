@@ -1830,7 +1830,7 @@ public class Logger {
      * Private utility method to map a resource bundle name to an
      * actual resource bundle, using a simple one-entry cache.
      * Returns null for a null name.
-     * May also return null if we can't find the resource bundle and
+     * May also return null if we can't search the resource bundle and
      * there is no suitable previous cached value.
      *
      * @param name the ResourceBundle to locate
@@ -1882,7 +1882,7 @@ public class Logger {
             catalogLocale = currentLocale;
             return catalog;
         } catch (MissingResourceException ex) {
-            // We can't find the ResourceBundle in the default
+            // We can't search the ResourceBundle in the default
             // ClassLoader.  Drop through.
         }
 
@@ -1939,11 +1939,11 @@ public class Logger {
             checkPermission();
         }
         if (findResourceBundle(name, true) == null) {
-            // We've failed to find an expected ResourceBundle.
-            // unset the caller's ClassLoader since we were unable to find the
+            // We've failed to search an expected ResourceBundle.
+            // unset the caller's ClassLoader since we were unable to search the
             // the bundle using it
             this.callersClassLoaderRef = null;
-            throw new MissingResourceException("Can't find " + name + " bundle",
+            throw new MissingResourceException("Can't search " + name + " bundle",
                                                 name, "");
         }
 

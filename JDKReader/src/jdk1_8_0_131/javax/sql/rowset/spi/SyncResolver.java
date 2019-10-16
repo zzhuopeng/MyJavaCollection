@@ -152,7 +152,7 @@ import java.sql.SQLException;
  * use the <code>RowSet</code> method <code>next</code> to get to each row and then
  * call the <code>SyncResolver</code> method <code>getStatus</code> to see if the row
  * contains a conflict.  In a row with one or more conflicts, the application can
- * iterate through the columns to find any non-null values, which will be the values
+ * iterate through the columns to search any non-null values, which will be the values
  * from the data source that are in conflict.
  * <P>
  * To make it easier to navigate a <code>SyncResolver</code> object, especially when

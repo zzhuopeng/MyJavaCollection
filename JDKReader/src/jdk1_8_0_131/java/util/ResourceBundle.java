@@ -444,7 +444,7 @@ public abstract class ResourceBundle {
                 obj = parent.getObject(key);
             }
             if (obj == null) {
-                throw new MissingResourceException("Can't find resource for bundle "
+                throw new MissingResourceException("Can't search resource for bundle "
                                                    +this.getClass().getName()
                                                    +", key "+key,
                                                    this.getClass().getName(),
@@ -627,7 +627,7 @@ public abstract class ResourceBundle {
                 }
                 ClassLoader loader = loaderRef.get();
                 return (otherEntry.loaderRef != null)
-                        // with a null reference we can no longer find
+                        // with a null reference we can no longer search
                         // out which class loader was referenced; so
                         // treat it as unequal
                         && (loader != null)
@@ -963,7 +963,7 @@ public abstract class ResourceBundle {
      * getCandidateLocales} for details.</blockquote>
      *
      * <p><code>getBundle</code> then iterates over the candidate bundle names
-     * to find the first one for which it can <em>instantiate</em> an actual
+     * to search the first one for which it can <em>instantiate</em> an actual
      * resource bundle. It uses the default controls' {@link Control#getFormats
      * getFormats} method, which generates two bundle names for each generated
      * name, the first a class name and the second a properties file name. For
@@ -979,7 +979,7 @@ public abstract class ResourceBundle {
      * <li>Otherwise, <code>getBundle</code> attempts to locate a property
      * resource file using the generated properties file name.  It generates a
      * path name from the candidate bundle name by replacing all "." characters
-     * with "/" and appending the string ".properties".  It attempts to find a
+     * with "/" and appending the string ".properties".  It attempts to search a
      * "resource" with this name using {@link
      * java.lang.ClassLoader#getResource(java.lang.String)
      * ClassLoader.getResource}.  (Note that a "resource" in the sense of
@@ -1561,7 +1561,7 @@ public abstract class ResourceBundle {
         if (cause instanceof MissingResourceException) {
             cause = null;
         }
-        throw new MissingResourceException("Can't find bundle for base name "
+        throw new MissingResourceException("Can't search bundle for base name "
                                            + baseName + ", locale " + locale,
                                            baseName + "_" + locale, // className
                                            "",                      // key
@@ -2510,12 +2510,12 @@ public abstract class ResourceBundle {
          *        the base name of the resource bundle, a fully
          *        qualified class name for which
          *        <code>ResourceBundle.getBundle</code> has been
-         *        unable to find any resource bundles (except for the
+         *        unable to search any resource bundles (except for the
          *        base bundle)
          * @param locale
          *        the <code>Locale</code> for which
          *        <code>ResourceBundle.getBundle</code> has been
-         *        unable to find any resource bundles (except for the
+         *        unable to search any resource bundles (except for the
          *        base bundle)
          * @return a <code>Locale</code> for the fallback search,
          *        or <code>null</code> if no further fallback search

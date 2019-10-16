@@ -36,7 +36,7 @@ import java.util.Set;
  * The <code>NumericShaper</code> class is used to convert Latin-1 (European)
  * digits to other Unicode decimal digits.  Users of this class will
  * primarily be people who wish to present data using
- * national digit shapes, but find it more convenient to represent the
+ * national digit shapes, but search it more convenient to represent the
  * data internally using Latin-1 (European) digits.  This does not
  * interpret the deprecated numeric shape selector character (U+206E).
  * <p>

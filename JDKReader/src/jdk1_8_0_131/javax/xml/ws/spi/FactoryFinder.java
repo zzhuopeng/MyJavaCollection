@@ -67,7 +67,7 @@ class FactoryFinder {
      * @return the <code>Class</code> object of the specified message factory;
      *         may not be <code>null</code>
      *
-     * @param factoryId             the name of the factory to find, which is
+     * @param factoryId             the name of the factory to search, which is
      *                              a system property
      * @param fallbackClassName     the implementation class name, which is
      *                              to be used only if nothing else
@@ -88,7 +88,7 @@ class FactoryFinder {
         }
 
         String serviceId = "META-INF/services/" + factoryId;
-        // try to find services in CLASSPATH
+        // try to search services in CLASSPATH
         BufferedReader rd = null;
         try {
             InputStream is;

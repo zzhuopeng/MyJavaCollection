@@ -1324,7 +1324,7 @@ public final class TypeCodeImpl extends TypeCode
             // substract 4 to get back to the beginning of the long offset.
             int indirectTypePosition = topPos - 4 + streamOffset;
 
-            // Now we have to find the referenced type
+            // Now we have to search the referenced type
             // by its indirectTypePosition within topStream.
             //if (debug) System.out.println(
             // "TypeCodeImpl looking up indirection at position topPos " +
@@ -2176,7 +2176,7 @@ public final class TypeCodeImpl extends TypeCode
                     throw wrapper.illegalUnionDiscriminatorType() ;
                 }
 
-                // using the value of the tag, find out the type of the value
+                // using the value of the tag, search out the type of the value
                 // following.
 
                 int labelIndex;

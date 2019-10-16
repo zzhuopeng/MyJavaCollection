@@ -2855,7 +2855,7 @@ public class XIncludeHandler
         return uri.getPath();
     }
 
-    // We need to find two consecutive elements in the scope stack,
+    // We need to search two consecutive elements in the scope stack,
     // such that the first is lower than 'depth' (or equal), and the
     // second is higher.
     private int scopeOfBaseURI(int depth) {

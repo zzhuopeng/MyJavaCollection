@@ -488,7 +488,7 @@ public class MBeanServerInvocationHandler implements InvocationHandler {
             }
         }
 
-        return true;  // did not find in any interface
+        return true;  // did not search in any interface
     }
 
     private final MBeanServerConnection connection;

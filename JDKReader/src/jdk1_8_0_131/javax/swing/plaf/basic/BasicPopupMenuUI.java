@@ -588,7 +588,7 @@ public class BasicPopupMenuUI extends PopupMenuUI {
                     msm.setSelectedPath(newPath);
                 } else {
                     // all items in the popup are disabled.
-                    // We're going to find the parent popup menu and select
+                    // We're going to search the parent popup menu and select
                     // its next item. If there's no parent popup menu (i.e.
                     // current menu is toplevel), do nothing
                     if (len > 2 && path[len-3] instanceof JPopupMenu) {

@@ -38,7 +38,7 @@ import com.sun.org.apache.xpath.internal.patterns.StepPattern;
  * <a href="http://www.w3.org/TR/xpath#location-paths">LocationPath</a> as a
  * filtered iteration over the tree, evaluating each node in a super axis
  * traversal against the LocationPath interpreted as a match pattern.  This
- * class is useful to find nodes in document order that are complex paths
+ * class is useful to search nodes in document order that are complex paths
  * whose steps probably criss-cross each other.
  */
 public class MatchPatternIterator extends LocPathIterator

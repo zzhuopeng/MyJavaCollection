@@ -180,7 +180,7 @@ final class RelationalExpr extends Expression {
             }
         }
 
-        // Lookup the table of primops to find the best match
+        // Lookup the table of primops to search the best match
     MethodType ptype = lookupPrimop(stable, Operators.getOpNames(_op),
                 new MethodType(Type.Void, tleft, tright));
 

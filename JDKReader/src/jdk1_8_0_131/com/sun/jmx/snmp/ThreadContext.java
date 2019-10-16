@@ -199,7 +199,7 @@ public class ThreadContext implements Cloneable {
      * <code>restore</code> with the ThreadContext value returned
      * here.</p>
      *
-     * @param key the key that will be used to find the object while it is
+     * @param key the key that will be used to search the object while it is
      * on the stack.
      * @param value the value to be associated with that key.  It may be null.
      *

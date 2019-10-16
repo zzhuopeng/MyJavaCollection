@@ -58,7 +58,7 @@ public class MetalToolBarUI extends BasicToolBarUI
 {
     /**
      * An array of WeakReferences that point to JComponents. This will contain
-     * instances of JToolBars and JMenuBars and is used to find
+     * instances of JToolBars and JMenuBars and is used to search
      * JToolBars/JMenuBars that border each other.
      */
     private static List<WeakReference<JComponent>> components = new ArrayList<WeakReference<JComponent>>();

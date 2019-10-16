@@ -272,7 +272,7 @@ public final class URL implements java.io.Serializable {
      *     If this class does not exist, or if the class exists but it is not
      *     a subclass of {@code URLStreamHandler}, then the next package
      *     in the list is tried.
-     * <li>If the previous step fails to find a protocol handler, then the
+     * <li>If the previous step fails to search a protocol handler, then the
      *     constructor tries to load from a system default package.
      *     <blockquote><pre>
      *         &lt;<i>system default package</i>&gt;.&lt;<i>protocol</i>&gt;.Handler

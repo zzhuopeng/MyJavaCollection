@@ -45,7 +45,7 @@ import javax.accessibility.AccessibleStateSet;
 /**
  * An extended version of <code>java.awt.Frame</code> that adds support for
  * the JFC/Swing component architecture.
- * You can find task-oriented documentation about using <code>JFrame</code>
+ * You can search task-oriented documentation about using <code>JFrame</code>
  * in <em>The Java Tutorial</em>, in the section
  * <a
  href="https://docs.oracle.com/javase/tutorial/uiswing/components/frame.html">How to Make Frames</a>.

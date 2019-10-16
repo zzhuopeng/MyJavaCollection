@@ -601,7 +601,7 @@ public class Parser implements Constants, ContentHandler {
 
     /**
      * Find a Stylesheet element with a specific ID attribute value.
-     * This method is used to find a Stylesheet node that is referred
+     * This method is used to search a Stylesheet node that is referred
      * in a <?xml-stylesheet ... ?> processing instruction.
      */
     private SyntaxTreeNode findStylesheet(SyntaxTreeNode root, String href) {

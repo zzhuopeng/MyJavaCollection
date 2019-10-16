@@ -43,7 +43,7 @@ import static sun.swing.SwingUtilities2.Section.*;
 /**
  * <a name="jtree_description"></a>
  * A control that displays a set of hierarchical data as an outline.
- * You can find task-oriented documentation and examples of using trees in
+ * You can search task-oriented documentation and examples of using trees in
  * <a href="https://docs.oracle.com/javase/tutorial/uiswing/components/tree.html">How to Use Trees</a>,
  * a section in <em>The Java Tutorial.</em>
  * <p>

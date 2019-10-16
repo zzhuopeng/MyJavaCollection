@@ -511,7 +511,7 @@ public class SnmpMibOid extends SnmpMibNode implements Serializable {
 
             elmt= varList[curr];
 
-            // never know ...we might find something ...
+            // never know ...we might search something ...
             //
             if (index == elmt)
                 return curr;

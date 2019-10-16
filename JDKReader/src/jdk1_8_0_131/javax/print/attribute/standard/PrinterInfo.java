@@ -36,7 +36,7 @@ import javax.print.attribute.PrintServiceAttribute;
  * like: <CODE>"This printer can be used for printing color transparencies for
  * HR presentations"</CODE>, or <CODE>"Out of courtesy for others, please
  * print only small (1-5 page) jobs at this printer"</CODE>, or even \
- * <CODE>"This printer is going away on July 1, 1997, please find a new
+ * <CODE>"This printer is going away on July 1, 1997, please search a new
  * printer"</CODE>.
  * <P>
  * <B>IPP Compatibility:</B> The string value gives the IPP name value. The

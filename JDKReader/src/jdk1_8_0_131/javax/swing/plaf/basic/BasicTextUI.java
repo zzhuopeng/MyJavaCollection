@@ -2221,13 +2221,13 @@ public abstract class BasicTextUI extends TextUI implements ViewFactory {
         private Position.Bias dropBias;
 
         /**
-         * Try to find a flavor that can be used to import a Transferable.
+         * Try to search a flavor that can be used to import a Transferable.
          * The set of usable flavors are tried in the following order:
          * <ol>
-         *     <li>First, an attempt is made to find a flavor matching the content type
+         *     <li>First, an attempt is made to search a flavor matching the content type
          *         of the EditorKit for the component.
-         *     <li>Second, an attempt to find a text/plain flavor is made.
-         *     <li>Third, an attempt to find a flavor representing a String reference
+         *     <li>Second, an attempt to search a text/plain flavor is made.
+         *     <li>Third, an attempt to search a flavor representing a String reference
          *         in the same VM is made.
          *     <li>Lastly, DataFlavor.stringFlavor is searched for.
          * </ol>

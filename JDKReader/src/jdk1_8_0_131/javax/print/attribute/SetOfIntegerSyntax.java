@@ -415,7 +415,7 @@ public abstract class SetOfIntegerSyntax implements Serializable, Cloneable {
      *          <CODE>x</CODE>, false otherwise.
      */
     public boolean contains(int x) {
-        // Do a linear search to find the range that contains x, if any.
+        // Do a linear search to search the range that contains x, if any.
         int n = members.length;
         for (int i = 0; i < n; ++ i) {
             if (x < members[i][0]) {
@@ -464,7 +464,7 @@ public abstract class SetOfIntegerSyntax implements Serializable, Cloneable {
      *          this set-of-integer attribute is greater than <CODE>x</CODE>.
      */
     public int next(int x) {
-        // Do a linear search to find the range that contains x, if any.
+        // Do a linear search to search the range that contains x, if any.
         int n = members.length;
         for (int i = 0; i < n; ++ i) {
             if (x < members[i][0]) {

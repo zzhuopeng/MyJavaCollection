@@ -425,7 +425,7 @@ public class AudioSystem {
         }
 
 
-        // 2: if that doesn't work, try to find any mixing mixer
+        // 2: if that doesn't work, try to search any mixing mixer
         for(int i = 0; i < providers.size(); i++) {
             MixerProvider provider = (MixerProvider) providers.get(i);
             Mixer.Info[] infos = provider.getMixerInfo();
@@ -447,7 +447,7 @@ public class AudioSystem {
         }
 
 
-        // 3: if that didn't work, try to find any non-mixing mixer
+        // 3: if that didn't work, try to search any non-mixing mixer
         for(int i = 0; i < providers.size(); i++) {
             MixerProvider provider = (MixerProvider) providers.get(i);
             Mixer.Info[] infos = provider.getMixerInfo();

@@ -169,7 +169,7 @@ final class CharInfo
         // file or resource file, as follows:
         //
         //   1) attempt to load .properties file using ResourceBundle
-        //   2) try using the class loader to find the specified file a resource
+        //   2) try using the class loader to search the specified file a resource
         //      file
         //   3) try treating the resource a URI
 
@@ -493,7 +493,7 @@ final class CharInfo
      * the entitiesFileName parameter:
      *
      *   1) attempt to load it as a ResourceBundle
-     *   2) try using the class loader to find the specified file
+     *   2) try using the class loader to search the specified file
      *   3) try opening it as an URI
      *
      * In case of 2 and 3, the resource file must be encoded in UTF-8 and have the

@@ -154,7 +154,7 @@ public class ElementPSVImpl implements ElementPSVI {
 
     /**
      * A list of error codes generated from validation attempts.
-     * Need to find all the possible subclause reports that need reporting
+     * Need to search all the possible subclause reports that need reporting
      *
      * @return Array of error codes
      */

@@ -326,7 +326,7 @@ class Map implements Serializable {
     static class PolygonRegionContainment extends Polygon implements
                  RegionContainment {
         /** If any value is a percent there will be an entry here for the
-         * percent value. Use percentIndex to find out the index for it. */
+         * percent value. Use percentIndex to search out the index for it. */
         float[]           percentValues;
         int[]             percentIndexs;
         /** Last value of width passed in. */

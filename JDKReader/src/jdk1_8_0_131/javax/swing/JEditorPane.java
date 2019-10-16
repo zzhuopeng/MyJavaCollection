@@ -39,7 +39,7 @@ import javax.accessibility.*;
 
 /**
  * A text component to edit various kinds of content.
- * You can find how-to information and examples of using editor panes in
+ * You can search how-to information and examples of using editor panes in
  * <a href="https://docs.oracle.com/javase/tutorial/uiswing/components/text.html">Using Text Components</a>,
  * a section in <em>The Java Tutorial.</em>
  *

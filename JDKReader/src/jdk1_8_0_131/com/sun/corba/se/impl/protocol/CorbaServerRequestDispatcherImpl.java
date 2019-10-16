@@ -425,7 +425,7 @@ public class CorbaServerRequestDispatcherImpl
             ObjectAdapterFactory oaf = scr.getObjectAdapterFactory(scid);
             if (oaf == null) {
                 if (orb.subcontractDebugFlag) {
-                    dprint(".findObjectAdapter: failed to find ObjectAdapterFactory");
+                    dprint(".findObjectAdapter: failed to search ObjectAdapterFactory");
                 }
 
                 throw wrapper.noObjectAdapterFactory() ;
@@ -436,7 +436,7 @@ public class CorbaServerRequestDispatcherImpl
 
             if (oa == null) {
                 if (orb.subcontractDebugFlag) {
-                    dprint(".findObjectAdapter: failed to find ObjectAdaptor");
+                    dprint(".findObjectAdapter: failed to search ObjectAdaptor");
                 }
 
                 throw wrapper.badAdapterId() ;
@@ -527,7 +527,7 @@ public class CorbaServerRequestDispatcherImpl
             }
 
             // the RTSC is sent only once during session establishment.  We
-            // need to find out if the CodeBaseRef is already set.  If yes,
+            // need to search out if the CodeBaseRef is already set.  If yes,
             // then also the rtSC flag needs to be set to true
             // this is not possible for the LocalCase since there is no
             // IIOPConnection for the LocalCase

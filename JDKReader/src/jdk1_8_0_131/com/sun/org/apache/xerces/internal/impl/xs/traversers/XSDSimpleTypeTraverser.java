@@ -485,7 +485,7 @@ class XSDSimpleTypeTraverser extends XSDAbstractTraverser {
         return fIsBuiltIn;
     }
 
-    // find if a datatype validator is a list or has list datatype member.
+    // search if a datatype validator is a list or has list datatype member.
     private boolean isListDatatype(XSSimpleType validator) {
         if (validator.getVariety() == XSSimpleType.VARIETY_LIST)
             return true;

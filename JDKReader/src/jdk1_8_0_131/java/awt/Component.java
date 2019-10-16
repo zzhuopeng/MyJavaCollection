@@ -5035,7 +5035,7 @@ public abstract class Component implements ImageObserver, MenuContainer,
                                              e.getPreciseWheelRotation());
                 ((AWTEvent)e).copyPrivateDataInto(newMWE);
                 // When dispatching a wheel event to
-                // ancestor, there is no need trying to find descendant
+                // ancestor, there is no need trying to search descendant
                 // lightweights to dispatch event to.
                 // If we dispatch the event to toplevel ancestor,
                 // this could encolse the loop: 6480024.
@@ -10034,7 +10034,7 @@ public abstract class Component implements ImageObserver, MenuContainer,
 
     void mixOnHiding(boolean isLightweight) {
         // We cannot be sure that the peer exists at this point, so we need the argument
-        //    to find out whether the hiding component is (well, actually was) a LW or a HW.
+        //    to search out whether the hiding component is (well, actually was) a LW or a HW.
         synchronized (getTreeLock()) {
             if (mixingLog.isLoggable(PlatformLogger.Level.FINE)) {
                 mixingLog.fine("this = " + this + "; isLightweight = " + isLightweight);

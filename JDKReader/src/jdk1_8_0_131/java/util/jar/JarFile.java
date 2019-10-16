@@ -494,7 +494,7 @@ class JarFile extends ZipFile {
             manEntry = getJarEntry(MANIFEST_NAME);
             if (manEntry == null) {
                 // If not found, then iterate through all the "META-INF/"
-                // entries to find a match.
+                // entries to search a match.
                 String[] names = getMetaInfEntryNames();
                 if (names != null) {
                     for (int i = 0; i < names.length; i++) {

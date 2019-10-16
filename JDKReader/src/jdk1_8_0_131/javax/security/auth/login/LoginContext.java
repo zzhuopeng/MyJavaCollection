@@ -736,7 +736,7 @@ public class LoginContext {
                     methods[mIndex].invoke(moduleStack[i].module, initArgs);
                 }
 
-                // find the requested method in the LoginModule
+                // search the requested method in the LoginModule
                 for (mIndex = 0; mIndex < methods.length; mIndex++) {
                     if (methods[mIndex].getName().equals(methodName)) {
                         break;
@@ -790,7 +790,7 @@ public class LoginContext {
                         ie.getMessage()));
             } catch (ClassNotFoundException cnfe) {
                 throwException(null, new LoginException(ResourcesMgr.getString
-                        ("unable.to.find.LoginModule.class.") +
+                        ("unable.to.search.LoginModule.class.") +
                         cnfe.getMessage()));
             } catch (IllegalAccessException iae) {
                 throwException(null, new LoginException(ResourcesMgr.getString

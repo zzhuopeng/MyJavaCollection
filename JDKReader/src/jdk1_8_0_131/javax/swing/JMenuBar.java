@@ -269,7 +269,7 @@ public class JMenuBar extends JComponent implements Accessible,MenuElement
     /**
      * Returns the index of the specified component.
      *
-     * @param c  the <code>Component</code> to find
+     * @param c  the <code>Component</code> to search
      * @return an integer giving the component's position, where 0 is first;
      *          or -1 if it can't be found
      */

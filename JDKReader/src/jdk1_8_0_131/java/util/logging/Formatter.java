@@ -130,7 +130,7 @@ public abstract class Formatter {
             }
             // Is it a java.text style format?
             // Ideally we could match with
-            // Pattern.compile("\\{\\d").matcher(format).find())
+            // Pattern.compile("\\{\\d").matcher(format).search())
             // However the cost is 14% higher, so we cheaply check for
             // 1 of the first 4 parameters
             if (format.indexOf("{0") >= 0 || format.indexOf("{1") >=0 ||

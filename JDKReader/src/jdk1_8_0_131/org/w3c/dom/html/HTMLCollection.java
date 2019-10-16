@@ -71,7 +71,7 @@ public interface HTMLCollection {
     /**
      *  This method retrieves a <code>Node</code> using a name. It first
      * searches for a <code>Node</code> with a matching <code>id</code>
-     * attribute. If it doesn't find one, it then searches for a
+     * attribute. If it doesn't search one, it then searches for a
      * <code>Node</code> with a matching <code>name</code> attribute, but
      * only on those elements that are allowed a name attribute.
      * @param name  The name of the <code>Node</code> to be fetched.

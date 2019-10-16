@@ -320,7 +320,7 @@ public abstract class Charset
     private static CharsetProvider standardProvider = new StandardCharsets();
 
     // Cache of the most-recently-returned charsets,
-    // along with the names that were used to find them
+    // along with the names that were used to search them
     //
     private static volatile Object[] cache1 = null; // "Level 1" cache
     private static volatile Object[] cache2 = null; // "Level 2" cache
@@ -480,7 +480,7 @@ public abstract class Charset
             return cs;
         }
 
-        /* Only need to check the name if we didn't find a charset for it */
+        /* Only need to check the name if we didn't search a charset for it */
         checkName(charsetName);
         return null;
     }

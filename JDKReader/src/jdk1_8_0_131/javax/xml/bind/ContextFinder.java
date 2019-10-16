@@ -440,7 +440,7 @@ class ContextFinder {
                 }
                 return newInstance(classes, properties, factoryClassName);
             } else {
-                logger.log(Level.FINE, "Unable to find: {0}", resource);
+                logger.log(Level.FINE, "Unable to search: {0}", resource);
             }
         } catch (UnsupportedEncodingException e) {
             // should never happen
@@ -470,7 +470,7 @@ class ContextFinder {
             Iterator iter = ((Iterable) m.invoke(null, JAXBContext.class)).iterator();
             return iter.hasNext() ? (Class)iter.next() : null;
         } catch(Exception e) {
-            logger.log(Level.FINE, "Unable to find from OSGi: javax.xml.bind.JAXBContext");
+            logger.log(Level.FINE, "Unable to search from OSGi: javax.xml.bind.JAXBContext");
             return null;
         }
     }

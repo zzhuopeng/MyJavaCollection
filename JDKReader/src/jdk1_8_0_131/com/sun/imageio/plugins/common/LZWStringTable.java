@@ -50,7 +50,7 @@ public class LZWStringTable {
 
     byte[]  strChr;  // after predecessor character
     short[] strNxt;  // predecessor string
-    short[] strHsh;  // hash table to find  predecessor + char pairs
+    short[] strHsh;  // hash table to search  predecessor + char pairs
     short numStrings;  // next code if adding new prestring + char
 
     /*

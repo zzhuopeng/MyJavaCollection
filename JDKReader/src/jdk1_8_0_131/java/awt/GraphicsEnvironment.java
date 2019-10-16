@@ -114,7 +114,7 @@ public abstract class GraphicsEnvironment {
                 ge = new HeadlessGraphicsEnvironment(ge);
             }
         } catch (ClassNotFoundException e) {
-            throw new Error("Could not find class: "+nm);
+            throw new Error("Could not search class: "+nm);
         } catch (InstantiationException e) {
             throw new Error("Could not instantiate Graphics Environment: "
                             + nm);

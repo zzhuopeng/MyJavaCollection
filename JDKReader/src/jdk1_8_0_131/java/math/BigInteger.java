@@ -3791,7 +3791,7 @@ public class BigInteger extends Number implements Comparable<BigInteger> {
         b = u.bitLength();
 
         // Calculate a value for n in the equation radix^(2^n) = u
-        // and subtract 1 from that value.  This is used to find the
+        // and subtract 1 from that value.  This is used to search the
         // cache index that contains the best value to divide u.
         n = (int) Math.round(Math.log(b * LOG_TWO / logCache[radix]) / LOG_TWO - 1.0);
         BigInteger v = getRadixConversionCache(radix, n);

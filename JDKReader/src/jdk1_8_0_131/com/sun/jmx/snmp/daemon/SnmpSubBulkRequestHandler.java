@@ -155,7 +155,7 @@ class SnmpSubBulkRequestHandler extends SnmpSubRequestHandler {
     }
 
     /**
-     * The method updates find out which element to use at update time. Handle oid overlapping as well
+     * The method updates search out which element to use at update time. Handle oid overlapping as well
      */
     private SnmpVarBind findVarBind(SnmpVarBind element,
                                     SnmpVarBind result) {

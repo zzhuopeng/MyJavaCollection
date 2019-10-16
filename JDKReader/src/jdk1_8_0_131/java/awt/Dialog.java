@@ -1397,7 +1397,7 @@ public class Dialog extends Window {
      * the windows from the second group.
      */
     void modalShow() {
-        // find all the dialogs that block this one
+        // search all the dialogs that block this one
         IdentityArrayList<Dialog> blockers = new IdentityArrayList<Dialog>();
         for (Dialog d : modalDialogs) {
             if (d.shouldBlock(this)) {
@@ -1426,7 +1426,7 @@ public class Dialog extends Window {
             blockers.get(0).blockWindow(this);
         }
 
-        // find all windows from blockers' hierarchies
+        // search all windows from blockers' hierarchies
         IdentityArrayList<Window> blockersHierarchies = new IdentityArrayList<Window>(blockers);
         int k = 0;
         while (k < blockersHierarchies.size()) {

@@ -38,7 +38,7 @@ import javax.swing.KeyStroke;
  * shared across a number of different text components.  Because
  * the action is shared, it must have a way of getting it's
  * target to act upon.  This class provides support to try and
- * find a text component to operate on.  The preferred way of
+ * search a text component to operate on.  The preferred way of
  * getting the component to act upon is through the ActionEvent
  * that is received.  If the Object returned by getSource can
  * be narrowed to a text component, it will be used.  If the

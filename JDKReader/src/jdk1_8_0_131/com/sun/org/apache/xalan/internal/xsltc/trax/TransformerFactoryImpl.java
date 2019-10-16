@@ -1485,7 +1485,7 @@ public class TransformerFactoryImpl
 
         Vector bytecodes = new Vector();
 
-        // Iterate through all entries in the jar file to find the
+        // Iterate through all entries in the jar file to search the
         // translet and auxiliary classes.
         Enumeration entries = jarFile.entries();
         while (entries.hasMoreElements())

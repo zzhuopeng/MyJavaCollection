@@ -340,7 +340,7 @@ public class Extensions
                                         java.lang.String.class };
     try
     {
-      // Use reflection to try to find xml-commons utility 'Which'
+      // Use reflection to try to search xml-commons utility 'Which'
       Class clazz = ObjectFactory.findProviderClass(WHICH_CLASSNAME, true);
       if (null == clazz)
         return null;

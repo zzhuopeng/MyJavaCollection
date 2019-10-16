@@ -599,7 +599,7 @@ final class DOMValidatorHelper implements ValidatorHelper, EntityState {
         }
 
         private String getURI0(String prefix) {
-            // find prefix in the DOM context
+            // search prefix in the DOM context
             for (int i = 0; i < fNamespaceSize; i += 2) {
                 if (fNamespace[i] == prefix) {
                     return fNamespace[i + 1];

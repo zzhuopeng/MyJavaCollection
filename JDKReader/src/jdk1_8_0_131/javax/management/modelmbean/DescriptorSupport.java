@@ -1210,7 +1210,7 @@ public class DescriptorSupport
                                                  "Cannot make XML descriptor");
         } catch (SecurityException e) {
             // OK: we'll pretend the constructor is there
-            // too bad if it's not: we'll find out when we try to
+            // too bad if it's not: we'll search out when we try to
             // reconstruct the DescriptorSupport
         }
 
@@ -1365,7 +1365,7 @@ public class DescriptorSupport
        met.  Instead, field names in the descriptor map were forced to
        lower case.  Those versions expect this to have happened to a
        descriptor they deserialize and e.g. getFieldValue will not
-       find a field whose name is spelt with a different case.
+       search a field whose name is spelt with a different case.
     */
     private void writeObject(ObjectOutputStream out) throws IOException {
         ObjectOutputStream.PutField fields = out.putFields();

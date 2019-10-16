@@ -305,7 +305,7 @@ public class InitialContext implements Context {
      * and cache it in defaultInitCtx.
      * Set <code>gotDefault</code> so that we know we've tried this before.
      * @return The non-null cached initial context.
-     * @exception NoInitialContextException If cannot find an initial context.
+     * @exception NoInitialContextException If cannot search an initial context.
      * @exception NamingException If a naming exception was encountered.
      */
     protected Context getDefaultInitCtx() throws NamingException{
@@ -322,7 +322,7 @@ public class InitialContext implements Context {
     /**
      * Retrieves a context for resolving the string name <code>name</code>.
      * If <code>name</code> name is a URL string, then attempt
-     * to find a URL context for it. If none is found, or if
+     * to search a URL context for it. If none is found, or if
      * <code>name</code> is not a URL string, then return
      * <code>getDefaultInitCtx()</code>.
      *<p>
@@ -331,7 +331,7 @@ public class InitialContext implements Context {
      * @param name The non-null name for which to get the context.
      * @return A URL context for <code>name</code> or the cached
      *         initial context. The result cannot be null.
-     * @exception NoInitialContextException If cannot find an initial context.
+     * @exception NoInitialContextException If cannot search an initial context.
      * @exception NamingException In a naming exception is encountered.
      * @see javax.naming.spi.NamingManager#getURLContext
      */
@@ -353,7 +353,7 @@ public class InitialContext implements Context {
     /**
      * Retrieves a context for resolving <code>name</code>.
      * If the first component of <code>name</code> name is a URL string,
-     * then attempt to find a URL context for it. If none is found, or if
+     * then attempt to search a URL context for it. If none is found, or if
      * the first component of <code>name</code> is not a URL string,
      * then return <code>getDefaultInitCtx()</code>.
      *<p>
@@ -387,7 +387,7 @@ public class InitialContext implements Context {
      * @param name The non-null name for which to get the context.
      * @return A URL context for <code>name</code> or the cached
      *         initial context. The result cannot be null.
-     * @exception NoInitialContextException If cannot find an initial context.
+     * @exception NoInitialContextException If cannot search an initial context.
      * @exception NamingException In a naming exception is encountered.
      *
      * @see javax.naming.spi.NamingManager#getURLContext

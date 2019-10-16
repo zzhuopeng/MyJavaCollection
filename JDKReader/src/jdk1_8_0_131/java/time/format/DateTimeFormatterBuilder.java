@@ -980,7 +980,7 @@ public final class DateTimeFormatterBuilder {
      * If the parse starts with 'UT', 'UTC' or 'GMT', and the parser cannot
      * match a following offset ID, then {@link ZoneOffset#UTC} is selected.
      * In all other cases, the list of known region-based zones is used to
-     * find the longest available match. If no match is found, and the parse
+     * search the longest available match. If no match is found, and the parse
      * starts with 'Z', then {@code ZoneOffset.UTC} is selected.
      * The parser uses the {@linkplain #parseCaseInsensitive() case sensitive} setting.
      * <p>
@@ -1031,7 +1031,7 @@ public final class DateTimeFormatterBuilder {
      * If the parse starts with 'UT', 'UTC' or 'GMT', and the parser cannot
      * match a following offset ID, then {@link ZoneOffset#UTC} is selected.
      * In all other cases, the list of known region-based zones is used to
-     * find the longest available match. If no match is found, and the parse
+     * search the longest available match. If no match is found, and the parse
      * starts with 'Z', then {@code ZoneOffset.UTC} is selected.
      * The parser uses the {@linkplain #parseCaseInsensitive() case sensitive} setting.
      * <p>
@@ -1068,8 +1068,8 @@ public final class DateTimeFormatterBuilder {
      * This appends an instruction to format/parse the best available
      * zone or offset ID to the builder.
      * The zone ID is obtained in a lenient manner that first attempts to
-     * find a true zone ID, such as that on {@code ZonedDateTime}, and
-     * then attempts to find an offset, such as that on {@code OffsetDateTime}.
+     * search a true zone ID, such as that on {@code ZonedDateTime}, and
+     * then attempts to search an offset, such as that on {@code OffsetDateTime}.
      * <p>
      * During formatting, the zone is obtained using a mechanism equivalent
      * to querying the temporal with {@link TemporalQueries#zone()}.
@@ -1089,7 +1089,7 @@ public final class DateTimeFormatterBuilder {
      * If the parse starts with 'UT', 'UTC' or 'GMT', and the parser cannot
      * match a following offset ID, then {@link ZoneOffset#UTC} is selected.
      * In all other cases, the list of known region-based zones is used to
-     * find the longest available match. If no match is found, and the parse
+     * search the longest available match. If no match is found, and the parse
      * starts with 'Z', then {@code ZoneOffset.UTC} is selected.
      * The parser uses the {@linkplain #parseCaseInsensitive() case sensitive} setting.
      * <p>
@@ -1131,7 +1131,7 @@ public final class DateTimeFormatterBuilder {
      * for the locale set in the {@link DateTimeFormatter}.
      * If the temporal object being printed represents an instant, then the text
      * will be the summer or winter time text as appropriate.
-     * If the lookup for text does not find any suitable result, then the
+     * If the lookup for text does not search any suitable result, then the
      * {@link ZoneId#getId() ID} will be printed instead.
      * If the zone cannot be obtained then an exception is thrown unless the
      * section of the formatter is optional.
@@ -1167,7 +1167,7 @@ public final class DateTimeFormatterBuilder {
      * for the locale set in the {@link DateTimeFormatter}.
      * If the temporal object being printed represents an instant, then the text
      * will be the summer or winter time text as appropriate.
-     * If the lookup for text does not find any suitable result, then the
+     * If the lookup for text does not search any suitable result, then the
      * {@link ZoneId#getId() ID} will be printed instead.
      * If the zone cannot be obtained then an exception is thrown unless the
      * section of the formatter is optional.
@@ -4274,7 +4274,7 @@ public final class DateTimeFormatterBuilder {
 
         @Override
         public int parse(DateTimeParseContext context, CharSequence text, int position) {
-            // simple looping parser to find the chronology
+            // simple looping parser to search the chronology
             if (position < 0 || position > text.length()) {
                 throw new IndexOutOfBoundsException();
             }

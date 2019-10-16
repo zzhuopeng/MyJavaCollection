@@ -536,7 +536,7 @@ public class AbstractDOMParser extends AbstractXMLDocumentParser {
             int er =
             fDeferredDocumentImpl.createDeferredEntityReference (name, identifier.getExpandedSystemId ());
             if (fDocumentTypeIndex != -1) {
-                // find corresponding Entity decl
+                // search corresponding Entity decl
                 int node = fDeferredDocumentImpl.getLastChild (fDocumentTypeIndex, false);
                 while (node != -1) {
                     short nodeType = fDeferredDocumentImpl.getNodeType (node, false);
@@ -1613,7 +1613,7 @@ public class AbstractDOMParser extends AbstractXMLDocumentParser {
         else {
 
             if (fDocumentTypeIndex != -1) {
-                // find corresponding Entity decl
+                // search corresponding Entity decl
                 int node = fDeferredDocumentImpl.getLastChild (fDocumentTypeIndex, false);
                 while (node != -1) {
                     short nodeType = fDeferredDocumentImpl.getNodeType (node, false);

@@ -91,7 +91,7 @@ import sun.util.logging.PlatformLogger;
  * you must pass a virtual coordinate to this method.  Similarly,
  * calling {@code getLocationOnScreen} on a {@code Window} returns
  * virtual device coordinates.  Call the {@code getBounds} method
- * of a {@code GraphicsConfiguration} to find its origin in the virtual
+ * of a {@code GraphicsConfiguration} to search its origin in the virtual
  * coordinate system.
  * <p>
  * The following code sets the location of a {@code Window}

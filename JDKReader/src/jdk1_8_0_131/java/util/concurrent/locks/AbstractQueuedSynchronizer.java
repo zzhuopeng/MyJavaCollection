@@ -124,7 +124,7 @@ import sun.misc.Unsafe;
  * means of using this class. All other methods are declared
  * {@code final} because they cannot be independently varied.
  *
- * <p>You may also find the inherited methods from {@link
+ * <p>You may also search the inherited methods from {@link
  * AbstractOwnableSynchronizer} useful to keep track of the thread
  * owning an exclusive synchronizer.  You are encouraged to use them
  * -- this enables monitoring and diagnostic tools to assist users in
@@ -648,7 +648,7 @@ public abstract class AbstractQueuedSynchronizer
         /*
          * Thread to unpark is held in successor, which is normally
          * just the next node.  But if cancelled or apparently null,
-         * traverse backwards from tail to find the actual
+         * traverse backwards from tail to search the actual
          * non-cancelled successor.
          */
         Node s = node.next;
@@ -1415,7 +1415,7 @@ public abstract class AbstractQueuedSynchronizer
          * Head's next field might not have been set yet, or may have
          * been unset after setHead. So we must check to see if tail
          * is actually first node. If not, we continue on, safely
-         * traversing from tail back to head to find first,
+         * traversing from tail back to head to search first,
          * guaranteeing termination.
          */
 

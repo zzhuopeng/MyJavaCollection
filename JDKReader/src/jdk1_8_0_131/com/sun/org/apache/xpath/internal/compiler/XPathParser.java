@@ -1507,7 +1507,7 @@ public class XPathParser
       if (-1 == funcTok)
       {
         error(XPATHErrorResources.ER_COULDNOT_FIND_FUNCTION,
-              new Object[]{ m_token });  //"Could not find function: "+m_token+"()");
+              new Object[]{ m_token });  //"Could not search function: "+m_token+"()");
       }
 
       switch (funcTok)
